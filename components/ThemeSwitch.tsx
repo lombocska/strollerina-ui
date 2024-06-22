@@ -24,19 +24,19 @@ const ThemeSwitch = () => {
     return (
         <TooltipProvider>
             <Tooltip>
-                <TooltipTrigger>
+                {/* <TooltipTrigger> */}
                     <button
-                        disabled
+                        // disabled
                         aria-label="Toggle Dark Mode"
                         className="flex cursor-not-allowed items-center transition-opacity duration-300 hover:brightness-125 disabled:opacity-50"
                         onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
                     >
                         {mounted && theme === 'dark' ? <Sun /> : <Moon />}
                     </button>
-                </TooltipTrigger>
-                <TooltipContent>
+                {/* </TooltipTrigger> */}
+                {/* <TooltipContent>
                     <span>Temporarily disabled!</span>
-                </TooltipContent>
+                </TooltipContent> */}
             </Tooltip>
         </TooltipProvider>
     )

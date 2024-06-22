@@ -5,7 +5,7 @@ import siteMetadata from '@/data/siteMetadata'
 import { Analytics } from '@vercel/analytics/react'
 import 'css/tailwind.css'
 import { Metadata } from 'next'
-import { JetBrains_Mono } from 'next/font/google'
+import { Alata, Albert_Sans, JetBrains_Mono } from 'next/font/google'
 import { SearchConfig, SearchProvider } from 'pliny/search'
 import 'pliny/search/algolia.css'
 import 'react-grid-layout/css/styles.css'
@@ -20,6 +20,35 @@ const font = JetBrains_Mono({
     variable: '--font-space-jetbrains-mono',
 })
 
+
+const albert_font = Albert_Sans({
+    subsets: ['latin'],
+    display: 'swap',
+    variable: '--font-albert-sans',
+})
+
+
+const alata_font = Alata({
+    weight: '400',
+    subsets: ['latin'],
+    display: 'swap',
+    variable: '--font-albert-sans',
+})
+
+
+
+
+// export const fontSans = fontSans({
+//     subsets: ["latin"],
+//     variable: "--font-sans",
+//   });
+  
+//   export const fontMono = fontMono({
+//     subsets: ["latin"],
+//     variable: "--font-mono",
+//   });
+
+  
 export const metadata: Metadata = {
     metadataBase: new URL(siteMetadata.siteUrl),
     title: {
@@ -93,8 +122,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <body className="bg-background text-black antialiased dark:text-white">
                 <ThemeProviders>
                     <Analytics />
+
                     <SectionContainer>
-                        <div className="box-border flex h-full flex-col justify-between font-sans">
+                        <div className="box-border flex h-full flex-col justify-between ">
                             <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>
                                 <Header />
                                 <main className="mb-auto">{children}</main>

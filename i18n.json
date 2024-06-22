@@ -1,0 +1,13 @@
+{
+    "locales": ["en", "hu"],
+    "defaultLocale": "hu",
+    "pages": { 
+      "*": ["common", "tags"],
+      "/": ["home", "example"],
+      "/manuals": ["manuals"],
+      "/manuals/*": ["manuals"],
+      "/about": ["about"],
+      "/strollers": ["strollers"],
+      "/carseats": ["carseats"]
+    }
+  }

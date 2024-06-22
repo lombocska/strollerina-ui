@@ -11,6 +11,7 @@ import MobileNav from './MobileNav'
 import SearchButton from './SearchButton'
 import ThemeSwitch from './ThemeSwitch'
 import { Button } from './shadcn/button'
+import { Logo } from './icons'
 
 const Header = () => {
     const [isScrolled, setIsScrolled] = useState(false)
@@ -41,13 +42,14 @@ const Header = () => {
                     <div>
                         <Link href="/" aria-label={siteMetadata.headerTitle}>
                             <div className="flex items-center justify-between rounded-full">
-                                <NextImage
+                                <Logo/>
+                                {/* <NextImage
                                     src="/static/images/logo.webp"
                                     alt="Logo"
                                     width="40"
                                     height="40"
                                     title="Logo"
-                                />
+                                /> */}
                             </div>
                         </Link>
                     </div>
@@ -57,10 +59,10 @@ const Header = () => {
                                 <li key={i}>
                                     <Button
                                         variant="ghost"
-                                        className="px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground"
+                                        className="px-3 py-2 text-sm font-large text-muted-foreground hover:text-foreground"
                                     >
                                         <Link
-                                            // className="rounded px-3 py-2 text-sm font-medium text-muted-foreground transition-all duration-300 hover:bg-secondary hover:brightness-125"
+                                            className="rounded px-3 py-2 text-lg font-medium text-muted-foreground transition-all duration-300 hover:bg-secondary hover:brightness-125"
                                             href={link.href}
                                         >
                                             {link.title}

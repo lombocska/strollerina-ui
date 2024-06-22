@@ -1,0 +1,17 @@
+export const ZERO = 0;
+export const ONE = 1;
+export const FIVE = 5;
+export const TEN = 10;
+export const FIFTEEN = 15;
+export const THIRTY = 30;
+export const FORTY = 40;
+export const FIFTY = 50;
+export const SIXSTY = 60;
+export const ONE_HUNDRED = 100;
+export const ONE_HUNDRED_THIRTY = 130;
+export const ONE_HUNDRED_FIFTY = 150;
+export const TWO_HUNDRED = 200;
+export const TWO_HUNDRED_FIFTY = 250;
+export const FIVE_HUNDRED = 500;
+export const ONE_THOUSAND_FIVE_HUNDRED = 1500;
+export const FIVE_THOUSAND = 5000;

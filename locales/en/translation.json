@@ -1,0 +1,2105 @@
+{
+  "dashboard": {
+    "chip": {
+      "filtered.number": "Filtered Strollers Number: ",
+      "sorting": {
+        "select-label": "Sorting ",
+        "priceAsc": "Price Ascending Order",
+        "priceDesc": "Price Descending Order",
+        "weightAsc": "Weight Ascending Order",
+        "weightDesc": "Weight Descending Order",
+        "heightAsc": "Handle Bar Height Ascending Order",
+        "heightDesc": "Handle Bar Height Descending Order",
+        "abc": "A-Z by brand",
+        "best-adac.asc": "ADAC Asc",
+        "best-adac.desc": "ADAC Desc"
+      }
+    }
+  },
+  "appbar.labels": {
+    "currency": "currency",
+    "lang": "lang"
+  },
+  "home": {
+    "feature": "Guidance, Search & Reviews",
+    "main-text": "Guiding you to find your dream stroller...",
+    "blog.title": "Latest blog posts",
+    "card": {
+      "interactive": "Let me guide you to choose the perfect stroller",
+      "interactive-sub": "Use the interactive guide to find your best stroller...",
+      "reviews": "Deep-dive into the reviews.",
+      "reviews-sub": "Search in reviews, videos, etc to see how others like your top strollers.",
+      "manuals": "Find and check your stroller user manuals.",
+      "manuals-sub": "Go for your stroller instruction based on brand and type.",
+      "carseats":"More than 150+ car seats",
+      "carseats-sub": "Compare car saeats based on every tiny important details dynamically."
+    }
+  },
+  "blog": {
+    "how-to":{
+      "number": 1,
+      "summer": {
+        "title": "How to chose a stroller if you have a sweaty baby or a summer baby",
+        "intro": ""
+      }
+    },
+    "post": {
+      "number": 1,
+      "2024-adac-test-bests-worsts-huge-fails-peg-perego-twist": {
+        "link": "/reviews/blog/info/2024-adac-test-bests-worsts-huge-fails-peg-perego-twist",
+        "stroller-id": null,
+        "title": "What happened on 2024 ADAC test and what are ADAC, Swedish Plus test and ECE R129 at all?",
+        "subtitle": "Parents 1x1, that saves your baby's life",
+        "header-title": "",
+        "header-img": "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/3ad55cff-01c6-47bc-f40b-572a4d529b00/public",
+        "img1": "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/4689491a-f831-4fb0-4342-658e0464e800/public",
+        "img2": "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/43bda036-d3b3-4586-f01e-25aec3272800/public",
+        "intro": "What is the ADAC test? What is Swedish Plus test? And ECE R129/03? ECE R44/04? One of them? Maybe ADAC sounds familiar a bit. Why are these all of them important? \n\n Because in 2024 one of the ADAC tested car seat is thrown through the vehicle in scenarios of frontal crash tests. Umm, What the heck, right?",
+        "intro-img": "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/560e60cf-44a6-4394-cf81-b3764bc0ba00/public",
+        "intro2": "Choosing a car seat for our baby is not an easy task, but the German ADAC and the Swedish Plus Test can be of great help. When a family chooses a car seat, the needs that arise are usually quite similar and categorizable. We want our child's car seat to be primarily safe, comfortable, and long-lasting, as well as practical, and at the same time, not to cost a fortune." ,
+        "default-data": "",
+        "warranty-title": "",
+        "warranty": "",
+        "what-is-it-for-title": "Important note for readers who tend to quit in the middle of an article",
+        "what-is-it-for": "Perhaps one of the most surprising facts for parents is that child car seats have an expiration date, known as the 'expiry period.' This expiry period exists because the materials used in child car seats can age, causing their behavior to change over time. A perfect example of this is plastic, which tends to become stiffer with age and may not absorb forces from a collision as it should. It's essential for everyone to consider this when purchasing a used car seat. While buying a high-quality car seat is a clear choice for safety, it's even more costly to compromise on safety when it comes to our children's well-being during car journeys.  Another fact that if a family is expecting their third child, it's highly likely that the first child car seat they purchased will no longer be suitable, as its expiry period has likely passed. The simplest way to address this issue is to set a reminder in our calendars a few years after purchasing the seat, reminding us when its expiry period is due. If you are into to buy a used car seat, it's crucial to remove the cover, check the purchase year, and find the manufacturing year on the seat for any visible signs of damage. Nevertheless, when purchasing a used seat, one can never be entirely sure whether the car in which it was previously used was involved in even a minor accident, which could affect the seat's future performance in a potential real-life collision.",
+        "pros-title": "What certifications and tests exist for child car seats?",
+        "pro-title": "Advantage",
+        "pros": [
+          "ADAC Test",
+          "Plus Test (Sweden)",
+          "ECE R44/04 Standard",
+          "i-Size (ECE R129) Standard",
+          "ÖAMTC Test"
+        ],
+        "pros-img": [
+          [
+            "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/2eb51fdc-46b9-49d8-874f-c2db373d6c00/public"
+          ],
+          [
+            "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/df9f415a-3f5d-44a3-bbc5-e79ca7a17600/public"
+          ],
+          [
+            "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/2ea4af6a-d230-4ed2-31f9-8f065dfa5a00/public"
+          ],
+          [
+            "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/27b7c93d-a3d7-4115-73e9-a070e9d83000/public"
+          ],
+          []
+        ],
+        "pros-descr": [
+          "The ADAC (Allgemeiner Deutscher Automobil-Club) is a German automobile club, a highly esteemed organization. This club conducts various tests, including those on child car seats, aiming to help parents navigate through the tremendous amount of options available. Safety, ergonomics, materials used in manufacturing, and ease of cleaning are among the key criteria evaluated in these tests. By averaging the scores of these characteristics, a rating between 1.5 and 5.5 is obtained.",
+          "The VTI and NTF (National Society for Road Safety) introduced the Plus Test in Sweden in 2009. The Plus Test sets particularly strict test requirements and is an additional test that is voluntary for car child seat manufacturers. Since an update to the test protocol in 2023, no forward-facing car child seats can undergo the test. The fundamental idea behind the Plus Test is that no child in a car child seat recommended by the Plus Test should ever suffer a dangerous, or even life-threatening, injury due to a collision. \n\n The Swedish Plus Test is so rigorous that only rear-facing car seats can meet its standards. Prior to 2011, tests did not assess harmful substances, whereas from 2015 onwards, usability and ergonomics were the sole focus.",
+          "ECE R44 04 is the older European approval standard that is being phased out. Child seats with this certification can still be used, but new child seats will only be approved under the new standard (R-129), as ECE R44/04 will be phased out from September 2024. \n\n It's not tested for side impact and based on the child's weight.",
+          "The new European Union standard gradually replacing the ECE R44 standard. The i-Size standard has stricter safety requirements, including side-impact testing and mandatory use of ISOFIX. \n\n In June 2013, the i-Size ECE R129 standard came into effect, elevating child car seat safety to a new level. \n The new regulation imposes mandatory safety requirements for child car seats, providing enhanced protection in the event of an accident. Certain safety expectations, now considered essential, were not compulsory under the ECE R44/04 standard, which has been in place since 2005. Manufacturers could choose whether to incorporate these advanced protections or settle for standard quality. \n\n The need for the new standard arose due to the shortcomings of the old standard and the advancements in car manufacturing, child car seat design, and safety technology that made it both possible and necessary. \n\n Why was the new i-Size standard created then? in short: avoid human error (= parent error) \n\n -Too many children died in car accidents. The leading cause of child fatalities is car accidents. Although the number of child deaths has decreased, in Europe, 10 children still died on the roads every week, and approximately 1150 are injured. (Sources: WHO (2007), EEVC Working Group 18 Report (February 2006). Survey in 12 European countries among children aged 0–14 (2003)). Since than it has improved a lot. Children have the lowest mortality rate compared to other age-groups, and the mortality rate has also decreased the most out of all age groups over the last decade. \n The absolute number of road fatalities among children between 2011 and 2020 decreased by 47%, from 733 fatalities in 2011 to 386 fatalities in 2020. As the total number of road fatalities was decreasing less rapidly, their relative share decreased slightly. Within the group of children, the largest decrease in fatalities could be observed among the age-group of 5–9 year olds.  \n In terms of transport mode, children had a very high death toll among the most vulnerable modes of transport: 32% of children killed were pedestrians, 13% were cyclists. These figures are EU averages but there are much higher percentages in a number of EU countries.  \n In Romania and Greece, more than one in two fatalities among children was a pedestrian. In the Netherlands, 47% of fatalities among children were cyclists.The differences between the percentages for children and all fatalities reflect the mobility behaviour of children. link: https://road-safety.transport.ec.europa.eu/document/download/7f00b402-9aa2-44c7-b3c0-aaa6f81e0abd_en?filename=ff_children_20220706.pdf \n\n - ISOFIX is needed since many child car seats are improperly installed. Properly securing a child car seat with the car's seatbelt can be too lengthy and complicated for many parents, leading to 27% of parents installing the seat incorrectly. To address this, the best solution is ISOFIX. The rate of incorrect installation drops to just 4% with ISOFIX seats. The new i-Size ECE R129 standard requires child seats to be ISOFIX-compatible, as the standard mandates ISOFIX. However using ISOFIX does not mean it's safer then using belt properly. \n Many older cars on the road lack ISOFIX. While ISOFIX has become more common in cars manufactured after 2006–2007, it was often an optional feature. However, in cars produced from January 2011 onwards, ISOFIX is standard equipment. \n\n - Another huge issue is that parents switch to larger car seats too soon. \n\n - High incidence of side impacts. 25% of car accidents involve side impacts. Independent crash tests long focused only on frontal impacts, as none of the ECE R44 standards (from ECE R44/01–02–03 to the ECE R44/04 in effect since 2005) required side impact protection systems or testing protocols. The new ECE R129 i-Size standard introduced the necessity for side impact tests. i-Size car seats now require side protection systems, particularly for the head, neck, and hips, making such tests possible.",
+          "The Austrian automobile club's test, similar to ADAC, evaluates child seats based on several aspects, such as safety, handling, ergonomics, and environmental considerations."
+        ],
+        "dimension-title": "Best car seats for babys in 2024 based on ADAC",
+        "dimension-img": [
+          "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/8a82a102-1f8b-4e39-731c-337dde258d00/public",
+          "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/49d07174-767a-41b0-7484-6f1e5569c500/public",
+          "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/eba0e510-001e-4975-b2b3-876af37d2800/public",
+          "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/f72676fc-4d21-4a43-56a5-51ef82ca3e00/public"
+        ],
+        "differences": "In the latest child seat evaluation (2024), ADAC rigorously assessed 24 seats for safety, usability, ergonomics, and pollutant levels. While there are commendable models available in every size category, two seats were rated as 'unsatisfactory' due to pollutant contamination. \n\n - 24 child seats across various sizes were tested, \n\n - For babys, Nuna Pipa urbn with 1.6, Cybex Cloud G i-Size installed via Base G with 1.8, Lionelo Astrid i-Size installed via Astrid i-Size Base with 1.8, Avionaut Cosmo installed via IQ Base 2.0 C Base with 2.0 ADAC result.",
+        "section-4-img": "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/7555abf1-1d16-4a10-605a-9b3a5729af00/public",
+        "end-title": "Worst car seats in 2024 based on ADAC",
+        "end": "The cover material of the Silver Cross Discover i-Size contains the pollutant DPHP , which can damage the thyroid and pituitary gland. In the safety category, this seat only received a satisfactory rating, and the poor rating of the pollutant content explains the ADAC's rating of 4.8. \n\n The second seat rated 'poor', Peg Perego Viaggio Twist + Base Twist, failed completely in a frontal crash , meaning that there is an acute risk of injury for the child: in the event of an impact, the seat is thrown through the vehicle! Due to the serious safety defects, the ADAC advises against using the Peg Perego Viaggio Twist + Base Twist in any case . In addition, the cover material is also contaminated, which resulted in the ADAC rating of 5.5 . The flame retardant TCPP detected there is suspected of being carcinogenic. \n\n Video about the frontal crash test: https://youtube.com/shorts/FKLE7wVk-uc?si=sTuvCsYNfLAcSuY5 \n\n source: https://www.adac.de/rund-ums-fahrzeug/ausstattung-technik-zubehoer/kindersitze/kindersitztest/kindersitz-vergleichstest-2024/",
+        "final": "I hope you've enjoyed this review. Let's get strollin'..."
+      },
+      "maxi-cosi-jade-carrycot-car-seat-3way-fix-review": {
+       "car-seat-id": 1021,
+       "header-title": "Maxi Cosi Jade",
+       "title": "Maxi Cosi Jade\n\nCan a carrycot be as safe as a car seat for our newborn?",
+       "link": "/reviews/product/car-seat/maxi-cosi-jade-carrycot-car-seat-3way-fix-review",
+       "header-img": "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/92b6eca7-f56a-42d2-51fa-e7f200d5d400/public",
+        "img1": "https://www.mall.hu/i/42994918/1000/1000",
+        "img2": "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/43bda036-d3b3-4586-f01e-25aec3272800/public",
+        "intro": "When it comes to the safety and comfort of your newborn, the Maxi-Cosi Jade car seat stands out as a premier choice. Known for its innovative design and advanced safety features, the Jade offers a unique solution for parents seeking the best for their little ones. In this article, we will delve into the features, benefits, and potential drawbacks of the Maxi-Cosi Jade car seat to help you make an informed decision. \n\n The Maxi-Cosi Jade is an award-winning car seat designed specifically for newborns up to approximately six months old, or 0-70 cm in height. It combines the safety standards of a car seat with the comfort of a carrycot, making it an ideal choice for parents who prioritize both safety and convenience.",
+        "intro2": "",
+        "default-data": "Dimensions, pictures, features",
+        "end-title": "Conclusion",
+        "end": "The Maxi-Cosi Jade car seat is a top-tier choice for parents seeking unparalleled safety and comfort for their newborns. Its innovative design, coupled with advanced safety features and versatile usability, make it a standout product in the market. While it may come with a higher price tag and a limited usage period, the benefits it offers in terms of safety and convenience are well worth the investment. If you are looking for a car seat that prioritizes your baby's well-being and provides ease of use, the Maxi-Cosi Jade is an excellent option to consider.",
+        "final": "I hope you've enjoyed this review. Let's get strollin'...",
+        "imgList": [
+          "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/095174fb-0381-4052-a8d0-a151a7ba1800/public",
+          "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/2d507659-7a2a-4ae2-b21f-f10232882a00/public",
+          "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/7d9173b7-808f-47d5-c86d-e03800670800/public",
+          "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/03b8536a-9ce4-46f4-6c44-7c128111e600/public"   
+        ],
+        "pros-title": "Advantages",
+        "pros": [
+          "Super safe",
+          "Certified with i-Size ECE R129",
+          "Full lie-flat",
+          "Undistrubed sleeps",
+          "Part of the 3way Maxi Cosi Series"
+        ],
+        "pros-img": [
+          ["https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/c5a4af17-aa5e-46fa-a3cb-04f9c2dfd600/public"],
+          ["https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/46e94084-a4a8-4a4b-84b3-c6a68894e900/public"],
+          ["https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/991e8f67-06a5-4f26-bde1-e13a9bdeb000/public"],
+          ["https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/1f1175fd-e15d-4a03-451f-78edf310f700/public"],
+          ["https://images.maxi-cosi.com/dorel-public-storage-prod/usps_list/1510710110U4Y2019_2019_maxicosi_stroller_carrycot_jade_black_nomadblack_partof3waycatseatfamily_3qrt.jpg"]
+        ],
+        "pros-descr": [
+          "ADAC tested this car seat in 2019. The result made this car seat to the best car seat so far with 1.5 point ('very good' category in ADAC). This car seat spreads the forces on the entire body of your baby. The baby's head is in the center of the car maximizing the side impact protection and protected by a head inlay.",
+          "Complies with the highest safetz standards, the seat categorization is based on the newest rules meaning it is based on the size of the child",
+          "Considering it's a carrycot, your child can sleep with a straight back properly.",
+          "No need to wake up your baby to transfer from car to stroller",
+          "If you love Maxi cosi and your toddler car seat is goind to be Maxi Cosi as well, then it's worth to buy. This system is a solution from birth up to approx 4 years in combination with 3WayFix (FamilyFix3), Pebble Plus and Pearl Pro i-Size. \n\n Jade is compatible with strollers like Leona, Adorra2, Adorra, Street and Lila SP."
+        ],
+        "cons-title": "Disadvantages",
+        "cons": [
+          "Takes 2 seats",
+          "It's heavy",
+          "Very limited lifespan",
+          "Expensive"
+        ],
+        "cons-img": [
+          ["https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/ec9ad4b3-5f63-48fa-d72e-a70004803700/public"],
+          ["https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/cbf47389-45be-4957-5219-456e7cc18700/public"],
+          ["https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/3fbaae01-8acd-4889-b6cd-09a61ec7fb00/public"],
+          ["https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/2c47c449-17bd-48d4-86f6-fcf1acd55000/public"]
+        ],
+        "cons-descr": [
+          "Since it can be mounted on an Isofix base across the direction of travel thus it takes up two seats.",
+          "It's almost 6 kg, so after giving birth, it's not so easy to lift up with your child.",
+          "You can use it when your child longer than 40 cm and less than 70 cm or less then 9 kg.",
+          "Considering the short life span, then price is a bit more than it should be."
+         ]
+      },
+      "cybex-gazelle-s2-impartial-review": {
+        "link": "/reviews/product/stroller/cybex-gazelle-s2-impartial-review",
+        "stroller-id": 16014,
+        "review-collection-link": "https://www.strollerina.com/reviews/brands/cybex",
+        "title": "An honest, impartial review about Cybex Gazelle S2 after 1.5 years of usage",
+        "subtitle": "Dimensions, setups, pros and cons with 2 children under 3",
+        "header-title": "Cybex Gazelle S2",
+        "header-img": "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/92b6eca7-f56a-42d2-51fa-e7f200d5d400/public",
+        "img1": "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/0fdc303b-75ce-414f-e68e-82f0e4915800/public",
+        "img2": "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/43bda036-d3b3-4586-f01e-25aec3272800/public",
+        "intro": "A Cybex Gazelle S2 stroller can be a great help in everyday life with two toddlers under 3 years old. Like everything in life, it has its advantages and disadvantages, but fundamentally, among the double strollers available on the market, it is an outstanding product that is worth its price. It can accommodate 1, 2, or even 3 children. It easily fits into the daily routine, perfect for afternoon naps, playing, lighter terrains, parks, urban streets, and shopping.",
+        "intro2": "When I found out I was pregnant again, our first child was 1.5 years old. I was sure we would need a stroller that could be converted into a double. Comparable quality double strollers on the market were the Bugaboo Donkey 5, UppaBaby Vista V2, Thule Sleek, and Maxi Cosi Lila. After extensive review and information searching, we decided on the Cybex. After a year and a half, we didn't regret it, but I still felt a lack because when I wanted to compare strollers, I couldn't find any reviews or videos where every single dimension, every single parameter, and option were explained, showing the stroller with a child, pointing out every important detail.",
+        "default-data": "Dimensions, pictures, features",
+        "warranty-title": "Warranty, service",
+        "warranty": "Cybex provides a non-transferable 2-year warranty upon presentation of the invoice and upon requesting it with the serial number. Facilitating complaint handling is if you register the product on the Cybex website. In Hungary, after the first year, there is a 2-year distributor's warranty where you have to prove that the manufacturer is at fault if something breaks. \n\nIn the case of Gazelle, it is crucial that the serial number of the secondary seat is found on the original box packaging, not on the seat and frame bottom. If you do not keep or photograph it, you will not be able to claim the warranty in case of a problem with the secondary seat without a serial number. In our case, our Gazelle's frame with the primary seat is from Mamas&Papas, where they smoothly helped with the issue of the canopy sliding. I personally bought the secondary seat from the Mamilla store, where they did not draw my attention to the serial number on the box, so we left without it. Warranty handling is currently quite cumbersome with them.",
+        "imgList": [
+          "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/0fdc303b-75ce-414f-e68e-82f0e4915800/public",
+          "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/43bda036-d3b3-4586-f01e-25aec3272800/public",
+          "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/5af41325-9459-4611-1484-820763b60d00/public",
+          "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/ba820db3-079d-40fe-8997-6cd2b52aab00/public",
+          "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/2a5af18a-73d8-45c4-e7ff-9fd654780800/public",
+          "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/92e669b7-213e-4fd5-7ce8-b48dc824b700/public",
+          "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/71a1d1bd-d4b6-42a2-0947-da967cb13c00/public",
+          "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/f91f1397-7190-45b6-0c1b-07af736c0600/public",
+          "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/dcea43d5-3673-4a66-e6ed-7d8153568100/public",
+          "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/8966d7e2-f4e6-44a0-2d33-13f31ff7fe00/public",
+          "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/308b38bd-fb35-473f-55f6-3b904f36e200/public",
+          "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/3ed52ca1-7602-417e-fdcc-d7f9c2e39000/public",
+          "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/0af091b3-9087-4344-f923-80f4d3e95100/public",
+          "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/c81bce02-20e8-4ef6-31d1-348e77c53e00/public",
+          "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/8c853e76-d3d1-4b07-5d4d-7a15fd9a2500/public",
+          "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/91eee57f-3b2e-4719-2597-13598a30c300/public",
+          "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/7404435c-bbdb-45e8-4a9f-ea28133a6a00/public",
+          "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/91140149-b603-4216-af07-2c8fad303200/public",
+          "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/8389993f-6492-4be3-f201-496f7769d900/public",
+          "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/af9bdad3-ac36-4cf4-4d06-038fa58a2700/public",
+          "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/da02570e-6e83-4bd0-d397-e89e6a5d8400/public",
+          "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/b2fb3e64-742c-4919-c147-ff05942cc500/public",
+          "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/ab97f222-9ce7-499a-9692-cd7cf540a900/public",
+          "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/6ce6512d-c8ff-4222-79c2-ab33769af300/public",
+          "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/10daca02-1b1f-4446-a390-dfce44ab8000/public",
+          "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/52511037-bcef-45be-7960-e5cde5e76d00/public",
+          "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/10daca02-1b1f-4446-a390-dfce44ab8000/public",
+          "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/59bf3de6-feae-483b-8d9c-afdc4e61a000/public"        ],
+        "what-is-it-for-title": "Where, what's it for?",
+        "what-is-it-for": "This stroller is a suitable choice for urban terrain with two toddlers under 3 years old, ideally purchased before the birth of the first child. Since it comes with a shopping basket, it's a great option for navigating the store with one child. (Someone recently asked me if any Gazelle owner ever uses the shopping basket. The situation is that it significantly facilitates shopping.)\nI would recommend this stroller to parents who often need to travel or organize activities alone with two small children. When the older child is around 2 years old and prone to wander off, having such assistance can be invaluable. For me, visits to the zoo, wildlife parks, and beach strolls were much more reassuring because my older child couldn't suddenly run off in busier areas when I was alone with them.\nIf you intend to put it in the trunk of a car, a Fiat 500 won't be enough; the stroller measures 83.57 x 64.52 x 30.99 cm when folded, so at least an estate car trunk will be necessary.\n\nWhen we started using it, my older child was 2 years old and 92 cm tall, while the younger one was 3 months old. Currently, my older child is over 3 years old and 104 cm tall. As seen in the picture, once we reach the seat's height capacity, our journey with the double stroller for two children will end. Considering that the stroller with 1 sports seat weighs 12.88 kg, I'll definitely be looking for a lighter alternative for my daughter from this point on.\n",
+        "pros-title": "Advantages",
+        "pro-title": "Advantage",
+        "pros": [
+          "Sibling stroller",
+          "Washable cover",
+          "XL sun canopy",
+          "Adjustable sun canopy height",
+          "One-pull harness tightening system",
+          "Safety",
+          "Compact fold with 2 sport seat units"
+        ],
+        "pros-img": [
+          [
+            "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/43bda036-d3b3-4586-f01e-25aec3272800/public",
+            "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/2a5af18a-73d8-45c4-e7ff-9fd654780800/public",
+            "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/8966d7e2-f4e6-44a0-2d33-13f31ff7fe00/public",
+            "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/0af091b3-9087-4344-f923-80f4d3e95100/public",
+            "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/92e669b7-213e-4fd5-7ce8-b48dc824b700/public"
+          ],
+          [
+            "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/f91f1397-7190-45b6-0c1b-07af736c0600/public"
+          ],
+          [
+            "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/7404435c-bbdb-45e8-4a9f-ea28133a6a00/public"
+          ],
+          [
+            "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/71a1d1bd-d4b6-42a2-0947-da967cb13c00/public",
+            "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/f91f1397-7190-45b6-0c1b-07af736c0600/public"
+          ],
+          [
+            "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/af9bdad3-ac36-4cf4-4d06-038fa58a2700/public"
+          ],
+          ["https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/91140149-b603-4216-af07-2c8fad303200/public"],
+          ["https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/59bf3de6-feae-483b-8d9c-afdc4e61a000/public"]
+        ],
+        "pros-descr": [
+          "Its most important advantage is that it can be converted into a sibling stroller, yet behaves just like a normal stroller when transporting one child. With one child seat attached, it's super easy to maneuver, handles obstacles well, can be easily lifted over a curb, and has a huge lower basket capacity and load capacity.",
+          "One of its best features is that the seat cover and sun canopy are washable in the washing machine, under the appropriate conditions. Currently, this is quite extraordinary on the market as many stroller manufacturers do not allow the stroller cover to be washed in the washing machine. What's more, removing the cover is child's play.",
+          "The sun canopy can be expanded to a truly enormous size and can really effectively shield the child when they want to hide or sleep, even providing almost complete coverage in a reclined position.",
+          "The adjustability of the sun canopy's height is a very good idea, allowing the seat to be used for a longer period by the older child, although the solution itself is not well thought out, as the canopy connector can slide on the rail after a while.",
+          "The harness tightening system on the S2 model is easily adjustable with one hand to fit the child's size.",
+          "With a small age gap, the older child is not yet reliable in busy traffic conditions. In such cases, the stroller is incredibly helpful as both children sit safely in it.",
+          "The stroller can be fold with 2 seat units as well."
+        ],
+        "cons-title": "Disadvantages",
+        "cons": [
+          "Peek-a-boo window without any means of fastening",
+          "Adjustable sun canopy connector",
+          "Stitched harness",
+          "Water pooling",
+          "Seat recline adjustment button",
+          "Small legroom, small footrest",
+          "Short usability period",
+          "The two seats are not interchangeable",
+          "Folding might succeed only once every leap year",
+          "Carrycot is not breezy",
+          "World of accessories..."
+        ],
+        "cons-img": [
+          [
+            "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/91eee57f-3b2e-4719-2597-13598a30c300/public"
+          ],
+          [
+            "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/f91f1397-7190-45b6-0c1b-07af736c0600/public"
+          ],
+          [
+            "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/308b38bd-fb35-473f-55f6-3b904f36e200/public"
+          ],
+          [
+            "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/8c853e76-d3d1-4b07-5d4d-7a15fd9a2500/public"
+          ],
+          [
+            "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/dcea43d5-3673-4a66-e6ed-7d8153568100/public"
+          ],
+          [
+            "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/da02570e-6e83-4bd0-d397-e89e6a5d8400/public",
+            "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/ba820db3-079d-40fe-8997-6cd2b52aab00/public"
+          ],
+          [],
+          [],
+          [],
+          [],
+          []
+        ],
+        "cons-descr": [
+          "One drawback for me is that the peek-a-boo window cannot be fastened in any way, neither with Velcro nor with magnets. This was annoying from the start because even a slight breeze would blow wind onto the child's head.",
+          "The sun canopy connector slides on the two outer frames of the seat, but this connector becomes loose after 1.5 years of use.",
+          "One of my biggest frustrations is the incomprehensible harness sewn onto the seat. We have a beautiful Makaszka footmuff, but it's unusable with this type of harness.",
+          "In single child mode, the stroller's huge lower basket turns into a literal rainwater collector in the rain, making it impossible to put anything there unless we want it washed...",
+          "It's possible we got a bad production batch, but the seat recline adjustment button got stuck and broke in 3 out of 2 cases, fortunately still within the first 14 days, so we returned it. The stroller we received for the third time has been flawless, and we haven't had any issues with this button since.",
+          "If both seats are forward-facing, the child sitting in the upper seat barely has any legroom. If the two seats are facing each other, the taller child's legs won't fit comfortably in the upper seat, making it uncomfortable for them to sit.",
+          "If there isn't an extremely small age gap between the two children, then the double child mode will only be usable for barely 1 year, as the older child won't comfortably fit in the seat. It's worth mentioning that although the manufacturer claims it can be used up to 4 years old, in reality, it's more like the beginning of the third year.",
+          "The seat received with the stroller and the secondary seat are not interchangeable; only the primary seat can fit into the lower adapter. (If you want to maintain the warranty. If this is not important to you, or if it's already out of warranty, and it bothers you that you can't swap the seats, you just need to grind down one small protruding piece of plastic on the connector of the secondary seat, and voilà, it's done. The same applies to the upper shopping basket.",
+          "In the vast majority of cases, folding the stroller requires a lot of patience and sometimes brute force.",
+          "It's weird that in 2023/2024 still not a basic feature to make the carrycot breezy. i.e. ABC Design made its Salsa 4 carrycot's ventilation in a proper way."
+        ],
+        "important-notes-title": "Important Notes",
+        "important-notes": [
+          "Do not forget to register your new Gazelle on Cybex online website",
+          "Save the serial number for second seat from the BOX!!!",
+          "Do not fully let the footrest of the lower sports seat to avoid problems"
+        ],
+        "dimension-title": "Seat dimensions, Gazelle S2 in a RAV4 580-liter trunk",
+        "dimension-img": [
+          "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/ab97f222-9ce7-499a-9692-cd7cf540a900/public",
+          "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/52511037-bcef-45be-7960-e5cde5e76d00/public",
+          "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/59bf3de6-feae-483b-8d9c-afdc4e61a000/public",
+          "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/10daca02-1b1f-4446-a390-dfce44ab8000/public"
+        ],
+        "differences-title": "Cybex Gazelle S vs Gazelle S2",
+        "differences": "Apart from the color of the seats, the biggest difference in the upgraded version is the harness tightening system, which the S2 model 'inherits' from the Mios 3, ePriam 2, and Priam 4 models.",
+        "end-title": "Overall",
+        "end": "The Gazelle S2 is a brilliantly conceived and designed stroller that can serve the family for a long time, even as a travel system, if this stroller is the first one purchased. It handles two children exceptionally well, giving parents a solid workout. It's not particularly suited for stairs or inclines, as that's not its primary purpose. If the family plans to have at least two young children with a small age difference, it's worth investing in the Gazelle S2.",
+        "final": "I hope you've enjoyed this review. Let's get strollin'..."
+      },
+      "doona-x-stroller-carseat-combo-review-2024": {
+        "link": "/reviews/product/stroller/type-2/doona-x-stroller-carseat-combo-review-2024",
+        "stroller-id": 17002,
+        "review-collection-link": "https://www.strollerina.com/reviews/brands/doona",
+        "title": "A detailed, impartial review about Doona X car seat stroller combo",
+        "subtitle": "Dimensions, setups, pros and cons",
+        "header-title": "Doona X Car Seat & Stroller",
+        "header-img": "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/92b6eca7-f56a-42d2-51fa-e7f200d5d400/public",
+        "img1": "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/d3aa9ca8-3079-442a-aa38-69665eca2a00/public",
+        "img2": "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/5bd15ceb-f34c-45fd-985f-d17d97e66600/public",
+        "intro": "When it comes to choosing baby gear, parents often seek products that combine safety, convenience, and style. The Doona Infant Car Seat Stroller has gained significant popularity for its unique features and innovative design. But is it the right choice for you? \n\n Doona X represents the new generation of the Doona Car Seat & Stroller, offering three recline positions: Sit, Relax, and Lay Back. This feature allows your child to lie down and relax comfortably. Like the Doona i, it meets the European i-Size safety regulation (R-129) and includes an adjustable harness and headrest. The Doona X also boasts patented shock absorbers and a smooth-release system for a smoother, safer ride, along with the Doona SIP add-on for enhanced side-impact protection.\n\n While the Doona+ and Doona i were available, I didn’t find the brand relevant to my needs. Living in the capital, our main modes of transportation within the city are buses, the metro, and occasionally taxis. With my first child, we rarely used a stroller, preferring a baby carrier (slings). These parameters suggested that the Doona+ or Doona i would be perfect for us. However, I couldn’t overlook the fact that the child couldn’t lie flat in the stroller, and the wheel suspension wasn’t the best.",
+        "intro2": "",
+        "default-data": "Dimensions, pictures, features",
+        "warranty-title": "Warranty, service",
+        "warranty": "Doona provides a non-transferable 2-year warranty upon presentation of the invoice and upon requesting it with the serial number. Facilitating complaint handling is if you register the product on the Doona website. ",
+        "imgList": [
+          "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/5bd15ceb-f34c-45fd-985f-d17d97e66600/public",
+          "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/d3aa9ca8-3079-442a-aa38-69665eca2a00/public"
+        ],
+        "what-is-it-for-title": "Where, what's it for?",
+        "what-is-it-for": "This stroller is a suitable choice for urban terrain with two toddlers under 3 years old, ideally purchased before the birth of the first child. Since it comes with a shopping basket, it's a great option for navigating the store with one child. (Someone recently asked me if any Gazelle owner ever uses the shopping basket. The situation is that it significantly facilitates shopping.)\nI would recommend this stroller to parents who often need to travel or organize activities alone with two small children. When the older child is around 2 years old and prone to wander off, having such assistance can be invaluable. For me, visits to the zoo, wildlife parks, and beach strolls were much more reassuring because my older child couldn't suddenly run off in busier areas when I was alone with them.\nIf you intend to put it in the trunk of a car, a Fiat 500 won't be enough; the stroller measures 83.57 x 64.52 x 30.99 cm when folded, so at least an estate car trunk will be necessary.\n\nWhen we started using it, my older child was 2 years old and 92 cm tall, while the younger one was 3 months old. Currently, my older child is over 3 years old and 104 cm tall. As seen in the picture, once we reach the seat's height capacity, our journey with the double stroller for two children will end. Considering that the stroller with 1 sports seat weighs 12.88 kg, I'll definitely be looking for a lighter alternative for my daughter from this point on.\n",
+        "pros-title": "Advantages",
+        "pro-title": "Advantage",
+        "pros": [
+          "Full recline feature, with 3 positions - Sit, Relax, Lay Back",
+          "Certified with i-Size ECE R129",
+          "Soft release system",
+          "New canopy design with textile zipper connection",
+          "Shock absorbent mechanism",
+          "Improved side impact protection, Doona SIP add on"
+        ],
+        "pros-img": [
+          ["https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/95a77e9f-ceef-4c85-87c2-df6f8d1ace00/public"],
+          ["https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/46e94084-a4a8-4a4b-84b3-c6a68894e900/public"],
+          ["https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/a750836a-179d-4569-53bb-8c7b0b019600/public"],
+          ["https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/67658857-afa2-498e-85e4-3326a6cfff00/public"],
+          ["https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/f0e5d806-3d0a-4b78-92fa-f8f51e98ed00/public"],
+          ["https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/9cbb20f2-5d04-4aae-13e4-87968504cf00/public"]
+        ],
+        "pros-descr": [
+          "These elevated features provide comfort and convenience, ensuring a seamless experience while exploring the world. \n\n[Image source: doona.com]",
+          "Complies with the highest safetz standards, the seat categorization is based on the newest rules meaning it is based on the size of the child",
+          "[Image source: doona.com]",
+          "New canopy design with textile zipper connection compared to textile push button connection by Doona i and Doona +. \n\n [Image source: doona.com]",
+          "Shock absorbent mechanism is now introduced for wheels finally.",
+          "Improved side impact protection, Doona SIP add on. \n\n[Image source: doona.com]"
+        ],
+      
+        "cons-title": "Disadvantages",
+        "cons": [
+          "Heavy",
+          "Push Handle Height",
+          "Price",
+          "ADAC Certification"
+        ],
+        "cons-img": [
+          ["https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/cbf47389-45be-4957-5219-456e7cc18700/public"],
+          ["https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/b4bc6415-4596-4889-cbb7-a370447dcf00/public"],
+          ["https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/2c47c449-17bd-48d4-86f6-fcf1acd55000/public"],
+          ["https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/c5a4af17-aa5e-46fa-a3cb-04f9c2dfd600/public"]
+        ],
+        "cons-descr": [
+          "Like other Doona models, the Doona X may be heavier compared to traditional infant car seats due to its integrated stroller mechanism. This added weight can make it more challenging to carry, especially for petite individuals.",
+          "Some users may find the push handle of the Doona X too low with its 101 cm, especially taller individuals. This can lead to discomfort during extended periods of pushing the stroller",
+          "The Doona X, like other Doona products, is an investment. Its dual functionality and innovative features come at a premium price point, which may not be feasible for all budgets.",
+          "Unlike some other stroller brands, the Doona X may not have ADAC certification, which is a safety standard recognized in certain regions. This lack of certification may raise concerns for parents seeking additional reassurance regarding safety."
+        ],
+        "important-notes-title": "Important Notes",
+        "important-notes": [
+          "Do not forget to register your new Gazelle on Cybex online website",
+          "Save the serial number for second seat from the BOX!!!",
+          "Do not fully let the footrest of the lower sports seat to avoid problems"
+        ],
+        "dimension-title": "Seat dimensions, Gazelle S2 in a RAV4 580-liter trunk",
+        "dimension-img": [
+        ],
+        "differences-title": "Differenced among Doona X, Doona i and  Dooona +",
+        "differences": "Recline: Only Doona X offers three recline positions - Sit, Relax, and Lay Back - providing more options for your child's comfort. \n\ni-Size compliancy: Only Doona X and Doona i is R129 certified while the classic Doona + is R44 certified. \n\nCanopy design: While the new Doona X has a zipper connection, Doona i and Doona + have a textile push button connection. \n\nAs for the wheels, only Doona X has shock absorbent mechanism. \n\n",
+        "end-title": "Overall",
+        "end": "Two months ago, the Doona X was introduced. If I were expecting my first child now, my perspective would be entirely different. The Doona X can recline in three positions, has an adjustable harness and ISOFIX compatibility, improved suspension, and a smoother transformation process into a stroller. These features are highly appealing. \nCurrently, my hesitation stems from the lack of ADAC safety certification and the push handle height, which, at 101 cm, is too low for my husband. In comparison, an Orbit Baby or Stokke stroller can have handles adjusted up to 135 cm, which makes a significant difference. \nOverall, Doona’s popularity and market relevance are undeniable and clearly on the rise.",
+        "final": "I hope you've enjoyed this review. Let's get strollin'..."
+      },
+      "bugaboo-butterfly-review-2024": {
+        "link": "/reviews/product/stroller/type-2/bugaboo-butterfly-review-2024",
+        "stroller-id": 7002,
+        "review-collection-link": "https://www.strollerina.com/reviews/brands/bugaboo",
+        "title": "The Bugaboo Butterfly: Redefining Urban Mobility for Parents",
+        "subtitle": "Dimensions, setups, pros and cons",
+        "header-title": "Bugaboo Butterfly Stroller",
+        "header-img": "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/92b6eca7-f56a-42d2-51fa-e7f200d5d400/public",
+        "img1": "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/b79723f6-7513-4d7a-de3b-884ce192dd00/public",
+        "img2": "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/5bd15ceb-f34c-45fd-985f-d17d97e66600/public",
+        "intro": "Bugaboo Butterfly appear in early of 2023 and defeated Yoyo2 ultra compact lightweight stroller. \n\nRenowned for its commitment to high-quality, functional, and stylish baby products, Bugaboo has once again pushed the boundaries with the Butterfly, a stroller designed to cater to the dynamic needs of modern families. \n\n This article delves into the features, benefits, and unique aspects of the Bugaboo Butterfly, highlighting why it stands out in the crowded market of baby strollers.",
+        "intro2": "",
+        "default-data": "Dimensions, pictures, features",
+        "imgList": [
+          "https://mamilla.hu/wp-content/uploads/2023/10/butterfly-black-black-compact-sidestand-carry-strap-sideshot.jpg",
+          "https://mamilla.hu/wp-content/uploads/2023/10/butterfly-black-forest-green-iconic.jpg",
+          "https://mamilla.hu/wp-content/uploads/2023/10/butterfly-black-forest-green-breezy-panel-detail.jpg",
+          "https://mamilla.hu/wp-content/uploads/2023/10/butterfly-black-forest-green-harness-detail.jpg"
+        ],
+        "pros-title": "Advantages",
+        "pros": [
+          "Extra backrest height",
+          "Folds with one hand automatically",
+          "4-year warranty",
+          "Travel System",
+          "Lightweight",
+          "Ecofriendly",
+          "Basket capacity"
+        ],
+        "pros-img": [
+          ["https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/1c714841-7411-4c70-e6ce-8c8024458600/public"],
+          ["https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/71b224fc-b326-4103-548f-8ecc1bed6700/public"],
+          ["https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/47d768a5-02fd-4500-8714-25caf6e0cf00/public"],
+          ["https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/0502b328-25e1-4e80-6c74-53f01bcddb00/public"],
+          ["https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/d6603e99-b628-4c78-a96b-cd52825f7600/public"],
+          ["https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/e205c9fe-687d-49e8-fd7e-e4a278879e00/public"],
+          ["https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/403bb6e8-e668-47ea-3a7a-fbcc18221500/public"]
+          
+        ],
+        "pros-descr": [
+          "With its 63 cm height, this stroller wins the competition regarding seat height. It's quite a choice for tall toddlers.",
+          "This stroller fold itself within 1 second! [image source: bugaboo.com]",
+          "Bugaboo provides 4-year warranty. It's much better compared to Cybex 2-year warranty.",
+          "With a car seat adapter, it can be a travel system as well to ease your travels with cars.",
+          "It's only 7.3 kg, so it's much lighter, then the others in this category.",
+          "Bugaboo is trying to go green with their strollers materials.",
+          "Usually lightweight strollers has a tiny basket with 2 or 3 kg storage capacity. Butterfly can store even 8 kg!"
+        ],
+      
+        "cons-title": "Disadvantages",
+        "cons": [
+          "Bumper bar not included, need to buy separately",
+          "Wheel size",
+          "No full-recline",
+          "No straight back"
+        ],
+        "cons-img": [
+          ["https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/000e2938-0bb2-4763-47a0-930a1b507e00/public"],
+          ["https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/1b63c7a4-8d6c-4f1c-f612-9025fcdbd400/public"],
+          ["https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/6b2808c5-85f3-466c-84e7-1c8c32da1a00/public"],
+          ["https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/b3761b6b-2dce-4b17-e746-b5da5fce7600/public"]
+        ],
+        "cons-descr": [
+          "Like Cybex, Bugaboo does the same with accessories. You need to buy anything separately on a high price... [image source: bugaboo.com]",
+          "While it's a cool stroller, de wheels are tiny, so probably you will have some difficulties with bigger potholes or terrains.",
+          "Butterfly seat cannot be lie-flat unfortunately.",
+          "Butterfly seat cannot be configured to provide straight sit up for your toddler. There are kids who cannot stand strollers with this issue."
+        ],
+        "differences-title": "",
+        "differences": "",
+        "end-title": "Overall",
+        "end": "The Bugaboo Butterfly is more than just a stroller; it is a testament to the innovative spirit of Bugaboo and its dedication to enhancing the lives of parents and children. With its compact design, ease of use, superior comfort, and eco-friendly credentials, the Butterfly is a standout choice for urban families. Whether navigating busy streets, taking a stroll in the park, or traveling, the Bugaboo Butterfly promises to make every journey a delightful experience. \n\n ",
+        "final": "I hope you've enjoyed this review. Let's get strollin'..."
+      }
+    }
+  },
+  "reviews": {
+    "main-text": "Finding valuable reviews can help a lot...",
+    "brands": "Let's talk about brands, choose one to see it's history and warranty details...",
+    "card-title": "Review of ",
+    "affiliate-disclosure": "This post contains affiliate links. If you click on these links and make a purchase, I may earn a commission at no extra cost to you. This helps support my blog and allows me to continue providing content. Thank you for your support!"
+  },
+  "manuals": {
+    "main-text": "Let's find my stroller manual...",
+    "title": "Manuals",
+    "brands": "Choose a brand to get your stroller's manual"
+  },
+  "about-us": {
+    "main-text": "About Us...About Me",
+    "title": "Who I am and why is this page even exists?",
+    "intro": "Welcome to my website, your ultimate resource for stroller and car seat comparisons and informative blog posts.",
+    "who-we-are-title": "Who I am",
+    "who-we-are": "I am a mother of two young children, an economist, a civil engineer, and a software developer. With such a diverse background, I bring a unique perspective to the world of parenting products. My journey into creating this website started from my own experiences and challenges as a parent." ,
+    "our-story-title" : "My Story",
+    "our-story" : "When my children were born, I found it incredibly difficult to locate comprehensive information to thoroughly compare strollers. The same issue arose with car seats — there was no single source that provided detailed comparisons based on the most crucial criteria. This frustration sparked the idea to create a website that would fill this gap and help other parents make informed decisions with ease.",
+    "our-mission-title": "My Mission",
+    "our-mission": "My mission is to provide parents with reliable, detailed, and unbiased information about strollers and car seats. I aim to simplify the process of selecting the best products for your children by offering in-depth comparisons and expert advice.",
+    "my-work-title": "My work",
+    "my-work": "Creating this website has been a monumental task. Every aspect of it, from gathering the smallest details to developing the website itself, has been done single-handedly. I am committed to ensuring that every piece of information is accurate and useful. My goal is to save you time and effort by presenting all the important facts in one place, so you can make the best choices for your family.",
+    "what-i-offer-title": "What I offer",
+    "what-i-offer" : "- Stroller Comparisons: Detailed reviews and comparisons of the latest strollers on the market, highlighting features, pros and cons, and value for money. \n\n - Car Seat Comparisons: Comprehensive analysis of various car seats, focusing on safety, ease of installation, comfort, and price. \n\n- Blog Posts: Regularly updated articles offering tips, advice, and insights on parenting, product reviews, and the latest trends in child safety and comfort.",
+    "thank-you-title": "Thank you",
+    "thank-you": "Thank you for visiting my website. I hope you find the information here helpful and empowering. If you have any questions or need further assistance, please don't hesitate to contact me. Together, we can make parenting just a little bit easier."
+  },
+  "header": {
+    "main-text": "More than 200+ strollers",
+    "subtitle": "Compare strollers based on every tiny important details dynamically."
+  },
+  "drawer": {
+    "buttons": {
+      "home": "Home",
+      "strollers": "Compare Strollers",
+      "car-seats": "Compare Car Seats",
+      "reviews": "Review Collection",
+      "manuals": "User Manuals",
+      "about-us": "About us"
+    },
+    "search": "Search",
+    "close": "Close",
+    "title": "Strollers to compare",
+    "filters": {
+      "clear-button": "clear",
+      "brands": "Brands",
+      "max-weight": "Max Stroller Weight [kg]",
+      "max-weight-car-seat": "Max Car Seat Weight [kg]",
+      "max-weight-kid": "Max Kid Weight [kg]",
+      "max-height-kid": "Max Kid Height [cm]",
+      "min-backrest": "Min Backrest Height [cm]",
+      "only-double": "Only Double Strollers",
+      "only-reversible": "Only Reversible Strollers",
+      "only-recline": "Only Lie-flat Seat",
+      "price": "Max Price",
+      "min-front-wheel": "Min Front-wheel diameter [cm]",
+      "min-back-wheel": "Min Back-wheel diameter [cm]",
+      "max-height": "Max Height [cm]",
+      "max-width": "Max Width [cm]",
+      "max-length": "Max Length [cm]",
+      "max-closed-height": "Max Closed Height [cm]",
+      "max-closed-length": "Max Closed Length [cm]",
+      "detailed-tab": "Detailed Filters",
+      "tag-tab": "Filter by features",
+      "only-with-adac": "Only ADAC tested",
+      "seat": {
+        "title": "Car Seat Facing Mode",
+        "rear": "Rear",
+        "forward": "Forward"
+      },
+      "adac": {
+        "title": "Adac test verdict",
+        "very-good": "Very good (< 1.5)",
+        "good": "Good (1.6 - 3.5)",
+        "satisfactory": "Satisfactory (3.6 - 4.4)",
+        "poor": "Poor (4.5 - 5.5)"
+      }
+    }
+  },
+  "main-card": {
+    "info-button": "Details",
+    "compare-button": "Compare",
+    "manual.click.title": "Click for user manual of ",
+    "manual.title": "Manual",
+    "reviews.title": "Reviews",
+    "compatible-car-seats.title": "Compatible Car Seats",
+    "compatible-car-seats.note": "Collected based on manufacturer descriptions. The reality can be different, before buying your dream set of travel system, always check it with the car seat and the adapter.",
+    "features.title": "Features, tags",
+    "shop": "Shop now here",
+    "tooltip": {
+      "baseless-isofix": "isofix directly on the carseat",
+      "base-with-belt": "car seat base attached with car's belt",
+      "base-with-car-seat-belt" : "The car seat base has it's on belt for latch to the ISOFIX.",
+      "no-isofix": "no isofix",
+      "base-with-easy-in-out-slipping": "slipping easy in and out ",
+      "adjustable-base": "height adjustable base",
+      "xxl-suncanopy": "xxl suncanopy",
+      "xl-suncanopy": "xl suncanopy",
+      "normal-suncanopy": "normal suncanopy",
+      "flip-out-eyeshade": "flip-out eyeshade",
+      "baby": "from birth to 1 year",
+      "toddler": "from 1 year to 4 year",
+      "kid": "above 4 year",
+      "carrycot": "carrycot",
+      "car-harness": "using belt to safeguards your child",
+      "airbag": "airbag",
+      "shield": "shield",
+      "Holmbergs-digital-safety": "system, which helps you keep your child safe",
+      "active-retract-harness": "An actively tightening harness with retractors to help parents with buckling up.",
+      "easy-in-harness": "you can effortlessly get your child in and out of the car",
+      "easy-to-harness-quiet": "quiet harness clip",
+      "buckle-holder": "buckle holder",
+      "magnetic-buckle-holder": "magnetic buckle holder",
+      "3D-growth": "3D-growth",
+      "machine-washable": "machine washable",
+      "full-lie-flat": "full-lie flat",
+      "lie-flat-in-car": "lie-flat in car",
+      "close-lie-flat": "almost lie-flat",
+      "one-hand-rotation": "one-hand rotation",
+      "slide-tech": "SlideTech™ technology enables you to simply slide your child toward you, so you can comfortably get them in and out of the car.",
+      "safe-cell": "Located in the car seat base, SafeCell forms a crumple zone that absorbs crash energy to help keep it away from your baby.",
+      "er-tech": "The Energy-Reduction Technology of GB safeguards your child in the event of a front impact. This visionary safety technology limits the neck’s exposure to impact forces and can lessen the risk of injury by reducing the forces by up to approx. 20 %.",
+      "kinetic-pods": "Kinetic pods help move forces away from your baby in case of side collision",
+      "modular": "modular",
+      "detachable-lightweight-carrier": "detachable lightweight carrier",
+      "g-cell": "g-cell side impact protection",
+      "g-cell-2": "g-cell side impact protection",
+      "air-protect": "Side impact protection in the headrest that reduces the risk of head injury by 20%",
+      "two-seat-covers-included": "two seat covers included",
+      "R129-i-Size": "R129-i-Size certified",
+      "ECE-R44-certified": "ECE-R44 certified",
+      "TÜV-certified-for-airplane": "TÜV certified for airplane",
+      "greenguard-certified": "GREENGUARD GOLD certified products have met some of the world's most rigorous chemical emissions standards including formaldehyde and phthalate levels.",
+      "agr-certified": "the AGR seal of approval marks particularly back-friendly products",
+      "car-seat-lightweight": "Car seat's weight is under 4.0 kg",
+      "car-seat-ultra-lightweight": "Car seat's weight is under 3.5 kg",
+      "lightweight": "Stroller's weight is under 8 kg",
+      "cabinApproved": "IATA defines cabin approved strollers with dimension like 56x45x25 cm, when adding the dimensions (height + width + length) it cannot be more than 158 cm (62 in). However, most airlines have size restrictions of 56x36x23 cm.",
+      "double": "At least 2 children can travel with the stroller.",
+      "recliningSeat": "Strollers that are fully reclinable.",
+      "reversibleSeat": "Reversible strollers let you effortlessly change the seat direction so that bub can be forward-facing or facing towards you.",
+      "priceFrom": "Stroller's price is started from this amount.",
+      "suitableForTallKids": "Stroller's backrest height is more than 50 cm.",
+      "suitableForChubbyKids": "Stroller's seat width is more than 33 cm.",
+      "jogging": "Stroller's seat width is more than 33 cm.",
+      "eco-friendly": "Stroller's frame is made of high-quality, non-toxic recycled plastic.",
+      "bike-trailer": "A child bike trailer is perfect for active families. A kid's bike trailer that lets you go biking, strolling, jogging, and more. ",
+      "breathable-mesh": "breathable mesh",
+      "3in1": "Carry cot, car seat and sport seat",
+      "2in1": "Sport seat and car seat",
+      "detachable-bumper-bar": "Bumper bar can be removed.",
+      "bumper-bar-not-included": "Bumper bar can be acquired for an extra price.",
+      "no-bumper-bar": "Bumper bar cannot be attached.",
+      "pivotal-bumper-bar": "Bumper bar cannot be removed fully.",
+      "only-one-car-seat": "Only one car seat can used for double stroller.",
+      "machine-wash-cold-cycle": "machine-washable - cold cycle",
+      "only-handwash": "only handwash allowed",
+      "large-basket": "Large basket",
+      "straight-sit-up": "Backrests sit 90 degrees straight (or very close to it),",
+      "3point-harness": "3-point harness",
+      "3-point-harness": "3-point-harness",
+      "5point-harness": "5-point harness",
+      "5-point-harness": "5-point-harness",
+      "one-pull-harness": "Needing one hand to secure the harness.",
+      "magnetic-harness": "Quick magnetic harness system",     
+      "extra-legroom" : "extra legroom",
+      "toddler-seat-on-stroller": "Toddler car seat can be attached to a stroller.",
+      "happy-belt": "happy belt",
+      "hand-brake": "hand brake",
+      "compact": "compact",
+      "folds-with-one-hand": "folds with one hand",
+      "folds-with-cot": "folds with cot",
+      "breezy-cot": "The carry cot has proper ventilation",
+      "around-the-world": "Easily can be used by public transportation.",
+      "all-terrain": "all-terrain",
+      "only-city": "suitable only for city, small wheels",
+      "1-year-warranty": "1-year warranty for the first buyer",
+      "4-year-warranty": "4-year warranty for the first buyer",
+      "3-year-warranty-if-registered-within-6-month": "3-year warranty for the first buyer",
+      "2-year-warranty": "2-year warranty for the first buyer",
+      "5-year-warranty": "5-year warranty for the first buyer",
+      "7-years-transferrable-warranty-if-registered-within-6-month": "7-year transferrable warranty if registered within 6 month",
+      "10-years-transferrable-warranty-if-registered-within-6-month": "10-year transferrable warranty if registered within 6 month",
+      "lifetime-warranty-if-registered-within-6-month": "lifetime warranty for the first buyer if registered within 6 month",
+      "warranty-varied-by-retailers": "warranty varied by retailers",
+      "electric": "electric",
+      "carbon": "carbon",
+      "extendable-seat": "extendible seat",
+      "height-adjustable-seat": "height-adjustable seat",
+      "triplet": "triplet",
+      "travel-system": "travel system",
+      "missingWeight": "missing weight data",
+      "missingOpenHeight": "missing open height data",
+      "missingOpenWidth": "missing open width data",
+      "missingOpenLength": "missing open length data",
+      "missingClosedHeight": "missing closed height data",
+      "missingClosedWidth": "missing closed width data",
+      "missingClosedLength": "missing closed length data",
+      "missingSumLoadCapacity": "missing sum load capacity data",
+      "missingSeatLoadCapacity": "missing seat load capacity data",
+      "missingBasketLoadCapacity": "missing basket load capacity data",
+      "missingFrontWheelSize": "missing front-wheel size data",
+      "missingBackWheelSize": "missing back-wheel size data",
+      "missingBackrestHeight": "missing backrest height size data",
+      "missingSeatWidth": "missing seat width size data",
+      "section-system": "system",
+      "section-bumper": "bumper bar",
+      "section-dimension": "dimension",
+      "section-harness": "harness",
+      "section-seat": "seat",
+      "section-fold": "fold",
+      "section-terrain": "terrain",
+      "section-warranty": "warranty",
+      "section-other-features": "other features",
+      "best-adac": "Best Adac Test"
+    },
+    "chip": {
+      "3-point-harness": "3-point-harness",
+      "5-point-harness": "5-point-harness",
+      "baseless-isofix": "isofix directly on the carseat",
+      "base-with-belt": "car seat base attached with car's belt",
+      "base-with-car-seat-belt" : "car seat base attached with car seat own belt",
+      "no-isofix": "no isofix",
+      "base-with-easy-in-out-slipping": "slipping easy in and out ",
+      "adjustable-base": "height adjustable base",
+      "xxl-suncanopy": "xxl suncanopy",
+      "xl-suncanopy": "xl suncanopy",
+      "normal-suncanopy": "normal suncanopy",
+      "flip-out-eyeshade": "flip-out eyeshade",
+      "baby": "for baby",
+      "toddler": "for toddler",
+      "kid": "for kid",
+      "carrycot": "carrycot",
+      "car-harness": "using belt",
+      "active-retract-harness": "active retract harness feature",
+      "easy-in-harness": "easy in harness feature",
+      "easy-to-harness-quiet": "quiet harness clip",
+      "buckle-holder": "buckle holder",
+      "extra-legroom" : "extra legroom",
+      "toddler-seat-on-stroller": "toddler car seat on stroller",
+      "magnetic-buckle-holder": "magnetic buckle holder",
+      "3D-growth": "3D-growth",
+      "machine-washable": "machine washable",
+      "full-lie-flat": "full-lie flat",
+      "lie-flat-in-car": "lie-flat in car",
+      "close-lie-flat": "almost lie-flat",
+      "one-hand-rotation": "one-hand rotation",
+      "slide-tech": "slide tech",
+      "safe-cell": "safe cell",
+      "er-tech": "ER tech",
+      "kinetic-pods": "kinetic pods",
+      "modular": "modular",
+      "detachable-lightweight-carrier": "detachable lightweight carrier",
+      "g-cell": "g-cell",
+      "g-cell-2": "g-cell 2",
+      "air-protect": "air-protect",
+      "airbag": "airbag",
+      "shield": "shield",
+      "Holmbergs-digital-safety": "Holmbergs DigitalSafety",
+      "two-seat-covers-included": "two seat covers included",
+      "R129-i-Size": "R129-i-Size certified",
+      "R129/03-i-Size": "R129/03-i-Size",
+      "ECE-R44-certified": "ECE-R44 certified",
+      "TÜV-certified-for-airplane": "TÜV certified for airplane",
+      "greenguard-certified": "greenguard-certified",
+      "agr-certified": "agr-certified",
+      "lightweight": "lightweight",
+      "ultra-lightweight": "ultra-lightweight",
+      "cabinApproved": "IATA/Cabin approved",
+      "double": "double",
+      "recliningSeat": "lie-flat seat",
+      "rearFacing": "rear-facing seat",
+      "forwardFacing": "forward-facing seat",
+      "sideProtection": "side-protection",
+      "rotating": "rotating",
+      "installation": "ADAC test with",
+      "adac": "ADAC test point",
+      "adac-link": "ADAC  test link",
+      "reversibleSeat": "reversible seat",
+      "suitableForTallKids": "suitable for tall kids",
+      "suitableForChubbyKids": "suitable for chubby kids",
+      "jogging": "jogging",
+      "eco-friendly": "ecofriendly",
+      "bike-trailer": "bike-trailer",
+      "breathable-mesh": "breathable mesh",
+      "3in1": "3in1",
+      "2in1": "2in1",
+      "detachable-bumper-bar": "detachable bumper bar",
+      "bumper-bar-not-included": "bumper bar not included",
+      "no-bumper-bar": "no available bumper bar",
+      "pivotal-bumper-bar": "pivotal bumper bar",
+      "only-one-car-seat": "only one car seat can used for double stroller",
+      "machine-wash-cold-cycle": "machine-washable - cold cycle",
+      "only-handwash": "only handwash allowed",
+      "large-basket": "large basket",
+      "straight-sit-up": "straight sit up",
+      "3point-harness": "3-point harness",
+      "5point-harness": "5-point harness",
+      "one-pull-harness": "one-pull harness system",
+      "magnetic-harness": "magnetic harness system",
+      "happy-belt": "happy belt",
+      "hand-brake": "hand brake",
+      "compact": "compact",
+      "folds-with-one-hand": "folds with one hand",
+      "folds-with-cot": "folds with cot",
+      "breezy-cot": "breezy cot",
+      "around-the-world": "around the world",
+      "all-terrain": "all-terrain",
+      "only-city": "suitable only for city",
+      "1-year-warranty": "1-year warranty",
+      "4-year-warranty": "4-year warranty",
+      "3-year-warranty-if-registered-within-6-month": "3-year warranty if registered within 6 month",
+      "2-year-warranty": "2-year warranty",
+      "5-year-warranty": "5-year warranty",
+      "7-years-transferrable-warranty-if-registered-within-6-month": "7-year transferrable warranty if registered within 6 month",
+      "10-years-transferrable-warranty-if-registered-within-6-month": "10-year transferrable warranty if registered within 6 month",
+      "lifetime-warranty-if-registered-within-6-month": "lifetime warranty if registered within 6 month",
+      "warranty-varied-by-retailers": "warranty varied by retailers",
+      "electric": "electric",
+      "carbon": "carbon",
+      "extendable-seat": "extendible seat",
+      "height-adjustable-seat": "height-adjustable seat",
+      "triplet": "triplet",
+      "travel-system": "travel system",
+      "missingWeight": "missing weight data",
+      "missingOpenHeight": "missing open height data",
+      "missingOpenWidth": "missing open width data",
+      "missingOpenLength": "missing open length data",
+      "missingClosedHeight": "missing closed height data",
+      "missingClosedWidth": "missing closed width data",
+      "missingClosedLength": "missing closed length data",
+      "missingSumLoadCapacity": "missing sum load capacity data",
+      "missingSeatLoadCapacity": "missing seat load capacity data",
+      "missingBasketLoadCapacity": "missing basket load capacity data",
+      "missingFrontWheelSize": "missing front-wheel size data",
+      "missingBackWheelSize": "missing back-wheel size data",
+      "missingBackrestHeight": "missing backrest height size data",
+      "missingSeatWidth": "missing seat width size data",
+      "section-system": "system",
+      "section-bumper": "bumper bar",
+      "section-dimension": "dimension",
+      "section-harness": "harness",
+      "section-seat": "seat",
+      "section-fold": "fold",
+      "section-terrain": "terrain",
+      "section-warranty": "warranty",
+      "section-other-features": "other features",
+      "best-adac": "Best Adac Result Achived:",
+      "section-adac-title": "ADAC filters",
+      "section-seat-title": "Seat filters",
+      "section-fold-title": "Fold filters",
+      "section-base-title": "Car Seat Base filters",
+      "section-canopy-title": "Car Seat Canopy filters",
+      "section-certification-title": "Certification filters",
+      "section-harness-title": "Harness filters",
+      "section-bumper-title": "Bumper filters",
+      "section-system-title": "System filters",
+      "section-warranty-title": "Warranty filters",
+      "section-other-features-title": "Other filters",
+      "section-terrain-title": "Terrain filters",
+      "section-dimension-title": "Dimension filters",
+      "section-kid-dimension-title": "Kid filters",
+      "section-price-title": "Price filters"
+    }
+  },
+  "comparing-dialog": {
+    "title": "Strollers to compare",
+    "table-view": "Table View",
+    "grid-view": "Grid View",
+    "close": "Close",
+    "delete-all": "Remove all stroller"
+  },
+  "comparing-grid": {
+    "open-dimensions": "open dimensions (HxWxL) ",
+    "folded-dimensions": "folded dimensions (HxWxL) ",
+    "age": "age ",
+    "product-weight": "child's weight ",
+    "height": "child's height ",
+    "weight": "weight ",
+    "sum-capacity": "sum capacity",
+    "seat-capacity": "seat capacity",
+    "basket-capacity": "basket capacity",
+    "backrest-height": "backrest height",
+    "seat-width": "seat width",
+    "front-wheel-size": "front-wheel size",
+    "back-wheel-size": "back-wheel size",
+    "price-from": "price from"
+  },
+  "stroller-info-dialog" : {
+    "accessories-title": "Useful accessories for strollers",
+    "images": "Images"
+  },
+  "gdpr": {
+    "title": "GDPR Settings - Privacy Policy",
+    "intro": "At Strollerina, we are committed to safeguarding your privacy and ensuring the security of\n                            your\n                            personal information. This Privacy Policy outlines how we collect, use, disclose, and manage\n                            your\n                            data in accordance with the General Data Protection Regulation (GDPR).",
+    "data-collection": "1. Data Collection:",
+    "data-collection-details": "We may collect personal information such as your name, address, email address, phone number,\n                            and\n                            payment details when you make a purchase or interact with our website. We may also collect\n                            information about your device, browser, and browsing behavior through cookies and similar\n                            technologies.",
+    "use-of-data": "2. Use of Data:",
+    "use-of-data-details": "We use the information we collect to process your orders, communicate with you, improve our products and services, and personalize your experience. We may also use your data for marketing purposes, but only with your consent.",
+    "data-sharing": "3. Data Sharing:",
+    "data-sharing-details": "We may share your personal information with trusted third parties such as shipping carriers\n                            and\n                            payment processors to fulfill your orders. We may also disclose your data when required by\n                            law or to\n                            protect our rights and interests.",
+    "data-security": "4. Data Security:",
+    "data-security-details": "We implement security measures to protect your personal information from unauthorized\n                            access,\n                            disclosure, alteration, or destruction. However, please be aware that no method of\n                            transmission over\n                            the internet or electronic storage is 100% secure.",
+    "your-rights": "5. Your Rights:",
+    "your-rights-details": "You have the right to access, correct, or delete your personal information. You can also\n                            object to\n                            the processing of your data, restrict its use, or request its transfer to another party. To\n                            exercise\n                            these rights or if you have any questions about our Privacy Policy, please contact us.",
+    "approval": "By using our website and providing your personal information, you consent to the collection,\n                            use,\n                            and disclosure of your data as described in this Privacy Policy. We may update this Policy\n                            from time\n                            to time, so please review it periodically for changes."
+  },
+  "brands": {
+    "link-title": "Manufacturer website",
+    "find-store-title": "Stores",
+    "reviewer-name-title": "Review about",
+    "review-link-title": "Link",
+    "reviewer-intro-title": "Intro",
+    "cybex": {
+      "intro": "Cybex is a leading manufacturer of child safety products, including child car seats, strollers, baby carriers, and kids furniture. \n \n Founded in 2005 by Martin Pos in Hong Kong as CYBEX Industrial Ltd., the company has since become synonymous with innovation and quality in the industry. \n\nIn 2014, Cybex was acquired by Goodbaby International, a Chinese child safety manufacturer, further solidifying its position as a global leader in child safety.",
+      "history": "With locations in Hong Kong, Kulmbach, Bayreuth, and Prague, Cybex sells its products internationally, catering to modern urban lifestyles. At the heart of the brand is the CYBEX D.S.F. Innovation Principle, which combines unique Design, unsurpassed Safety, and intelligent Functionality. This approach has led to the development of award-winning products like the rear-facing Sirona car seat, earning Cybex no less than fifteen Red Dot Design Awards.\n\n Cybex is not only recognized for its commitment to safety but also for its innovative designs and fashion-forward approach. By constantly challenging the status quo, Cybex has redefined the industry, offering products that seamlessly blend safety, design, and function. \n\nThe merger with Goodbaby International in 2014 further strengthened Cybex's position, leveraging Goodbaby's extensive research, development, and manufacturing capabilities.\n\nEuropean chic meets German pedantry in Cybex products, catering to modern parents who prioritize both style and safety. With a commitment to quality and safety endorsed by European testing organizations, Cybex continues to set new benchmarks in child safety, starting with its pioneering child car seats in 2000.",
+      "img1": "https://www.cybex-online.com/dw/image/v2/BFHM_PRD/on/demandware.static/-/Library-Sites-cybex-content-global/default/dw127a0a84/images/global/megamenu/CYBEX-Offers_Navigation-Our_Brands-Gold-Desktop-1340x974.jpg",
+      "img2": "https://www.cybex-online.com/dw/image/v2/BFHM_PRD/on/demandware.static/-/Library-Sites-cybex-content-global/default/dw2e29b260/images/global/megamenu/CYBEX-Offers_Navigation-Our_Brands-Platinum-Desktop-1340x974.jpg",
+      "link": "https://www.cybex-online.com",
+      "logo-img": "/brand-logos/cybex.svg",
+      "find-store-link": "https://www.cybex-online.com/en/us/stores",
+      "important-note": "Do not forget to register your Cybex products now\u200B and become\n a CYBEX Club member to unlock your exclusive benefits.",
+      "review-collection-title": "Reviews about Cybex products",
+      "header-title": "everything about Cybex...",
+      "title": "Innovating Child Safety with European Chic",
+      "review-number": 13,
+      "0": {
+        "stroller-ids": [
+          16014
+        ],
+        "cardmedia": "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/6ce6512d-c8ff-4222-79c2-ab33769af300/public",
+        "review-name-title": "Gazelle S2",
+        "reviewer-name": "strollerina",
+        "reviewer-intro": "A Cybex Gazelle S2 stroller can be a great help in everyday life with two toddlers under 3 years old. Like everything in life, it has its advantages and disadvantages, but fundamentally, among the double strollers available on the market, it is an outstanding product that is worth its price. It can accommodate 1, 2, or even 3 children. It easily fits into the daily routine, perfect for afternoon naps, playing, lighter terrains, parks, urban streets, and shopping.",
+        "review-source": "https://www.strollerina.com/",
+        "review-link": "/reviews/product/stroller/cybex-gazelle-s2-impartial-review",
+        "review-star": 5,
+        "lang": "EN/HU"
+      },
+      "12": {
+        "stroller-ids": [
+          16000
+        ],
+        "cardmedia": "https://drive.google.com/thumbnail?id=11SsZO7nF3i1EX9L2MwU71nQeM7qGYp79&sz=w1000",
+        "review-name-title": "Priam",
+        "reviewer-name": "made for mums",
+        "reviewer-intro": "The Cybex Priam travel system is a statement piece of baby equipment that is stylish and luxurious. It’s the perfect pram for those who want something extraordinary – but beware, it’s certainly not a compact options.",
+        "review-source": "https://www.madeformums.com/",
+        "review-link": "https://www.madeformums.com/reviews/cybex-priam-pushchair-review/",
+        "review-star": 5,
+        "lang": "EN"
+      },
+      "1": {
+        "stroller-ids": "",
+        "cardmedia": "https://lh3.googleusercontent.com/2OrUzHCRSI-V46Z1qJBh90usG6OkKwCbXN80FbrjkWoQz4VfoJjNAoQHLHPQRZWH7dI_m5I1gi48h6xMJ5pK6kkdXmUnXPe4VqwvEdo4QeWRjLV9Oew=w2400-rj",
+        "review-name-title": "Cybex Online Shop ",
+        "reviewer-name": "trustpilot",
+        "reviewer-intro": "People opnions on the online shop: amazing quality...\n No attention to major details causing a delay; \nCybex is the only company I trust for my son’s car seat... ",
+        "review-source": "https://www.trustpilot.com/",
+        "review-link": "https://www.trustpilot.com/review/cybex-online.com",
+        "review-star": 3,
+        "lang": "EN"
+      },
+      "2": {
+        "stroller-ids": "",
+        "cardmedia": "https://media.wired.com/photos/6598443125520e12c0d1e189/master/w_2240,c_limit/Cybex-Sirona-S-Featured-Gear.jpg",
+        "review-name-title": "Cybex Sirona S Convertible Car Seat",
+        "reviewer-name": "wired",
+        "reviewer-intro": "Cybex’s car seat from the future can rotate 360 degrees, track the temperature, and alert you if you leave your kiddo in the car.\n... ",
+        "review-source": "https://www.wired.com/",
+        "review-link": "https://www.wired.com/review/cybex-sensorsafe-sirona-s-car-seat-review/",
+        "review-star": 4,
+        "lang": "EN"
+      },
+      "3": {
+        "stroller-ids": "16000",
+        "cardmedia": "https://drive.google.com/thumbnail?id=11SsZO7nF3i1EX9L2MwU71nQeM7qGYp79&sz=w1000",
+        "review-name-title": "Priam, An Impartial Review: Mechanics, Comfort, Use",
+        "reviewer-intro": "This video is a very detailed one about child&parent comfort, safety, driving, warranty, frame, etc.",
+        "reviewer-name": "stroller workshop",
+        "review-source": "https://www.youtube.com/@BarnevognverkstedNo",
+        "review-link": "https://www.youtube.com/embed/0KeecAuQkXM?si=ygbzPNBc9I2C_Y9U",
+        "review-star": 5,
+        "lang": "EN"
+      },
+      "4": {
+        "stroller-ids": "16010,16005,22003,21000,17000,29002,51000,20000",
+        "cardmedia": "https://www.cybex-online.com/dw/image/v2/BFHM_PRD/on/demandware.static/-/Sites-cybex-master-catalog/default/dw44134b2b/images/products/10102486/cyb_24_int_y045_libelle_tpe_albe_18c00b7514c22470.jpeg",
+        "review-name-title": "MASSIVE Ultra-Compact Guide: GOOD vs TRASH !",
+        "reviewer-name": "stroller workshop",
+        "reviewer-intro": "This video is a very detailed one about comparing ultra-compact strollers...",
+        "review-source": "https://www.youtube.com/@BarnevognverkstedNo",
+        "review-link": "https://www.youtube.com/embed/HBFoOVI8zsU?si=7k9H3L5hvQlSrV8f",
+        "review-star": 5,
+        "lang": "EN"
+      },
+      "5": {
+        "stroller-ids": [
+          16014
+        ],
+        "cardmedia": "https://www.cybex-online.com/dw/image/v2/BFHM_PRD/on/demandware.static/-/Sites-cybex-master-catalog/default/dwc92abaee/images/products/10094801/cyb_22_int_y270_gazelles_rwf_fwf_tpe_skbl_182d588fb1600170.jpeg",
+        "review-name-title": "HASZNOS BABAHOLMIK: Testvér babakocsi",
+        "reviewer-name": "Gabriella Módis",
+        "reviewer-intro": "A kivehető bevásárló kosarának és a tágas babakocsi ülésének köszönhetően ideális társ - akár a heti piacra jársz, akár szupermarketbe látogatsz. \nA babakocsi a családoddal együtt növekszik, és több mint 20 lehetséges kombinációt kínál az ülésegységeknek, a babahordozóknak vagy az összes CYBEX babaülésnek. \nSzületéstől kezdve használható. \nA babakocsi ülés ergonomikus fekvő helyzetének köszönhetően a Gazelle S ideális választás a növekvő család első pillanatától kezdve.",
+        "review-source": "https://www.youtube.com/@GabriellaModis",
+        "review-link": "https://www.youtube.com/embed/UZbPN6B_Wgg?si=TOBOPQBckLIIJ5TS",
+        "review-star": 5,
+        "lang": "HU"
+      },
+      "6": {
+        "stroller-ids": [
+          16014,
+          55000
+        ],
+        "cardmedia": "https://www.cybex-online.com/dw/image/v2/BFHM_PRD/on/demandware.static/-/Sites-cybex-master-catalog/default/dwc92abaee/images/products/10094801/cyb_22_int_y270_gazelles_rwf_fwf_tpe_skbl_182d588fb1600170.jpeg",
+        "review-name-title": "Cybex Gazelle S vs. UPPAbaby VISTA V2 Stroller Comparison",
+        "reviewer-name": "Strolleria",
+        "reviewer-intro": "The UPPAbaby VISTA V2 and the Cybex Gazelle S are two of the most versatile strollers you can buy, whether you’re planning for the future or you have a toddler and another baby on the way. \nBoth convert from a single stroller to a double for siblings or twins, and both offer features like an extra-large storage basket and suspension in both the frame and all four wheels for a smooth ride. \nThe VISTA offers premium quality, an included bassinet and a longer warranty, while the Gazelle has advantages like a lower price point and a higher overall weight limit.\nIn this video, we'll compare the Cybex Gazelle S and UPPAbaby VISTA V2, looking at their features, configurations, compatible car seats and more.",
+        "review-source": "https://www.youtube.com/@Strolleria",
+        "review-link": "https://www.youtube.com/embed/5qpr3sAUMAY?si=1jaZ6BKfiEolc3JD",
+        "review-star": 5,
+        "lang": "EN"
+      },
+      "7": {
+        "stroller-ids": [
+          16000,
+          16006,
+          16002,
+          16012,
+          16003
+        ],
+        "cardmedia": "https://www.cybex-online.com/dw/image/v2/BFHM_PRD/on/demandware.static/-/Sites-cybex-master-catalog/default/dw44134b2b/images/products/10102486/cyb_24_int_y045_libelle_tpe_albe_18c00b7514c22470.jpeg",
+        "review-name-title": "6 Cybex Strollers Compared",
+        "reviewer-name": "stroller workshop",
+        "reviewer-intro": "Comparison on Orfeo, Mios S Lux, Melio, Coya & Priam",
+        "review-source": "https://www.youtube.com/@BarnevognverkstedNo",
+        "review-link": "https://www.youtube.com/embed/kBzZLGMWtCI?si=Lxozftp3spqqp3g6",
+        "review-star": 5,
+        "lang": "EN"
+      },
+      "8": {
+        "stroller-ids": [],
+        "cardmedia": "https://www.cybex-online.com/dw/image/v2/BFHM_PRD/on/demandware.static/-/Sites-cybex-master-catalog/default/dw44134b2b/images/products/10102486/cyb_24_int_y045_libelle_tpe_albe_18c00b7514c22470.jpeg",
+        "review-name-title": "Cybex Cloud G & Cloud T",
+        "reviewer-name": "Newbie and Me Baby Store",
+        "reviewer-intro": "Cybex has introduced a new car seat into their range - Cybex Cloud G. To save any confusion, we've compiled a short guide to help you choose the right one.",
+        "review-source": "https://www.youtube.com/@newbieandme",
+        "review-link": "https://www.youtube.com/embed/Vw8J31KOSbo?si=_vDCqyDmqTaI5qZl",
+        "review-star": 5,
+        "lang": "EN"
+      },
+      "9": {
+        "stroller-ids": [
+          16000,
+          16009
+        ],
+        "cardmedia": "https://www.cybex-online.com/dw/image/v2/BFHM_PRD/on/demandware.static/-/Sites-cybex-master-catalog/default/dwac887690/images/products/10099095/cyb_22_int_y045_baliosslux_tpe_sebe_1818a860397ad770.jpeg",
+        "review-name-title": "Cybex Priam 4 (2023) vs Cybex Balios S Lux (2023)",
+        "reviewer-name": "stroller workshop",
+        "reviewer-intro": "Comparison on Priam4  (2023) & Balios S Lux (2023).",
+        "review-source": "https://www.youtube.com/@BarnevognverkstedNo",
+        "review-link": "https://www.youtube.com/embed/PXjTYwEyCrA?si=b8EFaOql0Y8OaS7H",
+        "review-star": 5,
+        "lang": "EN"
+      },
+      "10": {
+        "stroller-ids": [
+          16012,
+          16002
+        ],
+        "cardmedia": "https://www.cybex-online.com/dw/image/v2/BFHM_PRD/on/demandware.static/-/Sites-cybex-master-catalog/default/dwd503f1e2/images/products/10094819/cyb_23_int_y045_meliocarbon_inlay_moob_182168db6ca60270.jpeg",
+        "review-name-title": "Cybex Mios vs Melio: Mechanics, Comfort, Use",
+        "reviewer-name": "stroller workshop",
+        "reviewer-intro": "Comparison on Mios and Melio.",
+        "review-source": "https://www.youtube.com/@BarnevognverkstedNo",
+        "review-link": "https://www.youtube.com/embed/EtY2vrOOGd8?si=OTQXLanOGaecAdJr",
+        "review-star": 5,
+        "lang": "EN"
+      },
+      "11": {
+        "stroller-ids": [
+          16008
+        ],
+        "cardmedia": "https://www.cybex-online.com/dw/image/v2/BFHM_PRD/on/demandware.static/-/Sites-cybex-master-catalog/default/dwe6abd906/images/products/Set_SP_GO_Avi_EN/cyb_21_avi_eu_y045_sipi_blpi_1762ce9ef7232370.jpeg?sw=1380&sh=1380&sm=fit&q=80&",
+        "review-name-title": "Cybex Avi futóbabakocsi",
+        "reviewer-name": "Fuss babakocsival",
+        "reviewer-intro": "Cybex Avi futóbabakocsi bemutatása...",
+        "review-source": "https://www.youtube.com/@fussbabakocsival5081",
+        "review-link": "https://youtu.be/WjUFPlUCibw?si=q7vK2nEAUM-g-BvA",
+        "review-star": 5,
+        "lang": "HU"
+      }
+    },
+    "abc_design": {
+      "intro": "In the fast-paced realm of design and innovation, there are few names that stand out with the same prominence and ingenuity as ABC Design Company. Born from a passion for pushing the boundaries of creativity and functionality, ABC Design Company has emerged as a trailblazer in the industry, captivating audiences worldwide with its groundbreaking concepts and unparalleled craftsmanship.",
+      "history": "A Legacy of Innovation:\nEstablished in [insert year], ABC Design Company swiftly carved its niche in the design landscape, driven by a relentless pursuit of excellence and a commitment to redefining standards. Since its inception, the company has remained steadfast in its mission to marry form with function, creating products that seamlessly integrate cutting-edge technology with elegant aesthetics.\n\nUncompromising Quality:\nAt the heart of ABC Design Company's ethos lies an unwavering dedication to quality. Each product undergoes rigorous testing and meticulous craftsmanship to ensure durability, reliability, and user satisfaction. Whether it's sleek consumer electronics, ergonomic furniture, or visionary architectural designs, ABC Design Company's commitment to excellence shines through in every creation.\n\nInnovating for Tomorrow:\nABC Design Company's forward-thinking approach extends beyond mere product design; it encompasses a vision for the future. With a team of visionary designers, engineers, and innovators, the company continuously explores new frontiers, anticipating emerging trends and pioneering breakthrough technologies. From sustainable materials to intuitive user interfaces, ABC Design Company remains at the forefront of innovation, shaping the way we live, work, and interact with the world around us.\n\nCollaboration and Partnership: \nCentral to ABC Design Company's success is its collaborative spirit and emphasis on partnership. By fostering meaningful relationships with clients, collaborators, and stakeholders, the company leverages collective expertise and diverse perspectives to create truly transformative solutions. Whether collaborating with industry leaders or grassroots innovators, ABC Design Company embraces collaboration as a cornerstone of its creative process, resulting in groundbreaking designs that resonate with audiences worldwide.",
+      "img1": "https://www.abc-design.de/fileadmin/products2024/emotion/kinderwagen-abc-design-salsa-4-air-biscuit-emotion-12.jpg",
+      "img2": "https://www.abc-design.de/fileadmin/products2024/emotion/kindersitz-abc-design-aspen-sage-emotion-03.jpg",
+      "link": "https://www.abc-design.de/en/",
+      "logo-img": "/brand-logos/abcdesign.svg",
+      "find-store-link": "https://www.abc-design.de/en/service/retailers",
+      "important-note": "Think Baby. Think Family.",
+      "review-collection-title": "Reviews about ABC Design products",
+      "header-title": "everything about ABC Design...",
+      "title": "Revolutionizing the World of Innovation",
+      "review-number": 9,
+      "0": {
+        "stroller-ids": [
+          1000
+        ],
+        "cardmedia": "https://images.immediate.co.uk/production/volatile/sites/28/2020/05/abc-design-salsa-4-air-composite-c06dbfa.jpg",
+        "review-name-title": "Salsa 4 Air",
+        "reviewer-name": "made for mums",
+        "reviewer-intro": "A competitively priced newborn pushchair which brilliantly handles rough terrain, but not compact or light enough to make it great for city living.",
+        "review-source": "https://www.madeformums.com/",
+        "review-link": "https://www.madeformums.com/reviews/abc-design-salsa-4-air-review/",
+        "review-star": 4.5,
+        "lang": "EN"
+      },
+      "1": {
+        "stroller-ids": [
+          1000
+        ],
+        "cardmedia": "https://crummymummy.co.uk/wp-content/uploads/2018/06/10-reasons-Im-loving-ABC-Designs-Salsa-4-travel-system-main.jpg",
+        "review-name-title": "Salsa 4 ",
+        "reviewer-name": "Crummymummy",
+        "reviewer-intro": "We were recently asked to review ABC Design’s new Salsa 4 travel system, and I can honestly say it’s one of the best pushchairs we’ve ever reviewed. ",
+        "review-source": "https://crummymummy.co.uk",
+        "review-link": "https://crummymummy.co.uk/10-reasons-im-loving-abc-designs-salsa-4-travel-system/",
+        "review-star": 5,
+        "lang": "EN"
+      },
+      "2": {
+        "stroller-ids": [
+          1003
+        ],
+        "cardmedia": "https://cdn.strollberry.com/strl/250s/yBbnvvIZfq9.jpg",
+        "review-name-title": "Samba",
+        "reviewer-name": "J.Hadi",
+        "reviewer-intro": "CFantastic value for money. I love the large wheels that don't get a puncture. And there's so much space for the baby in both the pram and the pushchair. Recommended.",
+        "review-source": "https://strollberry.com",
+        "review-link": "https://strollberry.com/strollers/abc-design-samba/review/wjU37t7gFcXXyQXyaaqX/",
+        "review-star": 4,
+        "lang": "EN"
+      },
+      "3": {
+        "stroller-ids": [
+          1003
+        ],
+        "cardmedia": "https://www.abc-design.de/fileadmin/products2024/products/1200454/designs/2404/kinderwagen-stroller-samba-grain-01-sportwagen-01.jpg",
+        "review-name-title": "Samba",
+        "reviewer-name": "BrendonMagyarorszag",
+        "reviewer-intro": "ABC Design Samba Diamond 2022 multifunkciós 2in1 babakocsi",
+        "review-source": "https://www.youtube.com/@BrendonMagyarorszag",
+        "review-link": "https://www.youtube.com/embed/xNxVU1BXvlU?si=EfzmBSSLHgvQLFej",
+        "review-star": 5,
+        "lang": "HU"
+      },
+      "4": {
+        "stroller-ids": [
+          1004
+        ],
+        "cardmedia": "https://cdn.strollberry.com/strl/250s/uW1W19602QRLd3EwBTM4.jpg",
+        "review-name-title": "Avus",
+        "reviewer-name": "Vivienne G.",
+        "reviewer-intro": "TLoving it. For regular strolls with a toddler (not too heavy terrain conditions), the perfect pushchair.",
+        "review-source": "https://strollberry.com",
+        "review-link": "https://strollberry.com/strollers/abc-design-avus/review/B4REDMFAOM42XBfhpSc1/",
+        "review-star": 4,
+        "lang": "EN"
+      },
+      "5": {
+        "stroller-ids": [
+          1004
+        ],
+        "cardmedia": "https://www.abc-design.de/fileadmin/products2024/products/1200451/designs/2401/kinderwagen-buggy-stroller-avus-honey-03-liegeposition-03.jpg",
+        "review-name-title": "Avus",
+        "reviewer-name": "BrendonMagyarorszag",
+        "reviewer-intro": "ABC Design Avus multifunkciós babakocsi",
+        "review-source": "https://www.youtube.com/@BrendonMagyarorszag",
+        "review-link": "https://www.youtube.com/embed/8owZHuFuhGo?si=mKk2tKvhWnVOTWQJ",
+        "review-star": 5,
+        "lang": "HU"
+      },
+      "6": {
+        "stroller-ids": [
+          1006
+        ],
+        "cardmedia": "https://cdn.strollberry.com/strl/m/PtyAEDWIjToCZwQHRdoo.jpg",
+        "review-name-title": "Ping 2",
+        "reviewer-name": "Klara",
+        "reviewer-intro": "Absolutely recommended. if needing something small but comfy",
+        "review-source": "https://strollberry.com",
+        "review-link": "https://strollberry.com/strollers/abc-design-ping-two/",
+        "review-star": 4,
+        "lang": "EN"
+      },
+      "7": {
+        "stroller-ids": [
+          1009
+        ],
+        "cardmedia": "https://images.immediate.co.uk/production/volatile/sites/28/2019/02/obaby-abc-design-zoom_129353-b92e630.jpg?quality=90&webp=true&resize=610,407",
+        "review-name-title": "Rebbecca Smith",
+        "reviewer-name": "stroller workshop",
+        "reviewer-intro": "CA very long, but slimline double buggy that allows little ones to sit at the same height - great for larger toddlers, but not if you don't have lot of space at home.",
+        "review-source": "https://www.madeformums.com",
+        "review-link": "https://www.madeformums.com/reviews/obaby-abc-design-zoom-review/",
+        "review-star": 4,
+        "lang": "EN"
+      },
+      "8": {
+        "stroller-ids": [
+          1009
+        ],
+        "cardmedia": "https://www.abc-design.de/fileadmin/products2024/products/1200489/designs/2402/Fahrradanhaenger-tour-olive-06-kinderfahrradanhaenger.jpg",
+        "review-name-title": "ABC Design Tour: 3in1",
+        "reviewer-name": "abc-design",
+        "reviewer-intro": "Mit dem Fahrradanhänger Tour verwandelt sich jeder Tag in ein Abenteuer. Dieser vielseitige Bike Trailer ist perfekt für Familien, die die Natur lieben und aktiv bleiben wollen. Ob für gemütliche Spaziergänge im Park, energiegeladene Joggingrunden am Morgen, gemeinsame Wanderungen im Grünen oder spannende Fahrradtouren am Wochenende – der Tour steht bereit. ",
+        "review-source": "https://www.youtube.com/@abc_design",
+        "review-link": "https://www.youtube.com/embed/B0YODvWR8dg?si=aSYltjVwhCOwUxub",
+        "review-star": 5,
+        "lang": "DE"
+      }
+    },
+    "baby_jogger": {
+      "intro": "In the bustling world of parenthood, few tools are as indispensable as the trusty stroller. From leisurely walks in the park to navigating crowded city streets, a reliable stroller is every parent's best friend. Among the plethora of options available, one brand stands out for its commitment to quality, innovation, and convenience: Baby Jogger.\n\n Since its inception, Baby Jogger has been synonymous with durability and functionality. Founded in 1984 by Phil Baechler, a father who wanted a solution for jogging with his infant son, the brand has evolved into a global leader in the stroller industry. What sets Baby Jogger apart is its relentless pursuit of perfection, continually refining its designs to meet the ever-changing needs of modern parents. ",
+      "history": "Innovative Design Features\n At the heart of every Baby Jogger stroller lies a dedication to innovation. The brand's engineers work tirelessly to incorporate cutting-edge features that enhance both the parent and child's experience. From the patented Quick-Fold Technology™ for effortless folding to the adjustable handlebars for ergonomic comfort, every detail is meticulously crafted with the end user in mind.\n\nOne hallmark feature of Baby Jogger strollers is their versatility. Whether you're a fitness enthusiast hitting the trails or a city dweller navigating tight spaces, there's a Baby Jogger stroller tailored to your lifestyle. With options ranging from compact urban models to rugged all-terrain designs, parents can find the perfect match for their unique needs. \n\n Eco-Friendly Initiatives\nIn an era of increasing environmental consciousness, Baby Jogger is committed to sustainability. The brand actively seeks out eco-friendly materials and manufacturing processes to minimize its carbon footprint. From recyclable packaging to energy-efficient facilities, every effort is made to reduce environmental impact without compromising quality.",
+      "img1": "https://newellbrands.scene7.com/is/image/NewellRubbermaid/BBJ_HP_6x1_Stroller_CityMiniGT2_Tile_1?fmt=jpeg",
+      "img2": "https://newellbrands.scene7.com/is/image/NewellRubbermaid/BBJ_HP_6x1_Stroller_CitySelect2_Tile_3?fmt=jpeg",
+      "link": "https://www.babyjogger.com/",
+      "logo-img": "/brand-logos/babyjogger.svg",
+      "find-store-link": "https://www.babyjogger.com/international-distributors.html",
+      "important-note": "Think Baby. Think Family.",
+      "review-collection-title": "Reviews about ABC Design products",
+      "header-title": "everything about Baby Jogger...",
+      "title": "Exploring the Ultimate Convenience: The Baby Jogger Stroller Brand",
+      "review-number": 8,
+      "0": {
+        "stroller-ids": [
+          3000
+        ],
+        "cardmedia": "https://cdn.strollberry.com/strl/m/Sswgy81nkIU.jpg",
+        "review-name-title": "Baby Jogger Summit X3 pushchair review",
+        "reviewer-name": "made for mums",
+        "reviewer-intro": "A zippy three-wheel sports buggy made for active parents, that’s easy to manoeuvre from park runs to public transport – all while your baby stays sound asleep",
+        "review-source": "https://www.madeformums.com/",
+        "review-link": "https://www.madeformums.com/reviews/baby-jogger-summit-x3-pushchair-review/",
+        "review-star": 5,
+        "lang": "EN"
+      },
+      "6": {
+        "stroller-ids": [
+          3004
+        ],
+        "cardmedia": "https://newellbrands.scene7.com/is/image/NewellRubbermaid/2203449_3435727_BABY0445_BBJ_Eco_GT2_Stroller_ATF1?fmt=jpeg",
+        "review-name-title": "Baby Jogger City Mini GT2 pushchair review",
+        "reviewer-name": "made for mums",
+        "reviewer-intro": "This bronze MFM-award-winning, all-terrain stroller is easy to push and has a genuine one-hand fold – but it won’t fit in small car boots...",
+        "review-source": "https://www.madeformums.com/",
+        "review-link": "https://www.madeformums.com/reviews/baby-jogger-city-mini-gt2-pushchair-review/",
+        "review-star": 5,
+        "lang": "EN"
+      },
+      "7": {
+        "stroller-ids": [
+          3006
+        ],
+        "cardmedia": "https://newellbrands.scene7.com/is/image//NewellRubbermaid/2081849_01",
+        "review-name-title": "Baby Jogger City Tour 2 pushchair review",
+        "reviewer-name": "made for mums",
+        "reviewer-intro": "Small-folding, lightweight and super easy to steer, this is a perfect second pushchair for day-to-day errands and short trips away...",
+        "review-source": "https://www.madeformums.com/",
+        "review-link": "https://www.madeformums.com/reviews/baby-jogger-city-tour-2-pushchair-review/",
+        "review-star": 5,
+        "lang": "EN"
+      },
+      "1": {
+        "stroller-ids": [
+          3000
+        ],
+        "cardmedia": "https://cdn.strollberry.com/strl/m/Sswgy81nkIU.jpg",
+        "review-name-title": "Baby Jogger Summit X3 Review",
+        "reviewer-intro": "The Baby Jogger Summit X3 has the price of a high-end best stroller but failed to perform well enough in our tests to justify the hefty price tag. Without the features and performance necessary to function as a jogging stroller, it is hard to find a reason to purchase it. It earned a 4 out of 10 for run-ability, making it a product we think parents will be disappointed if running is their plan. Compared to the competition, which includes strollers with higher scores and better performance coupled with lower list prices, it is a no-brainer to say we do not recommend this stroller.",
+        "reviewer-name": "GearLab Baby",
+        "review-source": "https://www.babygearlab.com",
+        "review-link": "https://www.babygearlab.com/reviews/getting-around/jogging-stroller/baby-jogger-summit-x3",
+        "review-star": 4,
+        "lang": "EN"
+      },
+      "2": {
+        "stroller-ids": [
+          3000
+        ],
+        "cardmedia": "https://cdn.strollberry.com/strl/m/Sswgy81nkIU.jpg",
+        "review-name-title": "Baby Jogger Summit X3 Stroller Review",
+        "reviewer-name": "Lucies List",
+        "reviewer-intro": "Baby Jogger has been making the Summit X3 for years and years – and this particular model has been the same since 2016. Ironically, the Summit X3 is Baby Jogger’s only jogging stroller – HA! Baby Jogger was purchased by Graco around 2017, and it’s kinda good to see that Graco hasn’t “Graco-ized” this model, like they have the City Mini.",
+        "review-source": "https://www.lucieslist.com",
+        "review-link": "https://www.lucieslist.com/review/baby-jogger-summit-x3-stroller-review/",
+        "review-star": 3,
+        "lang": "EN"
+      },
+      "3": {
+        "stroller-ids": [
+          3002
+        ],
+        "cardmedia": "https://newellbrands.scene7.com/is/image//NewellRubbermaid/3257186_Nordstrom_BundleImage_R2",
+        "review-name-title": "Baby Jogger City Sights, An Impartial Review: Mechanics, Comfort, Use",
+        "reviewer-intro": "Video about mechanics, comfort, use",
+        "reviewer-name": "The Stroller Workshop",
+        "review-source": "https://www.youtube.com/@BarnevognverkstedNo",
+        "review-link": "https://www.youtube.com/embed/gqE4yDQ5R6k?si=1T7In_MoQa5e6eKf",
+        "review-star": 3,
+        "lang": "EN"
+      },
+      "4": {
+        "stroller-ids": [
+          3003
+        ],
+        "cardmedia": "https://newellbrands.scene7.com/is/image/NewellRubbermaid/BBJ_SelectLP_2x1_Space_Tile_2?fmt=jpeg",
+        "review-name-title": "Baby Jogger City Select 2 Double Review",
+        "reviewer-intro": "The Baby Jogger City Select 2 Double is an inline stroller with somewhat stadium-style seating, included in our best double stroller review. This stroller offers multiple seating configurations, including two toddler seats in various directions and two car seats with adapters. The Select 2 has good size storage that is easy to access and brakes that are foot-friendly and easy to set and release. Unfortunately, this stroller is long and harder to maneuver, requiring a thoughtful approach and planning ahead. The fold is ridiculously bulky, and if you want to fit it almost anywhere, you'll have to remove the second seat to do it. The most frustrating is how close the toddler seats are to one another. If you use both, the front seat can't recline without hitting the child behind than, and the child behind them can kick the front seat at will. It seems like a design flaw in our minds, and the best strollers do this style better. Overall, the City Select 2 is an okay stroller, but it didn't meet the performance of the competition in our tests.",
+        "reviewer-name": "GearLab Baby",
+        "review-source": "https://www.babygearlab.com",
+        "review-link": "https://www.babygearlab.com/reviews/getting-around/double-stroller/baby-jogger-city-select-2-double",
+        "review-star": 3,
+        "lang": "EN"
+      },
+      "5": {
+        "stroller-ids": [
+          3004
+        ],
+        "cardmedia": "https://newellbrands.scene7.com/is/image/NewellRubbermaid/2203449_3435727_BABY0445_BBJ_Eco_GT2_Stroller_ATF1?fmt=jpeg",
+        "review-name-title": "Baby Jogger City Mini GT2 Review",
+        "reviewer-intro": "The Baby Jogger City Mini GT2 is a below-average full-size stroller that didn't stand out outside of being lightweight and compact when folded. However, even that isn't enough to make it one we think is a good fit for most families. This stroller has remained essentially unchanged for over 10 years. The features and functions feel dated compared to newer designs, and the functionality is somewhat lacking in most tests. The smaller wheels had trouble both on and off-road, and the narrow wheelbase left it somewhat tippy when trying to negotiate tight turns. The storage bin has a bar that goes across, limiting access, and the seatback can't be lifted with one hand. Overall, it is a somewhat dull stroller that can get the job done, but we think there are higher-performing options that parents and passengers will enjoy more.",
+        "reviewer-name": "GearLab Baby",
+        "review-source": "https://www.babygearlab.com",
+        "review-link": "https://www.babygearlab.com/reviews/getting-around/full-size-stroller/baby-jogger-city-mini-gt2",
+        "review-star": 4,
+        "lang": "EN"
+      }
+    },
+    "bob": {
+      "intro": "When it comes to outdoor exploration with your little ones, the BOB Stroller brand stands out as a beacon of rugged durability and unmatched performance. Since its inception, BOB has been synonymous with quality, offering parents the ultimate in off-road mobility for their active lifestyles. \n\n The BOB Legacy\nBOB, short for Beast of Burden, was founded in 1994 by two fathers who shared a passion for outdoor adventures with their children. Frustrated by the lack of suitable strollers for rough terrain, they set out to design a solution that could keep up with their active lifestyles. The result was the BOB Sport Utility Stroller, a game-changer in the world of all-terrain strollers.",
+      "history": "Built for Adventure\nAt the heart of every BOB stroller lies a commitment to rugged performance. Whether you're tackling rocky trails, sandy beaches, or snowy landscapes, BOB strollers are up to the challenge. With features like adjustable suspension systems, pneumatic tires, and a lightweight yet durable frame, these strollers glide effortlessly over any terrain, providing a smooth ride for both parent and child. \nSafety and Comfort\n\nWhile BOB strollers excel in off-road performance, they never compromise on safety and comfort. Each stroller undergoes rigorous testing to ensure compliance with the highest safety standards. From secure harness systems to padded seats and adjustable canopies, BOB strollers prioritize the well-being of your little one, allowing you to explore with peace of mind.\n\nVersatility at its Core\nOne of the hallmarks of the BOB brand is its versatility. Whether you're a dedicated runner, a weekend hiker, or simply enjoy long walks in the park, there's a BOB stroller to suit your needs. With options ranging from jogging strollers to all-terrain models, parents can find the perfect match for their active lifestyle.\nIn 2011, Britax expanded its portfolio with the acquisition of BOB Gear, a renowned brand of jogging pushchairs and accessories. This strategic move further solidified Britax's position in the childcare industry, offering parents a comprehensive range of products to meet their needs.",
+      "img1": "https://images.squarespace-cdn.com/content/v1/5c713d4465019f38b4b1c106/1698163512708-DE5AODQMHDZUSU7V7E4J/WayfinderPack_Nightfall_Strolling_1-%282%29.jpg",
+      "img2": "https://images.squarespace-cdn.com/content/v1/5c713d4465019f38b4b1c106/25052c38-5813-4162-a63c-a66163bf2427/WayfinderPack_Nightfall_Interaction_2.jpg",
+      "link": "https://www.bobgear.com/",
+      "logo-img": "/brand-logos/png/bob.png",
+      "find-store-link": "https://www.bobgear.com/find-a-retailer",
+      "important-note": "Think Baby. Think Family.",
+      "review-collection-title": "Reviews about Bob products",
+      "header-title": "everything about Bob...",
+      "title": "Exploring the BOB Stroller Brand",
+      "review-number": 6,
+      "0": {
+        "stroller-ids": [
+          6002
+        ],
+        "cardmedia": "https://images.squarespace-cdn.com/content/v1/5c713d4465019f38b4b1c106/1637245780384-QKXYF3QF1R7R3E71JCW6/BOB_Flex3_Graphite_Black_Jogging_Stroller_Facing_Right.jpg",
+        "review-name-title": "BOB Revolution Flex 3.0 | Runner’s Review",
+        "reviewer-name": "Jackalope Adventure Club",
+        "reviewer-intro": "The @Bobgear revolution flex 3.0 is a heavy duty running stroller with a lot to offer. Check out this review to see if it will be the right jogging stroller for you",
+        "review-source": "https://www.youtube.com/@Jackalopeadventureclub",
+        "review-link": "https://www.youtube.com/embed/EFv5g70w2FU?si=sK62uYSOrlwTi5u7",
+        "review-star": 5,
+        "lang": "EN"
+      },
+      "1": {
+        "stroller-ids": [
+          6000
+        ],
+        "cardmedia": "https://images.squarespace-cdn.com/content/v1/5c713d4465019f38b4b1c106/1637245780384-QKXYF3QF1R7R3E71JCW6/BOB_Flex3_Graphite_Black_Jogging_Stroller_Facing_Right.jpg",
+        "review-name-title": "BOB Gear Wayfinder Jogging Stroller Review & Comparison",
+        "reviewer-name": "BOB Gear",
+        "reviewer-intro": "by @mbeansdotcom: Introducing the Wayfinder, @bobgearus’s latest addition to their running strollers lineup. Despite its compact size, this stroller packs the same quality as the ultra-popular Bob Alterrain stroller, making it the perfect choice for parents who value both functionality and aesthetics.",
+        "review-source": "https://www.youtube.com/@Bobgear",
+        "review-link": "https://www.youtube.com/watch?v=EQcmUCCNXiw&ab_channel=BOBGear",
+        "review-star": 5,
+        "lang": "EN"
+      },
+      "2": {
+        "stroller-ids": [
+          6002
+        ],
+        "cardmedia": "https://images.squarespace-cdn.com/content/v1/5c713d4465019f38b4b1c106/1711487783058-68W0IKI3RQWB9X8MDRSK/Wayfinder-Right-Product-Photography.jpg",
+        "review-name-title": "BOB Revolution Flex 3.0 Review",
+        "reviewer-intro": "The BOB Revolution Flex 3.0 is a tried and true favorite full-size stroller crossover jogger. The stroller is easy to push and turn on and off the road. It has a locking swivel front wheel and pneumatic tires that make it comfy for the pusher and the passenger. We like the utilitarian nature of this stroller and think it is a great off-roading option for those who like to adventure off the sidewalk. However, it can do double duty for everyday errands as well, with large storage, nap-able seating, and features that benefit everyone. However, it is big and clunky when folded, and folding is a two-hand deal, while other competitors are one and stand by themselves. It also lacks the sleekness of other joggers and could be more stroller than you need. Overall, it is an option for those who love the outdoors and still need something for everyday life.",
+        "reviewer-name": "GearLab Baby",
+        "review-source": "https://www.babygearlab.com",
+        "review-link": "https://www.babygearlab.com/reviews/getting-around/full-size-stroller/bob-revolution-flex-3-0",
+        "review-star": 5,
+        "lang": "EN"
+      },
+      "4": {
+        "stroller-ids": [
+          6001
+        ],
+        "cardmedia": "https://images.squarespace-cdn.com/content/v1/5c713d4465019f38b4b1c106/1711487783058-68W0IKI3RQWB9X8MDRSK/Wayfinder-Right-Product-Photography.jpg",
+        "review-name-title": "BOB Alterrain Pro Review",
+        "reviewer-intro": "The BOB Alterrain Pro is the newest option presented by BOB, famous for the Revolution Flex. It has high-end features and a new design that aligns it with some of the nicer competition. The new stroller features a streamlined folding process, covered storage, taunt canopy, and new suspension that reminds us of the Thule Urban Glide 2. It still features a locking swivel front wheel, adjustable tracking and handlebar, and an aluminum frame. Unfortunately, the heavier weight and larger size mean it struggled in testing compared to thebest jogging strollers and we experienced more rolling resistance over the competition. Overall, this is a nice stroller with some impressive features, but for the price, we think there are better options to be had that will save you money.",
+        "reviewer-name": "GearLab Baby",
+        "review-source": "https://www.babygearlab.com",
+        "review-link": "https://www.babygearlab.com/reviews/getting-around/jogging-stroller/bob-alterrain-pro",
+        "review-star": 5,
+        "lang": "EN"
+      },
+      "3": {
+        "stroller-ids": [
+          6000,
+          53002
+        ],
+        "cardmedia": "https://cdn.thewirecutter.com/wp-content/media/2023/11/joggingstrollers-2048px-8131-2x1-1.jpg?auto=webp&quality=75&crop=2:1&width=1024&dpr=2",
+        "review-name-title": "The Best Jogging Strollers",
+        "reviewer-intro": "Designed to provide a smooth, cushy ride at higher speeds and on uneven terrain, jogging strollers are preferred by runners as well as by caregivers who simply appreciate how easy they are to push and maneuver in everyday use.\nAfter testing 18 models, we found that the Thule Urban Glide 3 is the best jogging stroller for people who are traversing mostly paved terrain (though this model can also handle the occasional off-road detour).\nIf you’re looking for a slightly narrower jogging stroller, with rugged wheels designed to handle off-road terrain, you may prefer the BOB Gear Wayfinder, our also-great pick.",
+        "reviewer-name": "nytimes",
+        "review-source": "https://www.nytimes.com/",
+        "review-link": "https://www.nytimes.com/wirecutter/reviews/best-jogging-strollers/",
+        "review-star": 5,
+        "lang": "EN"
+      },
+      "5": {
+        "stroller-ids": [
+          6003
+        ],
+        "cardmedia": "https://images.squarespace-cdn.com/content/v1/5c713d4465019f38b4b1c106/1643660131875-30HPD8NLBYU5CO0JXS12/BOB_Flex3.0_Duallie_Graphite-Right.jpg",
+        "review-name-title": "An All-Terrain Double Jogging Stroller With Great Reviews",
+        "reviewer-name": "Lucies List",
+        "reviewer-intro": "Typically when studying customer reviews, you see a fairly even distribution of likes and dislikes: 1 star, 5 stars, and everything in between; not so much with this stroller.",
+        "review-source": "https://www.lucieslist.com",
+        "review-link": "https://www.lucieslist.com/review/bob-revolution-flex-3-0-duallie-review/",
+        "review-star": 5,
+        "lang": "EN"
+      }
+    },
+    "bugaboo": {
+      "intro": "In the realm of baby gear, few brands command the same level of admiration and loyalty as Bugaboo. With its iconic design aesthetic, innovative features, and unwavering commitment to quality, Bugaboo has become synonymous with luxury and versatility in the world of strollers. Let's take a closer look at what makes Bugaboo stand out from the crowd and why it has become a favorite among parents worldwide.\n\n A Legacy of Innovation\nSince its inception in 1999, Bugaboo has been on a mission to revolutionize the way parents navigate the world with their little ones in tow. Founded by designer Max Barenbrug and physician Eduard Zanen, the brand emerged with the groundbreaking Bugaboo Classic stroller, featuring a sleek and modular design that quickly captured the attention of parents seeking both style and functionality.\n Meeting the Needs of Modern Parents\nBugaboo understands that modern parents lead busy lives and need products that can keep up with their on-the-go lifestyle. That's why the brand goes above and beyond to anticipate the needs of its customers, continuously innovating and evolving to meet the demands of today's families. Whether it's integrating advanced technology for a smoother ride or collaborating with renowned designers to create limited-edition collections, Bugaboo is committed to staying ahead of the curve and exceeding expectations.",
+      "history": "Uncompromising Quality\n\nQuality is non-negotiable for Bugaboo, and every stroller is built to the highest standards of craftsmanship and durability. From the premium materials used in construction to the rigorous testing process, Bugaboo ensures that its products withstand the demands of daily use and provide years of reliable performance. This commitment to quality has earned Bugaboo a reputation for excellence, instilling confidence in parents who demand nothing but the best for their little ones.\n\nMeeting the Needs of Modern Parents:\n\nBugaboo understands that modern parents lead busy lives and need products that can keep up with their on-the-go lifestyle. That's why the brand goes above and beyond to anticipate the needs of its customers, continuously innovating and evolving to meet the demands of today's families. Whether it's integrating advanced technology for a smoother ride or collaborating with renowned designers to create limited-edition collections, Bugaboo is committed to staying ahead of the curve and exceeding expectations.",
+      "img1": "https://www.bugaboo.com/dw/image/v2/BDLP_PRD/on/demandware.static/-/Library-Sites-BugabooSharedLibrary/default/dw9b4cb486/2023_BUGABOO_S7_DAY1_047%20(1).jpg?sw=1024",
+      "img2": "https://www.bugaboo.com/dw/image/v2/BDLP_PRD/on/demandware.static/-/Library-Sites-BugabooSharedLibrary/default/dwe2cb76d5/DFF%20-%20Homepage/Hero%20A%20main.jpg?sw=1024",
+      "link": "https://www.bugaboo.com/",
+      "logo-img": "/brand-logos/png/bugaboo-rb.png",
+      "find-store-link": "https://www.bugaboo.com/us-en/stores/",
+      "important-note": "Certified B Corp™\nWe’re proud to put the B in Bugaboo. Being B Corp certified means we’re committed to making a positive impact on the world for future generations. Here’s how it’ll keep us pushing to do even better.",
+      "review-collection-title": "Reviews about Bugaboo products",
+      "header-title": "everything about Bugaboo...",
+      "title": "Redefining Mobility with Style and Functionality",
+      "review-number": 10,
+      "0": {
+          "stroller-ids": [
+            7002
+          ],
+          "cardmedia": "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/b79723f6-7513-4d7a-de3b-884ce192dd00/public",
+          "review-name-title": "The Bugaboo Butterfly: Redefining Urban Mobility for Parents",
+          "reviewer-name": "strollerina",
+          "reviewer-intro": "Bugaboo Butterfly appear in early of 2023 and defeated Yoyo2 ultra compact lightweight stroller....",
+          "review-source": "https://www.strollerina.com/",
+          "review-link": "/reviews/product/stroller/type-2/bugaboo-butterfly-review-2024",
+          "review-star": 5,
+          "lang": "EN/HU"
+      },
+      "9": {
+        "stroller-ids": [
+          7003
+        ],
+        "cardmedia": "https://www.bugaboo.com/on/demandware.static/-/Sites-bugaboo-master/default/dwa096d189/ComparisonTable%20images/Donkey5-001b-Duo-Hero.png",
+        "review-name-title": "Bugaboo Donkey 5 pushchair review",
+        "reviewer-name": "made for mums",
+        "reviewer-intro": "A stylish and attractive all-terrain, single-to-double premium pushchair that can comfortably take your little ones from the newborn to toddler days, providing your doors are wide enough...",
+        "review-source": "https://www.madeformums.com/",
+        "review-link": "https://www.madeformums.com/reviews/bugaboo-donkey-5-pushchair-review/",
+        "review-star": 5,
+        "lang": "EN"
+      },
+      "1": {
+        "stroller-ids": [
+          7003
+        ],
+        "cardmedia": "https://www.bugaboo.com/on/demandware.static/-/Sites-bugaboo-master/default/dwa096d189/ComparisonTable%20images/Donkey5-001b-Duo-Hero.png",
+        "review-name-title": "Bugaboo Donkey 5 Stroller Review | Double Stroller Review",
+        "reviewer-name": "Snuggle Bugz",
+        "reviewer-intro": "More than double the fun! Melissa is joined with Kyra from Bugaboo to showcase the incredible Donkey 5 stroller as a part of our brand spotlight segment!\nIn this video they talk all tings Bugaboo Donkey 5… the ultimate stroller that grows with your family. Offering multiple configurations, both as a single or double stroller, the Bugaboo Donkey 5 is versatile, easy to push, and ready for the future.\nIf you’re thinking of expanding your family, you can easily convert it in just 3 clicks so it can carry 2 children. No matter which configuration you choose, the Bugaboo Donkey 5 is small enough to fit through most standard doorways, and it's perfectly designed to hold up to 48.5 lbs in one go!",
+        "review-source": "https://www.youtube.com/@SnuggleBugzStore",
+        "review-link": "https://www.youtube.com/embed/6o1K1GAVFCs?si=-l5IZjyJ4FYs9kXz",
+        "review-star": 5,
+        "lang": "EN"
+      },
+      "2": {
+        "stroller-ids": [
+          7003
+        ],
+        "cardmedia": "https://www.bugaboo.com/on/demandware.static/-/Sites-bugaboo-master/default/dwa096d189/ComparisonTable%20images/Donkey5-001b-Duo-Hero.png",
+        "review-name-title": "Bugaboo Donkey5 Review",
+        "reviewer-intro": "The Bugaboo Donkey 5 is a big burly lug of a double stroller. It comes with two bassinets and two toddler seats, making into one of the only options in our review designed with twins in mind. It is adjustable for 1-2 seats and one seat with a storage bin. We think it maneuvers well and has tight turns for such a wide ride, and we enjoyed the large sunshades and deep recline seats. However, this stroller has a bulky fold with no fold lock, and we don't think it will fit in everyone's car without dismantling it. So it might be a no-go if you need to drive to where you plan to use it. Overall, we get why people are drawn to this cool-looking, high-quality stroller, but it struggles to be truly useable for most parents, and we think the size alone can make it a struggle for parents of multiple children. Compared to the top-ranked strollers, it simply failed to perform as well.",
+        "reviewer-name": "GearLab Baby",
+        "review-source": "https://www.babygearlab.com",
+        "review-link": "https://www.babygearlab.com/reviews/getting-around/double-stroller/bugaboo-donkey5",
+        "review-star": 5,
+        "lang": "EN"
+      },
+      "3": {
+        "stroller-ids": [
+          7001
+        ],
+        "cardmedia": "https://www.bugaboo.com/on/demandware.static/-/Sites-bugaboo-master/default/dwc36b012b/DF_seatonly_side.png",
+        "review-name-title": "Dragonfly Review",
+        "reviewer-intro": "Proper video about the Dragonfly",
+        "reviewer-name": "floraminigroup",
+        "review-source": "https://www.tiktok.com/@floraminigroup",
+        "review-link": "https://www.tiktok.com/@floraminigroup/video/7338747745911508257",
+        "review-star": 5,
+        "lang": "HU"
+      },
+      "4": {
+        "stroller-ids": [
+          7001
+        ],
+        "cardmedia": "https://www.bugaboo.com/on/demandware.static/-/Sites-bugaboo-master/default/dwc36b012b/DF_seatonly_side.png",
+        "review-name-title": "Bugaboo Dragonfly pushchair review",
+        "reviewer-intro": "A robust, one-hand-fold pushchair from pioneering brand, Bugaboo. The Dragonfly model is adapted to suit all terrains, making it larger and heavier than its city competitors.",
+        "reviewer-name": "made for mums",
+        "review-source": "https://www.madeformums.com/",
+        "review-link": "https://www.madeformums.com/reviews/bugaboo-dragonfly-pushchair-review/",
+        "review-star": 5,
+        "lang": "EN"
+      },
+      "5": {
+        "stroller-ids": [
+          7002
+        ],
+        "cardmedia": "https://mamasandpapas.hu/wp-content/uploads/2022/06/bugaboo-butterfly-babakocsi-forest-green-7.jpg",
+        "review-name-title": "Bugaboo Butterfly pushchair review",
+        "reviewer-intro": "A super sturdy and ultra compact stroller that folds and unfolds in seconds with minimal effort, but comes with a premium price tag",
+        "reviewer-name": "made for mums",
+        "review-source": "https://www.madeformums.com/",
+        "review-link": "https://www.madeformums.com/reviews/bugaboo-butterfly-pushchair-review/",
+        "review-star": 5,
+        "lang": "EN"
+      },
+      "6": {
+        "stroller-ids": [
+          7002
+        ],
+        "cardmedia": "https://mamasandpapas.hu/wp-content/uploads/2022/06/bugaboo-butterfly-babakocsi-forest-green-7.jpg",
+        "review-name-title": "Bugaboo Butterfly review",
+        "reviewer-intro": "When you’re heading on holiday with your family, you’ll most likely want to pack a travel stroller to take with you. Going without isn’t an option if you have a little one who will no doubt get tired while you’re out and about and a travel system tends to be too big for taking away. One popular option is the Bugaboo Butterfly. While also marketed as a pushchair for city-dwellers thanks to its one-handed one-second fold, it quickly became a hit for families heading on holiday as it folds down into an ultra-compact package and is IATA-compatible, meaning it can be used as carry-on luggage on planes.",
+        "reviewer-name": "mother & baby",
+        "review-source": "https://www.motherandbaby.com/",
+        "review-link": "https://www.motherandbaby.com/reviews/pushchairs-buggies-strollers/bugaboo-butterfly-review/",
+        "review-star": 5,
+        "lang": "EN"
+      },
+      "7": {
+        "stroller-ids": [
+          7000
+        ],
+        "cardmedia": "https://www.bugaboo.com/on/demandware.static/-/Sites-bugaboo-master/default/dwf2f485e0/ComparisonTable%20images/Fox-5-2.png",
+        "review-name-title": "Bugaboo Fox 5 pushchair review",
+        "reviewer-intro": "A sturdy, light-to-push pram that performs well on all kinds of terrain. Stylish, sustainable, thoughtful engineering and a practical one-handed fold function – if you can get it to work",
+        "reviewer-name": "made for mums",
+        "review-source": "https://www.madeformums.com/",
+        "review-link": "https://www.madeformums.com/reviews/bugaboo-fox-5-review/",
+        "review-star": 5,
+        "lang": "EN"
+      },
+      "8": {
+        "stroller-ids": [
+          7000
+        ],
+        "cardmedia": "https://www.bugaboo.com/on/demandware.static/-/Sites-bugaboo-master/default/dwf2f485e0/ComparisonTable%20images/Fox-5-2.png",
+        "review-name-title": "Bugaboo Fox 5, An Impartial Review: Mechanics, Comfort, Use",
+        "reviewer-intro": "Impartial Review video about Fox5",
+        "reviewer-name": "made for mums",
+        "review-source": "https://www.madeformums.com/",
+        "review-link": "https://www.youtube.com/embed/iN5f3OgHyVU?si=DYofsocYOhQEYM6q",
+        "review-star": 5,
+        "lang": "EN"
+      }
+    },
+    "britax_römer": {
+      "intro": "For over 50 years, Britax has been at the forefront of child safety technology, earning the trust of families worldwide. What began as a venture into automotive safety equipment in 1938 has blossomed into a leading manufacturer of childcare safety products, including car seats and strollers. \n\nA Journey of Innovation\nThe roots of Britax trace back to its inception as a manufacturer of automotive safety accessories in the late 1930s. Over the decades, Britax diversified its portfolio, delving into aircraft interiors, car mirrors, and eventually, childcare safety products. In the 1960s, Britax made significant strides in safety technology, introducing the kite-mark BS 3254 for car seats and pioneering the inertia reel seat belt, a revolutionary innovation that saved lives. ",
+      "history": "Expansion and Acquisition\n Britax's commitment to safety led to strategic acquisitions, including RÖMER in Germany in 1973 and Safe-n-Sound in Australia in 1989, bolstering its position as a global leader in child safety. These acquisitions expanded Britax's reach, bringing its innovative products to new markets across Europe and Oceania.\n\n Setting Standards for Safety\nThroughout its history, Britax has been instrumental in setting safety standards for the industry. The introduction of the Isofix (LATCH) system in collaboration with Volkswagen in 1997 revolutionized child seat installation, enhancing safety and ease of use for parents worldwide. Britax's dedication to safety is evident in its patent portfolio, boasting over 180 granted patents in the United States alone.\nA Commitment to Quality\nBritax's reputation for quality and reliability is unmatched. From its early days manufacturing automotive safety equipment to its current lineup of childcare safety products, Britax sets the standard for excellence. Each product undergoes rigorous testing to ensure compliance with the highest safety standards, providing parents with peace of mind.\nThe BOB Gear Acquisition\n\nIn 2011, Britax expanded its portfolio with the acquisition of BOB Gear, a renowned brand of jogging pushchairs and accessories. This strategic move further solidified Britax's position in the childcare industry, offering parents a comprehensive range of products to meet their needs.",
+      "img1": "https://cdne1britaxus.azureedge.net/bri/uploads/car-seats/ICS/_1400x1840_crop_center-center_90_none/car-seat-category-page-lifestyle-rear-facing-3.jpg",
+      "img2": "https://cdne1britaxus.azureedge.net/bri/uploads/_2400xAUTO_fit_center-center_90_none/rectangle-63.jpg",
+      "link": "https://us.britax.com/",
+      "logo-img": "/brand-logos/britax.svg",
+      "find-store-link": "https://us.britax.com/where-to-buy",
+      "important-note": "Certified B Corp™\n\nBeing B Corp certified means we’re committed to making a positive impact on the world for future generations. Here’s how it’ll keep us pushing to do even better.",
+      "review-collection-title": "Reviews about Britax products",
+      "header-title": "everything about Britax...",
+      "title": "The Legacy: Britax Stroller Brand",
+      "review-number": 3,
+      "0": {
+        "stroller-ids": [
+          8000
+        ],
+        "cardmedia": "https://cdne1britaxus.azureedge.net/bri/salsify-assets/_halfPageWidthSquare2x/U015203_Grove_PindotOnyx_Right.jpg",
+        "review-name-title": "Britax Grove | Best Full Size Strollers",
+        "reviewer-intro": "In this video, Eli reviews the Britax Grove Stroller. The Grove is Britax's newest addition to their stroller line up. ",
+        "reviewer-name": "Magic Beans Videos",
+        "review-source": "https://www.youtube.com/@MagicBeansVideos",
+        "review-link": "https://www.youtube.com/embed/ww8bNq5qgD4?si=R8_7hf0azKbs3euS",
+        "review-star": 5,
+        "lang": "EN"
+      },
+      "1": {
+        "stroller-ids": [
+          8001
+        ],
+        "cardmedia": "https://cdne1britaxus.azureedge.net/bri/salsify-assets/_halfPageWidthSquare2x/Brook-Graphite-Onyx__Front_Right-2023.jpg",
+        "review-name-title": "Britax Willow Brook Travel System Review",
+        "reviewer-intro": "Introducing...the Willow Brook Travel System from Britax! This incredible system has everything you need to help with your daily adventures. Say hello to seamless transitions from car rides to strolling around town! The Willow Brook Travel System is designed for convenience, comfort, and style, ensuring every outing is a joyous and stress-free experience.",
+        "reviewer-name": "Snuggle Bugz",
+        "review-source": "https://www.youtube.com/@SnuggleBugzStore",
+        "review-link": "https://www.youtube.com/embed/9mc1Y6TFgTc?si=PfnUoyn0dGoJRU_v",
+        "review-star": 5,
+        "lang": "EN"
+      },
+      "2": {
+        "stroller-ids": [
+          8002
+        ],
+        "cardmedia": "https://nopwebimages.azureedge.net/nopweb/36938801_britax-romer-smile-5z-frost-grey-multifunkcios-babakocsi-brendon-36938801_600.png",
+        "review-name-title": "Wózek 2w1 Britax Smile 5Z",
+        "reviewer-intro": "Wózek 2w1 Britax Smile 5Z w filmie pokazano kolor Soft Taupe-Lux. Wózek terenowy z bardzo płynnym prowadzeniem.",
+        "reviewer-name": "Baby Expert",
+        "review-source": "https://www.youtube.com/@BabyExpertTV",
+        "review-link": "https://www.youtube.com/embed/bEtn6L-3BDw?si=RK7kaFPE_i0Z0hU9",
+        "review-star": 5,
+        "lang": "PL"
+      }
+    },
+    "chipolino": {
+      "intro": "Chipolino, a renowned brand under the Maxeurope umbrella, has carved a significant niche in the world of childcare products since its inception. Established as a part of Maxcom in 1996, Chipolino swiftly gained recognition for its commitment to style, quality, and reliability.\nInitially operating alongside the beloved Baby Max brand, Chipolino embarked on its journey as a provider of childcare essentials. With a focus on innovation and customer satisfaction, Chipolino quickly expanded its reach, captivating the hearts of parents across more than 30 countries worldwide.\nIn 2007, Chipolino's operations were consolidated into a separate entity, Chipolino Ltd., signaling its growing presence and influence in the childcare industry. This move allowed Chipolino to further enhance its brand identity and streamline its operations, solidifying its reputation as a trusted name in childcare.",
+      "history": "Not content with merely meeting existing standards, Chipolino continually strives for excellence. In 2012, the company established a state-of-the-art Testing Centre dedicated to ensuring the safety and reliability of its products. This commitment to safety reflects Chipolino's unwavering dedication to providing parents with peace of mind and children with a safe environment to grow and explore.\nChipolino's success story is a testament to its unwavering commitment to quality, innovation, and customer satisfaction. With each product bearing the Chipolino name, parents can rest assured that they are investing in the best for their little ones, empowering them to embark on childhood adventures with confidence and joy.",
+      "img1": "https://chipolino.com/data/kimo_images/kimo_accent_unit_36/accent_900_506_pink.jpg",
+      "img2": "https://chipolino.com/data/kimo_images/kimo_gallery_unit_36/big_galery_1400_1200px_5.jpg",
+      "link": "https://chipolino.com/",
+      "logo-img": "/brand-logos/chipolino.svg",
+      "find-store-link": "https://chipolino.com/en/stores",
+      "important-note": "A favourite brand of a few generations",
+      "review-collection-title": "Reviews about Chipolino products",
+      "header-title": "everything about Chipolino...",
+      "title": "Elevating Childhood Adventures",
+      "review-number": 0
+    },
+    "doona": {
+      "intro": "Doona, an innovative brand in the realm of strollers and car seats, has redefined convenience for modern parents since its inception. With a vision to seamlessly integrate mobility and safety, Doona introduced the world's first car seat with integrated wheels, revolutionizing travel for families worldwide. Since its debut, Doona has been synonymous with innovation, quality, and ease of use.",
+      "history": "Doona's journey began with a commitment to addressing the challenges faced by parents on the go. In 2015, the brand unveiled its groundbreaking infant car seat and stroller hybrid, combining safety-certified car seat functionality with the convenience of a compact stroller. This innovative design earned Doona widespread acclaim and recognition, solidifying its position as a leader in the childcare industry.",
+      "img1": "https://www.doona.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Fa5ijcxwbf06s%2F5b2YvY4G0jpS4Mu7WlJuu0%2F1d4400a9a1f65de2a6b7680ea4d05a5b%2Four-story.jpg%3Ffm%3Dwebp&w=3840&q=75",
+      "img2": "https://www.doona.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Fa5ijcxwbf06s%2F3ERJIihXKE42hLKxNae3fz%2F92bf0bf8554e257c8408145b00b7e7ac%2FOur_Story_Layout-01.jpg%3Ffm%3Dwebp&w=3840&q=75",
+      "link": "https://doona.com/",
+      "logo-img": "/brand-logos/png/doona.png",
+      "find-store-link": "https://www.doona.com/store-locator",
+      "important-note": "Innovating for hassle-free parenting",
+      "review-collection-title": "Customer Reviews on Doona Products",
+      "header-title": "Discover the World of Doona...",
+      "title": "Redefined Convenience for Modern Parents",
+      "review-number": 2,
+      "1": {
+        "stroller-ids": [
+          17000
+        ],
+        "cardmedia": "https://s13emagst.akamaized.net/products/61171/61170747/images/res_6515868d084a7863987ea798cba74ddd.jpg",
+        "review-name-title": "Doona Review",
+        "reviewer-intro": "While it might fill a niche for urban dwellers, its poor performance overall makes it an unlikely contender for most families",
+        "reviewer-name": "GearLab Baby",
+        "review-source": "https://www.babygearlab.com",
+        "review-link": "https://www.babygearlab.com/reviews/vehicle-safety/infant-car-seat/doona",
+        "review-star": 5,
+        "lang": "EN"
+      },
+      "0": {
+        "stroller-ids": [
+          17002
+        ],
+        "cardmedia": "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/d3aa9ca8-3079-442a-aa38-69665eca2a00/public",
+        "review-name-title": "Doona X Review",
+        "reviewer-intro": "When it comes to choosing baby gear, parents often seek products that combine safety, convenience, and style. The Doona Infant Car Seat Stroller has gained significant popularity for its unique features",
+        "reviewer-name": "Strollerina",
+        "review-source": "https://www.strollerina.com",
+        "review-link": "/reviews/product/stroller/type-2/doona-x-stroller-carseat-combo-review-2024",
+        "review-star": 5,
+        "lang": "EN/HU"
+      }
+    },
+    "easywalker": {
+      "intro": "Easywalker, a brand committed to combining style with functionality, has been a trusted name in the world of strollers since its inception. With a focus on creating products that seamlessly blend form and function, Easywalker has earned a reputation for reliability, comfort, and design excellence. From urban adventures to off-road explorations, Easywalker strollers are designed to keep pace with the demands of modern parenthood.",
+      "history": "Easywalker's journey began with a passion for creating strollers that catered to the needs of both parent and child. Founded in 1989, the brand quickly gained recognition for its innovative designs and attention to detail. With a commitment to sustainability and ethical manufacturing practices, Easywalker continues to push the boundaries of stroller design, offering parents a stylish and practical solution for navigating the challenges of parenthood.",
+      "img2": "https://easywalker.com/cdn/shop/files/JIMMEY_SAND_TAUPE_2_129_C1_RGB_lowRes.jpg?v=1677623778&width=1500",
+      "img1": "https://easywalker.com/cdn/shop/files/07062023_EW_Harvey5_GP_DuoMode_25493453453_56f03beb-079e-4a36-9cc2-ae343c9e29ed.png?v=1689843025&width=1500",
+      "link": "https://easywalker.com/",
+      "logo-img": "/brand-logos/png/easywalker.png",
+      "find-store-link": "https://easywalker.com/storelocator",
+      "important-note": "Do net forget to register your stroller for lifetime warranty within 6 month after purchase.",
+      "review-collection-title": "Customer Feedback on Easywalker Products",
+      "header-title": "Explore the World of Easywalker...",
+      "title": "Stylish Solutions for Modern Parenthood",
+      "review-number": 1,
+      "0": {
+        "stroller-ids": [
+          18000
+        ],
+        "cardmedia": "https://easywalker.com/cdn/shop/files/Harvey_Premium-JG-seat-sideview.png",
+        "review-name-title": "The new Easywalker Harvey 5 vs. Harvey 3",
+        "reviewer-intro": "Easywalker has once again given its pram an update \"quite easy\". The result is the new Easywalker Harvey 5. We will introduce you to the new member of the Easywalker family and show you the differences to the Easywalker Harvey 3 in a direct comparison.",
+        "reviewer-name": "myPram",
+        "review-source": "https://www.mypram.com",
+        "review-link": "https://www.mypram.com/en/magazine/stroller-blog/the-new-easywalker-harvey-5-vs.-harvey-3",
+        "review-star": 5,
+        "lang": "EN"
+      }
+    },
+    "egg": {
+      "intro": "Egg, a brand synonymous with luxury and sophistication, has become a beacon of style in the world of strollers. With a commitment to crafting elegant and practical solutions for modern parents, Egg strollers elevate the parenting experience to new heights. From sleek design to innovative features, Egg strollers are designed to make a statement while providing unparalleled comfort and convenience for both parent and child.",
+      "history": "Egg's journey began with a vision to redefine the stroller market with a focus on design excellence and quality craftsmanship. Since its inception, the brand has garnered acclaim for its distinctive egg-shaped design, setting it apart from traditional strollers. With a range of luxurious fabrics and customizable options, Egg strollers offer parents the opportunity to express their individual style while enjoying the utmost in comfort and functionality.",
+      "img1": "https://eggstroller.com/wp-content/uploads/slider/cache/33fbc9b72f0f2ada4ec589534edaa4a1/EGG1-436-scaled.jpg",
+      "img2": "https://eggstroller.com/wp-content/uploads/slider/cache/fdb4b8765a86afa74fa26bc5b34dffed/EGG1-566-v2-scaled.jpg",
+      "link": "https://eggstroller.com/",
+      "logo-img": "/brand-logos/png/egg.png",
+      "find-store-link": "https://eggstroller.com/find-stockist/",
+      "important-note": "Luxury redefined for modern parents",
+      "review-collection-title": "User Reviews on Egg Strollers",
+      "header-title": "Experience the Elegance of Egg...",
+      "title": "Luxurious Comfort for You and Your Baby",
+      "review-number": 0
+    },
+    "ergobaby": {
+      "intro": "Ergobaby, a leading brand in ergonomic baby carriers and strollers, has been empowering parents to embrace their adventures with confidence and comfort since its inception. With a focus on innovation and design excellence, Ergobaby products are meticulously crafted to provide the utmost in safety, comfort, and convenience for both parent and child.",
+      "history": "Ergobaby's journey began with a mission to revolutionize babywearing, making it easier and more comfortable for parents to carry their little ones close. Founded in 2002, the brand quickly gained recognition for its ergonomic baby carriers, which promote healthy hip development and proper spine alignment. Since then, Ergobaby has expanded its product lineup to include strollers and accessories, all designed with the same commitment to quality and functionality.",
+      "img1": "https://ergobaby.com/media/wysiwyg/metro/pdp/banner/Ergobaby_Metro-_9.webp",
+      "img2": "https://ergobaby.com/media/wysiwyg/metro/category/lifestyle/deluxe-london-fog-lifestyle.jpg",
+      "link": "https://ergobaby.com/",
+      "logo-img": "/brand-logos/png/ergo.png",
+      "find-store-link": "https://ergobaby.com/international-stores",
+      "important-note": "Empowering parents to embrace their adventures",
+      "review-collection-title": "Customer Reviews on Ergobaby Products",
+      "header-title": "Discover the World of Ergobaby...",
+      "title": "Embrace Your Adventures with Ergobaby",
+      "review-number": 2,
+      "0": {
+        "stroller-ids": [
+          20000
+        ],
+        "cardmedia": "https://ergobaby.com/media/catalog/product/cache/ae7c751e46c45a612137894a26f076e4/b/u/buggy_stroller_metro_plus_support_bar_1.jpg",
+        "review-name-title": "Ergobaby Metro Plus Deluxe Review",
+        "reviewer-intro": "Ergobaby Metro Plus Deluxe - how does it measure up as a travel stroller? ",
+        "reviewer-name": "The Stroller Mom",
+        "review-source": "https://www.youtube.com/@thestrollermom",
+        "review-link": "https://www.youtube.com/embed/V94u6z2dRSA?si=bgCRgCvVmOnKaJP7",
+        "review-star": 5,
+        "lang": "EN"
+      },
+      "1": {
+        "stroller-ids": [
+          20000
+        ],
+        "cardmedia": "https://ergobaby.com/media/catalog/product/cache/ae7c751e46c45a612137894a26f076e4/b/u/buggy_stroller_metro_plus_support_bar_1.jpg",
+        "review-name-title": "Ergobaby Metro+ Deluxe vs Not Deluxe: What's the Difference?",
+        "reviewer-intro": "Video about 2 Ergobaby strollers and their differences",
+        "reviewer-name": "The Stroller Workshop",
+        "review-source": "https://www.youtube.com/@BarnevognverkstedNo",
+        "review-link": "https://www.youtube.com/embed/N4D2Zx-ksfE?si=Q52Hkn0nWOEu9tE3",
+        "review-star": 5,
+        "lang": "EN"
+      }
+    },
+    "espiro": {
+      "intro": "Espiro, a trusted name in the world of childcare products, is dedicated to providing parents with practical, stylish, and reliable solutions for their little ones. With a commitment to quality and safety, Espiro products are designed to enhance the parenting experience, offering peace of mind and comfort for both parent and child.",
+      "history": "Espiro's journey began with a vision to create innovative and functional products that meet the evolving needs of modern families. Founded in [year], the brand quickly gained recognition for its strollers, car seats, and other childcare essentials. With a focus on design excellence and user-friendly features, Espiro has become a staple in households around the world, trusted by parents to provide the best for their children.",
+      "img1": "https://espiro.pl/uploads/sliders/9/home-66.jpg",
+      "img2": "https://espiro.pl/uploads/articles/326/sm_czym-rozni-sie-wave-2023-od-wave-2024.jpg",
+      "link": "https://espiro.pl/",
+      "logo-img": "/brand-logos/png/espiro.png",
+      "find-store-link": "https://espiro.pl/oddzialy",
+      "important-note": "Practical, stylish, and reliable solutions for modern families",
+      "review-collection-title": "Customer Feedback on Espiro Products",
+      "header-title": "Explore the World of Espiro...",
+      "title": "Enhancing the Parenting Experience with Espiro",
+      "review-number": 0
+    },
+    "gb": {
+      "intro": "gb, a brand known for its innovative and stylish childcare products, has been a trusted name in the industry since its inception. With a focus on combining functionality with modern design, gb offers parents practical and stylish solutions for their on-the-go lifestyle. From strollers to car seats, gb products are designed to make parenting easier and more enjoyable.",
+      "history": "gb's journey began with a commitment to redefining the stroller market with cutting-edge design and innovation. Founded in [1989], the brand quickly gained recognition for its sleek and stylish strollers, which blend form and function seamlessly. With a focus on quality and safety, gb products are trusted by parents around the world to provide the best for their children.\n\nThe merger with Goodbaby International in 2014 further strengthened Cybex's position, leveraging Goodbaby's extensive research, development, and manufacturing capabilities.\n\nEuropean chic meets German pedantry in Cybex products, catering to modern parents who prioritize both style and safety.",
+      "img1": "https://images.gb-online.com/image/upload/fl_progressive,w_1440/gbonline/teaser-ti-7_en-en-6295bbdd56f1a.jpeg",
+      "img2": "https://images.gb-online.com/image/upload/fl_progressive,w_1440/gbonline/teaser-ti-8_en-en-6295bc95531ab.jpeg",
+      "link": "https://gb-online.com/",
+      "logo-img": "/brand-logos/png/gb.png",
+      "find-store-link": "https://gb-online.com/en-us/retailer",
+      "important-note": "Innovative and stylish solutions for modern parents",
+      "review-collection-title": "Customer Reviews on gb Products",
+      "header-title": "Discover the World of gb...",
+      "title": "Redefining Parenting with gb",
+      "review-number": 0
+    },
+    "greentom": {
+      "intro": "Greentom, a brand committed to sustainability and eco-friendly practices, offers parents a guilt-free way to navigate the world of childcare products. With a focus on innovation and environmental consciousness, Greentom products are crafted from recycled materials and designed to minimize their carbon footprint. From strollers to accessories, Greentom provides parents with stylish and sustainable solutions for their little ones.",
+      "history": "Greentom's journey began with a vision to create a more sustainable future for the next generation. Founded in [year], the brand quickly gained recognition for its eco-friendly strollers, which are made from recycled materials and designed with the environment in mind. With a commitment to quality and innovation, Greentom products offer parents a guilt-free way to enjoy the convenience of modern childcare.",
+      "img1": "https://greentom.com/media/catalog/category/Homepage-banner-Feb-2024.jpg",
+      "img2": "https://greentom.com/media/cms/greentribe/alisson_simmonds.jpg",
+      "link": "https://www.greentom.com/",
+      "logo-img": "/brand-logos/png/greentom.png",
+      "find-store-link": "https://greentom.com/store-locator",
+      "important-note": "Stylish and sustainable solutions for modern families",
+      "review-collection-title": "Customer Feedback on Greentom Products",
+      "header-title": "Explore the World of Greentom...",
+      "title": "Sustainability Meets Style with Greentom",
+      "review-number": 1,
+      "0": {
+        "stroller-ids": [
+          23001
+        ],
+        "cardmedia": "https://greentom.com/media/catalog/product/cache/249688b60bb56e1686647a2df7a46765/1/_/1_greentom-2019-PET-classic-perspective-black-black-x.png",
+        "review-name-title": "Discover Greentom: the greenest pram on the planet",
+        "reviewer-intro": "Thanks to the clever people at Greentom, you can now do both with ease. Their award-winning pram and stroller combinations are handy, stylish and sustainable. And they come with some serious green credentials, so you can rest easy knowing you’re doing your bit for the planet and your bub’s future, every day.",
+        "reviewer-name": "mum's grapevine",
+        "review-source": "https://mumsgrapevine.com.au",
+        "review-link": "https://mumsgrapevine.com.au/2023/03/greentom-stroller-review/",
+        "review-star": 5,
+        "lang": "EN"
+      }
+    },
+    "hauck": {
+      "intro": "Hauck, a trusted name in the world of childcare products, has been providing parents with practical and reliable solutions for their little ones since [year]. With a focus on safety, comfort, and affordability, Hauck products are designed to meet the needs of modern families. From strollers to high chairs, Hauck offers parents peace of mind and convenience for every stage of their child's development.\n\nHauck's journey began with a commitment to creating quality products that make parenting easier and more enjoyable. Founded in [1923], the brand quickly gained recognition for its innovative designs and user-friendly features. With a focus on affordability and accessibility, Hauck products are trusted by parents around the world to provide the best for their children.",
+      "history": "hauck – a history of over 100 years of agility\n\n1923 Originally, the company was founded by Felix Hauck as a basketry\u200B.\n\n1950er The product range has been in constant development. The bassinets were followed by footmuffs.\u200B\n\n1960er hauck was the first nursery brand to source products from outside Germany.\u200B\n\n1970s The collection is expanded to include cots and prams, which very quickly become sought-after nationwide.\n\n1980er hauck became the first licensee of Disney in the German nursery segment. Together, hauck and Disney will celebrate their 100-year anniversary in 2023.\u200B\n\n1990er hauck proved again the ability to re-invent itself, this time as a pioneer in channel distribution: In the 90s, it started to supply the department stores KARSTADT and KAUFHOF.\u200B\n\n2000er hauck was the first company in the industry to sell its baby and children's products through amazon.de, shortly after the platform went online.\u200B\n\n2010er Other product premieres such as our various value sets further improved hauck’s leading position on the market.\u200B\n\n2020er An investment of the private equity company AVEDON Capital Partners B.V. now aims to further develop the business model and accelerate the growth.\u200B The corporate group is growing by adding the sourcing company Euret and the trading platform babyartikel.\n\n2023 hauck is celebrating the 100th anniversary and expanding the product portfolio to become the most caring newborn companion with a 360-degree product portfolio around babies.",
+      "img1": "https://a.storyblok.com/f/154800/3543x2364/a8e81f2c14/01-148594_01-670095-p01-rapid-3-air_black_pushchair-seat-liner_olive_ls.jpg",
+      "img2": "https://a.storyblok.com/f/154800/1920x1080/4c5fa5b39f/jpgs_1920x10804.jpg",
+      "link": "https://www.hauckuk.com/",
+      "logo-img": "/brand-logos/hauck.svg",
+      "find-store-link": "https://www.hauckuk.com/storelocator",
+      "important-note": "Practical and reliable solutions for modern families",
+      "review-collection-title": "Customer Reviews on Hauck Products",
+      "header-title": "Discover the World of Hauck...",
+      "title": "Making Parenting Easier with Hauck",
+      "review-number": 0
+    },
+    "joie": {
+      "intro": "Joie, a brand committed to providing parents with practical and stylish childcare solutions, has been a trusted name in the industry since its inception. With a focus on innovation and affordability, Joie products are designed to meet the needs of modern families. From strollers to car seats, Joie offers parents peace of mind and convenience for every stage of their child's development.",
+      "history": "Joie's journey began with a mission to make parenting easier and more enjoyable. Founded in [year], the brand quickly gained recognition for its innovative designs and user-friendly features. With a commitment to quality and affordability, Joie products are trusted by parents around the world to provide the best for their children.",
+      "img1": "https://dd.joiebaby.com/media/wysiwyg/homepage-desktop_3.jpg",
+      "img2": "https://dd.joiebaby.com/media/catalog/product/m/a/ma4-d-joie-stroller-finiti-recline.jpg",
+      "link": "https://uk.joiebaby.com/",
+      "logo-img": "/brand-logos/png/joie.png",
+      "find-store-link": "https://joiebaby.com/uk/store-locator",
+      "important-note": "Practical and stylish solutions for modern families",
+      "review-collection-title": "Customer Feedback on Joie Products",
+      "header-title": "Explore the World of Joie...",
+      "title": "Making Parenting Easy with Joie",
+      "review-number": 0
+    },
+    "joolz": {
+      "intro": "Joolz, a brand dedicated to creating beautiful and sustainable strollers, has been a trusted name in the world of childcare products since its inception. With a focus on design excellence and environmental consciousness, Joolz offers parents stylish and practical solutions for their little ones. From urban adventures to countryside strolls, Joolz strollers are designed to make parenting easier and more enjoyable.",
+      "history": "Joolz's journey began with a commitment to sustainability and eco-friendly practices. Founded in [year], the brand quickly gained recognition for its innovative designs and attention to detail. With a focus on quality craftsmanship and premium materials, Joolz strollers are designed to stand the test of time, offering parents a stylish and sustainable way to navigate the world of childcare.",
+      "img1": "https://www.joolz.com/dw/image/v2/BDLK_PRD/on/demandware.static/-/Library-Sites-joolz-global-shared-library/default/dwac4dda39/Blog/Joolz%20Hub_Quadro%20Collection_Subvisual_4_HR.jpg",
+      "img2": "https://www.joolz.com/dw/image/v2/BDLK_PRD/on/demandware.static/-/Library-Sites-joolz-global-shared-library/default/dw24373dc3/Blog/Stroll%20in%20ultimate%20style%20-%203@2x.jpg",
+      "link": "https://my-joolz.co.uk/",
+      "logo-img": "/brand-logos/png/joolz.png",
+      "find-store-link": "https://www.joolz.com/global/en/stores?showMap=true&horizontalView=true&isForm=true",
+      "important-note": "Beautiful and sustainable solutions for modern families",
+      "review-collection-title": "Customer Reviews on Joolz Products",
+      "header-title": "Discover the World of Joolz...",
+      "title": "Stylish and Sustainable Parenting with Joolz",
+      "review-number": 0
+    },
+    "joovy": {
+      "intro": "Joovy, a brand dedicated to making parenting easier and more enjoyable, offers practical and stylish solutions for modern families. With a focus on innovation and affordability, Joovy products are designed to meet the needs of busy parents on the go. From strollers to playards, Joovy provides parents with peace of mind and convenience for every stage of their child's development.",
+      "history": "Joovy's journey began with a mission to create quality products that simplify parenting. Founded in [year], the brand quickly gained recognition for its innovative designs and user-friendly features. With a commitment to affordability and accessibility, Joovy products are trusted by parents around the world to provide the best for their children.",
+      "img1": "https://joovy.com/wp-content/uploads/2023/05/230203_Joovy_Qool_Ko.jpeg",
+      "img2": "https://joovy.com/wp-content/uploads/2023/10/CompositeLayer-shadow-1.jpeg",
+      "link": "https://joovy.com/",
+      "logo-img": "/brand-logos/png/joovy.png",
+      "find-store-link": "https://joovy.com/storelocator/",
+      "important-note": "Practical and stylish solutions for busy parents",
+      "review-collection-title": "Customer Feedback on Joovy Products",
+      "header-title": "Explore the World of Joovy...",
+      "title": "Simplify Parenting with Joovy",
+      "review-number": 0
+    },
+    "mamas_and_papas": {
+      "intro": "Mamas & Papas, a trusted name in the world of childcare products, has been providing parents with practical and stylish solutions for their little ones since [year]. With a focus on quality and innovation, Mamas & Papas products are designed to meet the needs of modern families. From strollers to nursery furniture, Mamas & Papas offers parents peace of mind and convenience for every stage of their child's development.",
+      "history": "Mamas & Papas' journey began with a commitment to creating products that make parenting easier and more enjoyable. Founded in [1995], the brand quickly gained recognition for its innovative designs and attention to detail. With a focus on quality craftsmanship and premium materials, Mamas & Papas products are trusted by parents around the world to provide the best for their children.Mamas & Papas is a UK-based nursery brand and manufacturer supplying prams, pushchairs, baby products, furniture and maternity wear. It was established in Huddersfield in 1981 by David and Luisa Scacchetti, both of Italian ancestry, whose initial aim was to bring Italian design to the UK baby buggy market. They started the business with a range of coloured corduroy prams imported from Italy. They sold through one local shop of their own and through supplying other stores, until deciding to become a retail brand in 1998. For most of its existence, the business was privately owned.\nBy 2011, Mamas & Papas was described as the \"UK's bestselling nursery brand\". In 2014, the business embarked on cost-cutting associated with a Company Voluntary Arrangement (CVA). Store closures were considered [6] but were avoided by the CVA.",
+      "img1": "https://i.shgcdn.com/791441f5-0313-48ab-87e2-5f10c93553a6/-/format/auto/-/preview/3000x3000/-/quality/lighter/",
+      "img2": "https://i.shgcdn.com/5cc3e4c1-12b4-4655-8b07-8b4baa6d2ae9/-/format/auto/-/preview/3000x3000/-/quality/lighter/",
+      "link": "https://www.mamasandpapas.com/",
+      "logo-img": "/brand-logos/png/mamas.webp",
+      "find-store-link": "https://www.mamasandpapas.com/pages/store-locator",
+      "important-note": "Practical and stylish solutions for modern families",
+      "review-collection-title": "Customer Reviews on Mamas & Papas Products",
+      "header-title": "Discover the World of Mamas & Papas...",
+      "title": "Enhancing Parenthood with Mamas & Papas",
+      "review-number": 0
+    },
+    "maxi_cosi": {
+      "intro": "Maxi-Cosi, a brand synonymous with safety and comfort, has been a trusted name in the world of car seats and strollers since its inception. With a commitment to innovation and quality, Maxi-Cosi products are designed to provide parents with peace of mind and convenience for every journey. From infant car seats to travel systems, Maxi-Cosi offers parents reliable solutions for their little ones.",
+      "history": "Maxi-Cosi's journey began with a mission to create the safest and most comfortable car seats for children. Founded in [year], the brand quickly gained recognition for its innovative designs and advanced safety features. With a focus on user-friendly functionality and stylish design, Maxi-Cosi products are trusted by parents around the world to provide the best for their children.",
+      "img1": "https://images.maxi-cosi.co.uk/m/71f3a9c85ffaddb8/PNG_72_DPI-MC8515_2022_maxicosi_car-seat_Mica-Pro-Eco_Lifestyle_Car_ClimaFlowbackpanel_Landscape.png",
+      "img2": "https://images.maxi-cosi.co.uk/m/35e2a944e4cefa74/PNG_72_DPI-MC8618_2022_maxicosi_car-seat_Titan-Pro-i-Size_Lifestyle_Outside_Realcloseboycarriedbydad_Landscape.png",
+      "link": "https://www.maxi-cosi.co.uk/",
+      "logo-img": "/brand-logos/maxi-cosi.svg",
+      "find-store-link": "https://www.maxi-cosi.co.uk/c/find-store",
+      "important-note": "Safety and comfort for every journey",
+      "review-collection-title": "Reviews on Maxi-Cosi Products",
+      "header-title": "Discover the World of Maxi-Cosi...",
+      "title": "Safe and Comfortable Journeys with Maxi-Cosi",
+      "review-number": 1,
+      "0": {
+        "stroller-ids": [
+          1021
+        ],
+        "cardmedia": "https://imagedelivery.net/Y7hTskBCKV5kRi-34nHOOg/ec9ad4b3-5f63-48fa-d72e-a70004803700/public",
+        "review-name-title": "Maxi Cosi Jade",
+        "reviewer-name": "strollerina",
+        "reviewer-intro": "When it comes to the safety and comfort of your newborn, the Maxi-Cosi Jade car seat stands out...",
+        "review-source": "https://www.strollerina.com/",
+        "review-link": "/reviews/product/car-seat/maxi-cosi-jade-carrycot-car-seat-3way-fix-review",
+        "review-star": 5,
+        "lang": "EN/HU"
+      }
+    },
+    "moon": {
+      "intro": "The Moon Style presents a contemporary stroller system boasting a sleek, minimalist design, freshly introduced in 2020. Its standout features include low-maintenance rubber wheels, slightly oversized for this stroller category, and a plush suspension system, ensuring a smooth ride across urban landscapes. Remarkably slender and lightweight, tipping the scales at just under 12 kg in stroller mode, the Style offers effortless maneuverability.\nOne of the latest innovations in Moon's stroller systems, including the Style, is the Circ Air system. Teamed with the Träumeland mattress, this technology fosters a breathable environment for your baby, enhancing comfort.",
+      "history": "The reversible and fully reclining seat unit, coupled with an adjustable leg rest, ensures adaptability for your child's needs. On sunny days, the extendable hood provides ample coverage, particularly when the seat is upright. The carrycot boasts an oversized hood and bumper bar, while its elevated position on the chassis minimizes the need for excessive bending when interacting with your little one.\n This versatile 2-in-1 stroller system includes a rain cover, with the option to separately purchase adapters for Maxi-Cosi car seats and other accessories to enhance functionality.",
+      "img1": "https://moon-buggy.com/assets/images/e/moonK24-teaser-model-CLICC-767db70f.png",
+      "img2": "https://moon-buggy.com/assets/images/2/moonK24-general-image-EasyGonig-8817e4e4.png",
+      "link": "https://moon-buggy.com/en/prams.html",
+      "logo-img": "/brand-logos/moon.svg",
+      "find-store-link": "https://moon-buggy.com/en/dealer.html",
+      "important-note": "Test Winner of Stiftung Warentest",
+      "review-collection-title": "Reviews on Moon Products",
+      "header-title": "Discover the World of Moon...",
+      "title": "Premium quality and design",
+      "review-number": 0
+    },
+    "mountain_buggy": {
+      "intro": "Designing innovative and award-winning products for over 25 years, our iconic Kiwi brand enables parents all around the world to live life without limit.\nSince our humble beginnings, we've captured the essence of freedom with our undisputed reputation for performance and strength. New Zealand’s spectacular mountain trails are our backyard, testing ground and constant source of inspiration.\nDriven by strong customer connections, our products deliver manoeuvrability, durability, adaptability and simplicity - every time. It’s our DNA. Mountain Buggy has received two prestigious Red Dot design awards for urban jungle luxury and nano™.",
+      "history": "Founded in 1992 in New Zealand, Mountain Buggy was created by a father himself who was looking for a buggy that was suitable for all terrains so him and his child could enjoy the local mountains. Designed with precision engineering and putting practicality and safety at the forefront of the design process, Mountain Buggy's range of strollers and pushchairs are one of the most loved for all-terrain needs. From the urban streets of the city to the uneven paths of the mountains, Mountain Buggy offer a variety of strollers suited to your needs from newborn to toddler. Browse the full collection of Mountain Buggy pushchairs below to find the perfect one for you and your little one.",
+      "img1": "https://eu.mountainbuggy.com/cdn/shop/files/BLUE-BANNER_2376x.jpg",
+      "img2": "https://eu.mountainbuggy.com/cdn/shop/files/join-the-active-community-instagrams-od-943x460_1512x.jpg",
+      "link": "https://eu.mountainbuggy.com/",
+      "logo-img": "/brand-logos/mountain_buggy.svg",
+      "find-store-link": "https://eu.mountainbuggy.com/pages/store-locator",
+      "important-note": "Life without limit",
+      "review-collection-title": "Reviews on Mountain Buggy Products",
+      "header-title": "Discover the World of Mountain Buggy...",
+      "title": "buggies for good",
+      "review-number": 0
+    },
+    "nuna": {
+      "intro": "Family means the world to us. We're thrilled to be here with you at the start of the transformative journey of parenthood. Bringing practical and functional designs to life for families is a constant source of inspiration for us. We've thought of all the little things so you can focus on all the big things. Here's to a memorable adventure...",
+      "history": "Nuna, a brand rooted in the Netherlands but with a global presence, has been dedicated to crafting intelligent, supportive, and daring baby gear since 2007. Drawing from firsthand parenting experiences, Nuna creates ingenious family solutions that seamlessly blend practicality and elegance. Every aspect of Nuna's designs is meticulously crafted with thoughtful consideration, ensuring they seamlessly integrate into your lifestyle.\nNuna made its debut in 2007 with the introduction of the ZAAZ high chair, marking the beginning of their journey towards redefining childcare essentials. The innovative design of the ZAAZ aimed to provide little ones with their own designated space at the family table. Since then, Nuna has expanded and honed its expertise in design, offering a diverse array of smart and chic products. Today, Nuna's product line encompasses an extensive selection of pushchairs, car seats, loungers, travel cots, baby carriers, and beyond, catering to the multifaceted needs of modern families.",
+      "img1": "https://nunababy.com/media/wysiwyg/Homepage_2_240214_GL_DEMI.jpg",
+      "img2": "https://nunababy.com/media/wysiwyg/Sketch_2.png",
+      "link": "https://nunababy.com/en/",
+      "logo-img": "/brand-logos/nuna.svg",
+      "find-store-link": "",
+      "important-note": "Family means the world to us. ",
+      "review-collection-title": "Reviews on Nuna Products",
+      "header-title": "Discover the World of Nuna...",
+      "title": "winner of 6 red dot award",
+      "review-number": 0
+    },
+    "peg_perego": {
+      "intro": "Peg Perego, the Italian company founded in 1949 by Giuseppe Perego, revolutionized the market by designing carriages and strollers using “rubberized fabric” instead of sheet metal and wicker which were commonly in use and providing everyone with child care products that until that time had a limited market due to high costs.Avant-garde, attention to market changes and foresight have built a successful company over time which is known all over the world for its original ideas in the fields of infant care and toys, which are always of the highest quality, respect international safety regulations and are up to speed with the expectations of the modern mom.The campaign “Mamma in Italy” confirms the company’s creed in the Italian way of production which has earned the trust of mother’s for its quality: whoever loves “Made in Italy” looks for style, elegance, details and safety, quality ideas which Peg Perego constantly refers to when designing and creating its products.For Peg Perego, Made in Italy means “to continue doing only what we know how to do well”, says Lucio Perego, the company’s CEO, meaning to continue cultivating the patrimony of skills of Peg’s Italian production and enriching it with modern and avant-garde processing methods.",
+      "history": "The company has, in fact, supported its traditional spring season line of juvenile products (strollers, carriages, car seats and high chairs) with toy production, which has allowed using stable and optimal human resources. The integrated production offers closer quality control and an improvement in skills: from materials (fabric, rubber, metal) to the technology of complex and avant-garde production machinery. A team of experts supervises the entire production process to guarantee juvenile products.The compact and traditional organizational structure with a variety of tasks and taking care of the work environment with a great amount of attention given to the people consolidate company loyalty. The production facilities in Italy are: Arcore (Milan), San Donà di Piave (Venice), Ceggia (Venice), and add our international partners: Fort Wayne (USA), Toronto (Canada) Limeira SP (Brazil), for a total production surface area of 161.000 square meters.Peg Perego’s dynamic abilities can also been seen in recent creations: not only the building of a nursery dedicated to the founder, Giuseppe Perego, located in front of the offices and available for new mothers who work for the company, but also the reconstruction of the entire industrial area and the creation of a modern foodservice building for all of the employees.The site http://www.pegperego.com/, updated constantly, provides the trade and customers with all the new products, services and useful information needed when making an important purchase.We can talk about Peg Perego “System”: a way to produce characterized by research and experimentation, productive rigour, technical creativity and also a strong manufacturing culture which answers the client’s needs in terms of services and safety in purchasing child products.Only if the industry is able to translate new ideas into products that are able to “enter and withstand” the test of time, do these ideas take on a role in the usage culture: this is the case of Peg Perego’s Italian history.",
+      "img1": "https://en.pegperego.com/medias/company-profile.jpg?context=bWFzdGVyfHJvb3R8MTM0OTUyMnxpbWFnZS9qcGVnfGgxNi9oZTgvOTAyODExMDgxMTE2Ni5qcGd8MzIzY2Y3NzM3NGE4MDEzYjcyNjRhZDUwYzgzOTE1NmQ1NmI5ZDFiNjI5Y2NhMDIxOGU3OTgwN2U3OGQzZDIyYQ",
+      "img2": "https://en.pegperego.com/medias/SELFIE-BANNERHOME.jpg?context=bWFzdGVyfGltYWdlc3wyODQyODZ8aW1hZ2UvanBlZ3xpbWFnZXMvaGFmL2hmYi84OTExNjk0MDM3MDIyLmpwZ3xjM2ZmYmFkYWNmNmQ1YWIzNDUwN2QzZTVhZTEyYzZhNDNmZmVkYjg1YzFmZGQzOTIzNzA2MjljYjBlMmIwYTc4",
+      "link": "https://en.pegperego.com/store/?site=pegen",
+      "logo-img": "/brand-logos/peg_perego.svg",
+      "find-store-link": "https://en.pegperego.com/store/pegen/en/baby-products-stores",
+      "important-note": "a big worldwide family",
+      "review-collection-title": "Reviews on Peg Perego Products",
+      "header-title": "Discover the World of Peg Perego...",
+      "title": "a big worldwide family",
+      "review-number": 0
+    },
+    "phil_and_teds": {
+      "intro": "phil&teds® is celebrating 25 years of designing leading edge baby gear, after opening its doors from a Wellington garage in the mid-90s. \nChief cook & bottle washer, Campbell Gower, says this is a huge milestone for the award-winning nursery brand. We have come a long way from those humble beginnings. In the space of over two decades, the right insight and talent from a terrific team to create a uniquely appealing product set, and a brand that resonates with both mums and dads, has enabled us to help a million parents around the world adapt&survive their parenting day.",
+      "history": "phil&teds is an award-winning international company that's proud to be one of the world's leading inventors, designers and marketers of juvenile products. Through our high performance culture, we've built up global relationships with our customers inspiring parents to escape nursery jail and live life without limit.\nWe've been making kids stuff for over 25 years now, across three great brands: phil&teds, Mountain Buggy and Mokopuna. From New Zealand to Norway, our products are in over 40 markets and +1000 stores worldwide.\nOur company has received more business, consumer and industry awards than you can shake a stick at, including three internationally acclaimed Red Dot design awards and 56 patents. phil&teds' experience, combined with high performance culture, ensure our products - from buggies to booties - cut through the clutter of the crowded nursery channel.",
+      "img1": "https://nz.philandteds.com/cdn/shop/files/PT_SHOPIFY_homepage_category_PUSH_734x918px_1080x.jpg?v=1613697406",
+      "img2": "https://nz.philandteds.com/cdn/shop/files/PT_PUSH-PMF_MOB_750x890px.jpg?v=1709174021",
+      "link": "https://philandteds.com/",
+      "logo-img": "/brand-logos/png/phil.png",
+      "find-store-link": "https://nz.philandteds.com/pages/store-locator",
+      "important-note": "celebrating 25 years of keepin' it real!",
+      "review-collection-title": "Reviews on Phil and Teds Products",
+      "header-title": "Discover the World of Phil and Teds...",
+      "title": "Phil and Teds the original innovators of the inline® buggy",
+      "review-number": 0
+    },
+    "stokke": {
+      "intro": "Stokke, a brand known for its Scandinavian design and innovation, has been a trusted name in the world of childcare products since its inception. With a focus on quality and functionality, Stokke offers parents practical and elegant solutions for their little ones. From strollers to high chairs, Stokke products are designed to grow with your child, offering long-lasting value for modern families.",
+      "history": "Stokke's journey began in [year], when the brand was founded with a mission to create products that foster bonding between parent and child. Since then, Stokke has become synonymous with quality and innovation, with its products being trusted by parents around the world for their design and functionality. With a commitment to sustainability and excellence, Stokke continues to set the standard for childcare products.",
+      "img1": "https://www.stokke.com/on/demandware.static/-/Library-Sites-StokkeSharedLibrary/default/dw0d8f218a/cms_assets/ecom_hp-24_shopthelook_snoozi_jpg__legacy.jpg",
+      "img2": "https://www.stokke.com/on/demandware.static/-/Library-Sites-StokkeSharedLibrary/default/dw6d0440e6/cms_assets/hp_promo-summer-24_1536x960px_yoyo_wotext_edit03_jpg__verylarge.jpg",
+      "link": "https://www.stokke.com/EUR/en-pt/home",
+      "logo-img": "/brand-logos/png/stokke.png",
+      "find-store-link": "https://www.stokke.com/EUR/en-pt/stores",
+      "important-note": "Made to grow with you",
+      "review-collection-title": "Reviews on Stokke",
+      "header-title": "Discover the World of Stokke...",
+      "title": "Made to grow with you",
+      "review-number": 0
+    },
+    "ternx": {
+      "intro": "TernX embodies our commitment to versatility and innovation, anchored in our mission to simplify traveling with kids. Inspired by the tern bird, celebrated for its agility, grace, and resilience, it serves as a powerful inspiration. Its small but packs a punch. Terns are adept at navigating various environments, from coastlines to open seas, embodying the spirit of versatility and adaptability that we aspire to embody on our journey.\nThe \"X\" in TernX represents the unknown, the potential for limitless growth and exploration. It symbolizes our commitment to pushing boundaries, challenging conventions, and constantly evolving to meet the ever changing needs of our community… plus we thought it sounded pretty cool.",
+      "history": "Building blocks of change\n With millions of requests for basic essentials including diapers, clothing, backpacks, cribs, shoes, soap, shampoo, and more, Baby2Baby relies on the support from sponsors to stock their warehouse with high-need items, which are then distributed to the children Baby2Baby serves across the country.\nAt the heart of our mission lies the empowerment of parents with young children. That's why we couldn't envision a more fitting partner than Baby2Baby, whose values align closely with our own. TernX is proud to be a sponsor of\nBaby2Baby. \n\nSustainability\nWe’re committed to offset our CO2 emissions and thrilled to announce our collaboration with Tree-Nation, a global reforestation platform with an aim to plant 1 trillion trees by 2050.\n\nFrom the air we breathe, the water we drink, and the food we eat, the natural world is an incredible wonder that inspires us all.\n\nTogether, we're not only creating a greener future but also supporting communities and biodiversity around the world with the Forest of TernX.",
+      "img1": "https://ternx.com/cdn/shop/files/Toddlers_love_TernX_Carry_On_1024x.webp?v=1711264324",
+      "img2": "https://ternx.com/cdn/shop/files/TernX_Suitcase_Stroller_best_stroller_for_flying_1024x.webp",
+      "link": "https://ternx.com/",
+      "logo-img": "/brand-logos/png/ternx.png",
+      "find-store-link": "",
+      "important-note": "from carry on luggage to stroller in seconds.",
+      "review-collection-title": "Reviews on ternX",
+      "header-title": "Discover the World of ternX...",
+      "title": "from carry on luggage to stroller in seconds.",
+      "review-number": 0
+    },
+    "thule": {
+      "intro": "Whether it’s exploring the spectacular nature of the great outdoors or traveling the world with family and friends, we all have a passion for enjoying an active life. \nAt Thule, we share your desire to spend more time enjoying our passions – which means less time worrying about how to bring all the stuff we need. For more than 75 years, Thule has been creating solutions to simplify life’s adventures. We are committed to developing smart, stylish products that are environmentally sound, high quality, safe, and easy to use. All so you can bring the things you care most about.Whatever your passion, whatever your pursuit.Wherever you ́re going, whatever you ́re bringing.\nWith Thule, you're free to live your active life to the full.",
+      "history": "1942: Thule is founded by Eric Thulin, Sweden\n1962: We introduced the Thule ski rack – the first Thule product for carrying your sports gear\n1964: We introduced the Thule Roof Basket – a true innovation with its flexible fastening solution for easier mounting\n1977: The first Thule Ski Box TB-11 is launched. World-famous alpine skier Ingemar Stenmark becomes the brand ambassador\n1983: Surfboard carriers launched and world-famous surfer Robby Naish becomes a brand ambassador\n1992: Launch of the first towbar-mounted bike carrier\n2001: The year when you can transport your kayaks on Thule Hull-a-Port Kayak Carrier\n2005: We introduced bike carriers and awnings for RV products\n2010: You can travel the world with Thule Crossover\n2011: As an active family you can now have an active life with your kids with multifunctional trailers\n2014: and in we introduced our jogging strollers & child bike seats\n2015: You can go hiking and trekking with our technical backpacks\n2018: It was time to elevate the adventure with our rooftop tent",
+      "img1": "https://www.thule.com/-/s/fosLq0uD9KaPQbktf4jf3sVE0I1ka6MHoxeVBFyok_w/rs:fit/h:500/f:avif/w:2000/q:80/cb:-1/plain/-/media/images/thule/top-menu---explore-and-activities/activities/top-images/city_exploring_2000x500px.jpg",
+      "img2": "https://www.thule.com/-/s/aaI3Q1ZIq-MW2zEKd4i5FjIIbhAVPaC-0GnSiDOlm6c/rs:fit/h:800/f:avif/w:2000/q:80/cb:-1/plain/-/media/images/thule/explore/explore/this-is-thule/thule-timeline-history-desktop.jpg",
+      "link": "https://www.thule.com/en-us/strollers",
+      "logo-img": "/brand-logos/thule.svg",
+      "find-store-link": "",
+      "important-note": "The ultimate bike trailer, jogger, and stroller",
+      "review-collection-title": "Reviews on Thule",
+      "header-title": "Discover the World of Thule...",
+      "title": "Bring your life ®",
+      "review-number": 0
+    },
+    "uppa_baby": {
+      "intro": "UPPAbaby® was started when we became new parents, just like you. We now have three kids running around our house, but we like to think our family extends far beyond these four walls. Our customers are like true family members to us— every single one of them. As we continue to expand and evolve, our dedication has only grown stronger. We are still every bit committed to being the best at what we do. For our family, and now for yours.\nUPPAbaby was born in 2006 out of necessity and opportunity. It all came together when we had our second child but still couldn’t find the right baby gear to fit our needs. We wondered why the only options were either mass-produced and cheaply made or impractical and complicated with lengthy instruction manuals to operate. We were confident other parents wanted more, too.",
+      "history": "We wanted to make a stroller for parents that made their lives easier and better. We knew that as long as we took one step after another in the right direction, we could create a high-performance stroller that met and exceeded the needs of parents – all while letting them maintain the sense of style they’ve always had.\nOver the next few years, UPPAbaby grew organically and today, we’re proud to say the UPPAbaby family employs more than 175 people, selling strollers, car seats, accessories, and juvenile gear worldwide! Thank you for your continued support. We are so glad you’re here.– The Monahans",
+      "img1": "https://uppababy.com/wp-content/uploads/2024/04/Gwen_Theo_Trending_Now_Lifestyle.jpg",
+      "img2": "https://uppababy.com/wp-content/uploads/2022/09/HOMEPAGE-module5_3.webp",
+      "link": "https://uppababy.com/",
+      "logo-img": "/brand-logos/png/uppa.png",
+      "find-store-link": "https://uppababy.com/retail-locator/",
+      "important-note": "parenthood, understood.",
+      "review-collection-title": "Reviews on UppaBaby",
+      "header-title": "Discover the World of UppaBaby...",
+      "title": "welcome to the family.",
+      "review-number": 0
+    },
+    "valco_baby": {
+      "intro": "Valco Baby, a brand dedicated to creating practical and stylish strollers, has been a favorite among parents since its inception. With a focus on innovation and design excellence, Valco Baby offers parents elegant and functional solutions for their little ones. From compact travel strollers to full-size urban strollers, Valco Baby has something for every family.",
+      "history": "Valco Baby, an established Australian company with over 50 years of heritage, specializes in crafting nursery furniture, bouncy chairs, stands, doll prams, and related accessories. Valco's strollers and products are meticulously designed to exude modernity, integrate practical features, and ensure user-friendliness. Renowned for their lightweight construction, Valco strollers offer compactness and effortless portability. Despite their commitment to simplicity, Valco strollers provide comprehensive solutions for children from infancy through their stroller-free years. Notably, the Snap series, starting with the Snap 3 and Snap 4, has garnered widespread acclaim and popularity.",
+      "img1": "https://valcobaby.ca/wp-content/uploads/2020/11/trendduo-frontpage4.jpg",
+      "img2": "https://valcobaby.ca/wp-content/uploads/2020/11/homepage-image-1.jpg",
+      "link": "https://valcobaby.ca/",
+      "logo-img": "/brand-logos/valco.webp",
+      "find-store-link": "https://valcobaby.ca/store-finder/",
+      "important-note": "Presenting the all new...",
+      "review-collection-title": "Reviews on ValcoBaby",
+      "header-title": "Discover the World of ValcoBaby...",
+      "title": "Presenting the all new...",
+      "review-number": 0
+    },
+    "veebee": {
+      "intro": "Introducing vee🐝bee proudly made by Valco Baby\nAs a wholly owned Australian brand we are proud to deliver quality, practical, affordable and fun baby and nursery products for both parents and children Australia wide and internationally.\nOur range includes just about anything for baby. From single and twin prams, to pram accessories, nursery ware (and almost everything in between).\nYou might have noticed the BabyInc™ & 123 Grow™ brands. These are all under our umbrella, striving to bring you quality baby products.\nOur products can be found in all leading nursery and department stores across Australia and are now available online, direct to your door 🙂",
+      "history": "VeeBee's journey began in [year], when the brand was founded with a mission to create childcare products that offer great value for money. Since then, VeeBee has become a favorite among parents, with its products being trusted for their reliability and affordability. With a commitment to providing practical solutions for modern families, VeeBee continues to innovate and create products that meet the needs of parents and children alike.",
+      "img1": "https://cdn-lakef.nitrocdn.com/redvFXtGdHNYtOmpAtUOlHqeUgMBMIbW/assets/images/optimized/rev-fbb0bb7/veebee.com.au/wp-content/uploads/2019/09/SVGVeebee.svg",
+      "img2": "https://cdn-lakef.nitrocdn.com/redvFXtGdHNYtOmpAtUOlHqeUgMBMIbW/assets/images/optimized/rev-fbb0bb7/veebee.com.au/wp-content/uploads/2023/11/BO515-with-child-on-adult-chair-768x832.jpg",
+      "link": "https://veebee.com.au/",
+      "logo-img": "/brand-logos/veebee.svg",
+      "find-store-link": "",
+      "important-note": "",
+      "review-collection-title": "Reviews on Veebee",
+      "header-title": "Discover the World of Veebee...",
+      "title": "",
+      "review-number": 0
+    },
+    "zoe": {
+      "intro": "With over 40 years of experience in the baby industry, the founder of Zoe Stroller Brand embarked on a journey of innovation and consumer-centric approach in 2014. Starting Zoe as a passion project, the founder aimed to challenge the traditional retail model by directly connecting with consumers and delivering high-quality products tailored to their needs.\nThe decision to rebrand Zoe stemmed from its humble beginnings as a hobby, where branding considerations were minimal. Recognizing the importance of a distinct identity, the founder embraced a new logo characterized by whimsical letters and vibrant orange hues, reflecting the brand's cheerful and family-friendly ethos.\nOver the years, Zoe has evolved from a passion project into a recognized name in the stroller industry, known for its commitment to innovation, quality, and direct-to-consumer approach. With a focus on providing fun and functional stroller solutions, Zoe continues to delight families with its colorful and whimsical designs.",
+      "history": "ZOE's journey began in 2014, when the brand was founded with a mission to create strollers that are both lightweight and durable. Since then, ZOE has become a trusted name in the industry, with its products being loved by parents around the world for their quality and affordability. With a commitment to innovation and customer satisfaction, ZOE continues to push the boundaries of what is possible in childcare.",
+      "img1": "https://zoebaby.com/cdn/shop/files/Parents_Run.png?v=1696899172&width=1600",
+      "img2": "https://zoebaby.com/cdn/shop/files/morgannikole_2023_02_09_04_38_25_3c02905a-066b-4c84-926f-d256cc9f41ca.jpg?v=1696885783&width=760",
+      "link": "https://zoebaby.com/",
+      "logo-img": "/brand-logos/zoe.svg",
+      "find-store-link": "",
+      "important-note": "Parenting is a trip. Take it.",
+      "review-collection-title": "Reviews on Zoe",
+      "header-title": "Discover the World of Zoe...",
+      "title": "Parenting is a trip. Take it.",
+      "review-number": 0
+    }
+  },
+  "seo": {
+    "compare-strollers" : {
+      "title": "Compare Strollers",
+      "description": "Compare top strollers for features, price, and reviews. Find the best for you!"
+    },
+    "compare-carseats" : {
+      "title": "Compare Car Seats",
+      "description": "Compare top car seats for features, price, and reviews. Find the best for you!"
+    },
+    "reviews" : {
+      "title": "Reviews about strollers and car seats",
+      "description": "Let's talk about brands, choose one to see it's history and warranty details..."
+    },
+    "manuals" : {
+      "title": "Manuals of strollers and car seats",
+      "description": "Let's get manuals based on brands, choose one to see it's details..."
+    },
+    "stroller-review" : {
+      "title": "Impartial reviews of car seats",
+      "description": "Providing unbiased insights into safety, comfort"
+    },
+    "carseat-review" : {
+      "title": "Impartial reviews of car seats",
+      "description": "Providing unbiased insights into safety, comfort"
+    }
+  }
+}

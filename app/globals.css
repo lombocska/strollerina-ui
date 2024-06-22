@@ -200,57 +200,61 @@
 
     /* Grid Items */
     .grid-item-a {
-        background-image: url('/static/images/bento/about-square.webp');
+        background-image: url('/static/images/bento/about-square.png');
     }
 
     .grid-item-b-overlay {
-        background-image: url('/static/images/bento/details.webp');
+        background-image: url('/static/images/bento/strollers-silhouette-square.png');
+    }
+
+    .grid-item-d-overlay {
+        background-image: url('/static/images/bento/carseats-silhouette-square.png');
     }
 
     .grid-item-c {
-        background-image: url('/static/images/bento/image-1.webp');
+        background-image: url('/static/images/bento/right-banner.png');
     }
 
-    .grid-item-e-overlay {
-        background-image: url('/static/images/bento/blog-square.webp');
-    }
+    /* .grid-item-e-overlay {
+        background-image: url('/static/images/bento/blog-square.png');
+    } */
 
     .grid-item-f-overlay {
-        background-image: url('/static/images/bento/contributions-square.webp');
+        background-image: url('/static/images/bento/manuals-square.png');
     }
 
     .grid-item-g-overlay {
-        background-image: url('/static/images/bento/spotify.webp');
+        background-image: url('/static/images/bento/reviews-square.png');
     }
 
     .grid-item-h {
-        background-image: url('/static/images/bento/image-2.webp');
+        background-image: url('/static/images/bento/left-banner.png');
     }
 
     .grid-item-i-overlay {
-        background-image: url('/static/images/bento/github.webp');
+        background-image: url('/static/images/bento/strollers-silhouette-square.png');
     }
 
     .grid-item-j {
-        background-image: url('/static/images/bento/technologies.webp');
+        background-image: url('/static/images/bento/placeholder-square.png');
     }
 
     .grid-item-k-overlay {
-        background-image: url('/static/images/bento/twitter.webp');
+        background-image: url('/static/images/bento/about-info-square.png');
     }
 
     /* Responsive Adjustments */
     @media (min-width: 640px) {
         .grid-item-a {
-            background-image: url('/static/images/bento/about.webp');
+            background-image: url('/static/images/bento/about-2.png');
         }
 
         .grid-item-e-overlay {
-            background-image: url('/static/images/bento/blog.webp');
+            background-image: url('/static/images/bento/blog.png');
         }
 
         .grid-item-f-overlay {
-            background-image: url('/static/images/bento/contributions.webp');
+            background-image: url('/static/images/bento/manuals.png');
         }
     }
 
@@ -259,31 +263,35 @@
             opacity: 1;
         }
         .grid-item-a-silhouette {
-            background-image: url('/static/images/bento/about-silhouette.webp');
+            background-image: url('/static/images/bento/about-silhouette-4.png');
         }
 
         .grid-item-b {
-            background-image: url('/static/images/bento/details-silhouette.webp');
+            background-image: url('/static/images/bento/strollers-square.png');
+        }
+
+        .grid-item-d {
+            background-image: url('/static/images/bento/carseats-square.png');
         }
 
         .grid-item-e {
-            background-image: url('/static/images/bento/blog-silhouette.webp');
+            background-image: url('/static/images/bento/blog-silhouette.png');
         }
 
         .grid-item-f {
-            background-image: url('/static/images/bento/contributions-silhouette.webp');
+            background-image: url('/static/images/bento/manuals-silhouette.png');
         }
 
         .grid-item-g {
-            background-image: url('/static/images/bento/spotify-silhouette.webp');
+            background-image: url('/static/images/bento/reviews-square.png');
         }
 
         .grid-item-i {
-            background-image: url('/static/images/bento/github-silhouette.webp');
+            background-image: url('/static/images/bento/strollers-square.png');
         }
 
         .grid-item-k {
-            background-image: url('/static/images/bento/twitter-silhouette.webp');
+            background-image: url('/static/images/bento/about-info-square.png');
         }
     }
 }
@@ -332,3 +340,10 @@
         @apply m-0;
     }
 }
+
+
+@layer utilities {
+    .input-no-border {
+      @apply border-none;
+    }
+  }
