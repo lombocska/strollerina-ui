@@ -38,15 +38,12 @@ const Card = ({ title, description, imgSrc, href, tags = [] }: CardProps) => (
             
             <div className="p-6 flex flex-col justify-between flex-grow">
                 <div>
-                    <h2 className="mb-2 text-2xl font-bold leading-8 tracking-tight">
-                    {href ? (
-                        <Link href={href} aria-label={`Link to ${title}`}>
+                    <h2 className="mb-2 text-2xl font-bold leading-8 tracking-tight prose">
+
                         {title}
-                        </Link>
-                    ) : (
-                        title
-                    )}
+                    
                     </h2>
+
                     <div className="mb-3 flex flex-wrap">
                     {tags.map((tag, index) => (
                         <Badge

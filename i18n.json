@@ -1,6 +1,6 @@
 {
     "locales": ["en", "hu"],
-    "defaultLocale": "hu",
+    "defaultLocale": "en",
     "pages": { 
       "*": ["common", "tags"],
       "/": ["home", "example"],
