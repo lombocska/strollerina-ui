@@ -41,6 +41,7 @@ const Challenge = ({
        
         const getProductImages = async () => {
             try {
+                console.log(id)
                 getStrollerImgs(id).then(setImgs);
             } catch (error) {
                 console.log(error)
@@ -48,15 +49,14 @@ const Challenge = ({
         }
 
         getProductImages()
-    }, [id, imgs])
+    }, [id])
 
     const titleId = slugify(title, { lower: true })
 
     return (
         <div className="my-6 overflow-hidden rounded-lg ">
-
-            
-
+            {imgs && imgs.length > 0 &&
+            <>
             <div className="px-6 py-3">
                 <Title level={level} className="!m-0 text-xl" id={titleId}>
                     {title}
@@ -66,7 +66,8 @@ const Challenge = ({
             <div>
                 <Carousel slides={imgs} />
             </div>
-
+            </>
+        }
         </div>
     )
 }

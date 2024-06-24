@@ -132,7 +132,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <link rel="mask-icon" href="/static/favicons/safari-pinned-tab.svg" color="#5bbad5" />
             <meta name="msapplication-TileColor" content="#000000" />
             <meta name="theme-color" media="(prefers-color-scheme: light)" content="#E9D3B6" />
-            <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#E9D3B6" />
+            {/* <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000000" /> */}
             <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
             <body className="bg-background text-black antialiased dark:text-white">
                 <ThemeProviders>
@@ -144,9 +144,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     <Header />
 
                     <main className="container mx-auto max-w-7xl px-6 flex-grow mt-[80px]">
-
                         {children}
                     </main>
+                    <Footer />
                     </SearchProvider>
                     {/* <Navbar /> */}
                     {/* <SectionContainer> */}
@@ -156,6 +156,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                                 <main className="mb-auto">{children}</main>
                             </SearchProvider>
                             <Footer /> */}
+                             
                         </div>
                     {/* </SectionContainer> */}
                 </ThemeProviders>

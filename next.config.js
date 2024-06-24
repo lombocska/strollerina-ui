@@ -277,6 +277,7 @@ const nextConfig = {
             'ternx.com',
             'zoebaby.com',
             "www.besafe.com",
+            "images.maxi-cosi.com",
             "gravatar.com",
             "2.gravatar.com"
         ],
