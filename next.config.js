@@ -275,7 +275,10 @@ const nextConfig = {
             'nunababy.eu',
             'www.babyzen.com',
             'ternx.com',
-            'zoebaby.com'
+            'zoebaby.com',
+            "www.besafe.com",
+            "gravatar.com",
+            "2.gravatar.com"
         ],
     },
     experimental: {

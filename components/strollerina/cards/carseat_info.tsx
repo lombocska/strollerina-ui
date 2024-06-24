@@ -1,8 +1,8 @@
 // components/SidePanel.js
 'use client';
 
-import { getCarseatManualLink } from '@/lib/data';
-import { BrandItem, CarseatCardDTO, ManualDTO } from '@/types';
+import { getCarseatManualLink } from 'lib/data';
+import { BrandItem, CarseatCardDTO, ManualDTO } from 'types';
 import { Accordion, AccordionItem } from '@nextui-org/accordion';
 import { Card, CardBody, CardFooter, CardHeader } from '@nextui-org/card';
 import { Chip } from '@nextui-org/chip';

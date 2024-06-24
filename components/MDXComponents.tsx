@@ -10,6 +10,8 @@ import Image from './Image'
 import CustomLink from './Link'
 import StaticTweet from './StaticTweet'
 import YouTube from './YouTube'
+import BlogCarousel from './BlogCarousel'
+import Card from './Card'
 
 export const components: MDXComponents = {
     Image,
@@ -22,4 +24,6 @@ export const components: MDXComponents = {
     StaticTweet,
     Box,
     YouTube,
+    BlogCarousel,
+    Card
 }

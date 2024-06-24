@@ -4,6 +4,7 @@ import Image from '@/components/Image'
 import Link from '@/components/Link'
 import PageTitle from '@/components/PageTitle'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
+import SectionContainer from '@/components/SectionContainer'
 import TOCInline from '@/components/TOCInline'
 import Tag from '@/components/Tag'
 import { Skeleton } from '@/components/shadcn/skeleton'
@@ -60,6 +61,8 @@ export default function PostLayout({
 
     return (
         <>
+            {/* <SectionContainer> 
+            <div className="box-border flex h-full flex-col justify-between "> */}
             <ScrollTopAndComment />
             <article>
                 <div>
@@ -193,6 +196,8 @@ export default function PostLayout({
                     </div>
                 </div>
             </article>
+            {/* </div> */}
+        {/* </SectionContainer> */}
         </>
     )
 }

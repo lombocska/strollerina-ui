@@ -1,9 +1,9 @@
 'use client';
 
-import { clearLocalStorage } from '@/lib/LocalStorageAPI';
-import { ONE_THOUSAND_FIVE_HUNDRED } from '@/lib/constants';
-import { getAllCarSeats, searchCarSeats } from '@/lib/data';
-import { deepCompare } from '@/lib/util';
+import { clearLocalStorage } from 'lib/LocalStorageAPI';
+import { ONE_THOUSAND_FIVE_HUNDRED } from 'lib/constants';
+import { getAllCarSeats, searchCarSeats } from 'lib/data';
+import { deepCompare } from 'lib/util';
 import { Accordion, AccordionItem } from '@nextui-org/accordion';
 import { Button } from "@nextui-org/button";
 import useTranslation from 'next-translate/useTranslation';
@@ -18,7 +18,9 @@ import CarSeatCanopyFilters from './carseat_filters/carseat_canopy_filters';
 import CarSeatHarnessFilters from './carseat_filters/carseat_harness_filters';
 import CarSeatCertificationFilters from './carseat_filters/carseat_certification_filters';
 import CarSeatOtherFilters from './carseat_filters/carseat_other_filters';
-import { CarSeatFiltersProps } from '@/types';
+import { CarSeatFiltersProps } from 'types';
+import { Card, CardBody, CardHeader } from '@nextui-org/card';
+import { Divider } from '@nextui-org/react';
 
 
 export default function CarSeatFiltersCollection({brands, setCarseats, filters, initialFilters, setFilters}: CarSeatFiltersProps) {
@@ -88,15 +90,20 @@ export default function CarSeatFiltersCollection({brands, setCarseats, filters, 
     
     return (
         <>
-            <div className="flex justify-between m-3 mb-6">
+        <Card className="">
+            <CardHeader className="flex gap-3 justify-between">
+            {/* <div className="flex justify-between m-3 mb-6"> */}
                 <Button radius="full" size="lg" variant="ghost" onPress={() => search()}>
                     {t('search')}
                 </Button>
                 <Button  radius="full" size="lg" variant="ghost" onPress={() => clearFilters()}>
                     {t('clear')}
                 </Button>  
-            </div>
+            {/* </div> */}
+            </CardHeader>
         
+            <Divider/>
+            <CardBody>
             <div className="grid grid-flow-row-dense grid-cols-2">
                 <BrandSelection brands={brands} setFilters={setFilters} isCleared={isCleared}/>
    
@@ -136,6 +143,8 @@ export default function CarSeatFiltersCollection({brands, setCarseats, filters, 
                     <CarSeatOtherFilters  setFilters={setFilters} isCleared={isCleared} /> 
                 </AccordionItem>
             </Accordion>
+            </CardBody>
+            </Card>
         </>        
     );
 }

@@ -14,6 +14,7 @@ import { MDXLayoutRenderer } from 'pliny/mdx-components'
 import { allCoreContent, coreContent, sortPosts } from 'pliny/utils/contentlayer'
 
 import { ReportView } from './view'
+import SectionContainer from '@/components/SectionContainer'
 
 const defaultLayout = 'PostLayout'
 const layouts = {
@@ -116,15 +117,23 @@ export default async function Page({ params }: { params: { slug: string[] } }) {
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
             />
             <ReportView slug={slug} />
-            <Layout
-                content={mainContent}
-                authorDetails={authorDetails}
-                toc={post.toc}
-                next={next}
-                prev={prev}
-            >
-                <MDXLayoutRenderer code={post.body.code} components={components} toc={post.toc} />
-            </Layout>
+
+            <SectionContainer> 
+                <div className="box-border flex h-full flex-col justify-between ">
+                    <div className="divide-y divide-accent-foreground dark:divide-accent xl:col-span-3 xl:row-span-2 xl:pb-0">
+                        <Layout
+                            content={mainContent}
+                            authorDetails={authorDetails}
+                            toc={post.toc}
+                            next={next}
+                            prev={prev}
+                        >
+                            <MDXLayoutRenderer code={post.body.code} components={components} toc={post.toc} />
+                        </Layout>
+                    </div>
+                </div>
+            </SectionContainer>
+
         </>
     )
 }

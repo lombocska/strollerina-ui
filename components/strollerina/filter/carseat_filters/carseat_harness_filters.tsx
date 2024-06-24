@@ -1,8 +1,8 @@
 'use client';
 
-import { siteConfig } from "@/config/site";
+import { siteConfig } from "config/site";
 import Tags from "../input_fields/tags";
-import { CarSeatFiltersProps } from "@/types";
+import { CarSeatFiltersProps } from "types";
 import { Dispatch, SetStateAction } from "react";
 
 export default  function CarSeatHarnessFilters({setFilters, isCleared}: CarSeatFiltersProps) {

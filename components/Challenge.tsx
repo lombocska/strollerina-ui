@@ -8,6 +8,8 @@ import slugify from 'slugify'
 
 import Image from './Image'
 import Link from './Link'
+import { getStrollerImgs } from 'lib/data'
+import Carousel from './strollerina/carousel/carousel'
 
 interface TitleProps {
     level: number
@@ -37,12 +39,14 @@ const Challenge = ({
     solves,
     files,
 }) => {
+    
     const [userAvatars, setUserAvatars] = useState({})
     const usernameMapping = {
         jktrn: 'enscribe',
     }
 
     useEffect(() => {
+
         const fetchUserAvatars = async () => {
             const usernames = Array.isArray(solvers) ? [...new Set(solvers)] : [solvers]
 

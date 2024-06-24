@@ -145,6 +145,7 @@ export default function ListLayout({
                                                     alt={`${title} thumbnail`}
                                                     fill
                                                     className="mb-4 h-fit w-full rounded-md object-contain"
+                                                    loading='lazy'
                                                 />
                                             </div>
                                         </Link>

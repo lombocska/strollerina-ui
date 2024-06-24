@@ -1,12 +1,12 @@
 'use client';
 
-import { siteConfig } from "@/config/site";
-import { useLocalStorage } from '@/lib/LocalStorageAPI';
-import { FIVE, ONE_HUNDRED_FIFTY, SIXSTY, TEN, ZERO } from "@/lib/constants";
+import { siteConfig } from "config/site";
+import { useLocalStorage } from 'lib/LocalStorageAPI';
+import { FIVE, ONE_HUNDRED_FIFTY, SIXSTY, TEN, ZERO } from "lib/constants";
 import { Dispatch, SetStateAction, useEffect } from "react";
 import NumberInput from "../input_fields/number_input";
 import Tags from "../input_fields/tags";
-import { CarSeatFilters, CarSeatFiltersProps } from "@/types";
+import { CarSeatFilters, CarSeatFiltersProps } from "types";
 
 export default  function CarSeatKidDimensionFilters({setFilters, isCleared}: CarSeatFiltersProps) {
     

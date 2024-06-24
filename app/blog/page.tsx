@@ -1,3 +1,4 @@
+import SectionContainer from '@/components/SectionContainer'
 import ListLayout from '@/layouts/ListLayout'
 import { genPageMetadata } from 'app/seo'
 import { allBlogs } from 'contentlayer/generated'
@@ -20,11 +21,17 @@ export default function BlogPage() {
     }
 
     return (
+        <SectionContainer> 
+            <div className="box-border flex h-full flex-col justify-between ">
+                <div className="divide-y divide-accent-foreground dark:divide-accent xl:col-span-3 xl:row-span-2 xl:pb-0">
         <ListLayout
             posts={posts}
             initialDisplayPosts={initialDisplayPosts}
             pagination={pagination}
             title="All Posts"
         />
+        </div>
+        </div>
+        </SectionContainer>
     )
 }

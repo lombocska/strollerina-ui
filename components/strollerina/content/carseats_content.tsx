@@ -1,7 +1,7 @@
 'use client';
 
-import { useLocalStorage } from '@/lib/LocalStorageAPI';
-import { ONE_HUNDRED_FIFTY, ONE_THOUSAND_FIVE_HUNDRED, SIXSTY, THIRTY } from '@/lib/constants';
+import { useLocalStorage } from 'lib/LocalStorageAPI';
+import { ONE_HUNDRED_FIFTY, ONE_THOUSAND_FIVE_HUNDRED, SIXSTY, THIRTY } from 'lib/constants';
 import { Modal, ModalBody, ModalContent, ModalFooter, ModalHeader, useDisclosure } from '@nextui-org/modal';
 import useTranslation from 'next-translate/useTranslation';
 import { useState } from 'react';
@@ -9,7 +9,7 @@ import CarSeatFiltersCollection from '../filter/carseat_filters';
 import CounterChip from '../filter/helper/counter_chip';
 import { CarSeatSortingSelect } from '../sorting_select';
 import ProductCard from '../cards/product_card';
-import { BrandContentProps, CarseatCard, CarseatsContentProps, CarSeatFilters } from '@/types';
+import { BrandContentProps, CarseatCard, CarseatsContentProps, CarSeatFilters } from 'types';
 import { Button } from '@nextui-org/button';
 
 
@@ -42,8 +42,9 @@ export default  function CarseatsContent({ initialData, brands }:
 
     return (
        <>
-            
+            {/* <div className="ml-[calc(-50vw+50%+10px)] w-[calc(100vw-20px)] p-4 "> */}
             <main className="md:w-2/3 p-4  ">
+            {/* <main className="md:w-2/3 p-4  "> */}
             {carseats &&
             <>
                 <div className="grid grid-flow-col  content-center items-center mb-5 rounded-full ">
@@ -70,7 +71,7 @@ export default  function CarseatsContent({ initialData, brands }:
             </main>
 
             {/* carseat filters content  */}
-            <aside className="hidden md:block md:w-1/3 p-4  fixed right-0 top-16 h-full shadow-lg rounded-lg overflow-y-auto ">
+            <aside className="hidden md:block md:w-1/3 p-4  fixed right-0 top-16 h-full max-h-[1000px] bg-transparent overflow-y-auto ">
                 <CarSeatFiltersCollection brands={brands} setCarseats={setCarseats} filters={filters} initialFilters={initialFilters} setFilters={setFilters}/>
              </aside>
              
@@ -95,6 +96,7 @@ export default  function CarseatsContent({ initialData, brands }:
                     )}
                 </ModalContent>
             </Modal>
+            {/* </div> */}
         </>        
     );
 }

@@ -1,13 +1,13 @@
 'use client';
 
 import { CheckIcon } from "@/components/icons";
-import { siteConfig } from "@/config/site";
-import { useLocalStorage } from '@/lib/LocalStorageAPI';
+import { siteConfig } from "config/site";
+import { useLocalStorage } from 'lib/LocalStorageAPI';
 import { Chip } from "@nextui-org/chip";
 import useTranslation from "next-translate/useTranslation";
 import { useEffect } from "react";
 import AdacSelection from "../input_fields/adac_selection";
-import { CarSeatFilters, CarSeatFiltersProps } from "@/types";
+import { CarSeatFilters, CarSeatFiltersProps } from "types";
 
 export default function CarSeatAdacFilters({ setFilters, isCleared }: CarSeatFiltersProps) {
     const { t } = useTranslation('carseats');

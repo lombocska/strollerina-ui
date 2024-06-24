@@ -5,7 +5,7 @@ import siteMetadata from '@/data/siteMetadata'
 import { Analytics } from '@vercel/analytics/react'
 import 'css/tailwind.css'
 import { Metadata } from 'next'
-import { Alata, Albert_Sans, JetBrains_Mono } from 'next/font/google'
+import { Alata, Albert_Sans, Aleo, JetBrains_Mono, League_Spartan } from 'next/font/google'
 import { SearchConfig, SearchProvider } from 'pliny/search'
 import 'pliny/search/algolia.css'
 import 'react-grid-layout/css/styles.css'
@@ -13,6 +13,7 @@ import 'react-resizable/css/styles.css'
 
 import './globals.css'
 import { ThemeProviders } from './theme-providers'
+import { Navbar } from '@/components/strollerina/navbar'
 
 const font = JetBrains_Mono({
     subsets: ['latin'],
@@ -36,7 +37,20 @@ const alata_font = Alata({
 })
 
 
+const aleo_font = Aleo({
+    weight: '100',
+    subsets: ['latin'],
+    display: 'swap',
+    variable: '--font-albert-sans',
+})
 
+
+const spartan_font = League_Spartan({
+    weight: '400',
+    subsets: ['latin'],
+    display: 'swap',
+    variable: '--font-albert-sans',
+})
 
 // export const fontSans = fontSans({
 //     subsets: ["latin"],
@@ -113,6 +127,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 sizes="16x16"
                 href="/static/favicons/favicon-16x16.png"
             />
+
             <link rel="manifest" href="/static/favicons/site.webmanifest" />
             <link rel="mask-icon" href="/static/favicons/safari-pinned-tab.svg" color="#5bbad5" />
             <meta name="msapplication-TileColor" content="#000000" />
@@ -121,17 +136,28 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
             <body className="bg-background text-black antialiased dark:text-white">
                 <ThemeProviders>
-                    <Analytics />
 
-                    <SectionContainer>
-                        <div className="box-border flex h-full flex-col justify-between ">
+                    <Analytics />
+                    <div className="relative flex flex-col h-screen ">
+                    <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>
+                    {/* <Navbar /> */}
+                    <Header />
+
+                    <main className="container mx-auto max-w-7xl px-6 flex-grow mt-[80px]">
+
+                        {children}
+                    </main>
+                    </SearchProvider>
+                    {/* <Navbar /> */}
+                    {/* <SectionContainer> */}
+                        {/* <div className="box-border flex h-full flex-col justify-between ">
                             <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>
-                                <Header />
+                               
                                 <main className="mb-auto">{children}</main>
                             </SearchProvider>
-                            <Footer />
+                            <Footer /> */}
                         </div>
-                    </SectionContainer>
+                    {/* </SectionContainer> */}
                 </ThemeProviders>
             </body>
         </html>

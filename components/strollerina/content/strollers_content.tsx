@@ -11,6 +11,7 @@ import CounterChip from '../filter/helper/counter_chip';
 import SortingSelect from '../sorting_select';
 import { BrandContentProps, StrollerCard, StrollerFilters, StrollersContentProps } from 'types';
 import StrollerFiltersCollection from '../filter/stroller_filters';
+import { Accordion } from '@nextui-org/accordion';
 
 
 export default  function StrollersContent({ initialData, brands }: 
@@ -43,23 +44,22 @@ export default  function StrollersContent({ initialData, brands }:
     const [filters, setFilters] = useLocalStorage("stroller/filters", initialFilters);
 
     return (
-       <>   
-        {/* <main> */}
-        <div className="ml-[calc(-50vw+50%+10px)] w-[calc(100vw-20px)] p-4 ">
+        <>
+    
         
+        {/* <div className="ml-[calc(-50vw+50%+10px)] w-[calc(100vw-20px)] p-4 "> */}
         <main className="md:w-2/3 p-4  ">
-            {/* <div className="grid grid-rows-1 grid-flow-col gap-4 justify-between w-full"> */}
 
-            {/* <div className="grid grid-flow-col  content-center items-center mb-5 border-dotted border-4 rounded-full bg-zinc-100"> */}
         {strollers &&
             <>
                 <div className="grid grid-flow-col  content-center items-center mb-5 rounded-full ">
                     <CounterChip title={"stroller-count"} number={strollers.length} />
                     <SortingSelect  strollers={strollers} setStrollers={setStrollers}/>
                 </div>
-                {/* <FilterStatusChips json={filters} /> */}
 
-                <div className="gap-2 grid grid-cols-1 sm:grid-cols-3" key={"strollers"}>
+                {/* <div className="gap-2 grid grid-cols-1 sm:grid-cols-3" key={"strollers"}> */}
+                <div className="gap-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3">
+
                     {strollers.map(item => (
                             <ProductCard
                                 key={'stroller-' + item.id}
@@ -77,8 +77,6 @@ export default  function StrollersContent({ initialData, brands }:
         }
         </main>
 
-        {/* stroller filter content  */}
-            {/* <aside className="hidden md:block md:w-1/3 p-4  fixed right-0 top-16 h-full shadow-lg rounded-lg overflow-y-auto bg-transparent"> */}
             <aside className="hidden md:block md:w-1/3 p-4  fixed right-0 top-16 h-full max-h-[1000px] bg-transparent overflow-y-auto ">
                 <StrollerFiltersCollection brands={brands} setStrollers={setStrollers} filters={filters} initialFilters={initialFilters} setFilters={setFilters} isCleared={false}/>
              </aside>
@@ -104,7 +102,7 @@ export default  function StrollersContent({ initialData, brands }:
                     )}
                 </ModalContent>
             </Modal>
-        </div>
+        {/* </div>  */}
 
             
         </>        
