@@ -52,9 +52,9 @@ export default  function StrollersContent({ initialData, brands }:
 
         {strollers &&
             <>
-                <div className="grid grid-flow-col  content-center items-center mb-5 rounded-full ">
+                <div className="flex flex-wrap content-center items-center mb-5 rounded-full justify-between space-y-2">
                     <CounterChip title={"stroller-count"} number={strollers.length} />
-                    <SortingSelect  strollers={strollers} setStrollers={setStrollers}/>
+                    <SortingSelect strollers={strollers} setStrollers={setStrollers} />
                 </div>
 
                 {/* <div className="gap-2 grid grid-cols-1 sm:grid-cols-3" key={"strollers"}> */}

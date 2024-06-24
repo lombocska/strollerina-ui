@@ -47,7 +47,7 @@ export default  function CarseatsContent({ initialData, brands }:
             {/* <main className="md:w-2/3 p-4  "> */}
             {carseats &&
             <>
-                <div className="grid grid-flow-col  content-center items-center mb-5 rounded-full ">
+                <div className="flex flex-wrap content-center items-center mb-5 rounded-full justify-between space-y-2">
                     <CounterChip title={"carseat-count"} number={carseats.length} />
                     <CarSeatSortingSelect  carseats={carseats} setCarseats={setCarseats}/>
                 </div>

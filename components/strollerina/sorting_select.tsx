@@ -4,6 +4,7 @@ import { siteConfig } from "config/site";
 import { Select, SelectItem } from "@nextui-org/select";
 import useTranslation from "next-translate/useTranslation";
 import React, { useEffect } from "react";
+import { D } from "@upstash/redis/zmscore-5d82e632";
 
 export default function SortingSelect({strollers, setStrollers}) {
 
@@ -55,6 +56,7 @@ export default function SortingSelect({strollers, setStrollers}) {
     }, [value]); 
 
     return (
+        <div className="flex-shrink-0 w-full max-w-md">
         <Select
             radius="full"
             items={sortings}
@@ -68,6 +70,7 @@ export default function SortingSelect({strollers, setStrollers}) {
             >
              {(sorting) => <SelectItem key={sorting.value} textValue={t("strollers:"+ sorting.name)}> {t("strollers:"+ sorting.name)}</SelectItem>}
          </Select>
+         </div>
     );
 }
     
@@ -109,6 +112,8 @@ export function CarSeatSortingSelect({carseats, setCarseats}) {
     }, [value]); 
 
     return (
+        <div className="flex-shrink-0 w-full max-w-md">
+
         <Select
             radius="full"
             items={sortings}
@@ -122,6 +127,7 @@ export function CarSeatSortingSelect({carseats, setCarseats}) {
             >
              {(sorting) => <SelectItem key={sorting.value} textValue={t("carseats:"+ sorting.name)}> {t("carseats:"+ sorting.name)}</SelectItem>}
          </Select>
+         </div>
     );
 }
 
