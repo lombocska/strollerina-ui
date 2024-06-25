@@ -1,38 +1,3 @@
 {
-    "main-text" : "Itt megtalálhatod babakocsid használati útmutatóját...",
-    "brands": {
-        "cybex.logo-img" : "/brand-logos/cybex.svg",
-        "abc_design.logo-img" : "/brand-logos/abcdesign.svg",
-        "baby_jogger.logo-img" : "/brand-logos/babyjogger.svg",
-        "bob.logo-img" : "/brand-logos/png/bob.png",
-        "bugaboo.logo-img" : "/brand-logos/png/bugaboo-rb.png",
-        "britax_römer.logo-img" : "/brand-logos/britax.svg",
-        "chipolino.logo-img" : "/brand-logos/chipolino.svg",
-        "doona.logo-img" : "/brand-logos/png/doona.png",
-        "easywalker.logo-img" : "/brand-logos/png/easywalker.png",
-        "egg.logo-img" : "/brand-logos/png/egg.png",
-        "ergobaby.logo-img" : "/brand-logos/png/ergo.png",
-        "espiro.logo-img" : "/brand-logos/png/espiro.png",
-        "gb.logo-img" : "/brand-logos/png/gb.png",
-        "greentom.logo-img" : "/brand-logos/png/greentom.png",
-        "hauck.logo-img" : "/brand-logos/hauck.svg",
-        "joie.logo-img" : "/brand-logos/png/joie.png",
-        "joolz.logo-img" : "/brand-logos/png/joolz.png",
-        "joovy.logo-img" : "/brand-logos/png/joovy.png",
-        "mamas_and_papas.logo-img" : "/brand-logos/png/mamas.webp",
-        "maxi_cosi.logo-img" : "/brand-logos/maxi-cosi.svg",
-        "moon.logo-img" : "/brand-logos/moon.svg",
-        "mountain_buggy.logo-img" : "/brand-logos/mountain_buggy.svg",
-        "nuna.logo-img" : "/brand-logos/nuna.svg",
-        "peg_perego.logo-img" : "/brand-logos/peg_perego.svg",
-        "phil_and_teds.logo-img" : "/brand-logos/png/phil.png",
-        "stokke.logo-img" : "/brand-logos/png/stokke.png",
-        "ternx.logo-img" : "/brand-logos/png/ternx.png",
-        "thule.logo-img" : "/brand-logos/thule.svg",
-        "uppa_baby.logo-img" : "/brand-logos/png/uppa.png",
-        "valco_baby.logo-img" : "/brand-logos/valco.webp",
-        "veebee.logo-img" : "/brand-logos/veebee.svg",
-        "zoe.logo-img" : "/brand-logos/zoe.svg"
-
-    }
+    "main-text" : "Itt megtalálhatod babakocsid használati útmutatóját..."
 }

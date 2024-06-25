@@ -13,7 +13,7 @@ export default function SimpleCard({
   large?: boolean;
 }) { 
   return (
-    <Card className="py-4 bg-strollerina_green-200">
+    <Card className="py-4 bg-stone-200">
       <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
         <p className="text-tiny uppercase font-bold">{title}</p>
         <small className="text-default-500">{description}</small>

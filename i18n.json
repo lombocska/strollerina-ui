@@ -18,6 +18,14 @@
       {
         "domain": "babakocsikereso.hu",
         "defaultLocale": "hu"
+      },
+      {
+        "domain": "babakocsikereso.vercel.app",
+        "defaultLocale": "hu"
+      },
+      {
+        "domain": "strollerina-ui.vercel.app",
+        "defaultLocale": "en"
       }
     ]
   }
