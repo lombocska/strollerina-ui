@@ -9,5 +9,15 @@
       "/about": ["about"],
       "/strollers": ["strollers"],
       "/carseats": ["carseats"]
-    }
+    },
+    "domains": [
+      {
+        "domain": "strollerina.com",
+        "defaultLocale":  "en"
+      },
+      {
+        "domain": "babakocsikereso.hu",
+        "defaultLocale": "hu"
+      }
+    ]
   }
