@@ -5,14 +5,17 @@ import { Modal, ModalBody, ModalContent, ModalFooter, ModalHeader, useDisclosure
 import { getDictionary } from 'get-dictionary';
 import { ONE_HUNDRED_FIFTY, ONE_THOUSAND_FIVE_HUNDRED, SIXSTY, THIRTY } from 'lib/constants';
 import dynamic from 'next/dynamic';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { BrandContentProps, CarSeatFilters, CarseatCard, CarseatsContentProps } from 'types';
 import ProductCard from '../cards/product_card';
 import CarSeatFiltersCollection from '../filter/carseat_filters';
 import CounterChip from '../filter/helper/counter_chip';
 import { CarSeatSortingSelect } from '../sorting_select';
 
-
+const DynamicUseLocalStorage = dynamic(() => import('lib/LocalStorageAPI'), {
+    ssr: false,
+  });
+  
 export default  function CarseatsContent({ initialData, brands, dictionary}: 
     {
         initialData: CarseatsContentProps,
@@ -40,7 +43,19 @@ export default  function CarseatsContent({ initialData, brands, dictionary}:
     };
 
     //filters
-    const [filters, setFilters] = useLocalStorage("carseat/filters", initialFilters);
+    //filters
+    const [filters, setFilters] = useState(initialFilters);
+
+    useEffect(() => {
+        async function loadLocalStorage() {
+        const useLocalStorage = await DynamicUseLocalStorage;
+        const [storedFilters, setStoredFilters] = useLocalStorage("stroller/filters", initialFilters);
+        setFilters(storedFilters);
+        setFilters(() => setStoredFilters);
+        }
+
+        loadLocalStorage();
+    }, []);
 
     return (
        <>
