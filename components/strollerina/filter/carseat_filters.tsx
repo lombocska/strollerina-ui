@@ -6,7 +6,6 @@ import { getAllCarSeats, searchCarSeats } from 'lib/data';
 import { deepCompare } from 'lib/util';
 import { Accordion, AccordionItem } from '@nextui-org/accordion';
 import { Button } from "@nextui-org/button";
-import useTranslation from 'next-translate/useTranslation';
 import { useEffect, useState } from 'react';
 import CarSeatAdacFilters from './carseat_filters/carseat_adac_filters';
 import CarSeatKidDimensionFilters from './carseat_filters/carseat_kid_dimension_filters';
@@ -18,15 +17,23 @@ import CarSeatCanopyFilters from './carseat_filters/carseat_canopy_filters';
 import CarSeatHarnessFilters from './carseat_filters/carseat_harness_filters';
 import CarSeatCertificationFilters from './carseat_filters/carseat_certification_filters';
 import CarSeatOtherFilters from './carseat_filters/carseat_other_filters';
-import { CarSeatFiltersProps } from 'types';
+import { BrandContentProps, CarSeatFiltersProps, CarseatCard } from 'types';
 import { Card, CardBody, CardHeader } from '@nextui-org/card';
 import { Divider } from '@nextui-org/react';
+import { getDictionary } from 'get-dictionary';
 
 
-export default function CarSeatFiltersCollection({brands, setCarseats, filters, initialFilters, setFilters}: CarSeatFiltersProps) {
+export default function CarSeatFiltersCollection({brands, setCarseats, filters, initialFilters, setFilters, dictionary, onClose} : {
+    isCleared: boolean | false;
+    brands: BrandContentProps;
+    setCarseats: React.Dispatch<React.SetStateAction<CarseatCard[]>>;
+    filters: any; 
+    initialFilters: any; 
+    setFilters: React.Dispatch<React.SetStateAction<any>>; 
+    dictionary: Awaited<ReturnType<typeof getDictionary>>["carseats"];
+    onClose?: () => void;
+}) {
     
-    const { t } = useTranslation('carseats');
-
 
     const [isCleared, setIsCleared] = useState(false);
 
@@ -55,6 +62,9 @@ export default function CarSeatFiltersCollection({brands, setCarseats, filters, 
                             filters.tags
                 )
                 .then(res => setCarseats(res));
+        }
+        if (onClose) {
+            onClose();
         }
        
     };
@@ -92,55 +102,80 @@ export default function CarSeatFiltersCollection({brands, setCarseats, filters, 
         <>
         <Card className="">
             <CardHeader className="flex gap-3 justify-between">
-            {/* <div className="flex justify-between m-3 mb-6"> */}
                 <Button radius="full" size="lg" variant="ghost" onPress={() => search()}>
-                    {t('search')}
+                    {dictionary['common']["search"]}
                 </Button>
                 <Button  radius="full" size="lg" variant="ghost" onPress={() => clearFilters()}>
-                    {t('clear')}
+                    {dictionary['common']["clear"]}
                 </Button>  
-            {/* </div> */}
             </CardHeader>
         
             <Divider/>
             <CardBody>
             <div className="grid grid-flow-row-dense grid-cols-2">
-                <BrandSelection brands={brands} setFilters={setFilters} isCleared={isCleared}/>
+                <BrandSelection brands={brands} setFilters={setFilters} isCleared={isCleared} dictionary={dictionary}/>
    
-                <SelectMaxPrice setFilters={setFilters} isCleared={isCleared} lSPrefix={"carseat/"} defaultMaxPrice={ONE_THOUSAND_FIVE_HUNDRED}/>
+                <SelectMaxPrice 
+                    setFilters={setFilters} 
+                    isCleared={isCleared} 
+                    lSPrefix={"carseat/"} 
+                    defaultMaxPrice={ONE_THOUSAND_FIVE_HUNDRED}
+                    title={dictionary["filters"]['max-price']}
+                    label={dictionary["filters"]['max-price']}/>
             </div>
 
             <Accordion className='m-1 mb-10' variant="bordered" selectionMode="multiple">
-                <AccordionItem key="filters-accordion-1" aria-label={t('filters.section-adac-title')} title={t('filters.section-adac-title')} >
-                    <CarSeatAdacFilters setFilters={setFilters}  isCleared={isCleared} />
+                <AccordionItem 
+                        key="filters-accordion-1" 
+                        aria-label={dictionary['filters']['section-adac-title']} 
+                        title={dictionary['filters']['section-adac-title']} >
+                    <CarSeatAdacFilters setFilters={setFilters}  isCleared={isCleared} dictionary={dictionary}/>
                 </AccordionItem>
 
-                <AccordionItem key="filters-accordion-2" aria-label={t('filters.section-kid-dimension-title')} title={t('filters.section-kid-dimension-title')} >  
-                    <CarSeatKidDimensionFilters  setFilters={setFilters} isCleared={isCleared} />    
+                <AccordionItem key="filters-accordion-2" 
+                        aria-label={dictionary['filters']['section-kid-dimension-title']} 
+                        title={dictionary['filters']['section-kid-dimension-title']} >
+                    <CarSeatKidDimensionFilters  setFilters={setFilters} isCleared={isCleared} dictionary={dictionary}/>    
                 </AccordionItem>
 
-                <AccordionItem key="filters-accordion-3" aria-label={t('filters.section-seat-title')} title={t('filters.section-seat-title')} >                
-                    <CarSeatSeatDimensionFilters  setFilters={setFilters} isCleared={isCleared} />    
+                <AccordionItem key="filters-accordion-3"  
+                        aria-label={dictionary['filters']['section-seat-title']} 
+                        title={dictionary['filters']['section-seat-title']} >                             
+                    <CarSeatSeatDimensionFilters  setFilters={setFilters} isCleared={isCleared} dictionary={dictionary}/>    
                 </AccordionItem>
 
-                <AccordionItem key="filters-accordion-4" aria-label={t('filters.section-base-title')} title={t('filters.section-base-title')} >  
-                    <CarSeatBaseFilters  setFilters={setFilters} isCleared={isCleared} />    
+                <AccordionItem key="filters-accordion-4"  
+                        aria-label={dictionary['filters']['section-base-title']} 
+                        title={dictionary['filters']['section-base-title']} >              
+                        
+                    <CarSeatBaseFilters  setFilters={setFilters} isCleared={isCleared} dictionary={dictionary}/>    
                 </AccordionItem>
 
-                <AccordionItem key="filters-accordion-5" aria-label={t('filters.section-canopy-title')} title={t('filters.section-canopy-title')} >                
-                    <CarSeatCanopyFilters  setFilters={setFilters} isCleared={isCleared} />    
+                <AccordionItem key="filters-accordion-5"  
+                        aria-label={dictionary['filters']['section-canopy-title']} 
+                        title={dictionary['filters']['section-canopy-title']} >              
+                    
+                    <CarSeatCanopyFilters  setFilters={setFilters} isCleared={isCleared} dictionary={dictionary}/>    
                 </AccordionItem>
 
-                <AccordionItem key="filters-accordion-6" aria-label={t('filters.section-harness-title')} title={t('filters.section-harness-title')} >                
-                    <CarSeatHarnessFilters  setFilters={setFilters} isCleared={isCleared} /> 
+                <AccordionItem key="filters-accordion-6"  
+                        aria-label={dictionary['filters']['section-harness-title']} 
+                        title={dictionary['filters']['section-harness-title']} >              
+
+                    <CarSeatHarnessFilters  setFilters={setFilters} isCleared={isCleared} dictionary={dictionary}/> 
                 </AccordionItem>
 
-                <AccordionItem key="filters-accordion-7" aria-label={t('filters.section-certification-title')} title={t('filters.section-certification-title')} >                
-                    <CarSeatCertificationFilters  setFilters={setFilters} isCleared={isCleared} /> 
+                <AccordionItem key="filters-accordion-7"  
+                        aria-label={dictionary['filters']['section-certification-title']} 
+                        title={dictionary['filters']['section-certification-title']} >              
+
+                    <CarSeatCertificationFilters  setFilters={setFilters} isCleared={isCleared}dictionary={dictionary}/> 
                 </AccordionItem>
 
-                <AccordionItem key="filters-accordion-8" aria-label={t('filters.section-other-features-title')} title={t('filters.section-other-features-title')} >                
-                    <CarSeatOtherFilters  setFilters={setFilters} isCleared={isCleared} /> 
+                <AccordionItem key="filters-accordion-8"  
+                        aria-label={dictionary['filters']['section-other-features-title']} 
+                        title={dictionary['filters']['section-other-features-title']} >              
+                    <CarSeatOtherFilters  setFilters={setFilters} isCleared={isCleared} dictionary={dictionary}/> 
                 </AccordionItem>
             </Accordion>
             </CardBody>

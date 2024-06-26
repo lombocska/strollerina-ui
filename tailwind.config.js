@@ -14,7 +14,7 @@ module.exports = {
         './data/**/*.mdx',
         "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
     ],
-    darkMode: false,
+    darkMode: 'class',
     theme: {
         container: {
             center: true,

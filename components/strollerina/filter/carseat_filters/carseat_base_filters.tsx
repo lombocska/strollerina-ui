@@ -1,15 +1,19 @@
 'use client';
 
 import { siteConfig } from "config/site";
-import Tags from "../input_fields/tags";
-import { CarSeatFiltersProps } from "types";
+import { getDictionary } from "get-dictionary";
 import { Dispatch, SetStateAction } from "react";
+import Tags from "../input_fields/tags";
 
-export default  function CarSeatBaseFilters({setFilters, isCleared}: CarSeatFiltersProps) {
-
+export default  function CarSeatBaseFilters({setFilters, isCleared, dictionary} : {
+    isCleared: boolean | false;
+    setFilters: React.Dispatch<React.SetStateAction<any>>; 
+    dictionary: Awaited<ReturnType<typeof getDictionary>>["carseats"]
+}){
     return (
         <>
             <Tags 
+                dictionary={dictionary["tags"]}
                 tags={siteConfig.carseat_tags} 
                 section={"base"} 
                 lsName={"carseat/selectedBaseTags"}

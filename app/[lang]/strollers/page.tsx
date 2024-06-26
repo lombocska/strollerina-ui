@@ -1,0 +1,22 @@
+
+import { getAllStrollers, getBrands } from 'lib/data';
+import StrollersContent from '@/components/strollerina/content/strollers_content';
+import { getDictionary } from 'get-dictionary';
+import { Locale } from 'next/dist/compiled/@vercel/og/satori';
+
+export default async function Strollers({
+  params: { lang },
+}: {
+  params: { lang: Locale };
+}) {
+
+  const dictionary = await getDictionary(lang);
+  const initialData = await getAllStrollers();
+  const brands = await getBrands();
+
+  return (
+      <>
+        <StrollersContent initialData={initialData} brands={brands} dictionary={dictionary.strollers}/>
+      </>
+  );
+}

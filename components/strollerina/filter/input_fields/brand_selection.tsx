@@ -1,17 +1,14 @@
 'use client';
 
-import useTranslation from 'next-translate/useTranslation';
+// import useTranslation from 'next-translate/useTranslation';
 import { useEffect, useState } from 'react';
 import SelectWithMultipleChip from './select_with_multiple_chip';
 
-export default function BrandSelection({ brands, setFilters, isCleared}) {
-    const { t } = useTranslation('strollers');
+export default function BrandSelection({ brands, setFilters, isCleared, dictionary}) {
 
-    // const [values, setValues] = useLocalStorage("stroller/selectedBrandsName", new Set([]));
     const [values, setValues] = useState(new Set([]));
 
     const handleSelectionChange = (items) => {
-        // setSelectedBrands(Array.from(items).join(","));
         setValues(items);
         setFilters((filters) => ({
             ...filters,
@@ -31,8 +28,10 @@ export default function BrandSelection({ brands, setFilters, isCleared}) {
             items={brands} 
             values={values} 
             handleSelectionChange={handleSelectionChange} 
-            label={'brand-select-chip'} 
-            plHolder={'brand-chose'}
-            shouldTranslate={false}/>
+            label={dictionary["common"]['brand-select-chip']} 
+            plHolder={dictionary["common"]['brand-chose']}
+            shouldTranslate={false}
+            dictionary={dictionary}
+            />
     );
 }

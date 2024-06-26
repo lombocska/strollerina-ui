@@ -4,7 +4,6 @@ import { useLocalStorage } from 'lib/LocalStorageAPI';
 import { FIVE_THOUSAND, ONE_HUNDRED_FIFTY, THIRTY, TWO_HUNDRED, ZERO } from 'lib/constants';
 import { Button } from '@nextui-org/button';
 import { Modal, ModalBody, ModalContent, ModalFooter, ModalHeader, useDisclosure } from '@nextui-org/modal';
-import useTranslation from 'next-translate/useTranslation';
 import { useState } from 'react';
 import ProductCard from '../cards/product_card';
 import CounterChip from '../filter/helper/counter_chip';
@@ -12,15 +11,16 @@ import SortingSelect from '../sorting_select';
 import { BrandContentProps, StrollerCard, StrollerFilters, StrollersContentProps } from 'types';
 import StrollerFiltersCollection from '../filter/stroller_filters';
 import { Accordion } from '@nextui-org/accordion';
+import { getDictionary } from 'get-dictionary';
 
 
-export default  function StrollersContent({ initialData, brands }: 
+export default  function StrollersContent({ initialData, brands, dictionary}: 
         {
             initialData: StrollersContentProps,
-            brands: BrandContentProps
+            brands: BrandContentProps,
+            dictionary: Awaited<ReturnType<typeof getDictionary>>["strollers"]
         }) {
-    
-    const { t } = useTranslation('strollers');
+
     const {isOpen, onOpen, onOpenChange} = useDisclosure();
 
     const [strollers, setStrollers] = useState<StrollerCard[]>(initialData);
@@ -53,8 +53,8 @@ export default  function StrollersContent({ initialData, brands }:
         {strollers &&
             <>
                 <div className="flex flex-wrap content-center items-center mb-5 rounded-full justify-between space-y-2">
-                    <CounterChip title={"stroller-count"} number={strollers.length} />
-                    <SortingSelect strollers={strollers} setStrollers={setStrollers} />
+                    <CounterChip title={"strollers"} number={strollers.length} dictionary={dictionary}/>
+                    <SortingSelect strollers={strollers} setStrollers={setStrollers} dictionary={dictionary} />
                 </div>
 
                 {/* <div className="gap-2 grid grid-cols-1 sm:grid-cols-3" key={"strollers"}> */}
@@ -78,24 +78,41 @@ export default  function StrollersContent({ initialData, brands }:
         </main>
 
             <aside className="hidden md:block md:w-1/3 p-4  fixed right-0 top-16 h-full max-h-[1000px] bg-transparent overflow-y-auto ">
-                <StrollerFiltersCollection brands={brands} setStrollers={setStrollers} filters={filters} initialFilters={initialFilters} setFilters={setFilters} isCleared={false}/>
+                <StrollerFiltersCollection 
+                brands={brands} 
+                setStrollers={setStrollers} 
+                filters={filters} 
+                initialFilters={initialFilters} 
+                setFilters={setFilters} 
+                isCleared={false}
+                dictionary={dictionary}
+                />
              </aside>
              
              <div className="md:hidden fixed bottom-4 right-4 z-10">
-                <Button onPress={onOpen}>{t('common:info')}</Button>
+                <Button onPress={onOpen}>{dictionary["common"].info}</Button>
             </div>
 
              <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
                 <ModalContent className="overflow-y-auto max-h-screen">
                     {(onClose) => (
                         <>
-                        <ModalHeader className="flex flex-col gap-1">{t('info')}</ModalHeader>
+                        <ModalHeader className="flex flex-col gap-1">{dictionary["common"].info}</ModalHeader>
                         <ModalBody className="overflow-y-auto">
-                            <StrollerFiltersCollection brands={brands} setStrollers={setStrollers} filters={filters} initialFilters={initialFilters} setFilters={setFilters} isCleared={false}/>
+                            <StrollerFiltersCollection 
+                            brands={brands} 
+                            setStrollers={setStrollers} 
+                            filters={filters} 
+                            initialFilters={initialFilters} 
+                            setFilters={setFilters} 
+                            isCleared={false}
+                            dictionary={dictionary}
+                            onClose={onClose}
+                            />
                         </ModalBody>
                         <ModalFooter>
                             <Button color="danger" variant="light" onPress={onClose}>
-                                {t('close')}
+                                 {dictionary["common"].close}
                             </Button>
                         </ModalFooter>
                         </>

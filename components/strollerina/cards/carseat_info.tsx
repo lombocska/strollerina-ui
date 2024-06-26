@@ -9,14 +9,18 @@ import { Chip } from '@nextui-org/chip';
 import { Divider } from '@nextui-org/divider';
 import { Image } from "@nextui-org/image";
 import { Link } from '@nextui-org/link';
-import useTranslation from 'next-translate/useTranslation';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import Chips from '../chips';
+import { getDictionary } from 'get-dictionary';
 
-const CarseatInfo = ({ data, brand }: { data: CarseatCardDTO; brand: BrandItem }) => {
-    const { t } = useTranslation('carseats');
-    const router = useRouter()
+const CarseatInfo = ({ data, brand, dictionary }: 
+    { 
+        data: CarseatCardDTO; 
+        brand: BrandItem;
+        dictionary: Awaited<ReturnType<typeof getDictionary>>["carseats"]
+    }) => {
+    
 
     const [manual, setManual] = useState<ManualDTO | null>(null);
 
@@ -50,7 +54,8 @@ const CarseatInfo = ({ data, brand }: { data: CarseatCardDTO; brand: BrandItem }
                             showAnchorIcon
                             href={manual.manualLink}
                         >
-                            {t('manual-link')}
+                            {dictionary["manual-link"]}
+                            
                         </Link>
                     }
                 </CardHeader>
@@ -58,73 +63,69 @@ const CarseatInfo = ({ data, brand }: { data: CarseatCardDTO; brand: BrandItem }
                 <Divider/>
                 <CardBody>
                 <Accordion className='m-1 mb-10' variant="bordered" selectionMode="multiple" defaultExpandedKeys={["carseat-info-accordion-5"]}>
-                    <AccordionItem key="carseat-info-accordion-1" aria-label={t('table.titles.default-info')} title={t('table.titles.default-info')} >
+                    <AccordionItem key="carseat-info-accordion-1" 
+                            aria-label={dictionary["table"].titles['default-info']}
+                            title={dictionary["table"].titles['default-info']} >
 
                         <p>
-                            {t('table.titles.weight')}: {data.weight} [kg]
+                            {dictionary.table.titles.weight}: {data.weight} [kg]
                         </p>
 
                         <p>
-                            {t('table.titles.age')}: {data.minAge} - {data.maxAge} [month]
+                            {dictionary.table.titles.age}: {data.minAge} - {data.maxAge} [month]
                         </p>
 
                         <p>
-                            {t('table.titles.product-weight')}: {data.minWeight} - {data.maxWeight} [kg]
+                            {dictionary.table.titles['product-weight']}: {data.minWeight} - {data.maxWeight} [kg]
                         </p>
 
                         <p>
-                            {t('table.titles.kid-height')}: {data.minHeight} - {data.maxHeight} [cm]
+                            {dictionary.table.titles['kid-height']}: {data.minHeight} - {data.maxHeight} [cm]
                         </p>
 
 
                         {data.rearFacing &&
                             <Chip key={'data.rearFacing'} className="m-1" variant="bordered">
-                                 {t('tags:main-card.chip.rearFacing')}
+                                 {dictionary.tags['main-card'].chip.rearFacing}
                             </Chip>
                         }
 
                         {data.forwardFacing &&
                             <Chip key={'data.forwardFacing'} className="m-1" variant="bordered">
-                                 {t('tags:main-card.chip.forwardFacing')}
+                                 {dictionary.tags['main-card'].chip.forwardFacing}
                             </Chip>
                         }
 
                         {data.sideProtection &&
                             <Chip key={'data.sideProtection'} className="m-1" variant="bordered">
-                                 {t('tags:main-card.chip.sideProtection')}
+                                 {dictionary.tags['main-card'].chip.sideProtection}
                             </Chip>
                         }   
 
                         {data.rotating &&
                             <Chip key={'data.rotating'} className="m-1" variant="bordered">
-                                 {t('tags:main-card.chip.rotating')}
+                                 {dictionary.tags['main-card'].chip.rotating}
                             </Chip>
                         }       
                     </AccordionItem>
 
-                    <AccordionItem key="carseat-info-accordion-2" aria-label={t('table.titles.adac')} title={t('table.titles.adac')} >
+                    <AccordionItem key="carseat-info-accordion-2" 
+                            aria-label={dictionary["table"].titles.adac}
+                            title={dictionary["table"].titles.adac} >
                         {data.adacInfo && data.adacInfo.length > 0 &&  data.adacInfo[0].adacLink !== "0" && data.adacInfo.map((adac, index) => (
                                 <div key={"adac-" + index}>
-                                    {/* <Chip key={'adac.installation' + "-"  + index} className="m-1" variant="bordered"> */}
                                     <p className='uppercase mb-3'>
-                                        {t('filters.adac.title')} {index+1}
+                                        {dictionary.filters.adac.title} {index+1}
                                         </p>
                                     <p>
-                                        {t('filters.adac.installation')} {adac.installation}
+                                        {dictionary.filters.adac.installation} {adac.installation}
                                     </p>
-                                    {/* </Chip> */}
-                                    {/* <Chip key={'adac.adacTestedYear' + "-"  + index} className="m-1" variant="bordered"> */}
                                     <p>
-                                        {t('filters.adac.verdict')}: {adac.adac} [{adac.adacTestedYear}]
+                                        {dictionary.filters.adac.verdict}: {adac.adac} [{adac.adacTestedYear}]
                                     </p>
-                                    {/* </Chip> */}
-                                    {/* <Chip key={'adac.priceFrom' + "-"  + index} className="m-1" variant="bordered"> */}
-                                    {/* {t('comparing-grid.price-from')}: {adac.priceFrom * currency.value} [{currency.name}] */}
                                     <p>
-                                        {t('table.titles.price-from')}: {adac.priceFrom} EUR
+                                        {dictionary["table"].titles['price-from']}: {adac.priceFrom} EUR
                                     </p>
-                                    {/* </Chip> */}
-                                    {/* <Chip key={'adac.link' + "-"  + index} className="m-1" variant="bordered"> */}
                                         <Link
 
                                            target="_blank" rel="noopener"
@@ -134,23 +135,24 @@ const CarseatInfo = ({ data, brand }: { data: CarseatCardDTO; brand: BrandItem }
                                             href={adac.adacLink}
                                             title="ADAC Link"
                                         >   
-                                            {t('filters.adac.link')}
+                                            {dictionary.filters.adac.link}
                                         </Link>
-                                    {/* </Chip> */}
                                     <Divider className='mb-3'/>
                                 </div>
                         ))}
                         {!data.adacInfo  &&
                                 <p>
-                                    {t('adac.not-adac-tested')}
+                                    {dictionary.filters.adac['not-adac-tested']}
                                 </p>
                         } 
                         
                         
                     </AccordionItem>
 
-                    <AccordionItem key="carseat-info-accordion-5" aria-label={t('table.titles.seat')} title={t('table.titles.tags')} >
-                        <Chips json={data.tags} translationNS="tags:main-card." tPrefix="chip."/>
+                    <AccordionItem key="carseat-info-accordion-5" 
+                            aria-label={dictionary["table"].titles.seat}
+                            title={dictionary["table"].titles.seat} >
+                        <Chips json={data.tags} dictionary={dictionary["tags"]['main-card'].chip}/>
                     </AccordionItem>
                 </Accordion>
 

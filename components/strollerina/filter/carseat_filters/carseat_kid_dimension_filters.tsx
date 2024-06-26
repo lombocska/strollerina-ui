@@ -7,8 +7,13 @@ import { Dispatch, SetStateAction, useEffect } from "react";
 import NumberInput from "../input_fields/number_input";
 import Tags from "../input_fields/tags";
 import { CarSeatFilters, CarSeatFiltersProps } from "types";
+import { getDictionary } from "get-dictionary";
 
-export default  function CarSeatKidDimensionFilters({setFilters, isCleared}: CarSeatFiltersProps) {
+export default  function CarSeatKidDimensionFilters({setFilters, isCleared, dictionary} : {
+    isCleared: boolean | false;
+    setFilters: React.Dispatch<React.SetStateAction<any>>; 
+    dictionary: Awaited<ReturnType<typeof getDictionary>>["carseats"]
+}){
     
     const [selectedMaxKidWeight, setSelectedMaxKidWeight] = useLocalStorage("carseat/selectedMaxKidWeight", SIXSTY);
     const [selectedMaxKidHeight, setSelectedMaxKidHeight] = useLocalStorage("carseat/selectedMaxKidHeight", ONE_HUNDRED_FIFTY);
@@ -38,6 +43,7 @@ export default  function CarSeatKidDimensionFilters({setFilters, isCleared}: Car
     return (
         <>
             <Tags 
+                dictionary={dictionary["tags"]}
                 tags={siteConfig.carseat_tags} 
                 section={"kid"} 
                 lsName={"carseat/selectedKidDimensionTags"}
@@ -46,7 +52,7 @@ export default  function CarSeatKidDimensionFilters({setFilters, isCleared}: Car
        
 
             <NumberInput 
-                transNM={"carseats"}
+                label={dictionary["filters"]['max-weight-kid']}
                 title={"max-weight-kid"} 
                 inputValue={selectedMaxKidWeight} 
                 setInputValue={setSelectedMaxKidWeight} 
@@ -56,7 +62,7 @@ export default  function CarSeatKidDimensionFilters({setFilters, isCleared}: Car
                 step={FIVE} />
 
             <NumberInput 
-                transNM={"carseats"}
+                label={dictionary["filters"]['max-height-kid']}
                 title={"max-height-kid"} 
                 inputValue={selectedMaxKidHeight} 
                 setInputValue={setSelectedMaxKidHeight} 

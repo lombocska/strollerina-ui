@@ -1,9 +1,9 @@
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import React, { createContext, useContext, useState } from 'react';
 
 // Alapértelmezett állapot beállítása
 const defaultState = {
   loaded: false,
-  currency: 'USD',
+  currency: 'EUR',  // Alapértelmezett valuta EUR
   multiplicator: 1,
 };
 
@@ -37,11 +37,11 @@ export const CurrencyProvider = ({ children }) => {
 const getMultiplicatorForCurrency = (currency) => {
   switch (currency) {
     case 'USD':
-      return 1;
+      return 1.07; // USD to EUR conversion rate
     case 'EUR':
-      return 0.85;
+      return 1;
     case 'HUF':
-      return 300;
+      return 380; // HUF to EUR conversion rate
     default:
       return 1;
   }

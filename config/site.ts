@@ -86,12 +86,10 @@ export const siteConfig = {
     {section: "other-features", name: "electric", label: "main-card.chip.electric", tooltip: "main-card.tooltip.electric"},
     {section: "other-features", name: "carbon", label: "main-card.chip.carbon", tooltip: "main-card.tooltip.carbon"},
     {section: "other-features", name: "triplet", label: "main-card.chip.triplet", tooltip: "main-card.tooltip.triplet"},
-    {section: "other-features", name: "hand-brake", label: "main-card.chip.hand-brake", tooltip: "main-card.tooltip.hand-brake"},
     {section: "other-features", name: "double", label: "main-card.chip.double", tooltip: "main-card.tooltip.double"},
     {section: "other-features", name: "jogging", label: "main-card.chip.jogging", tooltip: "main-card.tooltip.jogging"},
     {section: "other-features", name: "bike-trailer", label: "main-card.chip.bike-trailer", tooltip: "main-card.tooltip.bike-trailer"},
     {section: "other-features", name: "eco-friendly", label: "main-card.chip.eco-friendly", tooltip: "main-card.tooltip.eco-friendly"},
-    {section: "other-features", name: "bike-trailer", label: "main-card.chip.bike-trailer", tooltip: "main-card.tooltip.bike-trailer"},
     {section: "other-features", name: "large-basket", label: "main-card.chip.large-basket", tooltip: "main-card.tooltip.large-basket"},
     {section: "other-features", name: "hand-brake", label: "main-card.chip.hand-brake", tooltip: "main-card.tooltip.hand-brake"},
     {section: "other-features", name: "breezy-cot", label: "main-card.chip.breezy-cot", tooltip: "main-card.tooltip.breezy-cot"},
@@ -111,80 +109,80 @@ export const siteConfig = {
     {section:"warranty", name: "warranty-varied-by-retailers", label: "main-card.chip.warranty-varied-by-retailers", tooltip: "main-card.tooltip.warranty-varied-by-retailers"}
   ],
   stroller_sortings : [
-      {value: 0, name: "sorting.priceAsc"},
-      {value: 1, name: "sorting.priceDesc"},
-      {value: 2, name: "sorting.abc"},
-      {value: 3, name: "sorting.weightAsc"},
-      {value: 4, name: "sorting.weightDesc"},
-      {value: 5, name: "sorting.heightAsc"},
-      {value: 6, name: "sorting.heightDesc"}
+      {value: 0, name: "priceAsc"},
+      {value: 1, name: "priceDesc"},
+      {value: 2, name: "abc"},
+      {value: 3, name: "weightAsc"},
+      {value: 4, name: "weightDesc"},
+      {value: 5, name: "heightAsc"},
+      {value: 6, name: "heightDesc"}
   ],
   stroller_info_open_dimensions_columns : [
     {
       key: "openHeight",
-      label: "table.headers.height",
+      label: "height",
     },
     {
       key: "openWidth",
-      label: "table.headers.width",
+      label: "width",
     },
     {
       key: "openLength",
-      label: "table.headers.length",
+      label: "length",
     }
   ],
   stroller_info_closed_dimensions_columns : [
     {
       key: "closedHeight",
-      label: "table.headers.closed-height",
+      label: "closed-height",
     },
     {
       key: "closedWidth",
-      label: "table.headers.closed-width",
+      label: "closed-width",
     },
     {
       key: "closedLength",
-      label: "table.headers.closed-length",
+      label: "closed-length",
     }
   ],
   stroller_info_capacity_columns : [
     {
       key: "sumLoadCapacity",
-      label: "table.headers.sum-load-capacity",
+      label: "sum-load-capacity",
     },
     {
       key: "seatLoadCapacity",
-      label: "table.headers.seat-load-capacity",
+      label: "seat-load-capacity",
     },
     {
       key: "basketLoadCapacity",
-      label: "table.headers.basket-load-capacity",
+      label: "basket-load-capacity",
     }
   ],
   stroller_info_weight_columns : [
     {
       key: "weight",
-      label: "table.headers.weight",
+      label: "weight",
     }
   ],
   stroller_info_wheel_columns : [
     {
       key: "frontWheelSize",
-      label: "table.headers.front-wheel",
+      label: "front-wheel",
     },
     {
       key: "backWheelSize",
-      label: "table.headers.back-wheel",
+      label: "back-wheel",
     }
   ],
   stroller_info_seat_columns : [
     {
       key: "backrestHeight",
-      label: "table.headers.seat-height",
+      label: "seat-height",
     },
     {
       key: "seatWidth",
-      label: "table.headers.seat-width",
+      label: "seat-width",
     }
   ],
 
@@ -244,19 +242,19 @@ export const siteConfig = {
     {section: "certification",name: "agr-certified", label: "main-card.chip.agr-certified", tooltip: "main-card.tooltip.agr-certified"},
   ],
   carseat_sortings : [
-    {value: 0, name: "sorting.abc"},
-    {value: 1, name: "sorting.bestAdacAsc"},
-    {value: 2, name: "sorting.bestAdacDesc"}
+    {value: 0, name: "abc"},
+    {value: 1, name: "bestAdacAsc"},
+    {value: 2, name: "bestAdacDesc"}
   ],
   carseat_adac : [
-    {name: 'carseats:filters.adac.very-good', value: 'VERY_GOOD'},
-    {name: 'carseats:filters.adac.good', value: 'GOOD'},
-    {name: 'carseats:filters.adac.satisfactory', value: 'SATISFACTORY'},
-    {name: 'carseats:filters.adac.poor', value: 'POOR'}
+    {name: 'very-good', value: 'VERY_GOOD'},
+    {name: 'good', value: 'GOOD'},
+    {name: 'satisfactory', value: 'SATISFACTORY'},
+    {name: 'poor', value: 'POOR'}
   ],
   carseat_facing: [
-    {name: 'carseats:filters.seat.rear', value: 'REAR'},
-    {name: 'carseats:filters.seat.forward', value: 'FORWARD'},
+    {name: 'rear', value: 'REAR'},
+    {name: 'forward', value: 'FORWARD'},
 ]
   
 

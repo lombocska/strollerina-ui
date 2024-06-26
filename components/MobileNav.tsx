@@ -12,6 +12,7 @@ import {
     DropdownMenuItem,
     DropdownMenuTrigger,
 } from './shadcn/dropdown-menu'
+import LocaleSwitcher from './locale-switcher'
 
 const MobileNav = () => {
     return (
@@ -36,6 +37,7 @@ const MobileNav = () => {
                         </Link>
                     </DropdownMenuItem>
                 ))}
+                <LocaleSwitcher/>
             </DropdownMenuContent>
         </DropdownMenu>
     )

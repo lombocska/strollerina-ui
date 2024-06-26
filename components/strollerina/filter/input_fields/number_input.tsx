@@ -1,7 +1,5 @@
 import React from "react";
 import { Input } from "@nextui-org/input";
-import { maxHeaderSize } from "http";
-import useTranslation from 'next-translate/useTranslation'
 import { NumberInputProps } from "types";
 
 const NumberInput: React.FC<NumberInputProps> = ({
@@ -13,18 +11,22 @@ const NumberInput: React.FC<NumberInputProps> = ({
   min,
   max,
   step,
-  transNM
+  label
 }) => {
-  const { t } = useTranslation(transNM);
+
+  // const handleValueChange = (event) => {
+  //   // const value = Math.round(parseFloat(event.target.value));
+  //   const value = event.target.value;
+  //   setInputValue(value);
+  // };
 
   return (
-    
     <Input
         key={title}
         className="mb-10 input-no-border"
         fullWidth
         type="number"
-        label={t('filters.' + title)}
+        label={label}
         labelPlacement="outside"
         value={inputValue}
         onValueChange={setInputValue}
@@ -37,4 +39,4 @@ const NumberInput: React.FC<NumberInputProps> = ({
   );
 }
 
-export default NumberInput; // Exporting NumberInput as default export
+export default NumberInput;

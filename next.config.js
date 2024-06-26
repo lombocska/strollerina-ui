@@ -1,6 +1,5 @@
 const { withContentlayer } = require('next-contentlayer')
 const redirects = require('./data/redirects.js')
-const nextTranslate = require('next-translate-plugin')
 
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
     enabled: process.env.ANALYZE === 'true',
@@ -123,6 +122,6 @@ const nextConfig = {
 }
 
 module.exports = () => {
-    const plugins = [withContentlayer, withBundleAnalyzer, nextTranslate]
+    const plugins = [withContentlayer, withBundleAnalyzer]
     return plugins.reduce((acc, next) => next(acc), nextConfig)
 }

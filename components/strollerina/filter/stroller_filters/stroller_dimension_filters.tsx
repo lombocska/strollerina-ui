@@ -8,8 +8,13 @@ import { BackWheel, FrontWheel, SeatHeight, StrollerHeight, StrollerLength, Stro
 import NumberInput from "../input_fields/number_input";
 import Tags from "../input_fields/tags";
 import { StrollerFilters, StrollerFiltersProps } from "types";
+import { getDictionary } from "get-dictionary";
 
-export default function StrollerDimensionFilters({setFilters, isCleared} : StrollerFiltersProps){
+export default function StrollerDimensionFilters({setFilters, isCleared, dictionary} : {
+    isCleared: boolean | false;
+    setFilters: React.Dispatch<React.SetStateAction<any>>; 
+    dictionary: Awaited<ReturnType<typeof getDictionary>>["strollers"]
+}){
     
     const [selectedMaxHeight, setSelectedMaxHeight] = useLocalStorage("stroller/selectedMaxHeight", TWO_HUNDRED);
     const [selectedClosedMaxHeight, setSelectedClosedMaxHeight] = useLocalStorage("stroller/selectedClosedMaxHeight", TWO_HUNDRED);
@@ -81,12 +86,14 @@ export default function StrollerDimensionFilters({setFilters, isCleared} : Strol
                         section={"dimension"} 
                         lsName={"stroller/selectedDimensionTags"}
                         isCleared={isCleared ?? false}
-                        setFilters={setFilters as Dispatch<SetStateAction<any>>} />
+                        setFilters={setFilters as Dispatch<SetStateAction<any>>}
+                        dictionary={dictionary["tags"]}
+                         />
                
 
                     <NumberInput 
-                        transNM={"strollers"}
                         title={"max-weight"} 
+                        label={dictionary["filters"]['max-weight']}
                         inputValue={selectedMaxWeight} 
                         setInputValue={setSelectedMaxWeight} 
                         demo={<Weight width={40} height={40}/>} 
@@ -95,7 +102,7 @@ export default function StrollerDimensionFilters({setFilters, isCleared} : Strol
                         step={ONE} />
                      
                     <NumberInput 
-                        transNM={"strollers"}
+                        label={dictionary["filters"]['min-backrest']}
                         title={"min-backrest"} 
                         inputValue={selectedMinSeatHeight} 
                         setInputValue={setSelectedMinSeatHeight} 
@@ -105,7 +112,7 @@ export default function StrollerDimensionFilters({setFilters, isCleared} : Strol
                         step={ONE} />
                      
                     <NumberInput 
-                        transNM={"strollers"}
+                        label={dictionary["filters"]['min-front-wheel']}
                         title={"min-front-wheel"} 
                         inputValue={selectedMinFrontWheelSize} 
                         setInputValue={setSelectedMinFrontWheelSize} 
@@ -115,7 +122,7 @@ export default function StrollerDimensionFilters({setFilters, isCleared} : Strol
                         step={ONE} />
                      
                     <NumberInput 
-                        transNM={"strollers"}
+                        label={dictionary["filters"]['min-back-wheel']}
                         title={"min-back-wheel"} 
                         inputValue={selectedMinBackWheelSize} 
                         setInputValue={setSelectedMinBackWheelSize} 
@@ -126,7 +133,7 @@ export default function StrollerDimensionFilters({setFilters, isCleared} : Strol
                     
                     
                     <NumberInput
-                        transNM={"strollers"}
+                        label={dictionary["filters"]['max-height']}
                         title={"max-height"} 
                         inputValue={selectedMaxHeight} 
                         setInputValue={setSelectedMaxHeight} 
@@ -137,7 +144,7 @@ export default function StrollerDimensionFilters({setFilters, isCleared} : Strol
 
                     
                     <NumberInput 
-                        transNM={"strollers"}
+                        label={dictionary["filters"]['max-width']}
                         title={"max-width"} 
                         inputValue={selectedMaxWidth} 
                         setInputValue={setSelectedMaxWidth} 
@@ -148,7 +155,7 @@ export default function StrollerDimensionFilters({setFilters, isCleared} : Strol
 
                     
                     <NumberInput 
-                        transNM={"strollers"}
+                        label={dictionary["filters"]['max-length']}
                         title={"max-length"} 
                         inputValue={selectedMaxLength} 
                         setInputValue={setSelectedMaxLength} 
@@ -159,7 +166,7 @@ export default function StrollerDimensionFilters({setFilters, isCleared} : Strol
 
                     
                     <NumberInput 
-                        transNM={"strollers"}
+                        label={dictionary["filters"]['max-closed-height']}
                         title={"max-closed-height"} 
                         inputValue={selectedClosedMaxHeight} 
                         setInputValue={setSelectedClosedMaxHeight} 
@@ -170,7 +177,7 @@ export default function StrollerDimensionFilters({setFilters, isCleared} : Strol
 
                 
                     <NumberInput 
-                        transNM={"strollers"}
+                        label={dictionary["filters"]['max-closed-length']}
                         title={"max-closed-length"} 
                         inputValue={selectedClosedMaxLength} 
                         setInputValue={setSelectedClosedMaxLength} 

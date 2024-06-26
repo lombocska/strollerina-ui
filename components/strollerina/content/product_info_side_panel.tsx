@@ -1,17 +1,16 @@
-// components/SidePanel.js
 'use client';
 
 interface ProductSidePanelProps {
     info: ReactNode;
+    dictionary: Awaited<ReturnType<typeof getDictionary>>["strollers"]
 }
 
 import { Button } from '@nextui-org/button';
 import { Modal, ModalBody, ModalContent, ModalFooter, ModalHeader, useDisclosure } from '@nextui-org/modal';
-import useTranslation from 'next-translate/useTranslation';
+import { getDictionary } from 'get-dictionary';
 import { ReactNode } from 'react';
 
-const ProductSidePanel: React.FC<ProductSidePanelProps> = ({ info }) => {
-    const { t } = useTranslation('common');
+const ProductSidePanel: React.FC<ProductSidePanelProps> = ({ info, dictionary }) => {
     const {isOpen, onOpen, onOpenChange} = useDisclosure();
 
 
@@ -22,20 +21,20 @@ const ProductSidePanel: React.FC<ProductSidePanelProps> = ({ info }) => {
             </aside>
 
             <div className="md:hidden fixed bottom-4 right-4">
-                <Button onPress={onOpen}>{t('info')}</Button>
+                <Button onPress={onOpen}>{dictionary["common"].info}</Button>
             </div>
 
             <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
                 <ModalContent className="overflow-y-auto max-h-screen">
                     {(onClose) => (
                         <>
-                        <ModalHeader className="flex flex-col gap-1">{t('info')}</ModalHeader>
+                        <ModalHeader className="flex flex-col gap-1">{dictionary["common"].info}</ModalHeader>
                         <ModalBody className="overflow-y-auto">
                             {info}
                         </ModalBody>
                         <ModalFooter>
                             <Button color="danger" variant="light" onPress={onClose}>
-                                {t('close')}
+                            {dictionary["common"].close}
                             </Button>
                         </ModalFooter>
                         </>

@@ -5,11 +5,19 @@ import { clearLocalStorage, useLocalStorage } from 'lib/LocalStorageAPI';
 import { Tag, TagsProps } from 'types';
 import { Chip } from '@nextui-org/chip';
 import { Tooltip } from '@nextui-org/tooltip';
-import useTranslation from 'next-translate/useTranslation';
 import { useEffect } from 'react';
+import { getDictionary } from 'get-dictionary';
 
-export default function Tags({tags, section, lsName, isCleared, setFilters} : TagsProps) {
-    const { t } = useTranslation('tags');
+export default function Tags({tags, section, lsName, isCleared, setFilters, dictionary} : 
+    {
+        tags: Tag[];
+        section: string;
+        lsName: string;
+        isCleared: boolean;
+        setFilters: React.Dispatch<React.SetStateAction<any>>;
+        dictionary: Awaited<ReturnType<typeof getDictionary>>["tags"]
+    }
+) {
 
     const [selectedTags, setSelectedTags] = useLocalStorage(lsName, []);
 
@@ -22,18 +30,19 @@ export default function Tags({tags, section, lsName, isCleared, setFilters} : Ta
     }, [isCleared]); 
 
     useEffect(() => {
-        console.log("carseat kid dimension filters changing")
         if (setFilters) {
-            setFilters((filters : any) => {
-                const existingTags = filters.tags || [];
-                const newTags = [...new Set([...existingTags, ...selectedTags])];
-                return {
+            console.log("Selected tags:", selectedTags);
+            setFilters((filters: any) => {
+                console.log("Previous filters:", filters);
+                const updatedFilters = {
                     ...filters,
-                    tags: newTags
+                    tags: selectedTags,
                 };
+                console.log("Updated filters:", updatedFilters);
+                return updatedFilters;
             });
         }
-        }, [selectedTags]); 
+    }, [selectedTags, setFilters]);
 
     const handleTagClick = (tag : Tag) => {
         if (selectedTags.includes(tag) && selectedTags.length === 1) {
@@ -51,16 +60,16 @@ export default function Tags({tags, section, lsName, isCleared, setFilters} : Ta
             let label = tag.label;
             let tooltip = tag.tooltip;
             return (
-                <div key={tag.name}>
+                <div key={"div-" + tag.name}>
                     {tag.section === section &&
                     
-                        <Tooltip 
-                            key={tag.name}
-                            placement={'top-start'}
-                            content={t(tooltip)}
-                            className="bg-stone-100">
+                        // <Tooltip 
+                        //     key={tag.name}
+                        //     placement={'top-start'}
+                        //     content={dictionary["tooltip"][tooltip]}
+                        //     className="bg-stone-100">
                             <Chip
-                                key={tag.name}
+                                key={"chip-" + tag.name}
                                 // classNames={{
                                 //     base: "bg-gradient-to-br from-strollerina_green-100 to-strollerina_green-300 border-small ",
                                 //     content: "drop-shadow shadow-black text-white",
@@ -70,9 +79,9 @@ export default function Tags({tags, section, lsName, isCleared, setFilters} : Ta
                                 onClick={() => handleTagClick(tag.name)}
                                 startContent={selectedTags.includes(tag.name) ? <CheckIcon size={18}/>  : <></>}
                             >
-                                {t(label)}
+                                {dictionary["main-card"]["chip"][label.split('.').pop()]}
                             </Chip>
-                        </Tooltip>
+                        // </Tooltip>
                     }
                 </div>
             );

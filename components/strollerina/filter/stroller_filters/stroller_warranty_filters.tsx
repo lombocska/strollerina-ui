@@ -4,11 +4,16 @@ import { siteConfig } from "config/site";
 import Tags from "../input_fields/tags";
 import { StrollerFiltersProps } from "types";
 import { Dispatch, SetStateAction } from "react";
+import { getDictionary } from "get-dictionary";
 
-export default  function StrollerWarrantyFilters({setFilters, isCleared}: StrollerFiltersProps){
- 
+export default  function StrollerWarrantyFilters({setFilters, isCleared, dictionary} : {
+    isCleared: boolean | false;
+    setFilters: React.Dispatch<React.SetStateAction<any>>; 
+    dictionary: Awaited<ReturnType<typeof getDictionary>>["strollers"]
+}){
     return (
         <Tags 
+            dictionary={dictionary["tags"]} 
             tags={siteConfig.stroller_tags} 
             section={"warranty"} 
             lsName={"stroller/selectedWarrantyTags"}

@@ -1,12 +1,17 @@
 'use client';
 
+import { getDictionary } from 'get-dictionary';
 import { useEffect, useState } from 'react';
+import { AdacType, CarSeatFilters } from 'types';
 import SelectWithMultipleChip from './select_with_multiple_chip';
-import { AdacSelectionProps, AdacType, CarSeatFilters } from 'types';
 
-export default function AdacSelection({ adacs, setFilters, isCleared} : AdacSelectionProps) {
+export default function AdacSelection({ adacs, setFilters, isCleared, dictionary} : {
+    adacs: AdacType[];
+    setFilters: React.Dispatch<React.SetStateAction<any>>;
+    isCleared: boolean;
+    dictionary: Awaited<ReturnType<typeof getDictionary>>["carseats"];
+}) {
 
-    // const [values, setValues] = useState(new Set([]));
     const [values, setValues] = useState<Set<AdacType>>(new Set());
 
     const handleSelectionChange = (items : Set<AdacType>) => {
@@ -31,8 +36,9 @@ export default function AdacSelection({ adacs, setFilters, isCleared} : AdacSele
             items={adacs} 
             values={values} 
             handleSelectionChange={handleSelectionChange} 
-            label={'adac-select-chip'} 
-            plHolder={'adac-chose'}
+            label={dictionary["common"]['adac-select-chip']} 
+            plHolder={dictionary["common"]['adac-chose']}
+            dictionary={dictionary["filters"]["adac"]}
             shouldTranslate={true}/>
     );
 }

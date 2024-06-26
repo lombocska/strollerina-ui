@@ -1,16 +1,19 @@
 'use client';
 
 import { CheckIcon } from "@/components/icons";
-import { siteConfig } from "config/site";
-import { useLocalStorage } from 'lib/LocalStorageAPI';
 import { Chip } from "@nextui-org/chip";
-import useTranslation from "next-translate/useTranslation";
+import { siteConfig } from "config/site";
+import { getDictionary } from "get-dictionary";
+import { useLocalStorage } from 'lib/LocalStorageAPI';
 import { useEffect } from "react";
+import { CarSeatFilters } from "types";
 import AdacSelection from "../input_fields/adac_selection";
-import { CarSeatFilters, CarSeatFiltersProps } from "types";
 
-export default function CarSeatAdacFilters({ setFilters, isCleared }: CarSeatFiltersProps) {
-    const { t } = useTranslation('carseats');
+export default function CarSeatAdacFilters({setFilters, isCleared, dictionary} : {
+    isCleared: boolean | false;
+    setFilters: React.Dispatch<React.SetStateAction<any>>; 
+    dictionary: Awaited<ReturnType<typeof getDictionary>>["carseats"]
+}){
     const [selectedOnlyWAdactTest, setSelectedOnlyWAdactTest] = useLocalStorage("carseat/selectedOnlyWAdactTest", false);
 
     useEffect(() => {
@@ -42,7 +45,12 @@ export default function CarSeatAdacFilters({ setFilters, isCleared }: CarSeatFil
 
     return (
         <>
-        <AdacSelection adacs={siteConfig.carseat_adac} setFilters={setFilters} isCleared={isCleared} />
+        <AdacSelection 
+            adacs={siteConfig.carseat_adac} 
+            setFilters={setFilters} 
+            isCleared={isCleared} 
+            dictionary={dictionary}
+            />
 
         <Chip
             className='mb-5'
@@ -51,7 +59,7 @@ export default function CarSeatAdacFilters({ setFilters, isCleared }: CarSeatFil
             onClick={() => handleSelectedOnlyWAdactTest()}
             startContent={selectedOnlyWAdactTest ? <CheckIcon size={18}/>  : <></>}
         >
-            {t('filters.only-with-adac')}
+            {dictionary["filters"]['only-with-adac']}
         </Chip>
         
         </>

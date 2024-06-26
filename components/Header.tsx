@@ -3,7 +3,6 @@
 import headerNavLinks from '@/data/headerNavLinks'
 import siteMetadata from '@/data/siteMetadata'
 import { cn } from '@/scripts/utils/tailwind-helpers'
-import NextImage from 'next/image'
 import { useEffect, useState } from 'react'
 
 import Link from './Link'
@@ -12,6 +11,7 @@ import SearchButton from './SearchButton'
 import ThemeSwitch from './ThemeSwitch'
 import { Button } from './shadcn/button'
 import { Logo } from './icons'
+import LocaleSwitcher from './locale-switcher'
 
 const Header = () => {
     const [isScrolled, setIsScrolled] = useState(false)
@@ -46,7 +46,9 @@ const Header = () => {
                             </div>
                         </Link>
                     </div>
+
                     <div className="flex items-center sm:space-x-3">
+
                         <ul className="hidden space-x-2 lg:flex">
                             {headerNavLinks.map((link, i) => (
                                 <li key={i}>
@@ -64,10 +66,12 @@ const Header = () => {
                                 </li>
                             ))}
                         </ul>
+                        
+                        <div className="hidden space-x-2 lg:flex">
+                            <LocaleSwitcher />
+                        </div>
+
                         <SearchButton />
-
-                        {/* <ThemeSwitch /> */}
-
                         <MobileNav />
                     </div>
                 </div>

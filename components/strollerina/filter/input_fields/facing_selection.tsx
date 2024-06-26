@@ -2,9 +2,15 @@
 
 import { useEffect, useState } from 'react';
 import SelectWithMultipleChip from './select_with_multiple_chip';
+import { FacingType } from 'types';
+import { getDictionary } from 'get-dictionary';
 
-export default function FacingSelection({ facing, setFilters, isCleared}) {
-
+export default function FacingSelection({ facing, setFilters, isCleared, dictionary} : {
+    facing: FacingType[];
+    setFilters: React.Dispatch<React.SetStateAction<any>>;
+    isCleared: boolean;
+    dictionary: Awaited<ReturnType<typeof getDictionary>>["carseats"];
+}) {
     const [values, setValues] = useState(new Set([]));
 
     const handleSelectionChange = (items) => {
@@ -27,8 +33,9 @@ export default function FacingSelection({ facing, setFilters, isCleared}) {
             items={facing} 
             values={values} 
             handleSelectionChange={handleSelectionChange} 
-            label={'facing-select-chip'} 
-            plHolder={'facing-chose'}
+            label={dictionary["common"]['facing-select-chip']} 
+            plHolder={dictionary["common"]['facing-chose']}
+            dictionary={dictionary["filters"]["seat"]}
             shouldTranslate={true}/>
     );
 }

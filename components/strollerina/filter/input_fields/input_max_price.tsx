@@ -1,15 +1,16 @@
 'use client';
 
 import { useLocalStorage } from 'lib/LocalStorageAPI';
-import { ONE_HUNDRED, THIRTY, ZERO } from 'lib/constants';
+import { FIVE_THOUSAND, ONE_HUNDRED, THIRTY, ZERO } from 'lib/constants';
 import { useEffect } from "react";
 import NumberInput from './number_input';
 import { useCurrency } from 'lib/context/currency_context';
 // import { useCurrencyContext } from '@/lib/context/currency_context';
 
-export default function SelectMaxPrice({ setFilters, isCleared, lSPrefix, defaultMaxPrice }) {
+export default function SelectMaxPrice({ setFilters, isCleared, lSPrefix, defaultMaxPrice, title, label }) {
     
     const { state, setCurrency } = useCurrency();
+    const { currency, multiplicator } = state;
 
     const handleCurrencyChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
         console.log("im called " + event.target.value)
@@ -22,22 +23,22 @@ export default function SelectMaxPrice({ setFilters, isCleared, lSPrefix, defaul
         console.log("stroller price filter changing")
         setFilters((filters) => ({
             ...filters,
-            maxPrice: selectedMaxPrice
+            maxPrice: selectedMaxPrice / multiplicator
         }))
-    }, [selectedMaxPrice]); 
+    }, [selectedMaxPrice, currency]); 
 
     useEffect(() => {
         if (isCleared) {
             console.log("max price filter clearing")
-            setSelectedMaxPrice(defaultMaxPrice);
+            setSelectedMaxPrice(defaultMaxPrice / multiplicator);
         }
     }, [isCleared]); 
 
     return (
         <div className="flex max-w-xs flex-col gap-2 m-3">
              <NumberInput 
-                    transNM={"strollers"}
-                    title={"max-price"} 
+                    title={title} 
+                    label={label}
                     inputValue={selectedMaxPrice} 
                     setInputValue={setSelectedMaxPrice} 
                     demo={<></>} 
@@ -60,8 +61,8 @@ export default function SelectMaxPrice({ setFilters, isCleared, lSPrefix, defaul
                         </div>
                     }
                     min={ZERO}
-                    max={THIRTY}
-                    step={ONE_HUNDRED} />
+                    max={FIVE_THOUSAND * multiplicator}
+                    step={ONE_HUNDRED * multiplicator} />
         </div>
     );
 }

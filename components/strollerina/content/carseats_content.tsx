@@ -3,7 +3,6 @@
 import { useLocalStorage } from 'lib/LocalStorageAPI';
 import { ONE_HUNDRED_FIFTY, ONE_THOUSAND_FIVE_HUNDRED, SIXSTY, THIRTY } from 'lib/constants';
 import { Modal, ModalBody, ModalContent, ModalFooter, ModalHeader, useDisclosure } from '@nextui-org/modal';
-import useTranslation from 'next-translate/useTranslation';
 import { useState } from 'react';
 import CarSeatFiltersCollection from '../filter/carseat_filters';
 import CounterChip from '../filter/helper/counter_chip';
@@ -11,19 +10,18 @@ import { CarSeatSortingSelect } from '../sorting_select';
 import ProductCard from '../cards/product_card';
 import { BrandContentProps, CarseatCard, CarseatsContentProps, CarSeatFilters } from 'types';
 import { Button } from '@nextui-org/button';
+import { getDictionary } from 'get-dictionary';
 
 
-export default  function CarseatsContent({ initialData, brands }: 
-        {
-            initialData: CarseatsContentProps,
-            brands: BrandContentProps
-        }) {
+export default  function CarseatsContent({ initialData, brands, dictionary}: 
+    {
+        initialData: CarseatsContentProps,
+        brands: BrandContentProps,
+        dictionary: Awaited<ReturnType<typeof getDictionary>>["carseats"]
+    }) {
     
-    const { t } = useTranslation('carseats');
     const {isOpen, onOpen, onOpenChange} = useDisclosure();
-
     const [carseats, setCarseats] = useState<CarseatCard[]>(initialData);
-
     const initialFilters : CarSeatFilters = 
         { 
             brandsName: [],
@@ -48,8 +46,8 @@ export default  function CarseatsContent({ initialData, brands }:
             {carseats &&
             <>
                 <div className="flex flex-wrap content-center items-center mb-5 rounded-full justify-between space-y-2">
-                    <CounterChip title={"carseat-count"} number={carseats.length} />
-                    <CarSeatSortingSelect  carseats={carseats} setCarseats={setCarseats}/>
+                    <CounterChip title={"carseats"} number={carseats.length} dictionary={dictionary}/>
+                    <CarSeatSortingSelect  carseats={carseats} setCarseats={setCarseats} dictionary={dictionary}/>
                 </div>
 
                 <div className="gap-2 grid grid-cols-1 sm:grid-cols-3" key={"carseats"}>
@@ -72,24 +70,25 @@ export default  function CarseatsContent({ initialData, brands }:
 
             {/* carseat filters content  */}
             <aside className="hidden md:block md:w-1/3 p-4  fixed right-0 top-16 h-full max-h-[1000px] bg-transparent overflow-y-auto ">
-                <CarSeatFiltersCollection brands={brands} setCarseats={setCarseats} filters={filters} initialFilters={initialFilters} setFilters={setFilters}/>
+                <CarSeatFiltersCollection brands={brands} setCarseats={setCarseats} filters={filters} initialFilters={initialFilters} setFilters={setFilters} dictionary={dictionary} isCleared={false}
+                />
              </aside>
              
              <div className="md:hidden fixed bottom-4 right-4 z-10">
-                <Button onPress={onOpen}>{t('common:info')}</Button>
+                <Button onPress={onOpen}>{dictionary["common"].info}</Button>
             </div>
 
              <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
                 <ModalContent className="overflow-y-auto max-h-screen">
                     {(onClose) => (
                         <>
-                        <ModalHeader className="flex flex-col gap-1">{t('info')}</ModalHeader>
+                        <ModalHeader className="flex flex-col gap-1">{dictionary["common"].info}</ModalHeader>
                         <ModalBody className="overflow-y-auto">
-                            <CarSeatFiltersCollection brands={brands} setCarseats={setCarseats} filters={filters} initialFilters={initialFilters} setFilters={setFilters}/>
+                            <CarSeatFiltersCollection brands={brands} setCarseats={setCarseats} filters={filters} initialFilters={initialFilters} setFilters={setFilters} dictionary={dictionary} isCleared={false} onClose={onClose} />
                         </ModalBody>
                         <ModalFooter>
                             <Button color="danger" variant="light" onPress={onClose}>
-                                {t('close')}
+                                {dictionary["common"].close}
                             </Button>
                         </ModalFooter>
                         </>

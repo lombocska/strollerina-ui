@@ -1,11 +1,5 @@
 'use client'
 
-import {
-    Tooltip,
-    TooltipContent,
-    TooltipProvider,
-    TooltipTrigger,
-} from '@/components/shadcn/tooltip'
 import { Moon, Sun } from 'lucide-react'
 import { useTheme } from 'next-themes'
 import { useEffect, useState } from 'react'
@@ -22,23 +16,14 @@ const ThemeSwitch = () => {
     }
 
     return (
-        <TooltipProvider>
-            <Tooltip>
-                {/* <TooltipTrigger> */}
-                    <button
-                        // disabled
-                        aria-label="Toggle Dark Mode"
-                        className="flex cursor-not-allowed items-center transition-opacity duration-300 hover:brightness-125 disabled:opacity-50"
-                        onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-                    >
-                        {mounted && theme === 'dark' ? <Sun /> : <Moon />}
-                    </button>
-                {/* </TooltipTrigger> */}
-                {/* <TooltipContent>
-                    <span>Temporarily disabled!</span>
-                </TooltipContent> */}
-            </Tooltip>
-        </TooltipProvider>
+            <button
+                aria-label="Toggle Dark Mode"
+                className="flex cursor-not-allowed items-center transition-opacity duration-300 hover:brightness-125"
+                onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+            >
+                {mounted && theme === 'dark' ? <Sun /> : <Moon />}
+            </button>
+
     )
 }
 

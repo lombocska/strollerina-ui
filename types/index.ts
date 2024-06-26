@@ -69,6 +69,12 @@ export type AdacType = {
   value: 'VERY_GOOD' | 'GOOD' | 'SATISFACTORY' | 'POOR';
 };
 
+
+
+export type FacingType = {
+  name: string;
+  value: 'FORWARD' | 'REAR';
+};
 export interface AdacSelectionProps {
   adacs: AdacType[];
   setFilters: React.Dispatch<React.SetStateAction<any>>;
@@ -215,6 +221,7 @@ export interface TagsProps {
 
 export interface NumberInputProps {
   title: string;
+  label: string;
   inputValue:  string; // Az inputValue lehet string, mivel a <Input> komponens value prop-ja stringet vár
   setInputValue: (value: number | string) => void;
   demo?: React.ReactNode;
@@ -222,5 +229,4 @@ export interface NumberInputProps {
   min?: number;
   max?: number;
   step?: number;
-  transNM: string;
 }
