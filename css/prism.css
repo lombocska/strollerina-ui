@@ -6,15 +6,15 @@
  */
 
 /* Code title styles */
-.remark-code-title {
+/* .remark-code-title {
     @apply mt-6 rounded-t bg-tertiary px-5 py-3 font-mono text-sm font-bold text-tertiary-foreground;
 }
 
 .remark-code-title + div > pre {
     @apply mt-0 rounded-t-none;
-}
+} */
 
-/* Code block styles */
+/* Code block styles
 .code-highlight {
     @apply float-left min-w-full;
 }
@@ -38,7 +38,7 @@
 .line-number::before {
     @apply -ml-2 mr-4 inline-block w-4 text-right text-muted-foreground;
     content: attr(line);
-}
+} */
 
 /**
  * Darcula theme
@@ -49,7 +49,7 @@
  * @author Alexandre Paradis <service.paradis@gmail.com>
  * @version 1.0
  */
-
+/* 
 .token.comment,
 .token.prolog,
 .token.cdata {
@@ -147,4 +147,4 @@ code.language-css .token.selector > .token.attribute,
 code.language-css .token.selector > .token.pseudo-class,
 code.language-css .token.selector > .token.pseudo-element {
     color: #ffc66d;
-}
+} */

@@ -12,9 +12,6 @@ import CarSeatFiltersCollection from '../filter/carseat_filters';
 import CounterChip from '../filter/helper/counter_chip';
 import { CarSeatSortingSelect } from '../sorting_select';
 
-const DynamicUseLocalStorage = dynamic(() => import('lib/LocalStorageAPI'), {
-    ssr: false,
-  });
   
 export default  function CarseatsContent({ initialData, brands, dictionary}: 
     {
@@ -23,9 +20,6 @@ export default  function CarseatsContent({ initialData, brands, dictionary}:
         dictionary: Awaited<ReturnType<typeof getDictionary>>["carseats"]
     }) {
 
-    const useLocalStorage = dynamic(() => import('lib/LocalStorageAPI'), {
-        ssr: false,
-    })
            
     const {isOpen, onOpen, onOpenChange} = useDisclosure();
     const [carseats, setCarseats] = useState<CarseatCard[]>(initialData);
@@ -43,19 +37,7 @@ export default  function CarseatsContent({ initialData, brands, dictionary}:
     };
 
     //filters
-    //filters
     const [filters, setFilters] = useState(initialFilters);
-
-    useEffect(() => {
-        async function loadLocalStorage() {
-        const useLocalStorage = await DynamicUseLocalStorage;
-        const [storedFilters, setStoredFilters] = useLocalStorage("stroller/filters", initialFilters);
-        setFilters(storedFilters);
-        setFilters(() => setStoredFilters);
-        }
-
-        loadLocalStorage();
-    }, []);
 
     return (
        <>
@@ -89,7 +71,7 @@ export default  function CarseatsContent({ initialData, brands, dictionary}:
 
             {/* carseat filters content  */}
             <aside className="hidden md:block md:w-1/3 p-4  fixed right-0 top-16 h-full max-h-[1000px] bg-transparent overflow-y-auto ">
-                <CarSeatFiltersCollection brands={brands} setCarseats={setCarseats} filters={filters} initialFilters={initialFilters} setFilters={setFilters} dictionary={dictionary} isCleared={false}
+                <CarSeatFiltersCollection brands={brands} setCarseats={setCarseats} filters={filters} initialFilters={initialFilters} setFilters={setFilters} dictionary={dictionary} 
                 />
              </aside>
              
@@ -103,7 +85,7 @@ export default  function CarseatsContent({ initialData, brands, dictionary}:
                         <>
                         <ModalHeader className="flex flex-col gap-1">{dictionary["common"].info}</ModalHeader>
                         <ModalBody className="overflow-y-auto">
-                            <CarSeatFiltersCollection brands={brands} setCarseats={setCarseats} filters={filters} initialFilters={initialFilters} setFilters={setFilters} dictionary={dictionary} isCleared={false} onClose={onClose} />
+                            <CarSeatFiltersCollection brands={brands} setCarseats={setCarseats} filters={filters} initialFilters={initialFilters} setFilters={setFilters} dictionary={dictionary}  onClose={onClose} />
                         </ModalBody>
                         <ModalFooter>
                             <Button color="danger" variant="light" onPress={onClose}>

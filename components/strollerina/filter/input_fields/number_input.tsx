@@ -14,11 +14,6 @@ const NumberInput: React.FC<NumberInputProps> = ({
   label
 }) => {
 
-  // const handleValueChange = (event) => {
-  //   // const value = Math.round(parseFloat(event.target.value));
-  //   const value = event.target.value;
-  //   setInputValue(value);
-  // };
 
   return (
     <Input

@@ -3,7 +3,7 @@
 import { FIVE_THOUSAND } from 'lib/constants';
 import { getAllStrollers, searchStrollers } from 'lib/data';
 import { deepCompare } from 'lib/util';
-import { BrandContentProps, StrollerCard, StrollerFiltersProps } from 'types';
+import { BrandContentProps, StrollerCard } from 'types';
 import { Accordion, AccordionItem } from '@nextui-org/accordion';
 import { Button } from "@nextui-org/button";
 import { useEffect, useState } from 'react';
@@ -21,9 +21,10 @@ import { Divider } from '@nextui-org/react';
 import { getDictionary } from 'get-dictionary';
 import StrollerBumperFilters from './stroller_filters/stroller_bumper_filters';
 import dynamic from 'next/dynamic';
+import { clearLocalStorage } from 'lib/LocalStorageAPI';
 
+  
 export default function StrollerFiltersCollection({ brands, setStrollers, filters, initialFilters, setFilters, dictionary, onClose } : {
-    isCleared: boolean | false;
     brands: BrandContentProps;
     setStrollers: React.Dispatch<React.SetStateAction<StrollerCard[]>>;
     filters: any; 
@@ -33,9 +34,9 @@ export default function StrollerFiltersCollection({ brands, setStrollers, filter
     onClose?: () => void;
 }) {
     
-    const clearLocalStorage = dynamic(() => import('lib/LocalStorageAPI'), {
-        ssr: false,
-    })
+    // const clearLocalStorage = dynamic(() => import('lib/LocalStorageAPI'), {
+    //     ssr: false,
+    // })
        
     
     const [isCleared, setIsCleared] = useState(false);
@@ -102,14 +103,14 @@ export default function StrollerFiltersCollection({ brands, setStrollers, filter
     return (
         <Card className="">
             <CardHeader className="flex gap-3 justify-between">
-                <Button radius="full" size="lg" variant="ghost" onPress={() => search()}>
+                <Button size="lg" variant="ghost" onPress={() => search()}>
                     {dictionary['common']["search"]}
                 </Button>
-                <Button radius="full" size="lg" variant="ghost" onPress={() => clearFilters()}>
+                <Button size="lg" variant="ghost" onPress={() => clearFilters()}>
                     {dictionary['common']["clear"]}
                 </Button>  
             </CardHeader>
-            <Divider/>
+            {/* <Divider/> */}
             <CardBody>
                 <div className="grid grid-flow-row-dense grid-cols-2">
                     <BrandSelection brands={brands} setFilters={setFilters} isCleared={isCleared} dictionary={dictionary}/>
@@ -123,8 +124,11 @@ export default function StrollerFiltersCollection({ brands, setStrollers, filter
                     />
                 </div>
 
-                <Accordion className='m-1 mb-10' variant="bordered" selectionMode="multiple">
+                <Accordion className='m-1 mb-10' variant="bordered" selectionMode="multiple"  type="single" collapsible>
+                    
                     <AccordionItem 
+                        value="1"
+                        className=''
                         key="filters-accordion-1" 
                         aria-label={dictionary['filters']['section-dimension-title']} 
                         title={dictionary['filters']['section-dimension-title']} 

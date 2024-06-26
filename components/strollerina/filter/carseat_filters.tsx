@@ -24,7 +24,6 @@ import { getDictionary } from 'get-dictionary';
 
 
 export default function CarSeatFiltersCollection({brands, setCarseats, filters, initialFilters, setFilters, dictionary, onClose} : {
-    isCleared: boolean | false;
     brands: BrandContentProps;
     setCarseats: React.Dispatch<React.SetStateAction<CarseatCard[]>>;
     filters: any; 

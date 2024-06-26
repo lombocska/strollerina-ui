@@ -14,7 +14,6 @@ module.exports = {
         './data/**/*.mdx',
         "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
     ],
-    darkMode: 'class',
     theme: {
         container: {
             center: true,
@@ -45,8 +44,8 @@ module.exports = {
                 border: 'hsl(var(--border))',
                 input: 'hsl(var(--input))',
                 ring: 'hsl(var(--ring))',
-                background: 'hsl(var(--background))',
-                foreground: 'hsl(var(--foreground))',
+                // background: 'hsl(var(--background))',
+                // foreground: 'hsl(var(--foreground))',
                 primary: {
                     DEFAULT: 'hsl(var(--primary))',
                     // DocSearch colors
@@ -59,14 +58,14 @@ module.exports = {
                     DEFAULT: 'hsl(var(--secondary))',
                     foreground: 'hsl(var(--secondary-foreground))',
                 },
-                tertiary: {
-                    DEFAULT: 'hsl(var(--tertiary))',
-                    foreground: 'hsl(var(--tertiary-foreground))',
-                },
-                destructive: {
-                    DEFAULT: 'hsl(var(--destructive))',
-                    foreground: 'hsl(var(--destructive-foreground))',
-                },
+                // tertiary: {
+                //     DEFAULT: 'hsl(var(--tertiary))',
+                //     foreground: 'hsl(var(--tertiary-foreground))',
+                // },
+                // destructive: {
+                //     DEFAULT: 'hsl(var(--destructive))',
+                //     foreground: 'hsl(var(--destructive-foreground))',
+                // },
                 muted: {
                     DEFAULT: 'hsl(var(--muted))',
                     foreground: 'hsl(var(--muted-foreground))',
@@ -79,116 +78,117 @@ module.exports = {
                     DEFAULT: 'hsl(var(--popover))',
                     foreground: 'hsl(var(--popover-foreground))',
                 },
-                card: {
-                    DEFAULT: 'hsl(var(--card))',
-                    foreground: 'hsl(var(--card-foreground))',
-                },
+                // card: {
+                //     DEFAULT: 'hsl(var(--card))',
+                //     foreground: 'hsl(var(--card-foreground))',
+                // },
             },
-            borderRadius: {
-                lg: `var(--radius)`,
-                md: `calc(var(--radius) - 2px)`,
-                sm: 'calc(var(--radius) - 4px)',
-            },
-            keyframes: {
-                'accordion-down': {
-                    from: { height: 0 },
-                    to: { height: 'var(--radix-accordion-content-height)' },
-                },
-                'accordion-up': {
-                    from: { height: 'var(--radix-accordion-content-height)' },
-                    to: { height: 0 },
-                },
-            },
-            animation: {
-                'accordion-down': 'accordion-down 0.2s ease-out',
-                'accordion-up': 'accordion-up 0.2s ease-out',
-                skeleton: 'skeleton 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-            },
-            typography: ({ theme }) => ({
-                DEFAULT: {
-                    css: {
-                        a: {
-                            color: theme('colors.primary.DEFAULT'),
-                            '&:hover': {
-                                filter: 'brightness(1.10)',
-                            },
-                            code: { color: theme('colors.primary.DEFAULT') },
-                        },
-                        p: {
-                            fontSize: '14px',
-                        },
-                        'h1,h2': {
-                            fontWeight: '700',
-                            letterSpacing: theme('letterSpacing.tight'),
-                        },
-                        h3: {
-                            fontWeight: '600',
-                        },
-                        pre: {
-                            fontSize: '14px !important',
-                        },
-                        code: {
-                            color: theme('colors.primary.DEFAULT'),
-                            fontSize: 'inherit',
-                            fontWeight: '400',
-                            backgroundColor: theme('colors.primary.foreground'),
-                            borderWidth: '1px',
-                            borderColor: theme('colors.border'),
-                            fontFamily: 'inherit',
-                            borderRadius: '0.25rem',
-                            padding: '0.25rem 0.5rem',
-                        },
-                        'code::before': {
-                            display: 'none',
-                        },
-                        'code::after': {
-                            display: 'none',
-                        },
-                        img: {
-                            display: 'block',
-                            borderRadius: '0.5rem',
-                            borderWidth: '1px',
-                            borderColor: theme('colors.border'),
-                            margin: '1.5rem auto !important',
-                        },
-                        blockquote: {
-                            color: theme('colors.muted.foreground'),
-                            quotes: 'none',
-                            fontStyle: 'normal',
-                            borderLeftColor: theme('colors.border'),
-                        },
-                        hr: {
-                            borderColor: theme('colors.border'),
-                        },
-                        tr: {
-                            borderColor: theme('colors.border'),
-                        },
-                        thead: {
-                            borderColor: theme('colors.border'),
-                        },
-                        'li::marker': {
-                            color: theme('colors.muted.foreground'),
-                        },
-                    },
-                },
-                invert: {
-                    css: {
-                        a: {
-                            color: theme('colors.primary.DEFAULT'),
-                            '&:hover': {
-                                filter: 'brightness(1.10)',
-                            },
-                            code: { color: theme('colors.primary.DEFAULT') },
-                        },
-                        p: {
-                            fontSize: '14px',
-                        },
-                        'h1,h2,h3,h4,h5,h6': {
-                            color: theme('colors.gray.100'),
-                        },
-                    },
-                },
-            }),
+            // borderRadius: {
+            //     lg: `var(--radius)`,
+            //     md: `calc(var(--radius) - 2px)`,
+            //     sm: 'calc(var(--radius) - 4px)',
+            // },
+            // keyframes: {
+            //     'accordion-down': {
+            //         from: { height: 0 },
+            //         to: { height: 'var(--radix-accordion-content-height)' },
+            //     },
+            //     'accordion-up': {
+            //         from: { height: 'var(--radix-accordion-content-height)' },
+            //         to: { height: 0 },
+            //     },
+            // },
+            // animation: {
+            //     'accordion-down': 'accordion-down 0.2s ease-out',
+            //     'accordion-up': 'accordion-up 0.2s ease-out',
+            //     skeleton: 'skeleton 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            // }
+            // typography: ({ theme }) => ({
+            //     DEFAULT: {
+            //         css: {
+            //             a: {
+            //                 color: theme('colors.primary.DEFAULT'),
+            //                 '&:hover': {
+            //                     filter: 'brightness(1.10)',
+            //                 },
+            //                 code: { color: theme('colors.primary.DEFAULT') },
+            //             },
+            //             p: {
+            //                 fontSize: '14px',
+            //             },
+            //             'h1,h2': {
+            //                 fontWeight: '700',
+            //                 letterSpacing: theme('letterSpacing.tight'),
+            //             },
+            //             h3: {
+            //                 fontWeight: '600',
+            //             },
+            //             pre: {
+            //                 fontSize: '14px !important',
+            //             },
+                        // code: {
+                        //     color: theme('colors.primary.DEFAULT'),
+                        //     fontSize: 'inherit',
+                        //     fontWeight: '400',
+                        //     backgroundColor: theme('colors.primary.foreground'),
+                        //     borderWidth: '1px',
+                        //     borderColor: theme('colors.border'),
+                        //     fontFamily: 'inherit',
+                        //     borderRadius: '0.25rem',
+                        //     padding: '0.25rem 0.5rem',
+                        // },
+                        // 'code::before': {
+                        //     display: 'none',
+                        // },
+                        // 'code::after': {
+                        //     display: 'none',
+                        // },
+                //         img: {
+                //             display: 'block',
+                //             borderRadius: '0.5rem',
+                //             borderWidth: '1px',
+                //             borderColor: theme('colors.border'),
+                //             margin: '1.5rem auto !important',
+                //         },
+                //         blockquote: {
+                //             color: theme('colors.muted.foreground'),
+                //             quotes: 'none',
+                //             fontStyle: 'normal',
+                //             borderLeftColor: theme('colors.border'),
+                //         },
+                //         hr: {
+                //             borderColor: theme('colors.border'),
+                //         },
+                //         tr: {
+                //             borderColor: theme('colors.border'),
+                //         },
+                //         thead: {
+                //             borderColor: theme('colors.border'),
+                //         },
+                //         'li::marker': {
+                //             color: theme('colors.muted.foreground'),
+                //         },
+                //     },
+                // },
+                // invert: {
+                //     css: {
+                //         a: {
+                //             color: theme('colors.primary.DEFAULT'),
+                //             '&:hover': {
+                //                 filter: 'brightness(1.10)',
+                //             },
+                //             code: { color: theme('colors.primary.DEFAULT') },
+                //         },
+                //         p: {
+                //             fontSize: '14px',
+                //         },
+                //         'h1,h2,h3,h4,h5,h6': {
+                //             color: theme('colors.gray.100'),
+                //         },
+                //     },
+                // },
+            // }
+        // ),
         },
     },
     plugins: [

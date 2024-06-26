@@ -1,6 +1,6 @@
 'use client';
 
-import  useLocalStorage  from 'lib/LocalStorageAPI';
+import  {useLocalStorage}  from 'lib/LocalStorageAPI';
 import { FIVE_THOUSAND, ONE_HUNDRED, THIRTY, ZERO } from 'lib/constants';
 import { useEffect } from "react";
 import NumberInput from './number_input';

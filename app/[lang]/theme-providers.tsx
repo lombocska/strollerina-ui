@@ -36,7 +36,7 @@ export function ThemeProviders({ children, themeProps }: ProvidersProps) {
 
   return (
     <NextUIProvider navigate={router.push}>
-      <NextThemesProvider {...themeProps}>
+      <NextThemesProvider defaultTheme="light">
         <CurrencyProvider>
           {children}
         </CurrencyProvider>

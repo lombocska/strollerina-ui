@@ -17,7 +17,7 @@ export default function SelectWithMultipleChip({ items, values, handleSelectionC
             >
             
                 {items?.map((item) => (
-                    <SelectItem key={item.value}>
+                    <SelectItem key={item.value} className='dark:text-white'>
                         {shouldTranslate ?  dictionary[item.name]: item.name }
                     </SelectItem>
                 ))}

@@ -50,17 +50,6 @@ export default  function StrollersContent({ initialData, brands, dictionary}:
     //filters
     const [filters, setFilters] = useState(initialFilters);
 
-    useEffect(() => {
-        async function loadLocalStorage() {
-        const useLocalStorage = await DynamicUseLocalStorage;
-        const [storedFilters, setStoredFilters] = useLocalStorage("stroller/filters", initialFilters);
-        setFilters(storedFilters);
-        setFilters(() => setStoredFilters);
-        }
-
-        loadLocalStorage();
-    }, []);
-
     return (
         <>
     
@@ -95,14 +84,13 @@ export default  function StrollersContent({ initialData, brands, dictionary}:
         }
         </main>
 
-            <aside className="hidden md:block md:w-1/3 p-4  fixed right-0 top-16 h-full max-h-[1000px] bg-transparent overflow-y-auto ">
+            <aside className="hidden md:block md:w-1/3 p-4 fixed right-0 top-16 h-full max-h-[1000px] overflow-y-auto ">
                 <StrollerFiltersCollection 
                 brands={brands} 
                 setStrollers={setStrollers} 
                 filters={filters} 
                 initialFilters={initialFilters} 
                 setFilters={setFilters} 
-                isCleared={false}
                 dictionary={dictionary}
                 />
              </aside>
@@ -123,7 +111,6 @@ export default  function StrollersContent({ initialData, brands, dictionary}:
                             filters={filters} 
                             initialFilters={initialFilters} 
                             setFilters={setFilters} 
-                            isCleared={false}
                             dictionary={dictionary}
                             onClose={onClose}
                             />

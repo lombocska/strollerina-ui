@@ -1,6 +1,5 @@
 'use client';
 
-// import useTranslation from 'next-translate/useTranslation';
 import { useEffect, useState } from 'react';
 import SelectWithMultipleChip from './select_with_multiple_chip';
 

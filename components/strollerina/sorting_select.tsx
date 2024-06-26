@@ -57,7 +57,7 @@ export default function SortingSelect({strollers, setStrollers, dictionary}: {
     }, [value]); 
 
     return (
-        <div className="flex-shrink-0 w-full max-w-md">
+        <div className="flex-shrink-0 w-full max-w-md ">
             <Select
                 radius="full"
                 items={sortings}
@@ -67,7 +67,7 @@ export default function SortingSelect({strollers, setStrollers, dictionary}: {
                 variant={"bordered"}
             >
                 {sortings.map(sorting => (
-                    <SelectItem key={sorting.value} textValue={dictionary["sorting"][sorting.name]}>
+                    <SelectItem key={sorting.value} textValue={dictionary["sorting"][sorting.name]} className='dark:text-white'>
                         {dictionary["sorting"][sorting.name]}
                     </SelectItem>
                 ))}
@@ -130,7 +130,7 @@ export function CarSeatSortingSelect({carseats, setCarseats, dictionary} : {
             variant={"bordered"}
             >
              {sortings.map(sorting => (
-                    <SelectItem key={sorting.value} textValue={dictionary["sorting"][sorting.name]}>
+                    <SelectItem key={sorting.value} textValue={dictionary["sorting"][sorting.name]} className='dark:text-white'>
                         {dictionary["sorting"][sorting.name]}
                     </SelectItem>
             ))}

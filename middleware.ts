@@ -60,8 +60,9 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  // Matcher ignoring `/_next/`, `/api/`, `/static/images/`, and `/static/favicons/`
+  // Matcher ignoring `/_next/`, `/api/`, `/static/images/`, `/static/favicons/`,
+  // and `public/tags` and `public/search.json`
   matcher: [
-    "/((?!api|_next/static|_next/image|favicon.ico|static/images|static/favicons).*)"
+    "/((?!api|_next/static|_next/image|favicon.ico|static/images|static/favicons|tags|search.json|feed.xml).*)"
   ],
 };

@@ -1,13 +1,12 @@
 'use client';
 
 import { CheckIcon } from '@/components/icons';
-import  clearLocalStorage  from 'lib/LocalStorageAPI';
+import  {clearLocalStorage, useLocalStorage}  from 'lib/LocalStorageAPI';
 import { Tag, TagsProps } from 'types';
 import { Chip } from '@nextui-org/chip';
 import { Tooltip } from '@nextui-org/tooltip';
 import { useEffect } from 'react';
 import { getDictionary } from 'get-dictionary';
-import useLocalStorage from 'lib/LocalStorageAPI';
 
 export default function Tags({tags, section, lsName, isCleared, setFilters, dictionary} : 
     {

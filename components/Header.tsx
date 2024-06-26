@@ -34,7 +34,7 @@ const Header = () => {
         <header className="fixed inset-x-0 top-4 z-40 flex h-[60px] justify-center">
             <div
                 className={cn(
-                    'mx-6 w-full max-w-[375px] items-center justify-between rounded-3xl border border-border bg-secondary px-4 shadow-sm saturate-100 backdrop-blur-[10px] sm:max-w-screen-sm lg:max-w-screen-lg xl:max-w-screen-xl',
+                    'mx-6 w-full max-w-[375px] items-center justify-between rounded-3xl border border-border bg-secondary dark:bg-transparent px-4 shadow-sm saturate-100 backdrop-blur-[10px] sm:max-w-screen-sm lg:max-w-screen-lg xl:max-w-screen-xl',
                     isScrolled && 'border-transparent bg-background/80'
                 )}
             >
@@ -70,7 +70,7 @@ const Header = () => {
                         <div className="hidden space-x-2 lg:flex">
                             <LocaleSwitcher />
                         </div>
-
+                        <ThemeSwitch/>
                         <SearchButton />
                         <MobileNav />
                     </div>

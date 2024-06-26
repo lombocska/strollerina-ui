@@ -2,7 +2,7 @@
 
 import { siteConfig } from "config/site";
 import { getDictionary } from "get-dictionary";
-import  useLocalStorage  from 'lib/LocalStorageAPI';
+import  {useLocalStorage}  from 'lib/LocalStorageAPI';
 import { FIVE, SIXSTY, THIRTY, ZERO } from "lib/constants";
 import { Dispatch, SetStateAction, useEffect } from "react";
 import { CarSeatFilters } from "types";

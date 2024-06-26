@@ -1,10 +1,9 @@
 'use client';
 
 import { siteConfig } from "config/site";
-import Tags from "../input_fields/tags";
-import { CarSeatFiltersProps } from "types";
-import { Dispatch, SetStateAction } from "react";
 import { getDictionary } from "get-dictionary";
+import { Dispatch, SetStateAction } from "react";
+import Tags from "../input_fields/tags";
 
 export default  function CarSeatHarnessFilters({setFilters, isCleared, dictionary} : {
     isCleared: boolean | false;

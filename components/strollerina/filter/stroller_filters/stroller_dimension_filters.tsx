@@ -1,7 +1,7 @@
 'use client';
 
 import { siteConfig } from "config/site";
-import  useLocalStorage  from 'lib/LocalStorageAPI';
+import  {useLocalStorage}  from 'lib/LocalStorageAPI';
 import { FIFTY, ONE, ONE_HUNDRED, ONE_HUNDRED_FIFTY, ONE_HUNDRED_THIRTY, SIXSTY, TEN, THIRTY, TWO_HUNDRED, ZERO } from "lib/constants";
 import { Dispatch, SetStateAction, useEffect } from "react";
 import { BackWheel, FrontWheel, SeatHeight, StrollerHeight, StrollerLength, StrollerWidth, Weight } from "../../icons";
