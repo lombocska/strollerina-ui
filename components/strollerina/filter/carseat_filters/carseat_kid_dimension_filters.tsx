@@ -1,7 +1,7 @@
 'use client';
 
 import { siteConfig } from "config/site";
-import { useLocalStorage } from 'lib/LocalStorageAPI';
+import  useLocalStorage  from 'lib/LocalStorageAPI';
 import { FIVE, ONE_HUNDRED_FIFTY, SIXSTY, TEN, ZERO } from "lib/constants";
 import { Dispatch, SetStateAction, useEffect } from "react";
 import NumberInput from "../input_fields/number_input";

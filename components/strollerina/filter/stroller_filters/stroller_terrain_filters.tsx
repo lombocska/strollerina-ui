@@ -2,7 +2,6 @@
 
 import { siteConfig } from "config/site";
 import Tags from "../input_fields/tags";
-import { StrollerFiltersProps } from "types";
 import { Dispatch, SetStateAction } from "react";
 import { getDictionary } from "get-dictionary";
 

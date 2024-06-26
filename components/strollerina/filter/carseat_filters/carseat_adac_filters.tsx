@@ -4,7 +4,7 @@ import { CheckIcon } from "@/components/icons";
 import { Chip } from "@nextui-org/chip";
 import { siteConfig } from "config/site";
 import { getDictionary } from "get-dictionary";
-import { useLocalStorage } from 'lib/LocalStorageAPI';
+import  useLocalStorage  from 'lib/LocalStorageAPI';
 import { useEffect } from "react";
 import { CarSeatFilters } from "types";
 import AdacSelection from "../input_fields/adac_selection";

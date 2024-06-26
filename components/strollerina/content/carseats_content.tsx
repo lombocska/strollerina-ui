@@ -1,16 +1,16 @@
 'use client';
 
-import { useLocalStorage } from 'lib/LocalStorageAPI';
-import { ONE_HUNDRED_FIFTY, ONE_THOUSAND_FIVE_HUNDRED, SIXSTY, THIRTY } from 'lib/constants';
+import { Button } from '@nextui-org/button';
 import { Modal, ModalBody, ModalContent, ModalFooter, ModalHeader, useDisclosure } from '@nextui-org/modal';
+import { getDictionary } from 'get-dictionary';
+import { ONE_HUNDRED_FIFTY, ONE_THOUSAND_FIVE_HUNDRED, SIXSTY, THIRTY } from 'lib/constants';
+import dynamic from 'next/dynamic';
 import { useState } from 'react';
+import { BrandContentProps, CarSeatFilters, CarseatCard, CarseatsContentProps } from 'types';
+import ProductCard from '../cards/product_card';
 import CarSeatFiltersCollection from '../filter/carseat_filters';
 import CounterChip from '../filter/helper/counter_chip';
 import { CarSeatSortingSelect } from '../sorting_select';
-import ProductCard from '../cards/product_card';
-import { BrandContentProps, CarseatCard, CarseatsContentProps, CarSeatFilters } from 'types';
-import { Button } from '@nextui-org/button';
-import { getDictionary } from 'get-dictionary';
 
 
 export default  function CarseatsContent({ initialData, brands, dictionary}: 
@@ -19,7 +19,11 @@ export default  function CarseatsContent({ initialData, brands, dictionary}:
         brands: BrandContentProps,
         dictionary: Awaited<ReturnType<typeof getDictionary>>["carseats"]
     }) {
-    
+
+    const useLocalStorage = dynamic(() => import('lib/LocalStorageAPI'), {
+        ssr: false,
+    })
+           
     const {isOpen, onOpen, onOpenChange} = useDisclosure();
     const [carseats, setCarseats] = useState<CarseatCard[]>(initialData);
     const initialFilters : CarSeatFilters = 

@@ -1,13 +1,7 @@
 import { Image } from "@nextui-org/image";
-import useTranslation from 'next-translate/useTranslation';
 import FeatureCard from "../cards/feature_card";
 
 export default function FeatureCards() {
-
-  const { t } = useTranslation('home');
-
-
-
   const features = [
     {
       title: t('stroller-title'),

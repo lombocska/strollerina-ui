@@ -1,6 +1,5 @@
 'use client';
 
-import { clearLocalStorage } from 'lib/LocalStorageAPI';
 import { FIVE_THOUSAND } from 'lib/constants';
 import { getAllStrollers, searchStrollers } from 'lib/data';
 import { deepCompare } from 'lib/util';
@@ -21,6 +20,7 @@ import { Card, CardBody, CardHeader } from '@nextui-org/card';
 import { Divider } from '@nextui-org/react';
 import { getDictionary } from 'get-dictionary';
 import StrollerBumperFilters from './stroller_filters/stroller_bumper_filters';
+import dynamic from 'next/dynamic';
 
 export default function StrollerFiltersCollection({ brands, setStrollers, filters, initialFilters, setFilters, dictionary, onClose } : {
     isCleared: boolean | false;
@@ -32,6 +32,11 @@ export default function StrollerFiltersCollection({ brands, setStrollers, filter
     dictionary: Awaited<ReturnType<typeof getDictionary>>["strollers"];
     onClose?: () => void;
 }) {
+    
+    const clearLocalStorage = dynamic(() => import('lib/LocalStorageAPI'), {
+        ssr: false,
+    })
+       
     
     const [isCleared, setIsCleared] = useState(false);
 
