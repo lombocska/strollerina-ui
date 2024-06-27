@@ -1,13 +1,8 @@
 'use client'
 
-import { Check, File, PenTool, Star, Tag, User, Users } from 'lucide-react'
 import React, { useEffect, useState } from 'react'
-import ReactMarkdown from 'react-markdown'
-import rehypeRaw from 'rehype-raw'
 import slugify from 'slugify'
 
-import Image from './Image'
-import Link from './Link'
 import { getStrollerImgs } from 'lib/data'
 import Carousel from './strollerina/carousel/carousel'
 

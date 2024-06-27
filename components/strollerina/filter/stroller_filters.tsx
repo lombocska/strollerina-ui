@@ -1,9 +1,9 @@
 'use client';
 
-import { FIVE_THOUSAND } from 'lib/constants';
+import { FIVE_THOUSAND, ONE_HUNDRED_FIFTY, THIRTY, TWO_HUNDRED, ZERO } from 'lib/constants';
 import { getAllStrollers, searchStrollers } from 'lib/data';
 import { deepCompare } from 'lib/util';
-import { BrandContentProps, StrollerCard } from 'types';
+import { BrandContentProps, StrollerCard, StrollerFilters } from 'types';
 import { Accordion, AccordionItem } from '@nextui-org/accordion';
 import { Button } from "@nextui-org/button";
 import { useEffect, useState } from 'react';
@@ -21,24 +21,34 @@ import { Divider } from '@nextui-org/react';
 import { getDictionary } from 'get-dictionary';
 import StrollerBumperFilters from './stroller_filters/stroller_bumper_filters';
 import dynamic from 'next/dynamic';
-import { clearLocalStorage } from 'lib/LocalStorageAPI';
+import { clearLocalStorage, useLocalStorage } from 'lib/LocalStorageAPI';
 
   
-export default function StrollerFiltersCollection({ brands, setStrollers, filters, initialFilters, setFilters, dictionary, onClose } : {
+export default function StrollerFiltersCollection({ brands, setStrollers, dictionary, onClose } : {
     brands: BrandContentProps;
     setStrollers: React.Dispatch<React.SetStateAction<StrollerCard[]>>;
-    filters: any; 
-    initialFilters: any; 
-    setFilters: React.Dispatch<React.SetStateAction<any>>; 
     dictionary: Awaited<ReturnType<typeof getDictionary>>["strollers"];
     onClose?: () => void;
 }) {
     
-    // const clearLocalStorage = dynamic(() => import('lib/LocalStorageAPI'), {
-    //     ssr: false,
-    // })
-       
-    
+    const initialFilters : StrollerFilters = 
+    {
+        brandsName: [],
+        maxHeight: TWO_HUNDRED,
+        closedMaxHeight: TWO_HUNDRED,
+        maxWidth: TWO_HUNDRED,
+        maxLength: TWO_HUNDRED,
+        closedMaxLength: ONE_HUNDRED_FIFTY,
+        maxWeight: THIRTY,
+        maxPrice: FIVE_THOUSAND,
+        minSeatHeight: ZERO,
+        minFrontWheelSize: ZERO,
+        minBackWheelSize: ZERO,
+        tags: []
+};
+
+    //filters
+    const [filters, setFilters] = useLocalStorage("stroller/filters", initialFilters);
     const [isCleared, setIsCleared] = useState(false);
 
     useEffect(() => {

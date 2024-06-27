@@ -4,17 +4,12 @@ import { Button } from '@nextui-org/button';
 import { Modal, ModalBody, ModalContent, ModalFooter, ModalHeader, useDisclosure } from '@nextui-org/modal';
 import { getDictionary } from 'get-dictionary';
 import { FIVE_THOUSAND, ONE_HUNDRED_FIFTY, THIRTY, TWO_HUNDRED, ZERO } from 'lib/constants';
-import dynamic from 'next/dynamic';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { BrandContentProps, StrollerCard, StrollerFilters, StrollersContentProps } from 'types';
 import ProductCard from '../cards/product_card';
 import CounterChip from '../filter/helper/counter_chip';
 import StrollerFiltersCollection from '../filter/stroller_filters';
 import SortingSelect from '../sorting_select';
-
-const DynamicUseLocalStorage = dynamic(() => import('lib/LocalStorageAPI'), {
-  ssr: false,
-});
 
 
 export default  function StrollersContent({ initialData, brands, dictionary}: 
@@ -24,31 +19,8 @@ export default  function StrollersContent({ initialData, brands, dictionary}:
             dictionary: Awaited<ReturnType<typeof getDictionary>>["strollers"]
         }) {
     
-    // const useLocalStorage = dynamic(() => import('lib/LocalStorageAPI'), {
-    //     ssr: false,
-    // })
-            
     const {isOpen, onOpen, onOpenChange} = useDisclosure();
-
     const [strollers, setStrollers] = useState<StrollerCard[]>(initialData);
-    const initialFilters : StrollerFilters = 
-        {
-            brandsName: [],
-            maxHeight: TWO_HUNDRED,
-            closedMaxHeight: TWO_HUNDRED,
-            maxWidth: TWO_HUNDRED,
-            maxLength: TWO_HUNDRED,
-            closedMaxLength: ONE_HUNDRED_FIFTY,
-            maxWeight: THIRTY,
-            maxPrice: FIVE_THOUSAND,
-            minSeatHeight: ZERO,
-            minFrontWheelSize: ZERO,
-            minBackWheelSize: ZERO,
-            tags: []
-    };
-
-    //filters
-    const [filters, setFilters] = useState(initialFilters);
 
     return (
         <>
@@ -88,9 +60,6 @@ export default  function StrollersContent({ initialData, brands, dictionary}:
                 <StrollerFiltersCollection 
                 brands={brands} 
                 setStrollers={setStrollers} 
-                filters={filters} 
-                initialFilters={initialFilters} 
-                setFilters={setFilters} 
                 dictionary={dictionary}
                 />
              </aside>
@@ -108,9 +77,6 @@ export default  function StrollersContent({ initialData, brands, dictionary}:
                             <StrollerFiltersCollection 
                             brands={brands} 
                             setStrollers={setStrollers} 
-                            filters={filters} 
-                            initialFilters={initialFilters} 
-                            setFilters={setFilters} 
                             dictionary={dictionary}
                             onClose={onClose}
                             />

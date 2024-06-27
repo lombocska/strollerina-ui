@@ -3,10 +3,15 @@
 import { usePathname, useRouter } from "next/navigation";
 import { i18n, Locale } from "i18n-config";
 import { useEffect, useState } from "react";
+import SelectWithMultipleChip from "./strollerina/filter/input_fields/select_with_multiple_chip";
+import { Select, SelectItem } from "@nextui-org/select";
+import { useTheme } from "next-themes";
 
 export default function LocaleSwitcher() {
   const pathName = usePathname();
   const router = useRouter();
+  const { theme } = useTheme(); // Access the current theme using next-themes hook
+
   const [currentLocale, setCurrentLocale] = useState<Locale | null>(null);
 
   const redirectedPathName = (locale: Locale) => {
@@ -31,16 +36,21 @@ export default function LocaleSwitcher() {
   }, [pathName]);
 
   return (
-    <select
-      value={currentLocale || ""}
-      onChange={handleLocaleChange}
-      className=" text-sm border rounded-md py-1 px-2 bg-secondary text-muted-foreground hover:text-foreground min-w-[80px] md:min-w-[100px] lg:min-w-[120px]"
-    >
-      {i18n.locales.map((locale) => (
-        <option key={locale} value={locale}>
-          {locale}
-        </option>
-      ))}
-    </select>
+    <div className="flex-shrink-0 w-full max-w-md ">
+            <Select
+                radius="full"
+                items={i18n.locales}
+                placeholder={currentLocale || ""}
+                className="max-w-lg min-w-[80px] md:min-w-[100px] lg:min-w-[120px]"
+                onChange={handleLocaleChange}
+                variant={"bordered"}
+            >
+                {i18n.locales.map(locale => (
+                    <SelectItem key={locale} textValue={locale} className={`${theme === 'dark' ? 'dark:text-white' : 'text-black'}`}>
+                        {locale}
+                    </SelectItem>
+                ))}
+            </Select>
+        </div>
   );
 }

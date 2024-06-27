@@ -1,39 +1,50 @@
 'use client';
 
-import { clearLocalStorage } from 'lib/LocalStorageAPI';
-import { ONE_THOUSAND_FIVE_HUNDRED } from 'lib/constants';
-import { getAllCarSeats, searchCarSeats } from 'lib/data';
-import { deepCompare } from 'lib/util';
 import { Accordion, AccordionItem } from '@nextui-org/accordion';
 import { Button } from "@nextui-org/button";
-import { useEffect, useState } from 'react';
-import CarSeatAdacFilters from './carseat_filters/carseat_adac_filters';
-import CarSeatKidDimensionFilters from './carseat_filters/carseat_kid_dimension_filters';
-import BrandSelection from './input_fields/brand_selection';
-import SelectMaxPrice from "./input_fields/input_max_price";
-import CarSeatSeatDimensionFilters from './carseat_filters/carseat_seat_dimension_filters';
-import CarSeatBaseFilters from './carseat_filters/carseat_base_filters';
-import CarSeatCanopyFilters from './carseat_filters/carseat_canopy_filters';
-import CarSeatHarnessFilters from './carseat_filters/carseat_harness_filters';
-import CarSeatCertificationFilters from './carseat_filters/carseat_certification_filters';
-import CarSeatOtherFilters from './carseat_filters/carseat_other_filters';
-import { BrandContentProps, CarSeatFiltersProps, CarseatCard } from 'types';
 import { Card, CardBody, CardHeader } from '@nextui-org/card';
 import { Divider } from '@nextui-org/react';
 import { getDictionary } from 'get-dictionary';
+import { clearLocalStorage, useLocalStorage } from 'lib/LocalStorageAPI';
+import { ONE_HUNDRED_FIFTY, ONE_THOUSAND_FIVE_HUNDRED, SIXSTY, THIRTY } from 'lib/constants';
+import { getAllCarSeats, searchCarSeats } from 'lib/data';
+import { deepCompare } from 'lib/util';
+import { useEffect, useState } from 'react';
+import { BrandContentProps, CarSeatFilters, CarseatCard } from 'types';
+import CarSeatAdacFilters from './carseat_filters/carseat_adac_filters';
+import CarSeatBaseFilters from './carseat_filters/carseat_base_filters';
+import CarSeatCanopyFilters from './carseat_filters/carseat_canopy_filters';
+import CarSeatCertificationFilters from './carseat_filters/carseat_certification_filters';
+import CarSeatHarnessFilters from './carseat_filters/carseat_harness_filters';
+import CarSeatKidDimensionFilters from './carseat_filters/carseat_kid_dimension_filters';
+import CarSeatOtherFilters from './carseat_filters/carseat_other_filters';
+import CarSeatSeatDimensionFilters from './carseat_filters/carseat_seat_dimension_filters';
+import BrandSelection from './input_fields/brand_selection';
+import SelectMaxPrice from "./input_fields/input_max_price";
 
 
-export default function CarSeatFiltersCollection({brands, setCarseats, filters, initialFilters, setFilters, dictionary, onClose} : {
+export default function CarSeatFiltersCollection({brands, setCarseats, dictionary, onClose} : {
     brands: BrandContentProps;
     setCarseats: React.Dispatch<React.SetStateAction<CarseatCard[]>>;
-    filters: any; 
-    initialFilters: any; 
-    setFilters: React.Dispatch<React.SetStateAction<any>>; 
     dictionary: Awaited<ReturnType<typeof getDictionary>>["carseats"];
     onClose?: () => void;
 }) {
     
+    const initialFilters : CarSeatFilters = 
+        { 
+            brandsName: [],
+            adacsName: [],
+            facingMode: [],
+            maxWeigth: THIRTY,
+            maxKidWeight: SIXSTY,
+            maxKidHeight: ONE_HUNDRED_FIFTY,
+            onlyWAdacTest: false,
+            maxPrice: ONE_THOUSAND_FIVE_HUNDRED,
+            tags: []
+    };
 
+    //filters
+    const [filters, setFilters] = useLocalStorage("carseat/filters", initialFilters);
     const [isCleared, setIsCleared] = useState(false);
 
     useEffect(() => {
@@ -47,7 +58,7 @@ export default function CarSeatFiltersCollection({brands, setCarseats, filters, 
 
 
     const search = async () => {
-        console.log("Search with  " + filters.selectedBrands)
+        console.log("Search with  " + filters.brandsName)
 
         if (setCarseats) {
             searchCarSeats(filters.brandsName, 

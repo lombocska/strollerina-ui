@@ -8,13 +8,16 @@ import { useEffect, useState } from 'react'
 import Link from './Link'
 import MobileNav from './MobileNav'
 import SearchButton from './SearchButton'
-import ThemeSwitch from './ThemeSwitch'
+// import ThemeSwitch from './ThemeSwitch'
 import { Button } from './shadcn/button'
 import { Logo } from './icons'
 import LocaleSwitcher from './locale-switcher'
+import { ThemeSwitch } from './strollerina/theme-switch'
+import { useTheme } from 'next-themes'
 
 const Header = () => {
     const [isScrolled, setIsScrolled] = useState(false)
+    const { theme } = useTheme(); // Access the current theme using next-themes hook
 
     useEffect(() => {
         const changeBackground = () => {
@@ -34,8 +37,9 @@ const Header = () => {
         <header className="fixed inset-x-0 top-4 z-40 flex h-[60px] justify-center">
             <div
                 className={cn(
-                    'mx-6 w-full max-w-[375px] items-center justify-between rounded-3xl border border-border bg-secondary dark:bg-transparent px-4 shadow-sm saturate-100 backdrop-blur-[10px] sm:max-w-screen-sm lg:max-w-screen-lg xl:max-w-screen-xl',
-                    isScrolled && 'border-transparent bg-background/80'
+                    'mx-6 w-full max-w-[375px] items-center justify-between rounded-3xl border border-border  px-4 shadow-sm saturate-100 backdrop-blur-[10px] sm:max-w-screen-sm lg:max-w-screen-lg xl:max-w-screen-xl',
+                    isScrolled && 'border-transparent bg-background/80 ',
+                    theme === 'dark' ? 'dark:bg-transparent' : 'bg-secondary'
                 )}
             >
                 <div className="mx-auto flex h-[60px] w-full items-center justify-between">

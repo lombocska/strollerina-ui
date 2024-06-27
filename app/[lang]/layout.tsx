@@ -92,7 +92,7 @@ export default function RootLayout({ children, params, }: { children: React.Reac
             <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000000" />
             <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
             
-            <body className="bg-background text-black antialiased dark:text-white">
+            <body className="bg-background antialiased ">
                 <ThemeProviders>
                     <Analytics />
                         <div className="flex flex-col min-h-screen">

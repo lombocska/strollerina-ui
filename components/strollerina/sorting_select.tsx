@@ -3,6 +3,7 @@
 import { Select, SelectItem } from '@nextui-org/select';
 import { siteConfig } from 'config/site';
 import { getDictionary } from 'get-dictionary';
+import { useTheme } from 'next-themes';
 import React, { useState, useEffect } from 'react';
 import { StrollerCard, StrollersContentProps } from 'types';
 // import { Select, SelectItem } from 'your-select-component-library'; // Adjust the import according to your select component library
@@ -15,6 +16,7 @@ export default function SortingSelect({strollers, setStrollers, dictionary}: {
 }) {
     const [value, setValue] = useState(2);
     const sortings = siteConfig.stroller_sortings;
+    const { theme } = useTheme(); // Access the current theme using next-themes hook
 
     const handleSelectionChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
         setValue(Number(e.target.value));
@@ -67,7 +69,7 @@ export default function SortingSelect({strollers, setStrollers, dictionary}: {
                 variant={"bordered"}
             >
                 {sortings.map(sorting => (
-                    <SelectItem key={sorting.value} textValue={dictionary["sorting"][sorting.name]} className='dark:text-white'>
+                    <SelectItem key={sorting.value} textValue={dictionary["sorting"][sorting.name]} className={`${theme === 'dark' ? 'dark:text-white' : 'text-black'}`}>
                         {dictionary["sorting"][sorting.name]}
                     </SelectItem>
                 ))}
@@ -86,6 +88,7 @@ export function CarSeatSortingSelect({carseats, setCarseats, dictionary} : {
     const [value, setValue] = React.useState(1);
     // const { t } = useTranslation('common');
     const sortings = siteConfig.carseat_sortings;
+    const { theme } = useTheme(); // Access the current theme using next-themes hook
 
     const handleSelectionChange = (e) => {
         setValue(e.target.value);
@@ -130,7 +133,7 @@ export function CarSeatSortingSelect({carseats, setCarseats, dictionary} : {
             variant={"bordered"}
             >
              {sortings.map(sorting => (
-                    <SelectItem key={sorting.value} textValue={dictionary["sorting"][sorting.name]} className='dark:text-white'>
+                    <SelectItem key={sorting.value} textValue={dictionary["sorting"][sorting.name]} className={`${theme === 'dark' ? 'dark:text-white' : 'text-black'}`}>
                         {dictionary["sorting"][sorting.name]}
                     </SelectItem>
             ))}
