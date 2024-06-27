@@ -14,6 +14,9 @@ import { font } from 'config/fonts'
 import { i18n, type Locale } from "../../i18n-config"
 import "../globals.css"
 import { ThemeProviders } from './theme-providers'
+import Script from 'next/script'
+import CookieConsentComponent from '@/components/cookieconsent/CookieConsent'
+// import CookieConsentComponent from '../components/CookieConsent';
 
 export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ lang: locale }));
@@ -83,7 +86,6 @@ export default function RootLayout({ children, params, }: { children: React.Reac
                 sizes="16x16"
                 href="/static/favicons/favicon-16x16.png"
             />
-            <script type="text/javascript"  src="//cdn.cookie-script.com/s/9daf868f81da50915192beccc1e1edc3.js"></script>
 
             <link rel="manifest" href="/static/favicons/site.webmanifest" />
             <link rel="mask-icon" href="/static/favicons/safari-pinned-tab.svg" color="#5bbad5" />
@@ -91,7 +93,8 @@ export default function RootLayout({ children, params, }: { children: React.Reac
             <meta name="theme-color" media="(prefers-color-scheme: light)" content="#E9D3B6" />
             <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000000" />
             <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
-            
+            {/* <Script type="text/javascript"  src="//cdn.cookie-script.com/s/9daf868f81da50915192beccc1e1edc3.js"/> */}
+
             <body className="bg-background antialiased ">
                 <ThemeProviders>
                     <Analytics />
@@ -105,6 +108,11 @@ export default function RootLayout({ children, params, }: { children: React.Reac
                             </SearchProvider>
                         </div>
                 </ThemeProviders>
+                <CookieConsentComponent />
+                {/* <Script
+                    src="https://cdn.cookie-script.com/s/9daf868f81da50915192beccc1e1edc3.js"
+                    strategy="beforeInteractive"
+             /> */}
             </body>
             <GoogleAnalytics gaId="G-M1NBC50F94" />
         </html>

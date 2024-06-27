@@ -76,6 +76,11 @@ export default function StrollerFiltersCollection({ brands, setStrollers, dictio
         }
     };
 
+    useEffect(() => {
+        console.log("strollers page loaded");
+        search();
+    }, []); 
+
     const clearFilters = async () => {
         if (setStrollers) {
             let allStrollers = await getAllStrollers();
@@ -123,7 +128,7 @@ export default function StrollerFiltersCollection({ brands, setStrollers, dictio
             {/* <Divider/> */}
             <CardBody>
                 <div className="grid grid-flow-row-dense grid-cols-2">
-                    <BrandSelection brands={brands} setFilters={setFilters} isCleared={isCleared} dictionary={dictionary}/>
+                    <BrandSelection brands={brands} setFilters={setFilters} isCleared={isCleared} dictionary={dictionary} type={"strollers"}/>
                     <SelectMaxPrice 
                         setFilters={setFilters} 
                         isCleared={isCleared} 

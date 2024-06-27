@@ -107,7 +107,12 @@ export default function CarSeatFiltersCollection({brands, setCarseats, dictionar
         }
 
     }
-    
+
+    useEffect(() => {
+        console.log("carseats page loaded");
+        search();
+    }, []); 
+
     return (
         <>
         <Card className="">
@@ -123,7 +128,7 @@ export default function CarSeatFiltersCollection({brands, setCarseats, dictionar
             <Divider/>
             <CardBody>
             <div className="grid grid-flow-row-dense grid-cols-2">
-                <BrandSelection brands={brands} setFilters={setFilters} isCleared={isCleared} dictionary={dictionary}/>
+                <BrandSelection brands={brands} setFilters={setFilters} isCleared={isCleared} dictionary={dictionary} type={"carseats"}/>
    
                 <SelectMaxPrice 
                     setFilters={setFilters} 

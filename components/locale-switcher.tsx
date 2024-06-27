@@ -3,7 +3,6 @@
 import { usePathname, useRouter } from "next/navigation";
 import { i18n, Locale } from "i18n-config";
 import { useEffect, useState } from "react";
-import SelectWithMultipleChip from "./strollerina/filter/input_fields/select_with_multiple_chip";
 import { Select, SelectItem } from "@nextui-org/select";
 import { useTheme } from "next-themes";
 
@@ -44,6 +43,7 @@ export default function LocaleSwitcher() {
                 className="max-w-lg min-w-[80px] md:min-w-[100px] lg:min-w-[120px]"
                 onChange={handleLocaleChange}
                 variant={"bordered"}
+                aria-label="locale-switcher"
             >
                 {i18n.locales.map(locale => (
                     <SelectItem key={locale} textValue={locale} className={`${theme === 'dark' ? 'dark:text-white' : 'text-black'}`}>
