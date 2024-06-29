@@ -16,6 +16,7 @@ import "../globals.css"
 import { ThemeProviders } from './theme-providers'
 import Script from 'next/script'
 import CookieConsentComponent from '@/components/cookieconsent/CookieConsent'
+import { Navbar } from '@/components/strollerina/navbar'
 // import CookieConsentComponent from '../components/CookieConsent';
 
 export async function generateStaticParams() {
@@ -100,7 +101,8 @@ export default function RootLayout({ children, params, }: { children: React.Reac
                     <Analytics />
                         <div className="flex flex-col min-h-screen">
                             <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>
-                            <Header />
+                            {/* <Header /> */}
+                            <Navbar />
                             <main className="flex-grow container mx-auto max-w-7xl px-6 mt-[80px]">
                                 {children}
                             </main>

@@ -4,6 +4,7 @@ import { useLanyard } from 'react-use-lanyard'
 
 import Image from '../Image'
 import ExternalLink from './ExternalLink'
+import Link from 'next/link'
 
 const BentoBox = ({ posts }) => {
 
@@ -13,11 +14,12 @@ const BentoBox = ({ posts }) => {
                 className="bento grid-mobile-layout sm:grid-sm-layout xl:grid-xl-layout mx-auto grid max-w-[375px] grid-cols-2 gap-4 *:rounded-3xl *:border *:border-muted *:bg-secondary *:bg-cover *:bg-center *:bg-no-repeat sm:max-w-screen-sm xl:max-w-screen-xl xl:grid-cols-4"
                 aria-label="Personal information and activity grid"
             >
-                <div
-                    className="first grid-item-a aspect-square rounded-3xl border bg-cover bg-center bg-no-repeat sm:aspect-[2.1/1] xl:aspect-auto"
+                <Link
+                    className="first grid-item-a aspect-square rounded-3xl border bg-cover bg-center bg-no-repeat sm:aspect-[2.1/1] xl:aspect-auto "
                     role="img"
                     aria-label="Introduction"
                     rel="preload"
+                    href={"/strollers"}
                 >
                     <div className="overlay grid-item-a-silhouette size-full rounded-3xl bg-cover bg-center bg-no-repeat opacity-0 transition-opacity duration-200" />
                     <p className="sr-only">
@@ -26,7 +28,7 @@ const BentoBox = ({ posts }) => {
                         currently interested in open-source intelligence, fundamental UI/UX design,
                         data science and rhythm games! */}
                     </p>
-                </div>
+                </Link>
 
                 <div className="grid-item-b relative aspect-square hover:bg-none">
                     <div className="overlay grid-item-b-overlay absolute inset-0 z-0 size-full rounded-3xl bg-cover bg-center bg-no-repeat transition-opacity duration-200 xl:opacity-0" />

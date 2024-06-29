@@ -1,10 +1,10 @@
 "use client";
 
-import { usePathname, useRouter } from "next/navigation";
-import { i18n, Locale } from "i18n-config";
-import { useEffect, useState } from "react";
 import { Select, SelectItem } from "@nextui-org/select";
+import { Locale, i18n } from "i18n-config";
 import { useTheme } from "next-themes";
+import { usePathname, useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 
 export default function LocaleSwitcher() {
   const pathName = usePathname();
@@ -35,7 +35,7 @@ export default function LocaleSwitcher() {
   }, [pathName]);
 
   return (
-    <div className="flex-shrink-0 w-full max-w-md ">
+        <div className="flex-shrink-0 w-full max-w-md ">
             <Select
                 radius="full"
                 items={i18n.locales}

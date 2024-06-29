@@ -18,7 +18,13 @@ import { useTheme } from 'next-themes'
 const Header = () => {
     const [isScrolled, setIsScrolled] = useState(false)
     const { theme } = useTheme(); // Access the current theme using next-themes hook
+    // const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+    // const handleOpenChange = (open) => {
+    //   setIsMenuOpen(open);
+    // };
+
+    
     useEffect(() => {
         const changeBackground = () => {
             if (window.scrollY > 10) {
@@ -34,6 +40,12 @@ const Header = () => {
     }, [])
 
     return (
+        <>
+        {/* Overlay */}
+        {/* {isMenuOpen && (
+            <div className="blur fixed inset-0 z-40 bg-black bg-opacity-50"></div>
+        )} */}
+
         <header className="fixed inset-x-0 top-4 z-40 flex h-[60px] justify-center">
             <div
                 className={cn(
@@ -72,15 +84,16 @@ const Header = () => {
                         </ul>
                         
                         <div className="hidden space-x-2 lg:flex">
-                            <LocaleSwitcher />
+                            {/* <LocaleSwitcher isDesktop={true}/> */}
                         </div>
                         <ThemeSwitch/>
                         <SearchButton />
-                        <MobileNav />
+                        {/* <MobileNav handleOpenChange={handleOpenChange}/> */}
                     </div>
                 </div>
             </div>
         </header>
+        </>
     )
 }
 

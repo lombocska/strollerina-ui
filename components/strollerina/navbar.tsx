@@ -1,3 +1,9 @@
+'use client'
+
+import headerNavLinks from '@/data/headerNavLinks'
+import siteMetadata from '@/data/siteMetadata'
+import { cn } from '@/scripts/utils/tailwind-helpers'
+import { useEffect, useState } from 'react'
 import {
   Navbar as NextUINavbar,
   NavbarContent,
@@ -7,139 +13,121 @@ import {
   NavbarItem,
   NavbarMenuItem,
 } from "@nextui-org/navbar";
-import { Button, ButtonGroup } from "@nextui-org/button";
-import { Kbd } from "@nextui-org/kbd";
 import { Link } from "@nextui-org/link";
-import { Input } from "@nextui-org/input";
-import { link as linkStyles } from "@nextui-org/theme";
-import NextLink from "next/link";
+import { useTheme } from "next-themes";
 import clsx from "clsx";
-
-import { siteConfig } from "config/site";
+import NextLink from "next/link";
+import LocaleSwitcher from "../locale-switcher";
+import SearchButton from "../SearchButton";
 import { ThemeSwitch } from "components/strollerina/theme-switch";
-import {
-  TwitterIcon,
-  GithubIcon,
-  DiscordIcon,
-  HeartFilledIcon,
-  SearchIcon,
-  Logo,
-} from "@/components/icons";
-import useTranslation from 'next-translate/useTranslation'
+import { Logo } from "@/components/icons";
+import { Button } from '../shadcn/button'
 
 export const Navbar = () => {
-  const { t } = useTranslation('common');
+  const [isScrolled, setIsScrolled] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false); // Állapot a menü nyitva tartásához
+  const { theme } = useTheme();
 
-  const searchInput = (
-    <Input
-      aria-label="Search"
-      classNames={{
-        inputWrapper: "bg-default-100",
-        input: "text-sm",
-      }}
-      endContent={
-        <Kbd className="hidden lg:inline-block" keys={["command"]}>
-          K
-        </Kbd>
+  useEffect(() => {
+    const changeBackground = () => {
+      if (window.scrollY > 10) {
+        setIsScrolled(true)
+      } else {
+        setIsScrolled(false)
       }
-      labelPlacement="outside"
-      placeholder="Search..."
-      startContent={
-        <SearchIcon className="text-base text-default-400 pointer-events-none flex-shrink-0" />
-      }
-      type="search"
-    />
-  );
+    }
+
+    document.addEventListener('scroll', changeBackground)
+
+    return () => document.removeEventListener('scroll', changeBackground)
+  }, [])
+
+  const handleMenuToggle = () => {
+    setMenuOpen(!menuOpen);
+  };
+
+  const handleMenuItemClick = () => {
+    setMenuOpen(false); // Bezárja a menüt, amikor egy menüpontot kiválasztanak
+  };
 
   return (
-    <NextUINavbar maxWidth="xl" position="sticky" className="shadow">
-      <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
-        <NavbarBrand as="li" className="gap-3 max-w-fit">
-          <NextLink className="flex justify-start items-center gap-1" href="/">
-            <Logo />
-            {/* <p className="font-bold text-inherit">ACME</p> */}
-          </NextLink>
-        </NavbarBrand>
-        <ul className="hidden lg:flex gap-4 justify-start ml-2">
-          {siteConfig.navItems.map((item) => (
-            <NavbarItem key={item.href}>
-              <NextLink
-                className={clsx(
-                  linkStyles({ color: "foreground" }),
-                  "data-[active=true]:text-primary data-[active=true]:font-medium",
-                )}
-                color="foreground"
-                href={item.href}
-              >
-                {t('navbar.' + item.label)}
-              </NextLink>
-            </NavbarItem>
-          ))}
-        </ul>
-      </NavbarContent>
+    <NextUINavbar>
+      <header className="fixed inset-x-0 top-4 z-40 flex h-[60px] justify-center">
+        <div
+          className={cn(
+            'mx-6 w-full max-w-[375px] items-center justify-between rounded-3xl border border-border  px-4 shadow-sm saturate-100 backdrop-blur-[10px] sm:max-w-screen-sm lg:max-w-screen-lg xl:max-w-screen-xl',
+            isScrolled && 'border-transparent bg-background/80 ',
+            theme === 'dark' ? 'dark:bg-transparent' : 'bg-secondary'
+          )}
+        >
+          <div className="mx-auto flex h-[60px] w-full items-center justify-between">
+            <NavbarContent>
+              <NavbarBrand as="li" className="gap-3 max-w-fit">
+                <NextLink className="flex justify-start items-center gap-1" href="/">
+                  <Logo />
+                </NextLink>
+              </NavbarBrand>
+            </NavbarContent>
 
-      <NavbarContent
-        className="hidden sm:flex basis-1/5 sm:basis-full"
-        justify="end"
-      >
-        <NavbarItem className="hidden sm:flex gap-2">
-          {/* <Link isExternal aria-label="Twitter" href={siteConfig.links.twitter}>
-            <TwitterIcon className="text-default-500" />
-          </Link> */}
-          {/* <Link isExternal aria-label="Discord" href={siteConfig.links.discord}>
-            <DiscordIcon className="text-default-500" />
-          </Link>
-          <Link isExternal aria-label="Github" href={siteConfig.links.github}>
-            <GithubIcon className="text-default-500" />
-          </Link> */}
-          <ThemeSwitch />
-        </NavbarItem>
-        <NavbarItem className="hidden md:flex">
-          <Button
-            isExternal
-            as={Link}
-            className="text-sm font-normal text-default-600 bg-default-100"
-            href={siteConfig.links.sponsor}
-            startContent={<HeartFilledIcon className="text-danger" />}
-            variant="flat"
-          >
-            Sponsor
-          </Button>
-        </NavbarItem>
+            <NavbarContent className="hidden lg:flex lg:basis-full" justify="end">
+              <NavbarItem className="hidden lg:flex gap-2">
+                <ul className="hidden lg:flex gap-4 justify-start ml-2">
+                  {headerNavLinks.map((item) => (
+                    <NavbarItem key={item.href}>
+                        <NextLink
+                          className={clsx(
+                            'data-[active=true]:text-primary data-[active=true]:font-medium font-large text-muted-foreground hover:text-foreground',
+                          )}
+                          color="foreground"
+                          href={item.href}
+                        >
+                          {item.title}
+                        </NextLink>
+                    </NavbarItem>
+                  ))}
+                </ul>
+              </NavbarItem>
 
-        {/* <NavbarItem ><ChangeLanguage/></NavbarItem> */}
-      </NavbarContent>
+              <NavbarItem className="hidden lg:flex gap-2">
+                <LocaleSwitcher />
+              </NavbarItem>
 
-      <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
-        {/* <Link isExternal aria-label="Github" href={siteConfig.links.github}>
-          <GithubIcon className="text-default-500" />
-        </Link> */}
-        <ThemeSwitch />
-        <NavbarMenuToggle />
-      </NavbarContent>
+              <ThemeSwitch />
+              <SearchButton />
+            </NavbarContent>
 
-      <NavbarMenu>
-        {/* {searchInput} */}
-        <div className="mx-4 mt-2 flex flex-col gap-2">
-          {siteConfig.navMenuItems.map((item, index) => (
-            <NavbarMenuItem key={`${item}-${index}`}>
-              <Link
-                color={
-                  index === 2
-                    ? "primary"
-                    : index === siteConfig.navMenuItems.length - 1
-                      ? "danger"
-                      : "foreground"
-                }
-                href={item.href}
-                size="lg"
-              >
-                {t('navbar.' + item.label)}
-              </Link>
-            </NavbarMenuItem>
-          ))}
+            <NavbarContent className="lg:hidden basis-1 pl-4" justify="end">
+              <ThemeSwitch />
+              <SearchButton />
+              <NavbarMenuToggle onClick={handleMenuToggle} />
+            </NavbarContent>
+
+            <NavbarMenu isOpen={menuOpen} onClose={() => setMenuOpen(false)}>
+              <div className="mx-4 mt-2 flex flex-col gap-2">
+                {headerNavLinks.map((item, index) => (
+                  <NavbarMenuItem key={`${item}-${index}`}>
+                    <Link
+                      color={
+                        index === 2
+                          ? "primary"
+                          : index === headerNavLinks?.length - 1
+                          ? "danger"
+                          : "foreground"
+                      }
+                      href={item.href}
+                      size="lg"
+                      onClick={handleMenuItemClick} // Bezárja a menüt, amikor egy menüpontot kiválasztanak
+                    >
+                      {item.title}
+                    </Link>
+                  </NavbarMenuItem>
+                ))}
+                <LocaleSwitcher />
+              </div>
+            </NavbarMenu>
+          </div>
         </div>
-      </NavbarMenu>
+      </header>
     </NextUINavbar>
   );
 };

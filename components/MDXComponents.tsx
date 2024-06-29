@@ -12,6 +12,7 @@ import StaticTweet from './StaticTweet'
 import YouTube from './YouTube'
 import BlogCarousel from './BlogCarousel'
 import Card from './Card'
+import Carousel from './strollerina/carousel/carousel'
 
 export const components: MDXComponents = {
     Image,
@@ -25,5 +26,6 @@ export const components: MDXComponents = {
     Box,
     YouTube,
     BlogCarousel,
+    Carousel,
     Card
 }

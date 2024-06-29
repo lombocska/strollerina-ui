@@ -36,12 +36,10 @@ export const CurrencyProvider = ({ children }) => {
 // Multiplikátor lekérése (példa funkció)
 const getMultiplicatorForCurrency = (currency) => {
   switch (currency) {
-    case 'USD':
-      return 1.07; // USD to EUR conversion rate
     case 'EUR':
       return 1;
     case 'HUF':
-      return 380; // HUF to EUR conversion rate
+      return 395;
     default:
       return 1;
   }

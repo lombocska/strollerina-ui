@@ -10,6 +10,7 @@ import ProductCard from '../cards/product_card';
 import CounterChip from '../filter/helper/counter_chip';
 import StrollerFiltersCollection from '../filter/stroller_filters';
 import SortingSelect from '../sorting_select';
+import { useTheme } from 'next-themes';
 
 
 export default  function StrollersContent({ initialData, brands, dictionary}: 
@@ -21,6 +22,7 @@ export default  function StrollersContent({ initialData, brands, dictionary}:
     
     const {isOpen, onOpen, onOpenChange} = useDisclosure();
     const [strollers, setStrollers] = useState<StrollerCard[]>(initialData);
+    const { theme } = useTheme(); // Access the current theme using next-themes hook
 
     return (
         <>
@@ -56,7 +58,7 @@ export default  function StrollersContent({ initialData, brands, dictionary}:
         }
         </main>
 
-            <aside className="hidden md:block md:w-1/3 p-4 fixed right-0 top-16 h-full max-h-[1000px] overflow-y-auto ">
+            <aside className="hidden lg:block md:w-1/3 p-4 fixed right-0 top-16 h-full max-h-[1000px] overflow-y-auto ">
                 <StrollerFiltersCollection 
                 brands={brands} 
                 setStrollers={setStrollers} 
@@ -64,8 +66,8 @@ export default  function StrollersContent({ initialData, brands, dictionary}:
                 />
              </aside>
              
-             <div className="md:hidden fixed bottom-4 right-4 z-10">
-                <Button onPress={onOpen}>{dictionary["common"].info}</Button>
+             <div className="lg:hidden fixed bottom-4 right-4 z-10">
+                <Button onPress={onOpen} className={`${theme === 'dark' ? 'dark:bg-[#92987F] dark:text-black' : 'bg-[#92987F] text-white'} shadow`}>{dictionary["common"].search}</Button>
             </div>
 
              <Modal isOpen={isOpen} onOpenChange={onOpenChange}>

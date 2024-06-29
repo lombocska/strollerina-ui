@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react'
 import slugify from 'slugify'
 
-import { getStrollerImgs } from 'lib/data'
+import { getStrollerImgs, getCarseatImgs } from 'lib/data'
 import Carousel from './strollerina/carousel/carousel'
 
 interface TitleProps {
@@ -26,7 +26,8 @@ const Title = ({ level, className, children, id }: TitleProps) => {
 const Challenge = ({
     title,
     level = 2,
-    id
+    id,
+    type
 }) => {
     
     const [imgs, setImgs] = useState([])
@@ -37,7 +38,11 @@ const Challenge = ({
         const getProductImages = async () => {
             try {
                 console.log(id)
-                getStrollerImgs(id).then(setImgs);
+                if (type === "carseat") {
+                    getCarseatImgs(id).then(setImgs);
+                } else {
+                    getStrollerImgs(id).then(setImgs);
+                }
             } catch (error) {
                 console.log(error)
             }

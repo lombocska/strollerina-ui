@@ -16,7 +16,7 @@
         --primary: 34 54% 60%;
         --primary-foreground: 0 0% 98%;
 
-        --secondary: 0 0% 98%;
+        /* --secondary: 0 0% 98%; */
         --secondary-foreground: 0 0% 9%;
 
         --tertiary: 0 0% 96.1%;
@@ -37,6 +37,33 @@
 
         --radius: 0.5rem;
     }
+    .dark {
+        --background: 0 0% 3.9%;
+        --foreground: 0 0% 98%;
+
+        /* --card: 0 0% 3.9%; */
+        /* --card-foreground: 0 0% 98%; */
+
+        /* --popover: 0 0% 3.9%;
+        --popover-foreground: 0 0% 98%;
+        --primary: 34 54% 81%;
+        --primary-foreground: 0 0% 9%;
+        --secondary: 0 0% 6%;
+        --secondary-foreground: 0 0% 98%;
+        --tertiary: 0 0% 14.9%;
+        --tertiary-foreground: 0 0% 98%;
+        --muted: 0 0% 14.9%;
+        --muted-foreground: 0 0% 63.9%;
+        --accent: 0 0% 14.9%;
+        --accent-foreground: 0 0% 98%;
+        --destructive: 0 62.8% 30.6%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 0 0% 14.9%;
+        --input: 0 0% 14.9%;
+        --ring: 34 54% 81%;
+        --radius: 0.5rem; */
+    }
+
 
     * {
         @apply border-border;
@@ -150,6 +177,8 @@
     .grid-item-a {
         background-image: url('/static/images/bento/about-square.png');
     }
+
+
 
     .grid-item-b-overlay {
         background-image: url('/static/images/bento/strollers-silhouette-square.png');

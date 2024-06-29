@@ -70,10 +70,16 @@ export default function StrollerFiltersCollection({ brands, setStrollers, dictio
                 filters.minFrontWheelSize, filters.minBackWheelSize, filters.tags
             );
             setStrollers(res);
-            if (onClose) {
-                onClose();
-            }
         }
+    };
+
+
+    const searchWithClose = async () => {
+        search();
+        if (onClose) {
+            onClose();
+        }
+    
     };
 
     useEffect(() => {
@@ -118,7 +124,7 @@ export default function StrollerFiltersCollection({ brands, setStrollers, dictio
     return (
         <Card className="">
             <CardHeader className="flex gap-3 justify-between">
-                <Button size="lg" variant="ghost" onPress={() => search()}>
+                <Button size="lg" variant="ghost" onPress={() => searchWithClose()}>
                     {dictionary['common']["search"]}
                 </Button>
                 <Button size="lg" variant="ghost" onPress={() => clearFilters()}>
@@ -127,7 +133,7 @@ export default function StrollerFiltersCollection({ brands, setStrollers, dictio
             </CardHeader>
             {/* <Divider/> */}
             <CardBody>
-                <div className="grid grid-flow-row-dense grid-cols-2">
+                <div className="grid grid-flow-row-dense grid-cols-1">
                     <BrandSelection brands={brands} setFilters={setFilters} isCleared={isCleared} dictionary={dictionary} type={"strollers"}/>
                     <SelectMaxPrice 
                         setFilters={setFilters} 
@@ -139,7 +145,7 @@ export default function StrollerFiltersCollection({ brands, setStrollers, dictio
                     />
                 </div>
 
-                <Accordion className='m-1 mb-10' variant="bordered" selectionMode="multiple"  type="single" collapsible>
+                <Accordion className='m-1 mb-10' variant="bordered" selectionMode="multiple" >
                     
                     <AccordionItem 
                         value="1"

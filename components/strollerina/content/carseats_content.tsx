@@ -11,6 +11,7 @@ import ProductCard from '../cards/product_card';
 import CarSeatFiltersCollection from '../filter/carseat_filters';
 import CounterChip from '../filter/helper/counter_chip';
 import { CarSeatSortingSelect } from '../sorting_select';
+import { useTheme } from 'next-themes';
 
 
 
@@ -24,6 +25,8 @@ export default  function CarseatsContent({ initialData, brands, dictionary}:
            
     const {isOpen, onOpen, onOpenChange} = useDisclosure();
     const [carseats, setCarseats] = useState<CarseatCard[]>(initialData);
+    const { theme } = useTheme(); // Access the current theme using next-themes hook
+
     // const initialFilters : CarSeatFilters = 
     //     { 
     //         brandsName: [],
@@ -72,13 +75,13 @@ export default  function CarseatsContent({ initialData, brands, dictionary}:
             </main>
 
             {/* carseat filters content  */}
-            <aside className="hidden md:block md:w-1/3 p-4  fixed right-0 top-16 h-full max-h-[1000px] bg-transparent overflow-y-auto ">
+            <aside className="hidden lg:block md:w-1/3 p-4  fixed right-0 top-16 h-full max-h-[1000px] bg-transparent overflow-y-auto ">
                 <CarSeatFiltersCollection brands={brands} setCarseats={setCarseats}  dictionary={dictionary} 
                 />
              </aside>
              
-             <div className="md:hidden fixed bottom-4 right-4 z-10">
-                <Button onPress={onOpen}>{dictionary["common"].info}</Button>
+             <div className="lg:hidden fixed bottom-10 right-7 z-10">
+                <Button onPress={onOpen} className={`${theme === 'dark' ? 'dark:bg-[#92987F] dark:text-black' : 'bg-[#92987F] text-white'} shadow`}>{dictionary["common"].search}</Button>
             </div>
 
              <Modal isOpen={isOpen} onOpenChange={onOpenChange}>

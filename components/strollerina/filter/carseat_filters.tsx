@@ -127,7 +127,7 @@ export default function CarSeatFiltersCollection({brands, setCarseats, dictionar
         
             <Divider/>
             <CardBody>
-            <div className="grid grid-flow-row-dense grid-cols-2">
+            <div className="grid grid-flow-row-dense grid-cols-1">
                 <BrandSelection brands={brands} setFilters={setFilters} isCleared={isCleared} dictionary={dictionary} type={"carseats"}/>
    
                 <SelectMaxPrice 

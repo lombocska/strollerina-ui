@@ -55,9 +55,9 @@ const Card = ({ title, description, imgSrc, href, tags = [] }: CardProps) => (
                         </Badge>
                     ))}
                     </div>
-                    <p className="prose prose-sm mb-3 max-w-none text-muted-foreground">
-                    {description}
-                    </p>
+                    <div className="prose prose-sm mb-3 max-w-none text-muted-foreground">
+                        {description}
+                    </div>
                 </div>
                 {href && (
                     <div className="mt-auto">
