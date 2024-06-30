@@ -40,6 +40,7 @@ export default function PostLayout({
     })
 
     useEffect(() => {
+        console.log("Blog path: " + path)
         if (slug) {
             fetch(`/api/page-views?slug=${encodeURIComponent(slug)}`)
                 .then((response) => response.json())

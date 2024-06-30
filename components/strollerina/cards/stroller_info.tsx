@@ -8,7 +8,6 @@ import { Card, CardBody, CardFooter, CardHeader } from '@nextui-org/card';
 import { Divider } from '@nextui-org/divider';
 import { Image } from "@nextui-org/image";
 import { Link } from '@nextui-org/link';
-import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import Chips from '../chips';
 import { InfoTable } from '../table';

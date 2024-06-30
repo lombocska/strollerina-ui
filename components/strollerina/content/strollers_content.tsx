@@ -11,6 +11,7 @@ import CounterChip from '../filter/helper/counter_chip';
 import StrollerFiltersCollection from '../filter/stroller_filters';
 import SortingSelect from '../sorting_select';
 import { useTheme } from 'next-themes';
+import { useCurrency } from 'lib/context/currency_context';
 
 
 export default  function StrollersContent({ initialData, brands, dictionary}: 
@@ -23,7 +24,9 @@ export default  function StrollersContent({ initialData, brands, dictionary}:
     const {isOpen, onOpen, onOpenChange} = useDisclosure();
     const [strollers, setStrollers] = useState<StrollerCard[]>(initialData);
     const { theme } = useTheme(); // Access the current theme using next-themes hook
-
+    const { state } = useCurrency();
+    const { currency, multiplicator } = state;
+  
     return (
         <>
     
@@ -48,7 +51,7 @@ export default  function StrollersContent({ initialData, brands, dictionary}:
                                 brand={item.brand}
                                 brandValue={item.brandValue}
                                 img={item.img}
-                                price={item.priceFrom}
+                                tags={item.priceFrom != null ? [Math.round(item.priceFrom * multiplicator) + "+ " + currency] : []}
                                 generatedId={item.generatedId}
                                 infoLinkPrefix={'/strollers/'}
                             />

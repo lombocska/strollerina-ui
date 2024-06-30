@@ -150,7 +150,7 @@ export type ProductCardProps = {
   name: string;
   brand: string;
   img: string;
-  price: number | null;
+  tags: [] ;
   generatedId: string;
   brandValue: string;
   infoLinkPrefix: string;

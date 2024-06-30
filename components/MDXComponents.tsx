@@ -13,6 +13,7 @@ import YouTube from './YouTube'
 import BlogCarousel from './BlogCarousel'
 import Card from './Card'
 import Carousel from './strollerina/carousel/carousel'
+import Link from './Link'
 
 export const components: MDXComponents = {
     Image,
@@ -27,5 +28,7 @@ export const components: MDXComponents = {
     YouTube,
     BlogCarousel,
     Carousel,
-    Card
+    Card,
+    Link
 }
+

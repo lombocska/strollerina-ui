@@ -27,28 +27,10 @@ export default  function CarseatsContent({ initialData, brands, dictionary}:
     const [carseats, setCarseats] = useState<CarseatCard[]>(initialData);
     const { theme } = useTheme(); // Access the current theme using next-themes hook
 
-    // const initialFilters : CarSeatFilters = 
-    //     { 
-    //         brandsName: [],
-    //         adacsName: [],
-    //         facingMode: [],
-    //         maxWeigth: THIRTY,
-    //         maxKidWeight: SIXSTY,
-    //         maxKidHeight: ONE_HUNDRED_FIFTY,
-    //         onlyWAdacTest: false,
-    //         maxPrice: ONE_THOUSAND_FIVE_HUNDRED,
-    //         tags: []
-    // };
-
-    // //filters
-    // const [filters, setFilters] = useState(initialFilters);
-
-
+ 
     return (
        <>
-            {/* <div className="ml-[calc(-50vw+50%+10px)] w-[calc(100vw-20px)] p-4 "> */}
             <main className="md:w-2/3 p-4  ">
-            {/* <main className="md:w-2/3 p-4  "> */}
             {carseats &&
             <>
                 <div className="flex flex-wrap content-center items-center mb-5 rounded-full justify-between space-y-2">
@@ -64,7 +46,7 @@ export default  function CarseatsContent({ initialData, brands, dictionary}:
                                 brand={item.brand}
                                 brandValue={item.brandValue}
                                 img={item.img}
-                                price={null}
+                                tags={item.bestAdac != null ? ['ADAC: ' + item.bestAdac] : []}
                                 generatedId={item.generatedId}
                                 infoLinkPrefix={'/carseats/'}
                             />
@@ -81,7 +63,7 @@ export default  function CarseatsContent({ initialData, brands, dictionary}:
              </aside>
              
              <div className="lg:hidden fixed bottom-10 right-7 z-10">
-                <Button onPress={onOpen} className={`${theme === 'dark' ? 'dark:bg-[#92987F] dark:text-black' : 'bg-[#92987F] text-white'} shadow`}>{dictionary["common"].search}</Button>
+                <Button onPress={onOpen} className={`${theme === 'dark' ? 'dark:bg-white dark:text-black' : 'bg-[#92987F] text-white'} shadow`}>{dictionary["common"].search}</Button>
             </div>
 
              <Modal isOpen={isOpen} onOpenChange={onOpenChange}>

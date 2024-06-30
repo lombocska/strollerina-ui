@@ -1,7 +1,6 @@
 'use client'
 
 import headerNavLinks from '@/data/headerNavLinks'
-import siteMetadata from '@/data/siteMetadata'
 import { cn } from '@/scripts/utils/tailwind-helpers'
 import { useEffect, useState } from 'react'
 import {
@@ -21,7 +20,6 @@ import LocaleSwitcher from "../locale-switcher";
 import SearchButton from "../SearchButton";
 import { ThemeSwitch } from "components/strollerina/theme-switch";
 import { Logo } from "@/components/icons";
-import { Button } from '../shadcn/button'
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -51,7 +49,7 @@ export const Navbar = () => {
   };
 
   return (
-    <NextUINavbar>
+    <NextUINavbar isMenuOpen={menuOpen} >
       <header className="fixed inset-x-0 top-4 z-40 flex h-[60px] justify-center">
         <div
           className={cn(
@@ -102,7 +100,7 @@ export const Navbar = () => {
               <NavbarMenuToggle onClick={handleMenuToggle} />
             </NavbarContent>
 
-            <NavbarMenu isOpen={menuOpen} onClose={() => setMenuOpen(false)}>
+            <NavbarMenu >
               <div className="mx-4 mt-2 flex flex-col gap-2">
                 {headerNavLinks.map((item, index) => (
                   <NavbarMenuItem key={`${item}-${index}`}>
@@ -116,7 +114,7 @@ export const Navbar = () => {
                       }
                       href={item.href}
                       size="lg"
-                      onClick={handleMenuItemClick} // Bezárja a menüt, amikor egy menüpontot kiválasztanak
+                      onPress={handleMenuItemClick} // Bezárja a menüt, amikor egy menüpontot kiválasztanak
                     >
                       {item.title}
                     </Link>

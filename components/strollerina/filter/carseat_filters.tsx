@@ -73,10 +73,15 @@ export default function CarSeatFiltersCollection({brands, setCarseats, dictionar
                 )
                 .then(res => setCarseats(res));
         }
+       
+    };
+
+    const searchWithClose = async () => {
+        search();
         if (onClose) {
             onClose();
         }
-       
+    
     };
 
     const clearFilters = async () => {
@@ -117,7 +122,7 @@ export default function CarSeatFiltersCollection({brands, setCarseats, dictionar
         <>
         <Card className="">
             <CardHeader className="flex gap-3 justify-between">
-                <Button radius="full" size="lg" variant="ghost" onPress={() => search()}>
+                <Button radius="full" size="lg" variant="ghost" onPress={() => searchWithClose()}>
                     {dictionary['common']["search"]}
                 </Button>
                 <Button  radius="full" size="lg" variant="ghost" onPress={() => clearFilters()}>

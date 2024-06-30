@@ -23,7 +23,7 @@ const Title = ({ level, className, children, id }: TitleProps) => {
     )
 }
 
-const Challenge = ({
+const BlogCarousel = ({
     title,
     level = 2,
     id,
@@ -72,4 +72,4 @@ const Challenge = ({
     )
 }
 
-export default Challenge
+export default BlogCarousel
