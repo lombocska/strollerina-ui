@@ -5,6 +5,7 @@ import { Github, Mail, Twitter } from 'lucide-react'
 import { usePathname } from 'next/navigation'
 
 import Link from './Link'
+import CookieConsentComponent from './cookieconsent/CookieConsent'
 
 export default function Footer() {
     const pathName = usePathname()
@@ -63,8 +64,10 @@ export default function Footer() {
                     <Link href="/">{siteMetadata.title}</Link>
                     <Link href="/contact">contact</Link>
                     <Link href="/gdpr">GDPR</Link>
+                    <CookieConsentComponent />
                 </div>
             </div>
+    
         </footer>
     )
 }

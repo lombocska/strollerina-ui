@@ -41,7 +41,7 @@ const computedFields: ComputedFields = {
         resolve: (doc) => doc._raw.sourceFilePath,
     },
     toc: { type: 'string', resolve: (doc) => extractTocHeadings(doc.body.raw) },
-}
+};
 
 /**
  * Count the occurrences of all tags across blog posts and write to json file
@@ -49,7 +49,7 @@ const computedFields: ComputedFields = {
 function createTagCount(allBlogs) {
     const tagCount: Record<string, number> = {}
     allBlogs.forEach((file) => {
-        if (file.tags && (!isProduction || file.draft !== true)) {
+        if (file.tags && (!isProduction || file.draft !== true) && file.language === "en") {
             file.tags.forEach((tag) => {
                 const formattedTag = GithubSlugger.slug(tag)
                 if (formattedTag in tagCount) {
@@ -61,6 +61,22 @@ function createTagCount(allBlogs) {
         }
     })
     writeFileSync('./app/tag-data.json', JSON.stringify(tagCount))
+
+    const tagCountHU: Record<string, number> = {}
+    allBlogs.forEach((file) => {
+        if (file.tags && (!isProduction || file.draft !== true) && file.language === "hu") {
+            file.tags.forEach((tag) => {
+                const formattedTag = GithubSlugger.slug(tag)
+                if (formattedTag in tagCountHU) {
+                    tagCountHU[formattedTag] += 1
+                } else {
+                    tagCountHU[formattedTag] = 1
+                }
+            })
+        }
+    })
+    writeFileSync('./app/tag-data-hu.json', JSON.stringify(tagCountHU))
+
 }
 
 function createSearchIndex(allBlogs) {
@@ -94,6 +110,7 @@ export const Blog = defineDocumentType(() => ({
         layout: { type: 'string' },
         bibliography: { type: 'string' },
         canonicalUrl: { type: 'string' },
+        language: { type: 'string', required: true },
     },
     computedFields: {
         ...computedFields,

@@ -17,6 +17,7 @@ import { ThemeProviders } from './theme-providers'
 import Script from 'next/script'
 import CookieConsentComponent from '@/components/cookieconsent/CookieConsent'
 import { Navbar } from '@/components/strollerina/navbar'
+import { getDictionary } from 'get-dictionary'
 // import CookieConsentComponent from '../components/CookieConsent';
 
 export async function generateStaticParams() {
@@ -63,7 +64,8 @@ export const metadata: Metadata = {
     },
 }
 
-export default function RootLayout({ children, params, }: { children: React.ReactNode; params: { lang: Locale }; }) {
+export default async function RootLayout({ children, params, }: { children: React.ReactNode; params: { lang: Locale }; }) {
+    const dictionary = await getDictionary(params.lang);
     return (
         <html
             lang={params.lang}
@@ -102,7 +104,7 @@ export default function RootLayout({ children, params, }: { children: React.Reac
                         <div className="flex flex-col min-h-screen">
                             <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>
                             {/* <Header /> */}
-                            <Navbar />
+                            <Navbar dictionary={dictionary}/>
                             <main className="flex-grow container mx-auto max-w-7xl px-6 mt-[80px]">
                                 {children}
                             </main>
@@ -110,7 +112,7 @@ export default function RootLayout({ children, params, }: { children: React.Reac
                             </SearchProvider>
                         </div>
                 </ThemeProviders>
-                <CookieConsentComponent />
+                
                 {/* <Script
                     src="https://cdn.cookie-script.com/s/9daf868f81da50915192beccc1e1edc3.js"
                     strategy="beforeInteractive"

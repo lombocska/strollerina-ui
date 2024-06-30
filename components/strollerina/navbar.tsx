@@ -20,8 +20,12 @@ import LocaleSwitcher from "../locale-switcher";
 import SearchButton from "../SearchButton";
 import { ThemeSwitch } from "components/strollerina/theme-switch";
 import { Logo } from "@/components/icons";
+import { getDictionary } from 'get-dictionary';
 
-export const Navbar = () => {
+export const Navbar = ({dictionary}: {
+    dictionary: Awaited<ReturnType<typeof getDictionary>>["navbar"]
+}) => {
+
   const [isScrolled, setIsScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false); // Állapot a menü nyitva tartásához
   const { theme } = useTheme();
@@ -79,7 +83,7 @@ export const Navbar = () => {
                           color="foreground"
                           href={item.href}
                         >
-                          {item.title}
+                          {dictionary["navbar"][item.title]}
                         </NextLink>
                     </NavbarItem>
                   ))}
@@ -106,9 +110,9 @@ export const Navbar = () => {
                   <NavbarMenuItem key={`${item}-${index}`}>
                     <Link
                       color={
-                        index === 2
+                        [0,1].includes(index) 
                           ? "primary"
-                          : index === headerNavLinks?.length - 1
+                          : index === headerNavLinks?.length - 3
                           ? "danger"
                           : "foreground"
                       }
@@ -116,7 +120,7 @@ export const Navbar = () => {
                       size="lg"
                       onPress={handleMenuItemClick} // Bezárja a menüt, amikor egy menüpontot kiválasztanak
                     >
-                      {item.title}
+                       {dictionary["navbar"][item.title]}
                     </Link>
                   </NavbarMenuItem>
                 ))}

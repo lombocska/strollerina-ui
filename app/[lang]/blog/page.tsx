@@ -8,8 +8,13 @@ const POSTS_PER_PAGE = 100
 
 export const metadata = genPageMetadata({ title: 'Blog' })
 
-export default function BlogPage() {
-    const posts = allCoreContent(sortPosts(allBlogs.filter((p) => !p.hidden)))
+export default async function BlogPage({
+    params: { lang },
+    }: {
+    params: { lang: Locale };
+    }) {
+      
+    const posts = allCoreContent(sortPosts(allBlogs.filter((p) => !p.hidden)).filter((p) => p.language === lang))
     const pageNumber = 1
     const initialDisplayPosts = posts.slice(
         POSTS_PER_PAGE * (pageNumber - 1),

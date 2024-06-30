@@ -4,7 +4,7 @@ const headerNavLinks = [
         href: "/strollers",
       },
       {
-        title: "car seats",
+        title: "carseats",
         href: "/carseats",
       },
       {
