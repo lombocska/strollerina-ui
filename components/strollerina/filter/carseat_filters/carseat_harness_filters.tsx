@@ -16,7 +16,7 @@ export default  function CarSeatHarnessFilters({setFilters, isCleared, dictionar
             <Tags 
                 tags={siteConfig.carseat_tags} 
                 section={"harness"} 
-                lsName={"carseat/selectedHarnessTags"}
+                lsName={"carseat/tags"}
                 isCleared={isCleared ?? false}
                 setFilters={setFilters as Dispatch<SetStateAction<any>>} 
                 dictionary={dictionary["tags"]}/>

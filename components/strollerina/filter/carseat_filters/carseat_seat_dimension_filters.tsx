@@ -43,7 +43,7 @@ export default  function CarSeatSeatDimensionFilters({setFilters, isCleared, dic
                  dictionary={dictionary["tags"]}
                 tags={siteConfig.carseat_tags} 
                 section={"seat"} 
-                lsName={"carseat/selectedSeatDimensionTags"}
+                lsName={"carseat/tags"}
                 isCleared={isCleared ?? false}
                 setFilters={setFilters as Dispatch<SetStateAction<any>>} />
        

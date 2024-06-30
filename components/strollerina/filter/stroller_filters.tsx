@@ -108,14 +108,14 @@ export default function StrollerFiltersCollection({ brands, setStrollers, dictio
         clearLocalStorage('stroller/selectedSiblingMode');
         clearLocalStorage('stroller/selectedReversibleSeatMode');
         clearLocalStorage('stroller/selectedFullRecliningSeatMode');
-        clearLocalStorage('stroller/selectedSeatTags');
-        clearLocalStorage('stroller/selectedDimensionTags');
-        clearLocalStorage('stroller/selectedFoldTags');
-        clearLocalStorage('stroller/selectedBumperTags');
-        clearLocalStorage('stroller/selectedHarnessTags');
-        clearLocalStorage('stroller/selectedOtherTags');
-        clearLocalStorage('stroller/selectedTerrainTags');
-        clearLocalStorage('stroller/selectedWarrantyTags');
+        clearLocalStorage('stroller/tags');
+        // clearLocalStorage('stroller/selectedDimensionTags');
+        // clearLocalStorage('stroller/selectedFoldTags');
+        // clearLocalStorage('stroller/selectedBumperTags');
+        // clearLocalStorage('stroller/selectedHarnessTags');
+        // clearLocalStorage('stroller/selectedOtherTags');
+        // clearLocalStorage('stroller/selectedTerrainTags');
+        // clearLocalStorage('stroller/selectedWarrantyTags');
         if (setFilters) {
             setFilters(initialFilters);
         }

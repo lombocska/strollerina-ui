@@ -15,7 +15,7 @@ export default  function CarSeatCanopyFilters({setFilters, isCleared, dictionary
             <Tags 
                 tags={siteConfig.carseat_tags} 
                 section={"canopy"} 
-                lsName={"carseat/selectedCanopyTags"}
+                lsName={"carseat/tags"}
                 isCleared={isCleared ?? false}
                 setFilters={setFilters as Dispatch<SetStateAction<any>>} 
                 dictionary={dictionary["tags"]}/>

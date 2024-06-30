@@ -84,7 +84,7 @@ export default function StrollerDimensionFilters({setFilters, isCleared, diction
                     <Tags 
                         tags={siteConfig.stroller_tags} 
                         section={"dimension"} 
-                        lsName={"stroller/selectedDimensionTags"}
+                        lsName={"stroller/tags"}
                         isCleared={isCleared ?? false}
                         setFilters={setFilters as Dispatch<SetStateAction<any>>}
                         dictionary={dictionary["tags"]}

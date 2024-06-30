@@ -15,7 +15,7 @@ export default  function CarSeatOtherFilters({setFilters, isCleared, dictionary}
             <Tags 
                 tags={siteConfig.carseat_tags} 
                 section={"other-features"} 
-                lsName={"carseat/selectedOtherTags"}
+                lsName={"carseat/tags"}
                 isCleared={isCleared ?? false}
                 dictionary={dictionary["tags"]}
                 setFilters={setFilters as Dispatch<SetStateAction<any>>} />

@@ -16,7 +16,7 @@ export default  function CarSeatCertificationFilters({setFilters, isCleared, dic
             <Tags 
                 tags={siteConfig.carseat_tags} 
                 section={"certification"} 
-                lsName={"carseat/selectedCertificationTags"}
+                lsName={"carseat/tags"}
                 isCleared={isCleared ?? false}
                 dictionary={dictionary["tags"]}
                 setFilters={setFilters as Dispatch<SetStateAction<any>>} />

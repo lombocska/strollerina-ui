@@ -99,13 +99,13 @@ export default function CarSeatFiltersCollection({brands, setCarseats, dictionar
         clearLocalStorage('carseat/selectedMaxKidHeight');
         clearLocalStorage('carseat/selectedMaxPrice');
         clearLocalStorage('carseat/selectedOnlyWAdactTest');
-        clearLocalStorage('carseat/selectedTags');
-        clearLocalStorage('carseat/selectedKidDimensionTags');
-        clearLocalStorage('carseat/selectedSeatDimensionTags');
-        clearLocalStorage('carseat/selectedBaseTags');
-        clearLocalStorage('carseat/selectedHarnessTags');
-        clearLocalStorage('carseat/selectedCertificationTags');
-        clearLocalStorage('carseat/selectedOtherTags');
+        clearLocalStorage('carseat/tags');
+        // clearLocalStorage('carseat/selectedKidDimensionTags');
+        // clearLocalStorage('carseat/selectedSeatDimensionTags');
+        // clearLocalStorage('carseat/selectedBaseTags');
+        // clearLocalStorage('carseat/selectedHarnessTags');
+        // clearLocalStorage('carseat/selectedCertificationTags');
+        // clearLocalStorage('carseat/selectedOtherTags');
     
         if (setFilters) {
             setFilters(initialFilters);

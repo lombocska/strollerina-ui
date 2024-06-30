@@ -15,7 +15,7 @@ export default  function StrollerSeatFilters({setFilters, isCleared, dictionary}
             dictionary={dictionary["tags"]}
             tags={siteConfig.stroller_tags} 
             section={"seat"} 
-            lsName={"stroller/selectedSeatTags"}
+            lsName={"stroller/tags"}
             isCleared={isCleared ?? false}
             setFilters={setFilters as Dispatch<SetStateAction<any>>} />
    

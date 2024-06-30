@@ -14,7 +14,7 @@ export default  function StrollerHarnessFilters({setFilters, isCleared, dictiona
         <Tags 
             tags={siteConfig.stroller_tags} 
             section={"harness"} 
-            lsName={"stroller/selectedHarnessTags"}
+            lsName={"stroller/tags"}
             isCleared={isCleared ?? false}
             setFilters={setFilters as Dispatch<SetStateAction<any>>}
             dictionary={dictionary["tags"]} />

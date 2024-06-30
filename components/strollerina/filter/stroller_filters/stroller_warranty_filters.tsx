@@ -15,7 +15,7 @@ export default  function StrollerWarrantyFilters({setFilters, isCleared, diction
             dictionary={dictionary["tags"]} 
             tags={siteConfig.stroller_tags} 
             section={"warranty"} 
-            lsName={"stroller/selectedWarrantyTags"}
+            lsName={"stroller/tags"}
             isCleared={isCleared ?? false}
             setFilters={setFilters as Dispatch<SetStateAction<any>>} />
    

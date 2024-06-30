@@ -15,7 +15,7 @@ export default  function StrollerTerrainFilters({setFilters, isCleared, dictiona
             dictionary={dictionary["tags"]}
             tags={siteConfig.stroller_tags} 
             section={"terrain"} 
-            lsName={"stroller/selectedTerrainTags"}
+            lsName={"stroller/tags"}
             isCleared={isCleared ?? false}
             setFilters={setFilters as Dispatch<SetStateAction<any>>} />
    

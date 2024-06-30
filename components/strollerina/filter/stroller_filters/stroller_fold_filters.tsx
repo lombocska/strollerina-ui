@@ -15,7 +15,7 @@ export default  function StrollerFoldFilters({setFilters, isCleared, dictionary}
             dictionary={dictionary["tags"]}
             tags={siteConfig.stroller_tags} 
             section={"fold"} 
-            lsName={"stroller/selectedFoldTags"}
+            lsName={"stroller/tags"}
             isCleared={isCleared ?? false}
             setFilters={setFilters as Dispatch<SetStateAction<any>>} />
    

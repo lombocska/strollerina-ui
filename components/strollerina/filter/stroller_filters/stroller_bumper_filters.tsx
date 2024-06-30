@@ -16,7 +16,7 @@ export default  function StrollerBumperFilters({setFilters, isCleared, dictionar
             dictionary={dictionary["tags"]}
             tags={siteConfig.stroller_tags} 
             section={"bumper"} 
-            lsName={"stroller/selectedBumperTags"}
+            lsName={"stroller/tags"}
             isCleared={isCleared ?? false}
             setFilters={setFilters as Dispatch<SetStateAction<any>>} />
    
