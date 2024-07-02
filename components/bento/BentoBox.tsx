@@ -19,7 +19,8 @@ const BentoBox = ({ posts }) => {
                     role="img"
                     aria-label="Introduction"
                     rel="preload"
-                    href={"/strollers"}
+                    target="_blank"
+                    href={"https://shareasale.com/r.cfm?b=2001933&u=4300111&m=124094&urllink=&afftrack="}
                 >
                     <div className="overlay grid-item-a-silhouette size-full rounded-3xl bg-cover bg-center bg-no-repeat opacity-0 transition-opacity duration-200" />
                     <p className="sr-only">

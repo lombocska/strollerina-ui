@@ -42,7 +42,7 @@
         --foreground: 0 0% 98%;
 
         --card: 0 0% 3.9%;
-        --card-foreground: 0 0% 98%;
+        --card-foreground: 0 0% 9%;
 
         /* --popover: 0 0% 3.9%;
         --popover-foreground: 0 0% 98%;
@@ -175,17 +175,19 @@
 
     /* Grid Items */
     .grid-item-a {
-        background-image: url('/static/images/bento/about-square.png');
+        background-image: url('/static/images/bento/veer-banner.png');
     }
 
-
+    .grid-item-b-overlay {
+        background-image: url('/static/images/bento/strollers-square.png');
+    }
 
     .grid-item-b-overlay {
-        background-image: url('/static/images/bento/strollers-silhouette-square.png');
+        background-image: url('/static/images/bento/strollers-square.png');
     }
 
     .grid-item-d-overlay {
-        background-image: url('/static/images/bento/carseats-silhouette-square.png');
+        background-image: url('/static/images/bento/carseats-square.png');
     }
 
     .grid-item-c {
@@ -223,7 +225,7 @@
     /* Responsive Adjustments */
     @media (min-width: 640px) {
         .grid-item-a {
-            background-image: url('/static/images/bento/about-2.png');
+            background-image: url('/static/images/bento/veer-banner.png');
         }
 
         .grid-item-e-overlay {
@@ -240,7 +242,7 @@
             opacity: 1;
         }
         .grid-item-a-silhouette {
-            background-image: url('/static/images/bento/about-silhouette-4.png');
+            background-image: url('/static/images/bento/veer-banner.png');
         }
 
         .grid-item-b {

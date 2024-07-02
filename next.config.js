@@ -88,7 +88,8 @@ const nextConfig = {
             "www.besafe.com",
             "images.maxi-cosi.com",
             "gravatar.com",
-            "2.gravatar.com"
+            "2.gravatar.com",
+            "static.shareasale.com"
         ],
     },
     experimental: {
