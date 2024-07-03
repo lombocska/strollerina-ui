@@ -35,7 +35,7 @@ export default function Card ({ title, description, imgSrc, href, tags = [] }: C
                 <Image
                 alt={title}
                 src={imgSrc}
-                className="object-fit object-center w-full dark:bg-slate-800"
+                className="object-fit object-center w-full dark:bg-white"
                 width={544}
                 height={286}
                 />

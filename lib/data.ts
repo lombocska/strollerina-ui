@@ -1,4 +1,4 @@
-import { CarseatCardDTO, ManualDTO, StrollerInfoDTO } from "types";
+import { AffiliateDTO, CarseatCardDTO, ManualDTO, StrollerInfoDTO } from "types";
 
 export async function getManuals(brand: string) {
     const base_url = process.env.NEXT_PUBLIC_BACKEND_URL;
@@ -163,6 +163,57 @@ export async function getStrollerManualLink (strollerId:number) : Promise<Manual
     }
 }
 
+
+export async function getStrollerAmazonAffiliateLink (id:number) : Promise<AffiliateDTO> {
+    const requestOptions = {
+        method: 'GET', headers: {'Content-Type': 'application/json'},
+    };
+    const base_url = process.env.NEXT_PUBLIC_BACKEND_URL;
+    let url = base_url + '/strollers/' + id + '/affiliate';
+    try {
+        const response = await fetch(url, requestOptions);
+
+        if (!response.ok) {
+            throw new Error('Network response was not ok for affiliate link.');
+        }
+
+        try {
+            return await response.json();
+        } catch (error) {
+            console.log('no affiliate found');
+            return null;
+        }
+    } catch (error) {
+        console.error('Fetch error:', error);
+        return null;
+    }
+}
+
+export async function getStrollerAmazonAccessoriesAffiliateLink (id:number) : Promise<AffiliateDTO[]> {
+    const requestOptions = {
+        method: 'GET', headers: {'Content-Type': 'application/json'},
+    };
+    const base_url = process.env.NEXT_PUBLIC_BACKEND_URL;
+    let url = base_url + '/strollers/' + id + '/accessories-affiliate';
+    try {
+        const response = await fetch(url, requestOptions);
+
+        if (!response.ok) {
+            throw new Error('Network response was not ok for affiliate link.');
+        }
+
+        try {
+            return await response.json();
+        } catch (error) {
+            console.log('no affiliate found');
+            return null;
+        }
+    } catch (error) {
+        console.error('Fetch error:', error);
+        return null;
+    }
+}
+
 export async function getAllCarSeats() {
     const base_url = process.env.NEXT_PUBLIC_BACKEND_URL;
     let url = base_url + '/car-seats';
@@ -286,6 +337,32 @@ export async function getCarseatManualLink (carseatId:number) : Promise<ManualDT
             return await response.json();
         } catch (error) {
             console.log('no manual found');
+            return null;
+        }
+    } catch (error) {
+        console.error('Fetch error:', error);
+        return null;
+    }
+}
+
+
+export async function getCarseatAmazonAffiliateLink (id:number) : Promise<AffiliateDTO> {
+    const requestOptions = {
+        method: 'GET', headers: {'Content-Type': 'application/json'},
+    };
+    const base_url = process.env.NEXT_PUBLIC_BACKEND_URL;
+    let url = base_url + '/carseats/' + id + '/affiliate';
+    try {
+        const response = await fetch(url, requestOptions);
+
+        if (!response.ok) {
+            throw new Error('Network response was not ok for affiliate link.');
+        }
+
+        try {
+            return await response.json();
+        } catch (error) {
+            console.log('no affiliate found');
             return null;
         }
     } catch (error) {

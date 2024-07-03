@@ -2,13 +2,13 @@
 import StrollerInfo from '@/components/strollerina/cards/stroller_info';
 import Carousel from '@/components/strollerina/carousel/carousel';
 import ProductSidePanel from '@/components/strollerina/content/product_info_side_panel';
+import AmazonLink from '@/components/strollerina/links/amazon_affiliate_link';
 import { subtitle, title } from "@/components/strollerina/primitives";
 import { Video } from '@/components/strollerina/video';
+import { Link } from '@nextui-org/react';
 import { getDictionary } from 'get-dictionary';
 import { getBrandByName, getStrollerByGeneratedId, getStrollerImgs } from 'lib/data';
-import { Metadata } from 'next';
 import { Locale } from 'next/dist/compiled/@vercel/og/satori';
-
 
   
 export default async function StrollerInfoPage({ params }: { params: { strollername: string, brandname:string, lang: Locale } }) {
@@ -31,6 +31,7 @@ export default async function StrollerInfoPage({ params }: { params: { strollern
                 <h2 className={subtitle({ class: "mt-4" })}>
                   {stroller.brand}
                 </h2>
+                <AmazonLink id={stroller.id} type='stroller' dictionary={dictionary.strollers}/>
               </div>
             </section>
           

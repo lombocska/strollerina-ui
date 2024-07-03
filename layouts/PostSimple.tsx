@@ -1,10 +1,10 @@
 'use client'
 
+import GenericAccessoriesAffiliateLinks from '@/components/DesktopGenericAccessoriesAffiliateLinks'
 import Image from '@/components/Image'
 import Link from '@/components/Link'
 import PageTitle from '@/components/PageTitle'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
-import SectionContainer from '@/components/SectionContainer'
 import TOCInline from '@/components/TOCInline'
 import Tag from '@/components/Tag'
 import { Skeleton } from '@/components/shadcn/skeleton'
@@ -41,6 +41,7 @@ export default function PostLayout({
 
     useEffect(() => {
         console.log("Blog path: " + path)
+        console.log("Blog slug: " + slug)
         if (slug) {
             fetch(`/api/page-views?slug=${encodeURIComponent(slug)}`)
                 .then((response) => response.json())
@@ -164,6 +165,8 @@ export default function PostLayout({
                             <div className="prose prose-sm max-w-none pb-8 pt-10 dark:prose-invert">
                                 <div className="toc not-prose">
                                     <TOCInline toc={toc} />
+                                    {/* generic accessories for everything */}
+                                    <GenericAccessoriesAffiliateLinks/>
                                 </div>
                                 <div className='text-foreground'>{children}</div>
                             </div>

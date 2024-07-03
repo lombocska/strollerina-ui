@@ -146,6 +146,13 @@ export type ManualDTO = {
   brandName: string;
 };
 
+
+export type AffiliateDTO = {
+  link: string;
+  name: string;
+  img: string;
+};
+
 export type ProductCardProps = {
   name: string;
   brand: string;

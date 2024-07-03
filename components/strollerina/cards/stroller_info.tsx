@@ -1,17 +1,17 @@
 'use client';
 
-import { siteConfig } from 'config/site';
-import { getStrollerManualLink } from 'lib/data';
-import { BrandItem, ManualDTO, StrollerInfoDTO } from 'types';
 import { Accordion, AccordionItem } from '@nextui-org/accordion';
 import { Card, CardBody, CardFooter, CardHeader } from '@nextui-org/card';
 import { Divider } from '@nextui-org/divider';
 import { Image } from "@nextui-org/image";
 import { Link } from '@nextui-org/link';
+import { siteConfig } from 'config/site';
+import { getDictionary } from 'get-dictionary';
+import { getStrollerManualLink } from 'lib/data';
 import { useEffect, useState } from 'react';
+import { BrandItem, ManualDTO, StrollerInfoDTO } from 'types';
 import Chips from '../chips';
 import { InfoTable } from '../table';
-import { getDictionary } from 'get-dictionary';
 
 const StrollerInfo = ({ data, brand, dictionary }: { 
     data: StrollerInfoDTO; 
@@ -30,7 +30,7 @@ const StrollerInfo = ({ data, brand, dictionary }: {
     const [manual, setManual] = useState<ManualDTO | null>(null);
 
     useEffect(() => {
-        getStrollerManualLink(data.id).then(setManual);        
+        getStrollerManualLink(data.id).then(setManual);       
     }, []); 
 
     return (
