@@ -2,46 +2,76 @@
 
 import { Button } from '@nextui-org/button';
 import { Modal, ModalBody, ModalContent, ModalFooter, ModalHeader, useDisclosure } from '@nextui-org/modal';
+import { Badge } from '@nextui-org/react';
 import { getDictionary } from 'get-dictionary';
-import { FIVE_THOUSAND, ONE_HUNDRED_FIFTY, THIRTY, TWO_HUNDRED, ZERO } from 'lib/constants';
+import { useLocalStorage } from 'lib/LocalStorageAPI';
+import { useCurrency } from 'lib/context/currency_context';
+import { HeartIcon } from 'lucide-react';
+import { useTheme } from 'next-themes';
+import { Locale } from 'next/dist/compiled/@vercel/og/satori';
+import Link from 'next/link';
 import { useState } from 'react';
-import { BrandContentProps, StrollerCard, StrollerFilters, StrollersContentProps } from 'types';
+import { BrandContentProps, StrollerCard, StrollersContentProps } from 'types';
 import ProductCard from '../cards/product_card';
 import CounterChip from '../filter/helper/counter_chip';
 import StrollerFiltersCollection from '../filter/stroller_filters';
 import SortingSelect from '../sorting_select';
-import { useTheme } from 'next-themes';
-import { useCurrency } from 'lib/context/currency_context';
 
 
-export default  function StrollersContent({ initialData, brands, dictionary}: 
+export default  function StrollersContent({ initialData, brands, dictionary, lang}: 
         {
             initialData: StrollersContentProps,
             brands: BrandContentProps,
-            dictionary: Awaited<ReturnType<typeof getDictionary>>["strollers"]
+            dictionary: Awaited<ReturnType<typeof getDictionary>>["strollers"],
+            lang:Locale
         }) {
     
     const {isOpen, onOpen, onOpenChange} = useDisclosure();
     const [strollers, setStrollers] = useState<StrollerCard[]>(initialData);
+    const [selectedStrollers, setSelectedStrollers] = useLocalStorage("strollers/compare", new Set());
+    const encodedIds = Array.from(selectedStrollers).map(id => (id)).join(',');
+    // const selectedStrollersQueryParam = Array.from(selectedStrollers).join(',');
+    // const queryParam = encodeURIComponent(selectedStrollersQueryParam);
+
     const { theme } = useTheme(); // Access the current theme using next-themes hook
     const { state } = useCurrency();
     const { currency, multiplicator } = state;
-  
+
+    const handleSelectCard = (id: string) => {
+        setSelectedStrollers((prevSelected: Set<string>) => {
+            const newSelected = new Set(prevSelected);
+            if (newSelected.has(id)) {
+                newSelected.delete(id);
+            } else {
+                newSelected.add(id);
+            }
+            return newSelected;
+        });
+        console.log("Selected stroller for comparison ", selectedStrollers);
+    };
+
     return (
         <>
     
         
-        {/* <div className="ml-[calc(-50vw+50%+10px)] w-[calc(100vw-20px)] p-4 "> */}
         <main className="md:w-2/3 p-4  ">
 
         {strollers &&
             <>
                 <div className="flex flex-wrap content-center items-center mb-5 rounded-full justify-between space-y-2">
+            
                     <CounterChip title={"strollers"} number={strollers.length} dictionary={dictionary}/>
                     <SortingSelect strollers={strollers} setStrollers={setStrollers} dictionary={dictionary} />
+
+                    {selectedStrollers && (
+                        <Link href={{ pathname:  "/" + lang + "/compare", query: { ids: encodedIds } }}>
+                            <Badge color="warning" content={selectedStrollers?.size} isInvisible={false} shape="circle">
+                                <HeartIcon className="fill-current" size={25}/>
+                            </Badge>
+                        </Link>
+                    )}
                 </div>
 
-                {/* <div className="gap-2 grid grid-cols-1 sm:grid-cols-3" key={"strollers"}> */}
                 <div className="gap-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3">
 
                     {strollers.map(item => (
@@ -54,6 +84,8 @@ export default  function StrollersContent({ initialData, brands, dictionary}:
                                 tags={item.priceFrom != null ? [Math.round(item.priceFrom * multiplicator) + "+ " + currency] : []}
                                 generatedId={item.generatedId}
                                 infoLinkPrefix={'/strollers/'}
+                                isSelected={selectedStrollers.has(item.generatedId)}
+                                onSelect={handleSelectCard}
                             />
                     ))}
                 </div>
@@ -95,7 +127,6 @@ export default  function StrollersContent({ initialData, brands, dictionary}:
                     )}
                 </ModalContent>
             </Modal>
-        {/* </div>  */}
 
             
         </>        

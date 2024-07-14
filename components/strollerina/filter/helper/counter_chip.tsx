@@ -16,7 +16,7 @@ export default function CounterChip({title, number, dictionary} :
 
   return (
     
-    <Chip color="warning" variant="dot" className="">
+    <Chip color="warning" variant="dot" className="" size="lg">
         {dictionary["common"]["count"]} : {number}
     </Chip>
   );

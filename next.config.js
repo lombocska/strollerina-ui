@@ -85,6 +85,7 @@ const nextConfig = {
             'www.babyzen.com',
             'ternx.com',
             'zoebaby.com',
+            'assets.nextchapter-ecommerce.com',
             "www.besafe.com",
             "images.maxi-cosi.com",
             "gravatar.com",
@@ -110,6 +111,32 @@ const nextConfig = {
                 destination: '/blog/picoctf-2022/beginners-compilation',
                 permanent: true,
             },
+            
+            {
+                source: '/compare-strollers',
+                destination: '/strollers',
+                permanent: true
+            },
+            {
+                source: '/compare-car-seats',
+                destination: '/carseats',
+                permanent: true
+            },
+            {
+                source: '/reviews/blog/info/2024-adac-test-bests-worsts-huge-fails-peg-perego-twist',
+                destination: '/blog/en/blog/adac/2024-adac-test-bests-worsts-huge-fails-peg-perego-twist',
+                permanent: true
+            },
+            {
+                source: '/blog/doona/doonax-17002/doonax-review',
+                destination: '/blog/en/blog/doona/doonax-17002/doonax-review',
+                permanent: true
+            },
+            {
+                source: '/reviews/product/stroller/type-2/doona-x-stroller-carseat-combo-review-2024',
+                destination: '/blog/en/blog/doona/doonax-17002/doonax-review',
+                permanent: true
+            }
             // Add all other redirects here...
         ]
     },

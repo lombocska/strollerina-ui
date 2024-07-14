@@ -82,7 +82,9 @@ export interface AdacSelectionProps {
 }
 
 export type CarseatCardDTO = {
+  generatedId:string;
   brand: string;
+  brandValue: string;
   name: string;
   id: number;
   img: string;
@@ -151,6 +153,7 @@ export type AffiliateDTO = {
   link: string;
   name: string;
   img: string;
+  type: string;
 };
 
 export type ProductCardProps = {
@@ -161,6 +164,8 @@ export type ProductCardProps = {
   generatedId: string;
   brandValue: string;
   infoLinkPrefix: string;
+  isSelected: boolean;
+  onSelect: (title: string) => void;
 }
 
 export type CarSeatFiltersProps = Partial<{

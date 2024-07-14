@@ -5,9 +5,9 @@ import ProductSidePanel from '@/components/strollerina/content/product_info_side
 import AmazonLink from '@/components/strollerina/links/amazon_affiliate_link';
 import { subtitle, title } from "@/components/strollerina/primitives";
 import { Video } from '@/components/strollerina/video';
-import { Link } from '@nextui-org/react';
+import { genPageMetadata } from 'app/[lang]/seo';
 import { getDictionary } from 'get-dictionary';
-import { getBrandByName, getStrollerByGeneratedId, getStrollerImgs } from 'lib/data';
+import { getStrollerByGeneratedId, getStrollerImgs } from 'lib/data';
 import { Locale } from 'next/dist/compiled/@vercel/og/satori';
 
   
@@ -16,7 +16,7 @@ export default async function StrollerInfoPage({ params }: { params: { strollern
 
   const stroller = await getStrollerByGeneratedId(params.strollername);
   const imgs = await getStrollerImgs(params.strollername);
-  const brand = await getBrandByName(params.brandname);
+  // const brand = await getBrandByName(params.brandname);
   const slideImgs = imgs && imgs.length > 0 ? imgs : [stroller.img];
 
   return (
@@ -46,18 +46,18 @@ export default async function StrollerInfoPage({ params }: { params: { strollern
 
       <ProductSidePanel 
         dictionary={dictionary.strollers}
-        info={<StrollerInfo data={stroller} brand={brand} dictionary={dictionary.strollers}/>}
+        info={<StrollerInfo data={stroller} dictionary={dictionary.strollers}/>}
       />
       
     </>
   )
 }
 
-// export function generateMetadata(): Metadata {
-//   const { t } = useTranslation("strollers");
-
-//   return {
-//     title: t`info-page-title`,
-//     description: t`info-page-description`
-//   };
-// }
+export const metadata = genPageMetadata({
+  title: 'Stroller info page',
+  description: 'All details, images, manuals of strollers',
+  robots: {
+      index: true,
+      follow: true,
+  },
+})

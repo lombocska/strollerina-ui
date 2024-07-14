@@ -26,7 +26,7 @@ export default async function CarSeats({
 
   return (
       <>
-        <CarseatsContent initialData={initialData} brands={brands} dictionary={dictionary.carseats}/>
+        <CarseatsContent initialData={initialData} brands={brands} dictionary={dictionary.carseats} lang={lang}/>
       </>
   );
 }

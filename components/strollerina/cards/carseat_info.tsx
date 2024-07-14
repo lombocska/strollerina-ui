@@ -1,47 +1,46 @@
 // components/SidePanel.js
 'use client';
 
-import { getCarseatManualLink } from 'lib/data';
-import { BrandItem, CarseatCardDTO, ManualDTO } from 'types';
 import { Accordion, AccordionItem } from '@nextui-org/accordion';
-import { Card, CardBody, CardFooter, CardHeader } from '@nextui-org/card';
+import { Card, CardBody, CardHeader } from '@nextui-org/card';
 import { Chip } from '@nextui-org/chip';
 import { Divider } from '@nextui-org/divider';
 import { Image } from "@nextui-org/image";
 import { Link } from '@nextui-org/link';
-import { useRouter } from 'next/navigation';
-import { useEffect, useState } from 'react';
-import Chips from '../chips';
 import { getDictionary } from 'get-dictionary';
+import { getBrandByName, getCarseatManualLink } from 'lib/data';
+import { useEffect, useState } from 'react';
+import { BrandItem, CarseatCardDTO, ManualDTO } from 'types';
+import Chips from '../chips';
 
-const CarseatInfo = ({ data, brand, dictionary }: 
+const CarseatInfo = ({ data, dictionary }: 
     { 
         data: CarseatCardDTO; 
-        brand: BrandItem;
         dictionary: Awaited<ReturnType<typeof getDictionary>>["carseats"]
     }) => {
     
 
     const [manual, setManual] = useState<ManualDTO | null>(null);
+    const [brand, setBrand] = useState<BrandItem> ();
 
     useEffect(() => {
-        getCarseatManualLink(data.id).then(setManual);        
+        getCarseatManualLink(data.id).then(setManual);      
+        getBrandByName(data.brandValue).then(setBrand);     
     }, []); 
 
     return (
-        <>
-            {/* <h2 className="text-xl font-bold mb-4">{t('common:info')}</h2> */}
             <Card className="">
                 <CardHeader className="flex gap-3 justify-between">
                     <div className="flex  gap-3">
+                    {brand &&
                         <Image
                             alt="brand logo"
                             height={100}
                             width={100}
                             radius="sm"
                             src={brand.img}
-
                         />
+                    }
                         <div className="flex flex-col">
                             <p className="text-md">{data.name}</p>
                             {/* <p className="text-small text-default-500">nextui.org</p> */}
@@ -170,7 +169,6 @@ const CarseatInfo = ({ data, brand, dictionary }:
                 </CardFooter> */}
             </Card>
             
-        </>
     );
 };
 

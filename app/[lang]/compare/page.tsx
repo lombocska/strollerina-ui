@@ -1,12 +1,10 @@
-
-import { getAllStrollers, getBrands } from 'lib/data';
-import StrollersContent from '@/components/strollerina/content/strollers_content';
+import InfoComparison from '@/components/strollerina/cards/info_comparison';
 import { getDictionary } from 'get-dictionary';
 import { Locale } from 'next/dist/compiled/@vercel/og/satori';
 import { genPageMetadata } from '../seo';
 
 export const metadata = genPageMetadata({
-  title: 'Strollers',
+  title: 'Compare',
   description: 'Dynamic stroller comparison',
   robots: {
       index: true,
@@ -14,17 +12,16 @@ export const metadata = genPageMetadata({
   },
 })
 
-export default async function Strollers({
+export default async function Compare({
   params: { lang },
 }: {
   params: { lang: Locale };
 }) {
+
   const dictionary = await getDictionary(lang);
-  const initialData = await getAllStrollers();
-  const brands = await getBrands();
   return (
       <>
-        <StrollersContent initialData={initialData} brands={brands} dictionary={dictionary.strollers} lang={lang}/>
+        <InfoComparison dictionary={dictionary} lang={lang}/>
       </>
   );
 }

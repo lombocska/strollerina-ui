@@ -189,6 +189,34 @@ export async function getStrollerAmazonAffiliateLink (id:number) : Promise<Affil
     }
 }
 
+export async function getStrollerAnbBabyAffiliateLink (id:number) : Promise<AffiliateDTO[]> {
+    const requestOptions = {
+        method: 'GET', headers: {'Content-Type': 'application/json'},
+    };
+    const base_url = process.env.NEXT_PUBLIC_BACKEND_URL;
+    let url = base_url + '/strollers/' + id + '/affiliate/anbbaby';
+    try {
+        const response = await fetch(url, requestOptions);
+
+        if (!response.ok) {
+            throw new Error('Network response was not ok for anbbaby affiliate link.');
+        }
+
+        try {
+        
+            let resp =  await response.json();
+            console.log("anb baby resp"  + resp)
+            return resp;
+        } catch (error) {
+            console.log('no affiliate found anbbaby');
+            return null;
+        }
+    } catch (error) {
+        console.error('anbbaby Fetch error:', error);
+        return null;
+    }
+}
+
 export async function getStrollerAmazonAccessoriesAffiliateLink (id:number) : Promise<AffiliateDTO[]> {
     const requestOptions = {
         method: 'GET', headers: {'Content-Type': 'application/json'},
@@ -285,21 +313,30 @@ export async function searchCarSeats(brands,
         });
 }
 
-export async function getCarseatByGeneratedId (generatedId:string) : Promise<CarseatCardDTO> {
-    console.log("Searching for carseat with carseat named " + generatedId)
+export async function getCarseatByGeneratedId(generatedId: string): Promise<CarseatCardDTO> {
+    if (!generatedId || generatedId.trim() === '') {
+        console.log("Invalid generatedId:", generatedId);
+    }
+    
     const requestOptions = {
-        method: 'GET', headers: {'Content-Type': 'application/json'},
+        method: 'GET',
+        headers: { 'Content-Type': 'application/json' },
     };
     const base_url = process.env.NEXT_PUBLIC_BACKEND_URL;
-    let url = base_url + '/car-seats/' + generatedId.split('-').pop();
-    return await fetch(url, requestOptions)
-        .then((response) => {
-            if (response.status != 200) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json();
-        })
+    let url = `${base_url}/car-seats/${generatedId.split('-').pop()}`;
+
+    try {
+        const response = await fetch(url, requestOptions);
+        if (response.status !== 200) {
+            throw new Error('Network response was not ok');
+        }
+        return await response.json();
+    } catch (error) {
+        console.error('Fetch error:', error);
+        throw new Error('Network response was not ok');
+    }
 }
+
 
 export async function getCarseatImgs (generatedId:string) {
     console.log("Searching for carseat images with carseat named " + generatedId)

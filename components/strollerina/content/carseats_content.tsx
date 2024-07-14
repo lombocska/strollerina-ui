@@ -3,31 +3,48 @@
 import { Button } from '@nextui-org/button';
 import { Modal, ModalBody, ModalContent, ModalFooter, ModalHeader, useDisclosure } from '@nextui-org/modal';
 import { getDictionary } from 'get-dictionary';
-import { ONE_HUNDRED_FIFTY, ONE_THOUSAND_FIVE_HUNDRED, SIXSTY, THIRTY } from 'lib/constants';
-import dynamic from 'next/dynamic';
-import { useEffect, useState } from 'react';
-import { BrandContentProps, CarSeatFilters, CarseatCard, CarseatsContentProps } from 'types';
+import { useLocalStorage } from 'lib/LocalStorageAPI';
+import { useTheme } from 'next-themes';
+import { Locale } from 'next/dist/compiled/@vercel/og/satori';
+import { useState } from 'react';
+import { BrandContentProps, CarseatCard, CarseatsContentProps } from 'types';
 import ProductCard from '../cards/product_card';
 import CarSeatFiltersCollection from '../filter/carseat_filters';
 import CounterChip from '../filter/helper/counter_chip';
 import { CarSeatSortingSelect } from '../sorting_select';
-import { useTheme } from 'next-themes';
+import Link from 'next/link';
+import { Badge } from '@nextui-org/react';
+import { HeartIcon } from 'lucide-react';
 
-
-
-export default  function CarseatsContent({ initialData, brands, dictionary}: 
+export default  function CarseatsContent({ initialData, brands, dictionary, lang}: 
     {
         initialData: CarseatsContentProps,
         brands: BrandContentProps,
-        dictionary: Awaited<ReturnType<typeof getDictionary>>["carseats"]
+        dictionary: Awaited<ReturnType<typeof getDictionary>>["carseats"],
+        lang:Locale
     }) {
 
            
     const {isOpen, onOpen, onOpenChange} = useDisclosure();
     const [carseats, setCarseats] = useState<CarseatCard[]>(initialData);
     const { theme } = useTheme(); // Access the current theme using next-themes hook
+    const [selectedCarseats, setSelectedCarseats] = useLocalStorage("carseats/compare", new Set());
+    const encodedIds = Array.from(selectedCarseats).map(id => (id)).join(',');
+   
+    const handleSelectCard = (id: string) => {
+        setSelectedCarseats((prevSelected: Set<string>) => {
+            const newSelected = new Set(prevSelected);
+            if (newSelected.has(id)) {
+                newSelected.delete(id);
+            } else {
+                newSelected.add(id);
+            }
+            return newSelected;
+        });
+        console.log("Selected carseats for comparison ", selectedCarseats);
+    };
 
- 
+
     return (
        <>
             <main className="md:w-2/3 p-4  ">
@@ -36,6 +53,13 @@ export default  function CarseatsContent({ initialData, brands, dictionary}:
                 <div className="flex flex-wrap content-center items-center mb-5 rounded-full justify-between space-y-2">
                     <CounterChip title={"carseats"} number={carseats.length} dictionary={dictionary}/>
                     <CarSeatSortingSelect  carseats={carseats} setCarseats={setCarseats} dictionary={dictionary}/>
+                    {selectedCarseats && (
+                        <Link href={{ pathname:  "/" + lang + "/compare", query: { ids: encodedIds, type: 'carseat' } }}>
+                            <Badge color="warning" content={selectedCarseats?.size} isInvisible={false} shape="circle">
+                                <HeartIcon className="fill-current" size={25}/>
+                            </Badge>
+                        </Link>
+                    )}
                 </div>
 
                 <div className="gap-2 grid grid-cols-1 sm:grid-cols-3" key={"carseats"}>
@@ -49,6 +73,8 @@ export default  function CarseatsContent({ initialData, brands, dictionary}:
                                 tags={item.bestAdac != null ? ['ADAC: ' + item.bestAdac] : []}
                                 generatedId={item.generatedId}
                                 infoLinkPrefix={'/carseats/'}
+                                isSelected={selectedCarseats.has(item.generatedId)}
+                                onSelect={handleSelectCard}
                             />
                     ))}
                 </div>

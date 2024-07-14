@@ -15,14 +15,16 @@
     "search": "Keresés",
     "clear": "Szűrők törlése",
     "producer-link": "Gyártó honlapja",
-    "manual-link": "Használati útmutató",
+    "manual-link": "Használati útmutató",    
+    "compare" : "Összehasonlítás",
     "table": {
       "titles" : {
         "heigh-width-length": "Magasság, szélesség, hosszúság, súly",
         "capacity" : "Terhelhetőség",
         "wheel": "Kerekek",
         "seat": "Ülés",
-        "tags": "Tulajdonságok"
+        "tags": "Tulajdonságok",
+        "buy": "Hol tudom megvenni"
       },
       "headers": {
         "height": "Tolókar magasság [cm]",

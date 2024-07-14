@@ -16,13 +16,15 @@
     "clear": "Clear",
     "producer-link": "Producer's website",
     "manual-link": "Manuals",
+    "compare" : "Compare",
     "table": {
       "titles" : {
         "heigh-width-length": "Height, width, length, weight",
         "capacity" : "Weight capacity",
         "wheel": "Wheels",
         "seat": "Seat",
-        "tags": "Features"
+        "tags": "Features",
+        "buy": "Where to buy"
       },
       "headers": {
         "height": "Handlebar height [cm]",
