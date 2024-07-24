@@ -88,6 +88,7 @@ const nextConfig = {
             'assets.nextchapter-ecommerce.com',
             "www.besafe.com",
             "images.maxi-cosi.com",
+            "www.cybex-online.com",
             "gravatar.com",
             "2.gravatar.com",
             "static.shareasale.com"

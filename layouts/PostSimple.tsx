@@ -166,7 +166,7 @@ export default function PostLayout({
                                 <div className="toc not-prose">
                                     <TOCInline toc={toc} />
                                     {/* generic accessories for everything */}
-                                    <GenericAccessoriesAffiliateLinks/>
+                                    {/* <GenericAccessoriesAffiliateLinks/> */}
                                 </div>
                                 <div className='text-foreground'>{children}</div>
                             </div>
