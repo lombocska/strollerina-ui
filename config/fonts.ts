@@ -1,14 +1,14 @@
-import { Alata, Albert_Sans, Aleo as FontMono, Inter as FontSans, JetBrains_Mono, League_Spartan } from "next/font/google";
+import { Alata, Albert_Sans, Inter as FontSans, JetBrains_Mono, League_Spartan } from "next/font/google";
 
 export const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
 });
 
-export const fontMono = FontMono({
-  subsets: ["latin"],
-  variable: "--font-mono",
-});
+// export const fontMono = FontMono({
+//   subsets: ["latin"],
+//   variable: "--font-mono",
+// });
 
 
 export const font = JetBrains_Mono({
