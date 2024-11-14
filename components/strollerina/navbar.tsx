@@ -1,6 +1,7 @@
 'use client'
 
 import headerNavLinks from '@/data/headerNavLinks'
+import obligatoryPages from '@/data/obligatoryPages'
 import { cn } from '@/scripts/utils/tailwind-helpers'
 import { useEffect, useState } from 'react'
 import {
@@ -21,6 +22,7 @@ import SearchButton from "../SearchButton";
 import { ThemeSwitch } from "components/strollerina/theme-switch";
 import { Logo } from "@/components/icons";
 import { getDictionary } from 'get-dictionary';
+import ObligatoryPages from '../obligatory-pages';
 
 export const Navbar = ({dictionary}: {
     dictionary: Awaited<ReturnType<typeof getDictionary>>["navbar"]
@@ -93,6 +95,9 @@ export const Navbar = ({dictionary}: {
               <NavbarItem className="hidden lg:flex gap-2">
                 <LocaleSwitcher />
               </NavbarItem>
+              <NavbarItem className="hidden lg:flex gap-2">
+                <ObligatoryPages pages={obligatoryPages} dictionary={dictionary}/>
+              </NavbarItem>
 
               <ThemeSwitch />
               <SearchButton />
@@ -125,6 +130,7 @@ export const Navbar = ({dictionary}: {
                   </NavbarMenuItem>
                 ))}
                 <LocaleSwitcher />
+                <ObligatoryPages pages={obligatoryPages} dictionary={dictionary}/>
               </div>
             </NavbarMenu>
           </div>

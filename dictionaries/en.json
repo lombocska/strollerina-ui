@@ -653,6 +653,76 @@
     "email-title": "Email",
     "email": "strollerina.find.your.stroller@gmail.com"
   },
+  "disclaimer": {
+    "title": "Disclaimer",
+    "intro": "The information provided by our website is for general informational purposes only. All information on the site is provided in good faith; however, we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, reliability, availability, or completeness of any information on the site.",
+    "general-information-title": "General Information",
+    "general-information": "The information on this website is for general informational purposes only and is subject to change without notice. While we endeavor to keep the information up-to-date and correct, we make no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability, or availability of the information.",
+    "liability-title": "Limitation of Liability",
+    "liability": "In no event shall we be liable for any loss or damage including without limitation, indirect or consequential loss or damage, or any loss or damage whatsoever arising from loss of data or profits arising out of, or in connection with, the use of this website.",
+    "external-links-title": "External Links Disclaimer",
+    "external-links": "Our website may contain links to external websites that are not provided or maintained by or in any way affiliated with us. Please note that we do not guarantee the accuracy, relevance, timeliness, or completeness of any information on these external websites.",
+    "errors-omissions-title": "Errors and Omissions",
+    "errors-omissions": "While we have made every attempt to ensure that the information contained on this site is accurate, we are not responsible for any errors or omissions, or for the results obtained from the use of this information.",
+    "contact-title": "Contact Us",
+    "contact": "If you have any questions about this disclaimer, please contact us at strollerina.find.your.stroller@gmail.com."
+  },
+  "privacy-policy": {
+    "title": "Privacy Policy",
+    "intro": "Your privacy is important to us. This Privacy Policy explains how we collect, use, and protect your information on our website.",
+    "data-collection-title": "Data Collection",
+    "data-collection": "We do not collect personal information from our users. Any data collected through cookies is anonymous and used solely for improving user experience on the site.",
+    "cookies-title": "Cookie Usage",
+    "cookies": "We use cookies to enhance your experience on our site. Cookies are small data files that are placed on your device to remember preferences and improve site performance.",
+    "third-party-title": "Third-Party Services",
+    "third-party": "We may use third-party services, such as Google AdSense, to serve ads on our site. These third parties may use cookies to provide relevant ads based on your browsing behavior. However, no personally identifiable information is collected.",
+    "data-security-title": "Data Security",
+    "data-security": "We take reasonable measures to protect your data and ensure it is not misused, altered, or accessed without authorization.",
+    "contact-title": "Contact Us",
+    "contact": "If you have any questions about this Privacy Policy, please contact us at support@example.com."
+  },
+  "terms": {
+    "title": "Terms and Conditions",
+    "meta-description": "Terms and Conditions of our website",
+    "intro": "Please read these Terms and Conditions carefully before using our website.",
+    "sections": [
+      {
+        "heading": "Acceptance of Terms",
+        "content": "By accessing and using our website, you agree to be bound by these terms and conditions."
+      },
+      {
+        "heading": "Modifications to Terms",
+        "content": "We reserve the right to modify these terms at any time. Please review them periodically."
+      },
+      {
+        "heading": "User Conduct",
+        "content": "You agree not to use the website in any way that causes harm or violates any applicable law."
+      },
+      {
+        "heading": "Privacy Policy",
+        "content": "Refer to our Privacy Policy for details on how we handle user information."
+      },
+      {
+        "heading": "Intellectual Property",
+        "content": "All content on our website is the property of [Your Company] and is protected by copyright laws."
+      },
+      {
+        "heading": "Limitation of Liability",
+        "content": "We are not liable for any damages arising from your use of the website."
+      },
+      {
+        "heading": "Governing Law",
+        "content": "These terms are governed by the laws of Hungary."
+      }
+    ]
+  },
+  "obligatory": {
+    "about-us": "About us",
+    "disclaimer": "Disclaimer",
+    "privacy-policy": "Privacy Policy",
+    "terms-and-conditions": "Terms and Conditions",
+    "select": "Useful pages"
+  },  
   "brands": {
     "link-title": "Manufacturer website",
     "find-store-title": "Stores",

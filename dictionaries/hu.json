@@ -1063,6 +1063,76 @@
     "main-text": "Több, mint 200 babakocsi",
     "subtitle": "Hasonlíts össze babakocsikat könnyedén a legapróbb részletekig. Használd a részletes keresőt, vagy a tageket, hogy megtaláld a legjobb babakocsit számotokra. Garancia, márka, derékszögben ültetés, kompatibilitás..."
   },
+  "disclaimer": {
+    "title": "Felelősségkizárás",
+    "intro": "A weboldalunkon található információk kizárólag általános tájékoztatási célokat szolgálnak. Minden információt jóhiszeműen közlünk; azonban semmilyen formában, kifejezetten vagy hallgatólagosan nem vállalunk felelősséget az információk pontosságáért, megfelelőségéért, érvényességéért, megbízhatóságáért, elérhetőségéért vagy teljességéért.",
+    "general-information-title": "Általános Információk",
+    "general-information": "A weboldalon található információk általános tájékoztatási célokat szolgálnak, és előzetes értesítés nélkül változhatnak. Miközben igyekszünk az információkat naprakészen és pontosan tartani, nem vállalunk felelősséget az információk teljességéért, pontosságáért, megbízhatóságáért, megfelelőségéért vagy elérhetőségéért.",
+    "liability-title": "Felelősség Korlátozása",
+    "liability": "Semmilyen esetben nem vállalunk felelősséget semmilyen veszteségért vagy kárért, beleértve korlátozás nélkül a közvetett vagy következményes veszteségeket vagy károkat, illetve bármilyen adatvesztésből vagy nyereségvesztésből eredő veszteségeket, amelyek a weboldal használatából erednek.",
+    "external-links-title": "Külső Hivatkozások Felelősségkizárása",
+    "external-links": "Weboldalunk külső oldalakra mutató hivatkozásokat tartalmazhat, amelyek nem állnak kapcsolatban velünk, és amelyeket nem mi biztosítunk vagy tartunk karban. Kérjük, vegye figyelembe, hogy nem vállalunk garanciát ezen külső oldalak bármely információjának pontosságáért, relevanciájáért, időszerűségéért vagy teljességéért.",
+    "errors-omissions-title": "Hibák és Hiányosságok",
+    "errors-omissions": "Mindent megtettünk annak érdekében, hogy a weboldalon található információk pontosak legyenek, de nem vállalunk felelősséget az esetleges hibákért vagy hiányosságokért, illetve az információk felhasználásából eredő következményekért.",
+    "contact-title": "Kapcsolatfelvétel",
+    "contact": "Ha bármilyen kérdése van a felelősségkizárással kapcsolatban, kérjük, lépjen velünk kapcsolatba a strollerina.find.your.stroller@gmail.com címen."
+  },
+  "privacy-policy": {
+    "title": "Adatvédelmi Irányelvek",
+    "intro": "Fontos számunkra az Ön adatainak védelme. Ez az adatvédelmi irányelv leírja, hogyan gyűjtjük, használjuk fel és védjük az Ön adatait a weboldalunkon.",
+    "data-collection-title": "Adatgyűjtés",
+    "data-collection": "Nem gyűjtünk személyes adatokat a felhasználóktól. A cookie-kon keresztül gyűjtött adatok névtelenek, és kizárólag a felhasználói élmény javítását szolgálják az oldalon.",
+    "cookies-title": "Cookie-k Használata",
+    "cookies": "Cookie-kat használunk a weboldalunkon, hogy javítsuk az Ön élményét. A cookie-k kis adatfájlok, amelyeket az eszközén tárolunk az előnyben részesített beállítások megjegyzése és a weboldal teljesítményének javítása érdekében.",
+    "third-party-title": "Harmadik Felek Szolgáltatásai",
+    "third-party": "Előfordulhat, hogy harmadik felek szolgáltatásait vesszük igénybe, mint például a Google AdSense, hogy hirdetéseket jelenítsünk meg az oldalon. Ezek a harmadik felek cookie-kat használhatnak, hogy releváns hirdetéseket biztosítsanak az Ön böngészési szokásai alapján. Személyes adatokat azonban nem gyűjtünk.",
+    "data-security-title": "Adatbiztonság",
+    "data-security": "Megfelelő intézkedéseket teszünk annak érdekében, hogy az adatai védve legyenek, és ne kerüljenek illetéktelen kezekbe, valamint ne történjen adatmanipuláció.",
+    "contact-title": "Kapcsolatfelvétel",
+    "contact": "Ha bármilyen kérdése van az adatvédelmi irányelveinkkel kapcsolatban, kérjük, vegye fel velünk a kapcsolatot a support@example.com címen."
+  },
+  "terms": {
+    "title": "Felhasználási feltételek",
+    "meta-description": "A weboldalunk felhasználási feltételei",
+    "intro": "Kérjük, figyelmesen olvassa el ezeket a felhasználási feltételeket a weboldal használata előtt.",
+    "sections": [
+      {
+        "heading": "A feltételek elfogadása",
+        "content": "A weboldal elérésével és használatával elfogadja ezen feltételeket."
+      },
+      {
+        "heading": "A feltételek módosítása",
+        "content": "Fenntartjuk a jogot a feltételek módosítására. Kérjük, rendszeresen ellenőrizze őket."
+      },
+      {
+        "heading": "Felhasználói magatartás",
+        "content": "Ön beleegyezik, hogy nem használja a weboldalt olyan módon, amely kárt okoz vagy sérti a vonatkozó törvényeket."
+      },
+      {
+        "heading": "Adatvédelmi szabályzat",
+        "content": "Lásd az Adatvédelmi Szabályzatunkat, hogy megtudja, hogyan kezeljük a felhasználói információkat."
+      },
+      {
+        "heading": "Szellemi tulajdon",
+        "content": "A weboldalon található összes tartalom a [Your Company] tulajdona és szerzői jogok védik."
+      },
+      {
+        "heading": "Felelősség korlátozása",
+        "content": "Nem vállalunk felelősséget a weboldal használatából eredő károkért."
+      },
+      {
+        "heading": "Irányadó jog",
+        "content": "Ezeket a feltételeket a Magyarrszág törvényei szabályozzák."
+      }
+    ]
+  },
+  "obligatory": {
+  "about-us": "Rólunk",
+  "disclaimer": "Felelősségkizárás",
+  "privacy-policy": "Adatvédelmi irányelvek",
+  "terms-and-conditions": "Általános Szerződési Feltételek",
+  "select": "Hasznos oldalak"
+  },
   "drawer": {
     "buttons": {
       "home": "Home",
