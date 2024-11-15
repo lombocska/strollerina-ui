@@ -175,7 +175,7 @@
 
     /* Grid Items */
     .grid-item-a {
-        background-image: url('/static/images/bento/veer-banner.png');
+        background-image: url('/static/images/bento/about-info-square.png');
     }
 
     .grid-item-b-overlay {
@@ -225,7 +225,7 @@
     /* Responsive Adjustments */
     @media (min-width: 640px) {
         .grid-item-a {
-            background-image: url('/static/images/bento/veer-banner.png');
+            background-image: url('/static/images/bento/about-2.png');
         }
 
         .grid-item-e-overlay {
@@ -242,7 +242,7 @@
             opacity: 1;
         }
         .grid-item-a-silhouette {
-            background-image: url('/static/images/bento/veer-banner.png');
+            background-image: url('/static/images/bento/about-silhouette-3.png');
         }
 
         .grid-item-b {
