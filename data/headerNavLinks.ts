@@ -16,7 +16,7 @@ const headerNavLinks = [
       },
       {
         title: "about",
-        href: "/about",
+        href: "/about-us",
       }
 ]
 
