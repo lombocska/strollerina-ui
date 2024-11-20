@@ -97,6 +97,12 @@ export default async function RootLayout({ children, params, }: { children: Reac
             <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000000" />
             <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
             {/* <Script type="text/javascript"  src="//cdn.cookie-script.com/s/9daf868f81da50915192beccc1e1edc3.js"/> */}
+            <Script 
+                async 
+                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1946644893911245" 
+                crossOrigin='anonymous'
+                strategy="lazyOnload"
+            />
 
             <body className="bg-background antialiased ">
                 <ThemeProviders>
