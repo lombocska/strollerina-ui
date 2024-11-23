@@ -46,7 +46,7 @@ export default function Footer() {
                     <div>{` • `}</div>
                     <Link href="/gdpr">GDPR</Link>
                     <div>{` • `}</div>
-                    <CookieConsentComponent />
+                    {/* <CookieConsentComponent /> */}
                 </div>
             </div>
         </footer>
