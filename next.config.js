@@ -91,7 +91,8 @@ const nextConfig = {
             "www.cybex-online.com",
             "gravatar.com",
             "2.gravatar.com",
-            "static.shareasale.com"
+            "static.shareasale.com",
+            "www.abc-design.de"
         ],
     },
     experimental: {

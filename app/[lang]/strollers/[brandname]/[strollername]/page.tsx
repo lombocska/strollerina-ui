@@ -53,11 +53,27 @@ export default async function StrollerInfoPage({ params }: { params: { strollern
   )
 }
 
-export const metadata = genPageMetadata({
-  title: 'Stroller info page',
-  description: 'All details, images, manuals of strollers',
-  robots: {
+export async function generateMetadata({ params }: { params: { strollername?: string; brandname?: string; lang?: string } }) {
+  console.log("GenerateMetadata params:", params);
+
+  const strollernameRaw = params?.strollername || 'Stroller';
+  const brandname = params?.brandname || 'Brand';
+
+  // Remove the numeric part after the last dash (-)
+  const strollername = strollernameRaw.includes('-')
+    ? strollernameRaw.split('-').slice(0, -1).join('-')
+    : strollernameRaw;
+
+  return {
+    title: `${brandname} ${strollername} - Stroller Info`,
+    description: `Explore detailed information, images, and manuals for the ${brandname} ${strollername}. Discover everything you need to know about this stroller.`,
+    robots: {
       index: true,
       follow: true,
-  },
-})
+    },
+  };
+}
+
+
+
+
