@@ -723,6 +723,12 @@
     "terms-and-conditions": "Terms and Conditions",
     "select": "Useful pages"
   },  
+
+  "home":{
+    "welcome": "The ultimate stroller and car seat guide",
+    "sub-welcome": "Search and compare strollers and car seats",
+    "header-btn": "Search now"
+  },
   "brands": {
     "link-title": "Manufacturer website",
     "find-store-title": "Stores",

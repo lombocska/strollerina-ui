@@ -17,7 +17,7 @@ export default async function IndexPage({
     const posts = allCoreContent(sortedPosts)
     return (
     <>
-        <Main posts={posts} />
+        <Main posts={posts} dictionary={dictionary.home}/>
     </>
     )
     

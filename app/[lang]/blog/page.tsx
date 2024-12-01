@@ -26,7 +26,7 @@ export default async function BlogPage({
     }
 
     return (
-        <SectionContainer> 
+        // <SectionContainer> 
             <div className="box-border flex h-full flex-col justify-between ">
                 <div className="divide-y divide-accent-foreground dark:divide-accent xl:col-span-3 xl:row-span-2 xl:pb-0">
         <ListLayout
@@ -37,6 +37,6 @@ export default async function BlogPage({
         />
         </div>
         </div>
-        </SectionContainer>
+        // </SectionContainer>
     )
 }

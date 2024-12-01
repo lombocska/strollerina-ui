@@ -173,6 +173,12 @@
         grid-area: k;
     }
 
+
+    /* Grid Items */
+    .home-header {
+        background-image: url('/static/images/bento/home-header.png');
+    }
+
     /* Grid Items */
     .grid-item-a {
         background-image: url('/static/images/bento/about-square.png');

@@ -10,7 +10,7 @@ import 'react-grid-layout/css/styles.css'
 import 'react-resizable/css/styles.css'
 
 import { GoogleAnalytics } from '@next/third-parties/google'
-import { font } from 'config/fonts'
+import { font, fontSans, albert_font, alata_font, spartan_font } from 'config/fonts'
 import { i18n, type Locale } from "../../i18n-config"
 import "../globals.css"
 import { ThemeProviders } from './theme-providers'
@@ -26,10 +26,21 @@ export async function generateStaticParams() {
 
 export const metadata: Metadata = {
     metadataBase: new URL(siteMetadata.siteUrl),
+
     title: {
         default: siteMetadata.title,
         template: `%s | ${siteMetadata.title}`,
     },
+    keywords: [
+        'top rated infant stroller',
+        'good strollers',
+        'best prams and strollers',
+        'best infant stroller',
+        'recommended strollers for newborns',
+        'strollers reviews',
+        'strollers comparison',
+        'best affordable strollers',
+    ],
     description: siteMetadata.description,
     openGraph: {
         title: siteMetadata.title,

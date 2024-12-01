@@ -1494,6 +1494,11 @@
     "email-title": "Email",
     "email": "strollerina.find.your.stroller@gmail.com"
   },
+  "home": {
+    "welcome": "Babakocsi és autósülés lexicon",
+    "sub-welcome": "Keresd meg és hasonlítsd össze a babakocsikat és autósüléseket",
+    "header-btn": "Keresés most"
+  },
   "brands": {
     "link-title": "Gyártó honlapja",
     "find-store-title": "Boltok",

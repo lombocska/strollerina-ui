@@ -10,6 +10,7 @@ const BentoBox = ({ posts }) => {
 
     return (
         <div className="ml-[calc(-50vw+50%+10px)] w-[calc(100vw-20px)] p-4">
+            
             <section
                 className="bento grid-mobile-layout sm:grid-sm-layout xl:grid-xl-layout mx-auto grid max-w-[375px] grid-cols-2 gap-4 *:rounded-3xl *:border *:border-muted *:bg-secondary *:bg-cover *:bg-center *:bg-no-repeat sm:max-w-screen-sm xl:max-w-screen-xl xl:grid-cols-4"
                 aria-label="Personal information and activity grid"
