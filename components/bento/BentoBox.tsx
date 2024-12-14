@@ -99,7 +99,7 @@ const BentoBox = ({ posts }) => {
                 <div className="grid-item-g relative aspect-square hover:bg-none">
                     <div className="overlay grid-item-g-overlay absolute inset-0 z-0 size-full rounded-3xl bg-cover bg-center bg-no-repeat transition-opacity duration-200 xl:opacity-0" />
                     <ExternalLink
-                        href={`/blog`}
+                        href={`/reviews`}
                         aria-label="Search for reviews"
                         title="Search in reviews"
                     />

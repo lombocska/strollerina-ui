@@ -1,4 +1,4 @@
-import { AffiliateDTO, CarseatCardDTO, ManualDTO, StrollerInfoDTO } from "types";
+import { AffiliateDTO, CarseatCardDTO, ManualDTO, ReviewDTO, StrollerInfoDTO } from "types";
 
 export async function getManuals(brand: string) {
     const base_url = process.env.NEXT_PUBLIC_BACKEND_URL;
@@ -11,8 +11,30 @@ export async function getManuals(brand: string) {
  
   return res.json()
 }
+export async function getActiveBrands() {
+    const requestOptions = {
+        method: 'GET', headers: {'Content-Type': 'application/json'},
+    };
+    const base_url = process.env.NEXT_PUBLIC_BACKEND_URL;
+    let url = base_url + '/brands/active';
+    return await fetch(url, requestOptions)
+        .then((response) => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok fetching active brands');
+            }
+            // Handle the successful response here
+            return response.json()
+                .then(brands => brands.map((brand:any) => {
+                    return {
+                        name: brand.name,
+                        value: brand.value,
+                        img: brand.img
+                    }
+                }));
+        })
+}
 
-export  async function getBrands() {
+export  async function getStrollerBrands() {
   const requestOptions = {
       method: 'GET', headers: {'Content-Type': 'application/json'},
   };
@@ -33,6 +55,29 @@ export  async function getBrands() {
                   }
               }));
       })
+}
+
+export async function getCarSeatBrands() {
+    const requestOptions = {
+        method: 'GET', headers: {'Content-Type': 'application/json'},
+    };
+    const base_url = process.env.NEXT_PUBLIC_BACKEND_URL;
+    let url = base_url + '/car-seats/brands';
+    return await fetch(url, requestOptions)
+        .then((response) => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok fetching carseat brands');
+            }
+            // Handle the successful response here
+            return response.json()
+                .then(brands => brands.map((brand:any) => {
+                    return {
+                        name: brand.name,
+                        value: brand.value,
+                        img: brand.img
+                    }
+        }));
+    })
 }
 
 export async function getBrandByName(brandName:string) {
@@ -63,6 +108,19 @@ export async function getAllStrollers() {
         })
 }
 
+
+export async function getStrollersByBrand(brand:string) {
+    const base_url = process.env.NEXT_PUBLIC_BACKEND_URL;
+    let url = base_url + '/strollers/brand/' + brand;
+    console.log("Fetched url: " + url);
+    return await fetch(url)
+        .then((res) => {
+            if (!res.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return res.json();
+        })
+}
 
 export async function searchStrollers (
                             brands,
@@ -126,6 +184,24 @@ export async function getStrollerImgs (generatedId:string) {
     };
     const base_url = process.env.NEXT_PUBLIC_BACKEND_URL;
     let url = base_url + '/strollers/' + generatedId.split('-').pop() + '/imgs';
+    return await fetch(url, requestOptions)
+        .then((response) => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            // Handle the successful response here
+            console.log(response);
+            return response.json();
+        })
+}
+
+export async function getStrollerReviews (generatedId:string) {
+    console.log("Searching for stroller reviews with stroller named " + generatedId)
+    const requestOptions = {
+        method: 'GET', headers: {'Content-Type': 'application/json'},
+    };
+    const base_url = process.env.NEXT_PUBLIC_BACKEND_URL;
+    let url = base_url + '/strollers/' + generatedId.split('-').pop() + '/reviews';
     return await fetch(url, requestOptions)
         .then((response) => {
             if (!response.ok) {
@@ -254,28 +330,17 @@ export async function getAllCarSeats() {
         })
 }
 
-export async function getCarSeatBrands() {
-    const requestOptions = {
-        method: 'GET', headers: {'Content-Type': 'application/json'},
-    };
+export async function getCarSeatsByBrand(brand:string) {
     const base_url = process.env.NEXT_PUBLIC_BACKEND_URL;
-    let url = base_url + '/car-seats/brands';
-    return await fetch(url, requestOptions)
-        .then((response) => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok fetching carseat brands');
+    let url = base_url + '/car-seats/brand/' + brand;
+    return await fetch(url)
+        .then((res) => {
+            if (!res.ok) {
+                throw new Error('Network response was not ok fetching all car seats');
             }
-            // Handle the successful response here
-            return response.json()
-                .then(brands => brands.map((brand:any) => {
-                    return {
-                        name: brand.name,
-                        value: brand.value,
-                        img: brand.img
-                    }
-                }));
+            return res.json();
         })
-  }
+}
 
 export async function searchCarSeats(brands, 
                                     adacs, onlyAdacTested, 
@@ -356,6 +421,25 @@ export async function getCarseatImgs (generatedId:string) {
         })
 }
 
+export async function getCarseatReviews (generatedId:string) {
+    console.log("Searching for stroller reviews with stroller named " + generatedId)
+    const requestOptions = {
+        method: 'GET', headers: {'Content-Type': 'application/json'},
+    };
+    const base_url = process.env.NEXT_PUBLIC_BACKEND_URL;
+    let url = base_url + '/car-seats/' + generatedId.split('-').pop() + '/reviews';
+    return await fetch(url, requestOptions)
+        .then((response) => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            // Handle the successful response here
+            console.log(response);
+            return response.json();
+        })
+}
+
+
 export async function getCarseatManualLink (carseatId:number) : Promise<ManualDTO> {
     const requestOptions = {
         method: 'GET', headers: {'Content-Type': 'application/json'},
@@ -407,3 +491,151 @@ export async function getCarseatAmazonAffiliateLink (id:number) : Promise<Affili
         return null;
     }
 }
+
+
+export async function submitStrollerCarSeatReview (data) {
+    try {
+        console.log(data)
+        const base_url = process.env.NEXT_PUBLIC_BACKEND_URL;
+        let url = base_url + '/reviews';
+        const requestOptions = {
+            method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(data)
+        };
+        const response = await fetch(url, requestOptions);
+
+        // Check if the response is okay (status code 200-299)
+        if (!response.ok) {
+          throw new Error('Failed to submit form');
+        }
+    
+        // Optionally parse the response JSON if needed
+        const result = await response.json();
+        console.log('Form submitted successfully:', result);
+      } catch (error) {
+        console.error('Error submitting form:', error);
+      }
+}
+
+
+export async function submitStrollerCarSeatReviewWMissingData (data) {
+    try {
+        console.log(data)
+        const base_url = process.env.NEXT_PUBLIC_BACKEND_URL;
+        let url = base_url + '/reviews/missing-data';
+        const requestOptions = {
+            method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(data)
+        };
+        const response = await fetch(url, requestOptions);
+
+        // Check if the response is okay (status code 200-299)
+        if (!response.ok) {
+          throw new Error('Failed to submit form');
+        }
+    
+        // Optionally parse the response JSON if needed
+        const result = await response.json();
+        console.log('Form submitted successfully:', result);
+      } catch (error) {
+        console.error('Error submitting form:', error);
+      }
+}
+
+
+export async function getReviews(): Promise<ReviewDTO> {
+    const base_url = process.env.NEXT_PUBLIC_BACKEND_URL;
+    const url = `${base_url}/reviews`;
+
+    
+    const requestOptions = {
+        method: 'GET',
+        headers: { 'Content-Type': 'application/json', 'Cache-Control': 'no-store' },
+        caches: 'no-store', // Ensures no caching
+    };
+
+    try {
+        const response = await fetch(url, requestOptions);
+        if (response.status !== 200) {
+            throw new Error(`Failed to fetch reviews, status code: ${response.status}`);
+        }
+
+        const data: ReviewDTO = await response.json();
+        return data;
+    } catch (error) {
+        console.error('Fetch error:', error);
+        throw new Error('Failed to fetch reviews');
+    }
+}
+
+
+export async function getFilteredReviews(strollerBrandsQuery:string, carSeatBrandsQuery:string): Promise<ReviewDTO> {
+    const base_url = process.env.NEXT_PUBLIC_BACKEND_URL;
+    const url = `${base_url}/reviews?strollerBrands=${strollerBrandsQuery}&carSeatBrands=${carSeatBrandsQuery}`;
+
+    
+    const requestOptions = {
+        method: 'GET',
+        headers: { 'Content-Type': 'application/json'},
+    };
+
+    try {
+        const response = await fetch(url, requestOptions);
+        if (response.status !== 200) {
+            throw new Error(`Failed to fetch reviews, status code: ${response.status}`);
+        }
+
+        const data: ReviewDTO = await response.json();
+        return data;
+    } catch (error) {
+        console.error('Fetch error:', error);
+        throw new Error('Failed to fetch reviews');
+    }
+}
+
+
+export async function getCountries(): Promise<string[]> {
+    const base_url = process.env.NEXT_PUBLIC_BACKEND_URL;
+    const url = `${base_url}/generic/countries`;
+
+    const requestOptions = {
+        method: 'GET',
+        headers: { 'Content-Type': 'application/json' },
+    };
+
+    try {
+        const response = await fetch(url, requestOptions);
+        if (!response.ok) {
+            throw new Error(`Failed to fetch countries. Status: ${response.status}`);
+        }
+
+        const data: string[] = await response.json(); 
+        return data;
+    } catch (error) {
+        console.error('Error fetching countries:', error);
+        throw error;
+    }
+}
+
+
+export async function getCurrencies(): Promise<string[]> {
+    const base_url = process.env.NEXT_PUBLIC_BACKEND_URL;
+    const url = `${base_url}/generic/currencies`;
+
+    const requestOptions = {
+        method: 'GET',
+        headers: { 'Content-Type': 'application/json' },
+    };
+
+    try {
+        const response = await fetch(url, requestOptions);
+        if (!response.ok) {
+            throw new Error(`Failed to fetch currencies. Status: ${response.status}`);
+        }
+
+        const data: string[] = await response.json(); 
+        return data;
+    } catch (error) {
+        console.error('Error fetching currencies:', error);
+        throw error;
+    }
+}
+

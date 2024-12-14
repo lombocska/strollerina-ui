@@ -242,3 +242,60 @@ export interface NumberInputProps {
   max?: number;
   step?: number;
 }
+
+// Type for the Brand, assuming it's an object with an ID and a name
+type Brand = {
+  id: number;
+  name: string;
+};
+
+// Type for StrollerCarSeatReviewDTO, based on the Java DTO
+export type StrollerCarSeatReviewDTO = {
+  strollerBrand: string;
+  strollerName: string;
+  strollerImg: string;
+  strollerBuyDate: number;
+  strollerIsSecondHand: boolean;
+  strollerOriginalPrice: number | null;
+  strollerSellingPrice: number | null;
+  strollerYearsOfUsage: number;
+  strollerComment: string;
+
+  strollerFoldStars: number | null;
+  strollerReclineStars: number | null;
+  strollerHandlebarStars: number | null;
+  strollerCanopyStars: number | null;
+  strollerHarnessStars: number | null;
+  strollerCarrycotStars: number | null;
+  strollerBasketStars: number | null;
+  strollerSeatStars: number | null;
+  strollerCleaningStars: number | null;
+
+  carSeatBrand: string;
+  carSeatName: string;
+  carSeatImg: string;
+  carSeatBuyDate: number;
+  carSeatIsSecondHand: boolean;
+  carSeatOriginalPrice: number | null;
+  carSeatSellingPrice: number | null;
+  carSeatYearsOfUsage: number;
+  carSeatComment: string;
+
+  carSeatReclineStars: number | null;
+  carSeatRotationStars: number | null;
+  carSeatAirFlowStars: number | null;
+  carSeatCanopyStars: number | null;
+  carSeatHarnessStars: number | null;
+  carSeatCleaningStars: number | null;
+
+  email: string;
+  reviewerName: string;
+  createdAt: Date | null;
+};
+
+// Type for ReviewDTO, which contains lists of StrollerCarSeatReviewDTO
+export type ReviewDTO = {
+  comboReviews: StrollerCarSeatReviewDTO[];
+  standaloneStrollerReviews: StrollerCarSeatReviewDTO[];
+  standaloneCarSeatReviews: StrollerCarSeatReviewDTO[];
+};

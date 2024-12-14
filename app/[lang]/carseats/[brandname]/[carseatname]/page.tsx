@@ -2,10 +2,11 @@
 import CarseatInfo from '@/components/strollerina/cards/carseat_info';
 import Carousel from '@/components/strollerina/carousel/carousel';
 import ProductSidePanel from '@/components/strollerina/content/product_info_side_panel';
+import ReviewsContent from '@/components/strollerina/content/reviews_content';
 import { subtitle, title } from "@/components/strollerina/primitives";
 import { Video } from '@/components/strollerina/video';
 import { getDictionary } from 'get-dictionary';
-import { getBrandByName, getCarseatByGeneratedId, getCarseatImgs } from 'lib/data';
+import { getBrandByName, getCarseatByGeneratedId, getCarseatImgs, getCarseatReviews } from 'lib/data';
 import { Metadata } from 'next';
 import { Locale } from 'next/dist/compiled/@vercel/og/satori';
 
@@ -16,6 +17,8 @@ export default async function CarseatInfoPage({ params }: { params: { carseatnam
   const imgs = await getCarseatImgs(params.carseatname);
   const brand = await getBrandByName(params.brandname);
   const slideImgs = imgs && imgs.length > 0 ? imgs : [carseat.img];
+  
+  const reviews = await getCarseatReviews(params.carseatname);
 
   return (
     <>
@@ -35,6 +38,13 @@ export default async function CarseatInfoPage({ params }: { params: { carseatnam
           {/* blurDataURL={image.blurDataURL} */}
 
           <Carousel slides={slideImgs} />
+
+          {/* Reviews Section */}
+          {reviews && (
+            <div className="py-8">
+              <ReviewsContent reviews={reviews} dictionary={dictionary} isFullWidth={true}/>
+            </div>
+          )}
 
           </section>
           {/* <section className="flex flex-col  gap-4 py-8 md:py-3 max-h-[1000px]"> */}

@@ -1,7 +1,7 @@
 
 import SimpleCard from '@/components/strollerina/cards/simple_card';
 import { getDictionary } from 'get-dictionary';
-import { getBrands } from 'lib/data';
+import { getActiveBrands } from 'lib/data';
 import { Locale } from 'next/dist/compiled/@vercel/og/satori';
 import Image from "next/image";
 import Link from "next/link";
@@ -12,7 +12,7 @@ export default async function Manuals({
   params: { lang: Locale };
 }) {
 
-  const brands = await getBrands()
+  const brands = await getActiveBrands()
   const brandManualLinkBase = "/manuals/"
   const dictionary = await getDictionary(lang);
 

@@ -96,7 +96,7 @@ export const Navbar = ({dictionary}: {
                 <LocaleSwitcher />
               </NavbarItem>
               <NavbarItem className="hidden lg:flex gap-2">
-                <ObligatoryPages pages={obligatoryPages} dictionary={dictionary}/>
+                {/* <ObligatoryPages pages={obligatoryPages} dictionary={dictionary}/> */}
               </NavbarItem>
 
               <ThemeSwitch />
@@ -130,7 +130,7 @@ export const Navbar = ({dictionary}: {
                   </NavbarMenuItem>
                 ))}
                 <LocaleSwitcher />
-                <ObligatoryPages pages={obligatoryPages} dictionary={dictionary}/>
+                {/* <ObligatoryPages pages={obligatoryPages} dictionary={dictionary}/> */}
               </div>
             </NavbarMenu>
           </div>

@@ -6,7 +6,7 @@ export default function Home({ posts, dictionary }) {
         // <div className="divide-y divide-accent-foreground dark:divide-accent">
 
         <div >
-            <header className="relative mb-6 h-60 sm:h-80 xl:h-96 rounded-3xl">
+            <header className="relative mb-6 h-60 sm:h-80 xl:h-96 rounded-3xl overflow-hidden">
                 <div
                     className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat home-header rounded-3xl"
                     // style={{ backgroundImage: 'url(/path-to-your-image.jpg)' }}

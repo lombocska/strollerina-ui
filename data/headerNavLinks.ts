@@ -8,15 +8,15 @@ const headerNavLinks = [
         href: "/carseats",
       },
       {
+        title: "reviews",
+        href: "/reviews",
+      },
+      {
         title: "blog",
         href: "/blog",
       }, {
         title: "manuals",
         href: "/manuals",
-      },
-      {
-        title: "about",
-        href: "/about-us",
       }
 ]
 

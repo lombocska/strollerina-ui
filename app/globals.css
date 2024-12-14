@@ -179,6 +179,9 @@
         background-image: url('/static/images/bento/home-header.png');
     }
 
+    .register-setup-header {
+        background-image: url('/static/images/bento/register-setup-header-2.png');
+    }
     /* Grid Items */
     .grid-item-a {
         background-image: url('/static/images/bento/about-square.png');

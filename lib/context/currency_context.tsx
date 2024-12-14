@@ -10,7 +10,12 @@ const defaultState = {
 // Kontextus létrehozása
 const CurrencyContext = createContext({
   state: defaultState,
-  setCurrency: () => {}, // Alapértelmezett üres függvény
+  setCurrency: () => {}, 
+  currencyOptions : [
+    { key: 'HUF', label: 'HUF' },
+    { key: 'USD', label: 'USD' },
+    { key: 'EUR', label: 'EUR' },
+  ]
 });
 
 export const CurrencyProvider = ({ children }) => {
@@ -44,6 +49,7 @@ const getMultiplicatorForCurrency = (currency) => {
       return 1;
   }
 };
+
 
 // Kontextus használata
 export const useCurrency = () => useContext(CurrencyContext);
