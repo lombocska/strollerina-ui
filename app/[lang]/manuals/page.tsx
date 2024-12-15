@@ -5,6 +5,16 @@ import { getActiveBrands } from 'lib/data';
 import { Locale } from 'next/dist/compiled/@vercel/og/satori';
 import Image from "next/image";
 import Link from "next/link";
+import { genPageMetadata } from '../seo';
+
+export const metadata = genPageMetadata({
+  title: 'Manuals',
+  description: 'stroller and car seat manuals',
+  robots: {
+      index: true,
+      follow: true,
+  },
+})
 
 export default async function Manuals({
   params: { lang },

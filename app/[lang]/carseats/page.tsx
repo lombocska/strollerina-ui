@@ -4,15 +4,17 @@ import { getDictionary } from 'get-dictionary';
 import { getAllCarSeats, getCarSeatBrands } from 'lib/data';
 import { Metadata } from 'next';
 import { Locale } from 'next/dist/compiled/@vercel/og/satori';
+import { genPageMetadata } from '../seo';
 
 
-// export function generateMetadata(): Metadata {
-
-//   return {
-//     title: t`page-title`,
-//     description: t`page-description`
-//   };
-// }
+export const metadata = genPageMetadata({
+  title: 'Car Seats',
+  description: 'Dynamic car seat comparison',
+  robots: {
+      index: true,
+      follow: true,
+  },
+})
 
 export default async function CarSeats({
   params: { lang },
