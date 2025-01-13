@@ -9,7 +9,7 @@ import 'pliny/search/algolia.css'
 import 'react-grid-layout/css/styles.css'
 import 'react-resizable/css/styles.css'
 
-import { GoogleAnalytics } from '@next/third-parties/google'
+import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google'
 import { font, fontSans, albert_font, alata_font, spartan_font } from 'config/fonts'
 import { i18n, type Locale } from "../../i18n-config"
 import "../globals.css"
@@ -77,50 +77,28 @@ export const metadata: Metadata = {
 
 export default async function RootLayout({ children, params }: { children: React.ReactNode; params: { lang: Locale } }) {
     const dictionary = await getDictionary(params.lang);
-  
+
     return (
-      <html
-        lang={params.lang}
-        className={`${font.variable} scroll-smooth`}
-        suppressHydrationWarning
-      >
-        {/* GTM Header */}
-        <Script
-          id="google-tag-manager"
-          strategy="beforeInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-N8QDRF8F');`,
-          }}
-        />
-  
-        <body className="bg-background antialiased ">
-          {/* GTM Body */}
-          <noscript>
-            <iframe
-              src="https://www.googletagmanager.com/ns.html?id=GTM-N8QDRF8F"
-              height="0"
-              width="0"
-              style={{ display: 'none', visibility: 'hidden' }}
-            ></iframe>
-          </noscript>
-  
-          <ThemeProviders>
-            <Analytics />
-            <div className="flex flex-col min-h-screen">
-              <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>
-                <Navbar dictionary={dictionary} />
-                <main className="flex-grow container mx-auto max-w-7xl px-6 mt-[80px]">
-                  {children}
-                </main>
-                <Footer />
-              </SearchProvider>
-            </div>
-          </ThemeProviders>
+        <html
+            lang={params.lang}
+            className={`${font.variable} scroll-smooth`}
+            suppressHydrationWarning
+        >
+            <GoogleTagManager gtmId='GTM-N8QDRF8F'/>
+            <ThemeProviders>
+                <Analytics />
+                <div className="flex flex-col min-h-screen">
+                    <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>
+                        <Navbar dictionary={dictionary} />
+                        <main className="flex-grow container mx-auto max-w-7xl px-6 mt-[80px]">
+                            {children}
+                        </main>
+                        <Footer />
+                    </SearchProvider>
+                </div>
+            </ThemeProviders>
         </body>
-      </html>
+      </html >
     );
-  }
-  
+}
+
