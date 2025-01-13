@@ -77,28 +77,31 @@ export const metadata: Metadata = {
 
 export default async function RootLayout({ children, params }: { children: React.ReactNode; params: { lang: Locale } }) {
     const dictionary = await getDictionary(params.lang);
-
+  
     return (
-        <html
-            lang={params.lang}
-            className={`${font.variable} scroll-smooth`}
-            suppressHydrationWarning
-        >
-            <GoogleTagManager gtmId='GTM-N8QDRF8F'/>
-            <ThemeProviders>
-                <Analytics />
-                <div className="flex flex-col min-h-screen">
-                    <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>
-                        <Navbar dictionary={dictionary} />
-                        <main className="flex-grow container mx-auto max-w-7xl px-6 mt-[80px]">
-                            {children}
-                        </main>
-                        <Footer />
-                    </SearchProvider>
-                </div>
-            </ThemeProviders>
-        </body>
-      </html >
-    );
-}
+      <html
+        lang={params.lang}
+        className={`${font.variable} scroll-smooth`}
+        suppressHydrationWarning
+      >
 
+        <GoogleTagManager gtmId='GTM-N8QDRF8F'/>
+
+        <body className="bg-background antialiased ">
+          <ThemeProviders>
+            <Analytics />
+            <div className="flex flex-col min-h-screen">
+              <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>
+                <Navbar dictionary={dictionary} />
+                <main className="flex-grow container mx-auto max-w-7xl px-6 mt-[80px]">
+                  {children}
+                </main>
+                <Footer />
+              </SearchProvider>
+            </div>
+          </ThemeProviders>
+        </body>
+      </html>
+    );
+  }
+  
