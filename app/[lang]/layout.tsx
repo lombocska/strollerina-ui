@@ -86,7 +86,8 @@ export default async function RootLayout({ children, params }: { children: React
       >
 
         <GoogleTagManager gtmId='GTM-N8QDRF8F'/>
-
+        <GoogleAnalytics  gaId='G-M1NBC50F94'/>
+        
         <body className="bg-background antialiased ">
           <ThemeProviders>
             <Analytics />
