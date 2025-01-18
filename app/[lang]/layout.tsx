@@ -74,7 +74,7 @@ export const metadata: Metadata = {
   },
   // Include custom meta tags here
   other: {
-      'impact-site-verification': '-461713335',
+      'impact-site-verification': 'be0e4293-937f-4230-b938-660eb162efde',
   },
 }
 
