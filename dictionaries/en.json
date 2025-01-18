@@ -63,7 +63,7 @@
       "max-weight": "Max stroller weight [kg]",
       "max-weight-kid": "Max kid weight [kg]",
       "max-height-kid": "Max kid height [cm]",
-      "min-backrest": "Min backrest magasság [cm]",
+      "min-backrest": "Min backrest height [cm]",
       "only-double": "Sibling/double",
       "only-reversible": "Reversible",
       "only-recline": "Full lie-flat",

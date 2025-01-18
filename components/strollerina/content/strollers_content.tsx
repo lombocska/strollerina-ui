@@ -6,7 +6,7 @@ import { Badge } from '@nextui-org/react';
 import { getDictionary } from 'get-dictionary';
 import { useLocalStorage } from 'lib/LocalStorageAPI';
 import { useCurrency } from 'lib/context/currency_context';
-import { HeartIcon } from 'lucide-react';
+import { DiffIcon, GitCompareIcon, HeartIcon } from 'lucide-react';
 import { useTheme } from 'next-themes';
 import { Locale } from 'next/dist/compiled/@vercel/og/satori';
 import Link from 'next/link';
@@ -66,7 +66,7 @@ export default  function StrollersContent({ initialData, brands, dictionary, lan
                     {selectedStrollers && (
                         <Link href={{ pathname:  "/" + lang + "/compare", query: { ids: encodedIds } }}>
                             <Badge color="warning" content={selectedStrollers?.size} isInvisible={false} shape="circle">
-                                <HeartIcon className="fill-current" size={25}/>
+                                <DiffIcon className="fill-current" size={25}/>
                             </Badge>
                         </Link>
                     )}

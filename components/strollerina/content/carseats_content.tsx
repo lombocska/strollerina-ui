@@ -14,7 +14,7 @@ import CounterChip from '../filter/helper/counter_chip';
 import { CarSeatSortingSelect } from '../sorting_select';
 import Link from 'next/link';
 import { Badge } from '@nextui-org/react';
-import { HeartIcon } from 'lucide-react';
+import { DiffIcon, HeartIcon } from 'lucide-react';
 
 export default  function CarseatsContent({ initialData, brands, dictionary, lang}: 
     {
@@ -56,7 +56,7 @@ export default  function CarseatsContent({ initialData, brands, dictionary, lang
                     {selectedCarseats && (
                         <Link href={{ pathname:  "/" + lang + "/compare", query: { ids: encodedIds, type: 'carseat' } }}>
                             <Badge color="warning" content={selectedCarseats?.size} isInvisible={false} shape="circle">
-                                <HeartIcon className="fill-current" size={25}/>
+                                <DiffIcon className="fill-current" size={25}/>
                             </Badge>
                         </Link>
                     )}
