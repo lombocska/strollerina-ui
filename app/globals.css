@@ -130,7 +130,7 @@
     }
 
     .grid-xl-layout {
-        grid-template-areas: 'a a b c' 'd e e c' 'h f f g' 'h i j k';
+        grid-template-areas: 'b d a c' 'y e e c' 'h f f g' 'h i j k';
     }
 
     @media (min-width: 1280px) {
@@ -172,6 +172,10 @@
     .grid-item-k {
         grid-area: k;
     }
+    .grid-item-y {
+        grid-area: y;
+    }
+    
 
 
     /* Grid Items */
@@ -231,6 +235,10 @@
         background-image: url('/static/images/bento/about-info-square.png');
     }
 
+    .grid-item-y-overlay {
+        background-image: url('/static/images/bento/partner-w-square.png');
+    }
+
     /* Responsive Adjustments */
     @media (min-width: 640px) {
         .grid-item-a {
@@ -280,6 +288,10 @@
 
         .grid-item-k {
             background-image: url('/static/images/bento/about-info-square.png');
+        }
+
+        .grid-item-y {
+            background-image: url('/static/images/bento/partner-w-square.png');
         }
     }
 }

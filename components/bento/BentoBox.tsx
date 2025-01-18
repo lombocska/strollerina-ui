@@ -10,7 +10,7 @@ const BentoBox = ({ posts }) => {
 
     return (
         <div className="ml-[calc(-50vw+50%+10px)] w-[calc(100vw-20px)] p-4">
-            
+
             <section
                 className="bento grid-mobile-layout sm:grid-sm-layout xl:grid-xl-layout mx-auto grid max-w-[375px] grid-cols-2 gap-4 *:rounded-3xl *:border *:border-muted *:bg-secondary *:bg-cover *:bg-center *:bg-no-repeat sm:max-w-screen-sm xl:max-w-screen-xl xl:grid-cols-4"
                 aria-label="Personal information and activity grid"
@@ -19,22 +19,19 @@ const BentoBox = ({ posts }) => {
                     className="first grid-item-a aspect-square rounded-3xl border bg-cover bg-center bg-no-repeat sm:aspect-[2.1/1] xl:aspect-auto "
                     role="img"
                     aria-label="Introduction"
-                    // rel="preload"
-                    // target="_blank"
-                    // href={"https://shareasale.com/r.cfm?b=2001933&u=4300111&m=124094&urllink=&afftrack="}
+                // rel="preload"
+                // target="_blank"
+                // href={"https://shareasale.com/r.cfm?b=2001933&u=4300111&m=124094&urllink=&afftrack="}
                 >
                     <div className="overlay grid-item-a-silhouette size-full rounded-3xl bg-cover bg-center bg-no-repeat opacity-0 transition-opacity duration-200" />
                     <p className="sr-only">
-                        {/* Hey, I'm Jason! I'm a freelance frontend web developer and cybersecurity CTF
-                        player from Los Angeles, and I go by aliases enscribe and jktrn online. I'm
-                        currently interested in open-source intelligence, fundamental UI/UX design,
-                        data science and rhythm games! */}
+
                     </p>
                 </div>
 
                 <div className="grid-item-b relative aspect-square hover:bg-none">
                     <div className="overlay grid-item-b-overlay absolute inset-0 z-0 size-full rounded-3xl bg-cover bg-center bg-no-repeat transition-opacity duration-200 xl:opacity-0" />
-                    
+
                     <ExternalLink
                         href={`/strollers`}
                         aria-label="Search for strollers"
@@ -60,14 +57,13 @@ const BentoBox = ({ posts }) => {
 
                 <div className="grid-item-d relative aspect-square hover:bg-none">
                     <div className="overlay grid-item-d-overlay absolute inset-0 z-0 size-full rounded-3xl bg-cover bg-center bg-no-repeat transition-opacity duration-200 xl:opacity-0" />
-                    
+
                     <ExternalLink
                         href={`/carseats`}
                         aria-label="Search for car seats"
                         title="Compare your car seats"
                     />
                 </div>
-
 
 
                 <div className="grid-item-e relative flex aspect-[6/5] items-start overflow-hidden p-4 hover:bg-none sm:aspect-[2.1/1] sm:items-center xl:aspect-auto">
@@ -96,6 +92,16 @@ const BentoBox = ({ posts }) => {
                     />
                 </div>
 
+                <div className="grid-item-y relative aspect-square hover:bg-none">
+                    <div className="overlay grid-item-y-overlay absolute inset-0 z-0 size-full rounded-3xl bg-cover bg-center bg-no-repeat transition-opacity duration-200 xl:opacity-0" />
+                    <ExternalLink
+                        href={`/reviews`}
+                        aria-label="Search for reviews"
+                        title="Search in reviews"
+                    />
+
+                </div>
+
                 <div className="grid-item-g relative aspect-square hover:bg-none">
                     <div className="overlay grid-item-g-overlay absolute inset-0 z-0 size-full rounded-3xl bg-cover bg-center bg-no-repeat transition-opacity duration-200 xl:opacity-0" />
                     <ExternalLink
@@ -103,8 +109,7 @@ const BentoBox = ({ posts }) => {
                         aria-label="Search for reviews"
                         title="Search in reviews"
                     />
-                        {/* <SpotifyPresence lanyard={lanyard.data} /> */}
-                    
+
                 </div>
 
                 <div className="grid-item-h aspect-[1/2.1] xl:aspect-auto" aria-hidden="true" />
@@ -124,7 +129,7 @@ const BentoBox = ({ posts }) => {
                 </div>  */}
                 <div className="grid-item-i relative aspect-square hover:bg-none">
                     <div className="overlay grid-item-i-overlay absolute inset-0 z-0 size-full rounded-3xl bg-cover bg-center bg-no-repeat transition-opacity duration-200 xl:opacity-0" />
-                    
+
                     <ExternalLink
                         href={`/strollers`}
                         aria-label="Search for strollers"

@@ -35,8 +35,9 @@ export const alata_font = Alata({
 
 
 export const spartan_font = League_Spartan({
-  weight: '400',
-  subsets: ['latin'],
+  weight: ['300', '400', '700'], // Multiple weights
+  style: ['normal'], // Add italic styles
+  subsets: ['latin'], // Subset
   display: 'swap',
-  variable: '--font-albert-sans',
+  variable: '--font-league-spartan',
 })

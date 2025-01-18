@@ -23,56 +23,59 @@ import { getDictionary } from 'get-dictionary'
 export async function generateStaticParams() {
     return i18n.locales.map((locale) => ({ lang: locale }));
 }
-
 export const metadata: Metadata = {
-    metadataBase: new URL(siteMetadata.siteUrl),
+  metadataBase: new URL(siteMetadata.siteUrl),
 
-    title: {
-        default: siteMetadata.title,
-        template: `%s | ${siteMetadata.title}`,
-    },
-    keywords: [
-        'top rated infant stroller',
-        'good strollers',
-        'best prams and strollers',
-        'best infant stroller',
-        'recommended strollers for newborns',
-        'strollers reviews',
-        'strollers comparison',
-        'best affordable strollers',
-    ],
-    description: siteMetadata.description,
-    openGraph: {
-        title: siteMetadata.title,
-        description: siteMetadata.description,
-        url: './',
-        siteName: siteMetadata.title,
-        images: [siteMetadata.socialBanner],
-        locale: 'en_US',
-        type: 'website',
-    },
-    alternates: {
-        canonical: './',
-        types: {
-            'application/rss+xml': `${siteMetadata.siteUrl}/feed.xml`,
-        },
-    },
-    robots: {
-        index: true,
-        follow: true,
-        googleBot: {
-            index: true,
-            follow: true,
-            'max-video-preview': -1,
-            'max-image-preview': 'large',
-            'max-snippet': -1,
-        },
-    },
-    twitter: {
-        title: siteMetadata.title,
-        card: 'summary_large_image',
-        images: [siteMetadata.socialBanner],
-    },
+  title: {
+      default: siteMetadata.title,
+      template: `%s | ${siteMetadata.title}`,
+  },
+  keywords: [
+      'top rated infant stroller',
+      'good strollers',
+      'best prams and strollers',
+      'best infant stroller',
+      'recommended strollers for newborns',
+      'strollers reviews',
+      'strollers comparison',
+      'best affordable strollers',
+  ],
+  description: siteMetadata.description,
+  openGraph: {
+      title: siteMetadata.title,
+      description: siteMetadata.description,
+      url: './',
+      siteName: siteMetadata.title,
+      images: [siteMetadata.socialBanner],
+      locale: 'en_US',
+      type: 'website',
+  },
+  alternates: {
+      canonical: './',
+      types: {
+          'application/rss+xml': `${siteMetadata.siteUrl}/feed.xml`,
+      },
+  },
+  robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+          index: true,
+          follow: true,
+          'max-video-preview': -1,
+          'max-image-preview': 'large',
+          'max-snippet': -1,
+      },
+  },
+  twitter: {
+      title: siteMetadata.title,
+      card: 'summary_large_image',
+      images: [siteMetadata.socialBanner],
+  },
+  // Include custom meta tags here
+  other: {
+      'impact-site-verification': '-461713335',
+  },
 }
 
 export default async function RootLayout({ children, params }: { children: React.ReactNode; params: { lang: Locale } }) {
