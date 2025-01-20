@@ -122,11 +122,11 @@
 
     /* Bento box layouts */
     .grid-mobile-layout {
-        grid-template-areas: 'a a' 'a a' 'b b' 'b b' 'e e' 'h i' 'h c' 'k c' 'd d' 'd d' 'g g' 'g g' 'f f' 'j j' 'j j';
+        grid-template-areas: 'a a' 'a a' 'b b' 'b b' 'e e' 'h i' 'h c' 'k c' 'd d' 'd d' 'g g' 'g g' 'f f' 'j j' 'j j' 'y y';
     }
 
     .grid-sm-layout {
-        grid-template-areas: 'a a' 'b d' 'e e' 'j g' 'h i' 'h c' 'k c' 'f f';
+        grid-template-areas: 'a a' 'b d' 'e e' 'y g' 'h i' 'h c' 'k c' 'f f';
     }
 
     .grid-xl-layout {
@@ -180,15 +180,24 @@
 
     /* Grid Items */
     .home-header {
-        background-image: url('/static/images/bento/home-header.png');
+        background-image: url('/static/images/bento/home-header-purple-flowers.png');
     }
 
-    .register-setup-header {
-        background-image: url('/static/images/bento/register-setup-header-2.png');
+    .reviews-header {
+        background-image: url('/static/images/bento/reviews-header.png');
     }
+
+    .manuals-header {
+        background-image: url('/static/images/bento/manuals-header.png');
+    }
+
+    .compare-header {
+        background-image: url('/static/images/bento/compare-header.png');
+    }
+
     /* Grid Items */
     .grid-item-a {
-        background-image: url('/static/images/bento/about-square.png');
+        background-image: url('/static/images/bento/reviews-square-inverz.png');
     }
 
     .grid-item-b-overlay {
@@ -242,7 +251,7 @@
     /* Responsive Adjustments */
     @media (min-width: 640px) {
         .grid-item-a {
-            background-image: url('/static/images/bento/about-2.png');
+            background-image: url('/static/images/bento/reviews-square-inverz.png');
         }
 
         .grid-item-e-overlay {
@@ -258,8 +267,8 @@
         .bento:hover > *:not(.first):hover .overlay {
             opacity: 1;
         }
-        .grid-item-a-silhouette {
-            background-image: url('/static/images/bento/about-silhouette-3.png');
+        .grid-item-a-overlay {
+            background-image: url('/static/images/bento/reviews-square-overlay.png');
         }
 
         .grid-item-b {

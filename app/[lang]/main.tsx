@@ -21,7 +21,7 @@ export default function Home({ posts, dictionary }) {
                     </p>
                     <Link
                         href="/strollers"
-                        className="mt-4 inline-block rounded-lg bg-primary px-4 py-2 text-sm font-medium text-white hover:bg-primary-dark sm:mt-6 sm:px-6 sm:py-3 sm:text-lg"
+                        className="mt-4 inline-block rounded-lg bg-[#818bb9] px-4 py-2 text-sm font-medium text-white hover:bg-primary-dark sm:mt-6 sm:px-6 sm:py-3 sm:text-lg"
                     >
                         {dictionary["header-btn"]}
                     </Link>

@@ -584,6 +584,9 @@
     "main-text" : "Find here the manual of your strollers or car seats.",
     "brands": "Choose a brand to get your stroller's manual"
   }, 
+  "compare": {
+    "title": "Compare"
+  },
   "reviews": {
     "main-text": "Reviews",
     "brands": "Let's talk about brands, choose one to see it's history and warranty details...",

@@ -1,29 +1,32 @@
 import React from "react";
-import { Input } from "@nextui-org/input";
-import { maxHeaderSize } from "http";
 import { Chip } from "@nextui-org/chip";
 import { getDictionary } from "get-dictionary";
 
-export default function Chips({json, dictionary}: {
-    json:any, 
-    dictionary: Awaited<ReturnType<typeof getDictionary>>["strollers"]["tags"]["main-card"]["chip"]
+export default function Chips({ json, dictionary, commonTags }: {
+  json: any; 
+  dictionary: Awaited<ReturnType<typeof getDictionary>>["strollers"]["tags"]["main-card"]["chip"];
+  commonTags: string[];
 }) {
   
-     const renderChips = () => {
-        return Object.entries(json).map(([key, value]) => {
-            // Stringify complex values for display purposes
-            const displayValue = value == null ? "" : Array.isArray(value) ? value.join(", ") : value.toString();
-            return (
-                <Chip key={key} className="m-1" variant="bordered">
-                    {dictionary[displayValue]}
-                </Chip>
-            );
-        });
-};
+  const renderChips = () => {
+    return json.map((tag: string, index: number) => {
+      const isCommonTag = commonTags && commonTags.includes(tag);
 
-return (
+      const chipClass = isCommonTag 
+        ? 'bg-[#d2ada7]'
+        : ''; 
+
+      return (
+        <Chip key={index} className={`m-1 ${chipClass}`} variant="bordered">
+          {dictionary[tag] || tag}
+        </Chip>
+      );
+    });
+  };
+
+  return (
     <div className="flex flex-wrap">
-        {renderChips()}
+      {renderChips()}
     </div>
-);
+  );
 }

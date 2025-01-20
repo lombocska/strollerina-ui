@@ -8,7 +8,7 @@ export default function ReviewHeaderContent({ dictionary, headerLabelKey, button
         <>
         <header className="relative mb-6 h-60 sm:h-80 xl:h-96 rounded-3xl overflow-hidden">
             <div
-                className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat register-setup-header rounded-3xl"
+                className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat reviews-header rounded-3xl"
                 aria-hidden="true"
             />
             <div className="relative z-10 flex h-full flex-col items-center justify-center p-4 text-center text-white">

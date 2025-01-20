@@ -13,10 +13,11 @@ import { useEffect, useState } from 'react';
 import { BrandItem, CarseatCardDTO, ManualDTO } from 'types';
 import Chips from '../chips';
 
-const CarseatInfo = ({ data, dictionary }: 
+const CarseatInfo = ({ data, dictionary, commonTags }: 
     { 
         data: CarseatCardDTO; 
         dictionary: Awaited<ReturnType<typeof getDictionary>>["carseats"]
+        commonTags: string[];
     }) => {
     
 
@@ -151,7 +152,7 @@ const CarseatInfo = ({ data, dictionary }:
                     <AccordionItem key="carseat-info-accordion-5" 
                             aria-label={dictionary["table"].titles.seat}
                             title={dictionary["table"].titles.seat} >
-                        <Chips json={data.tags} dictionary={dictionary["tags"]['main-card'].chip}/>
+                        <Chips json={data.tags} dictionary={dictionary["tags"]['main-card'].chip} commonTags={commonTags}/>
                     </AccordionItem>
                 </Accordion>
 

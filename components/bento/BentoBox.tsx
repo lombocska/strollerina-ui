@@ -15,7 +15,17 @@ const BentoBox = ({ posts }) => {
                 className="bento grid-mobile-layout sm:grid-sm-layout xl:grid-xl-layout mx-auto grid max-w-[375px] grid-cols-2 gap-4 *:rounded-3xl *:border *:border-muted *:bg-secondary *:bg-cover *:bg-center *:bg-no-repeat sm:max-w-screen-sm xl:max-w-screen-xl xl:grid-cols-4"
                 aria-label="Personal information and activity grid"
             >
-                <div
+
+                <div className="grid-item-a relative aspect-square hover:bg-none">
+                    <div className="overlay grid-item-a-overlay absolute inset-0 z-0 size-full rounded-3xl bg-cover bg-center bg-no-repeat transition-opacity duration-200 xl:opacity-0" />
+                    <ExternalLink
+                        href={`/reviews`}
+                        aria-label="Search for reviews"
+                        title="Search in reviews"
+                    />
+
+                </div>
+                {/* <div
                     className="first grid-item-a aspect-square rounded-3xl border bg-cover bg-center bg-no-repeat sm:aspect-[2.1/1] xl:aspect-auto "
                     role="img"
                     aria-label="Introduction"
@@ -27,7 +37,7 @@ const BentoBox = ({ posts }) => {
                     <p className="sr-only">
 
                     </p>
-                </div>
+                </div> */}
 
                 <div className="grid-item-b relative aspect-square hover:bg-none">
                     <div className="overlay grid-item-b-overlay absolute inset-0 z-0 size-full rounded-3xl bg-cover bg-center bg-no-repeat transition-opacity duration-200 xl:opacity-0" />

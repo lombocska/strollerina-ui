@@ -13,9 +13,10 @@ import { AffiliateDTO, BrandItem, ManualDTO, StrollerInfoDTO } from 'types';
 import Chips from '../chips';
 import { InfoTable } from '../table';
 
-const StrollerInfo = ({ data, dictionary }: { 
+const StrollerInfo = ({ data, dictionary, commonTags }: { 
     data: StrollerInfoDTO; 
-    dictionary: Awaited<ReturnType<typeof getDictionary>>["strollers"]
+    dictionary: Awaited<ReturnType<typeof getDictionary>>["strollers"];
+    commonTags: string[];
 }) => {
     const open_dimension_columns = siteConfig.stroller_info_open_dimensions_columns;
     const closed_dimension_columns = siteConfig.stroller_info_closed_dimensions_columns;
@@ -31,7 +32,7 @@ const StrollerInfo = ({ data, dictionary }: {
     useEffect(() => {
         getStrollerManualLink(data.id).then(setManual); 
         getStrollerAnbBabyAffiliateLink(data.id).then(setWhereToBuyLinks);   
-        getBrandByName(data.brandValue).then(setBrand);   
+        getBrandByName(data.brandValue).then(setBrand);  
     }, []); 
 
     return (
@@ -106,7 +107,7 @@ const StrollerInfo = ({ data, dictionary }: {
                         aria-label={dictionary["table"]["titles"]["tags"]} 
                         title={dictionary["table"]["titles"]["tags"]} 
                     >
-                        <Chips json={data.tags} dictionary={dictionary["tags"]["main-card"]["chip"]}/>
+                        <Chips json={data.tags} dictionary={dictionary["tags"]["main-card"]["chip"]} commonTags={commonTags}/>
                     </AccordionItem>
 
                     {whereToBuyLinks && whereToBuyLinks.length > 0 &&

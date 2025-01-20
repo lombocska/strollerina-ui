@@ -6,7 +6,7 @@ import { Badge } from '@nextui-org/react';
 import { getDictionary } from 'get-dictionary';
 import { useLocalStorage } from 'lib/LocalStorageAPI';
 import { useCurrency } from 'lib/context/currency_context';
-import { DiffIcon, GitCompareIcon, HeartIcon } from 'lucide-react';
+import { ChevronsRightLeft, DiffIcon, GitCompareIcon, HeartIcon, Search } from 'lucide-react';
 import { useTheme } from 'next-themes';
 import { Locale } from 'next/dist/compiled/@vercel/og/satori';
 import Link from 'next/link';
@@ -73,7 +73,7 @@ export default function StrollersContent({ initialData, brands, dictionary, lang
             setDropdownOpen(false);
         }
     };
-    
+
 
     return (
         <>
@@ -89,9 +89,9 @@ export default function StrollersContent({ initialData, brands, dictionary, lang
                             <SortingSelect strollers={strollers} setStrollers={setStrollers} dictionary={dictionary} />
 
                             {selectedStrollers && (
-                                <Link href={{ pathname: "/" + lang + "/compare", query: { ids: encodedIds } }}>
+                                <Link className='hidden lg:block' href={{ pathname: "/" + lang + "/compare", query: { ids: encodedIds } }}>
                                     <Badge color="warning" content={selectedStrollers?.size} isInvisible={false} shape="circle">
-                                        <DiffIcon className="fill-current" size={25} />
+                                        <ChevronsRightLeft  size={30} />
                                     </Badge>
                                 </Link>
                             )}
@@ -107,7 +107,7 @@ export default function StrollersContent({ initialData, brands, dictionary, lang
                             />
 
                             {/* Dropdown with search results */}
-                            {isDropdownOpen && searchResults  && (
+                            {isDropdownOpen && searchResults && (
                                 <ul className="absolute z-10 w-full bg-white border border-gray-300 rounded-lg shadow-md mt-2">
                                     {searchResults.map((stroller) => (
                                         <li key={stroller.id} className="p-2 hover:bg-gray-100">
@@ -152,8 +152,45 @@ export default function StrollersContent({ initialData, brands, dictionary, lang
                 />
             </aside>
 
-            <div className="lg:hidden fixed bottom-4 right-4 z-10">
-                <Button onPress={onOpen} className={`${theme === 'dark' ? 'dark:bg-[#92987F] dark:text-black' : 'bg-[#92987F] text-white'} shadow`}>{dictionary["common"].search}</Button>
+            <div className="lg:hidden fixed right-0 top-1/2 z-99 flex flex-col gap-4 transform -translate-y-1/2">
+                <Button
+                    isIconOnly
+                    radius="none"
+                    size="lg"
+                    aria-label="search"
+                    onPress={onOpen}
+                    className={`${theme === 'dark' ? 'dark:bg-[#92987F] dark:text-black' : 'bg-[#92987F] text-white'
+                        } shadow rounded-l-full hover:scale-110 transition-transform`}
+                >
+                    <Search />
+                </Button>
+                {selectedStrollers && (
+                    <div className="lg:hidden fixed right-0 top-[calc(50%+4rem)] z-99" id="compare">
+                        <Badge
+                            color="warning"
+                            content={selectedStrollers?.size} // Number of selected strollers
+                            isInvisible={selectedStrollers?.size === 0} // Hide badge if no strollers
+                            shape="circle"
+                        >
+                            <Button
+                                isIconOnly
+                                radius="none"
+                                size="lg"
+                                aria-label="compare"
+                                onPress={() => {
+                                    // Redirect to the compare page with the selected strollers
+                                    const query = { pathname: `/${lang}/compare`, query: { ids: encodedIds } };
+                                    window.location.href = `${query.pathname}?${new URLSearchParams(query.query).toString()}`;
+                                }}
+                                className={`${theme === 'dark' ? 'dark:bg-[#92987F] dark:text-black' : 'bg-[#92987F] text-white'
+                                    } shadow rounded-l-full`}
+                            >
+                                <ChevronsRightLeft />
+                            </Button>
+                        </Badge>
+                    </div>
+                )}
+
             </div>
 
             <Modal isOpen={isOpen} onOpenChange={onOpenChange}>

@@ -10,6 +10,8 @@ import Image from 'next/image';
 import CarseatInfo from './carseat_info';
 import { Button } from '@nextui-org/button';
 import { Trash2Icon } from 'lucide-react';
+import { useLocalStorage } from 'lib/LocalStorageAPI';
+import CompareHeaderContent from '../headers/compare-header';
 
 const InfoComparison = ({ dictionary, lang }) => {
     const searchParams = useSearchParams();
@@ -19,6 +21,8 @@ const InfoComparison = ({ dictionary, lang }) => {
     const [type, setType] = useState<string>('stroller');
     const [selectedStrollers, setSelectedStrollers] = useState<StrollerInfoDTO[]>([]);
     const [selectedCarseats, setSelectedCarseats] = useState<CarseatCardDTO[]>([]);
+    const [commonTagsStroller, setCommonTagsStroller] = useLocalStorage("stroller/common-tags", []);
+    const [commonTagsCarseat, setCommonTagsCarseat] = useLocalStorage("carseat/common-tags", []);
 
     useEffect(() => {
         const idsParam = searchParams.get('ids')?.split(',') || [];
@@ -28,12 +32,18 @@ const InfoComparison = ({ dictionary, lang }) => {
     }, [searchParams]);
 
     useEffect(() => {
+
         const fetchStrollers = async () => {
             if (ids.length > 0) {
                 const strollers = await Promise.all(ids.map(id => getStrollerByGeneratedId(id)));
                 setSelectedStrollers(strollers);
+                // Identify common tags
+                const allTags = strollers.map(stroller => stroller.tags);
+                const sharedTags = allTags.reduce((acc, tags) => acc.filter(tag => tags.includes(tag)), allTags[0] || []);
+                setCommonTagsStroller(sharedTags);
             } else {
                 setSelectedStrollers([]);
+                setCommonTagsStroller([]);
             }
         };
 
@@ -41,8 +51,13 @@ const InfoComparison = ({ dictionary, lang }) => {
             if (ids.length > 0) {
                 const carseats = await Promise.all(ids.map(id => getCarseatByGeneratedId(id)));
                 setSelectedCarseats(carseats);
+                // Identify common tags
+                const allTags = carseats.map(carseat => carseat.tags);
+                const sharedTags = allTags.reduce((acc, tags) => acc.filter(tag => tags.includes(tag)), allTags[0] || []);
+                setCommonTagsCarseat(sharedTags);
             } else {
                 setSelectedCarseats([]);
+                setCommonTagsCarseat([]);
             }
         };
 
@@ -68,37 +83,53 @@ const InfoComparison = ({ dictionary, lang }) => {
     };
 
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {type === 'stroller' ?
-                selectedStrollers.map((stroller, index) => (
-                    <div key={index} className="flex flex-col items-center">
-                        <Image
-                            loading="lazy"
-                            alt="stroller manual brand image"
-                            src={stroller.img}
-                            width={200} height={200} />
-                        <Button onClick={() => handleRemove(stroller.generatedId)} className="my-4">
-                            <Trash2Icon />
-                        </Button>
-                        <StrollerInfo data={stroller} dictionary={dictionary.strollers} />
-                    </div>
-                ))
-                :
-                selectedCarseats.map((carseat, index) => (
-                    <div key={index} className="flex flex-col items-center">
-                        <Image
-                            loading="lazy"
-                            alt="carseat manual brand image"
-                            src={carseat.img}
-                            width={300} height={200} />
-                        <Button onClick={() => handleRemove(carseat.generatedId)} className="my-4">
-                            <Trash2Icon />
-                        </Button>
-                        <CarseatInfo data={carseat} dictionary={dictionary.carseats} />
-                    </div>
-                ))
-            }
-        </div>
+        <>
+            <CompareHeaderContent dictionary={dictionary} headerLabelKey={'title'} />
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {type === 'stroller'
+                    ? selectedStrollers.map((stroller, index) => (
+                        <div key={index} className="flex flex-col items-center min-h-[300px]">
+                            <div className="w-[200px] h-[300px] overflow-hidden">
+                                <Image
+                                    loading="lazy"
+                                    alt="stroller image"
+                                    src={stroller.img}
+                                    width={200}
+                                    height={200}
+                                    className="object-cover"
+                                />
+                            </div>
+                            <Button onClick={() => handleRemove(stroller.generatedId)} className="my-4">
+                                <Trash2Icon />
+                            </Button>
+                            <div className="w-full max-w-full">
+                                <StrollerInfo data={stroller} dictionary={dictionary.strollers} commonTags={commonTagsStroller} />
+                            </div>
+                        </div>
+                    ))
+                    : selectedCarseats.map((carseat, index) => (
+                        <div key={index} className="flex flex-col items-center min-h-[300px]">
+                            <div className="w-[200px] h-[300px] overflow-hidden">
+                                <Image
+                                    loading="lazy"
+                                    alt="carseat image"
+                                    src={carseat.img}
+                                    width={200}
+                                    height={300}
+                                    className="object-cover" // Crop to fit the dimensions
+                                />
+                            </div>
+                            <Button onClick={() => handleRemove(carseat.generatedId)} className="my-4">
+                                <Trash2Icon />
+                            </Button>
+                            <div className="w-full max-w-full">
+                                <CarseatInfo data={carseat} dictionary={dictionary.carseats} commonTags={commonTagsCarseat} />
+                            </div>
+                        </div>
+                    ))
+                }
+            </div>
+        </>
     );
 };
 

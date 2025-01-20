@@ -14,7 +14,7 @@ import CounterChip from '../filter/helper/counter_chip';
 import { CarSeatSortingSelect } from '../sorting_select';
 import Link from 'next/link';
 import { Badge } from '@nextui-org/react';
-import { DiffIcon, HeartIcon } from 'lucide-react';
+import { ChevronsRightLeft, DiffIcon, HeartIcon, Search } from 'lucide-react';
 import { searchCarseatByName } from 'lib/data';
 
 export default function CarseatsContent({ initialData, brands, dictionary, lang }:
@@ -75,11 +75,13 @@ export default function CarseatsContent({ initialData, brands, dictionary, lang 
                             <CounterChip title={"carseats"} number={carseats.length} dictionary={dictionary} />
                             <CarSeatSortingSelect carseats={carseats} setCarseats={setCarseats} dictionary={dictionary} />
                             {selectedCarseats && (
-                                <Link href={{ pathname: "/" + lang + "/compare", query: { ids: encodedIds, type: 'carseat' } }}>
+                                
+                                <Link className='hidden lg:block' href={{ pathname: "/" + lang + "/compare", query: { ids: encodedIds, type: 'carseat' } }}>
                                     <Badge color="warning" content={selectedCarseats?.size} isInvisible={false} shape="circle">
-                                        <DiffIcon className="fill-current" size={25} />
+                                        <ChevronsRightLeft size={25} />
                                     </Badge>
                                 </Link>
+                                
                             )}
                         </div>
 
@@ -134,9 +136,47 @@ export default function CarseatsContent({ initialData, brands, dictionary, lang 
                 />
             </aside>
 
-            <div className="lg:hidden fixed bottom-10 right-7 z-10">
-                <Button onPress={onOpen} className={`${theme === 'dark' ? 'dark:bg-white dark:text-black' : 'bg-[#92987F] text-white'} shadow`}>{dictionary["common"].search}</Button>
+            <div className="lg:hidden fixed right-0 top-1/2 z-99 flex flex-col gap-4 transform -translate-y-1/2">
+                <Button
+                    isIconOnly
+                    radius="none"
+                    size="lg"
+                    aria-label="search"
+                    onPress={onOpen}
+                    className={`${theme === 'dark' ? 'dark:bg-[#92987F] dark:text-black' : 'bg-[#92987F] text-white'
+                        } shadow rounded-l-full hover:scale-110 transition-transform`}
+                >
+                    <Search />
+                </Button>
+                {selectedCarseats && (
+                    <div className="lg:hidden fixed right-0 top-[calc(50%+4rem)] z-99" id="compare">
+                        <Badge
+                            color="warning"
+                            content={selectedCarseats?.size} // Number of selected strollers
+                            isInvisible={selectedCarseats?.size === 0} // Hide badge if no strollers
+                            shape="circle"
+                        >
+                            <Button
+                                isIconOnly
+                                radius="none"
+                                size="lg"
+                                aria-label="compare"
+                                onPress={() => {
+                                    // Redirect to the compare page with the selected strollers
+                                    const query = { pathname: `/${lang}/compare`, query: { ids: encodedIds , type: 'carseat'} };
+                                    window.location.href = `${query.pathname}?${new URLSearchParams(query.query).toString()}`;
+                                }}
+                                className={`${theme === 'dark' ? 'dark:bg-[#92987F] dark:text-black' : 'bg-[#92987F] text-white'
+                                    } shadow rounded-l-full`}
+                            >
+                                <ChevronsRightLeft />
+                            </Button>
+                        </Badge>
+                    </div>
+                )}
+
             </div>
+
 
             <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
                 <ModalContent className="overflow-y-auto max-h-screen">
