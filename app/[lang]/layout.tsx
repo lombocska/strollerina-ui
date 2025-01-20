@@ -18,6 +18,7 @@ import Script from 'next/script'
 import CookieConsentComponent from '@/components/cookieconsent/CookieConsent'
 import { Navbar } from '@/components/strollerina/navbar'
 import { getDictionary } from 'get-dictionary'
+import GoogleAdsense from './GoogleAdsense'
 // import CookieConsentComponent from '../components/CookieConsent';
 
 export async function generateStaticParams() {
@@ -86,14 +87,10 @@ export default async function RootLayout({ children, params }: { children: React
         lang={params.lang}
         className={`${font.variable} scroll-smooth`}
         suppressHydrationWarning
-      >
-
-        {/* <GoogleTagManager gtmId='GTM-N8QDRF8F'/> */}
-        <GoogleAnalytics  gaId='G-M1NBC50F94'/>
-        
+      >        
         <body className="bg-background antialiased ">
           <ThemeProviders>
-            <Analytics />
+            {/* <Analytics /> */}
             <div className="flex flex-col min-h-screen">
               <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>
                 <Navbar dictionary={dictionary} />
@@ -105,6 +102,9 @@ export default async function RootLayout({ children, params }: { children: React
             </div>
           </ThemeProviders>
         </body>
+        {/* <GoogleTagManager gtmId='GTM-N8QDRF8F'/> */}
+        <GoogleAnalytics  gaId='G-M1NBC50F94'/>
+        <GoogleAdsense pId="pub-1946644893911245" />
       </html>
     );
   }
