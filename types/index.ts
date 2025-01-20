@@ -40,6 +40,24 @@ export type StrollerCard = {
   maxAge: number;
 };
 
+export type StrollerSearchByNameDto = {
+  id: string;
+  generatedId:string;
+  brand: string;
+  brandValue: string;
+  name: string;
+  internalLink: string;
+};
+
+
+export type CarseatSearchByNameDto = {
+  id: string;
+  generatedId:string;
+  brand: string;
+  brandValue: string;
+  name: string;
+  internalLink: string;
+};
 
 export type CarseatsContentProps =  CarseatCard[];
 

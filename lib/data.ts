@@ -122,6 +122,34 @@ export async function getStrollersByBrand(brand:string) {
         })
 }
 
+export async function searchStrollerByName(name:string) {
+    const base_url = process.env.NEXT_PUBLIC_BACKEND_URL;
+    let url = base_url + '/strollers/search';
+    let params =
+            `?name=${name}`;
+    return await fetch(url + params)
+    .then((res) => {
+        if (!res.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return res.json();
+    })
+}
+
+export async function searchCarseatByName(name:string) {
+    const base_url = process.env.NEXT_PUBLIC_BACKEND_URL;
+    let url = base_url + '/car-seats/search';
+    let params =
+            `?name=${name}`;
+    return await fetch(url + params)
+    .then((res) => {
+        if (!res.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return res.json();
+    })
+}
+
 export async function searchStrollers (
                             brands,
                             maxHeight, closedMaxHeight, maxWidth, maxLength, 
