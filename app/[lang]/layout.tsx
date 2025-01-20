@@ -104,7 +104,7 @@ export default async function RootLayout({ children, params }: { children: React
         </body>
         {/* <GoogleTagManager gtmId='GTM-N8QDRF8F'/> */}
         <GoogleAnalytics  gaId='G-M1NBC50F94'/>
-        <GoogleAdsense pId="pub-1946644893911245" />
+        <GoogleAdsense pId="1946644893911245" />
       </html>
     );
   }
