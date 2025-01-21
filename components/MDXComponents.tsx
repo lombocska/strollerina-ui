@@ -15,6 +15,7 @@ import Card from './Card'
 import Carousel from './strollerina/carousel/carousel'
 import Link from './Link'
 import AmazonAccessoriesLinks from './strollerina/links/amazon_accessories_affiliate_links'
+import GoogleAd from 'app/[lang]/GoogleAd'
 
 export const components: MDXComponents = {
     Image,
@@ -31,6 +32,7 @@ export const components: MDXComponents = {
     Carousel,
     Card,
     Link,
-    AmazonAccessoriesLinks
+    AmazonAccessoriesLinks,
+    GoogleAd
 }
 
