@@ -78,6 +78,10 @@ export default function StrollerFiltersCollection({ brands, setStrollers, dictio
         // If tags from URL are not empty, merge them with current filter tags
         const searchTags = tagsFromUrl.length > 0 ? tagsFromUrl : filters.tags;
 
+        if (setFilters && tagsFromUrl.length > 0 ) {
+            setFilters(initialFilters);
+        }
+        
         if (setStrollers) {
                 const res = await searchStrollers(
                     filters.brandsName,

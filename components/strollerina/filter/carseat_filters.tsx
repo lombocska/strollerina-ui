@@ -74,7 +74,11 @@ export default function CarSeatFiltersCollection({ brands, setCarseats, dictiona
 
         // If tags from URL are not empty, merge them with current filter tags
         const searchTags = tagsFromUrl.length > 0 ? tagsFromUrl : filters.tags;
-
+        
+        if (setFilters && tagsFromUrl.length > 0 ) {
+            setFilters(initialFilters);
+        }
+        
         if (setCarseats) {
             searchCarSeats(filters.brandsName,
                 filters.adacsName,
