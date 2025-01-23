@@ -17,19 +17,24 @@ const NumberInput: React.FC<NumberInputProps> = ({
 
   return (
     <Input
-        key={title}
-        className="mb-10 input-no-border"
-        fullWidth
-        type="number"
-        label={label}
-        labelPlacement="outside"
-        value={inputValue}
-        onValueChange={setInputValue}
-        min={min}
-        max={max}
-        step={step}
-        startContent={demo}
-        endContent={endContent ? endContent : <></>}
+      style={{
+        color: "inherit",
+        caretColor: "transparent",
+        borderColor: 'transparent'
+      }}
+      key={title}
+      className="mb-10 input-no-border"
+      fullWidth
+      type="number"
+      label={label}
+      labelPlacement="outside"
+      value={inputValue}
+      onValueChange={setInputValue}
+      min={min}
+      max={max}
+      step={step}
+      startContent={demo}
+      endContent={endContent ? endContent : <></>}
     />
   );
 }

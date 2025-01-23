@@ -23,15 +23,15 @@ import StrollerBumperFilters from './stroller_filters/stroller_bumper_filters';
 import dynamic from 'next/dynamic';
 import { clearLocalStorage, useLocalStorage } from 'lib/LocalStorageAPI';
 
-  
-export default function StrollerFiltersCollection({ brands, setStrollers, dictionary, onClose } : {
+
+export default function StrollerFiltersCollection({ brands, setStrollers, dictionary, onClose }: {
     brands: BrandContentProps;
     setStrollers: React.Dispatch<React.SetStateAction<StrollerCard[]>>;
     dictionary: Awaited<ReturnType<typeof getDictionary>>["strollers"];
     onClose?: () => void;
 }) {
-    
-    const initialFilters : StrollerFilters = 
+
+    const initialFilters: StrollerFilters =
     {
         brandsName: [],
         maxHeight: TWO_HUNDRED,
@@ -45,11 +45,21 @@ export default function StrollerFiltersCollection({ brands, setStrollers, dictio
         minFrontWheelSize: ZERO,
         minBackWheelSize: ZERO,
         tags: []
-};
+    };
 
     //filters
     const [filters, setFilters] = useLocalStorage("stroller/filters", initialFilters);
     const [isCleared, setIsCleared] = useState(false);
+
+    // Get query params from URL
+    const getQueryParams = () => {
+        if (typeof window !== 'undefined') {
+            const searchParams = new URLSearchParams(window.location.search);
+            const tags = searchParams.get('tags');
+            return tags ? tags.split(',') : []; // returns a list of tags if exists
+        }
+        return [];
+    };
 
     useEffect(() => {
         console.log("stroller filters changing");
@@ -58,34 +68,49 @@ export default function StrollerFiltersCollection({ brands, setStrollers, dictio
             console.log("initial filters equal with selected ones");
             setIsCleared(false);
         }
-    }, [filters]); 
+    }, [filters]);
 
     const search = async () => {
+ 
+        // Extract tags from URL query parameters if they exist
+        const tagsFromUrl = getQueryParams();
+
+        // If tags from URL are not empty, merge them with current filter tags
+        const searchTags = tagsFromUrl.length > 0 ? tagsFromUrl : filters.tags;
+
         if (setStrollers) {
-            console.log("Search with  " + filters.selectedBrands);
-            const res = await searchStrollers(filters.brandsName,
-                filters.maxHeight, filters.closedMaxHeight, filters.maxWidth, filters.maxLength,
-                filters.closedMaxLength, filters.maxWeight, filters.maxPrice, filters.minSeatHeight,
-                filters.siblingMode, filters.reversibleSeatMode, filters.fullRecliningSeatMode,
-                filters.minFrontWheelSize, filters.minBackWheelSize, filters.tags
-            );
-            setStrollers(res);
-        }
+                const res = await searchStrollers(
+                    filters.brandsName,
+                    filters.maxHeight,
+                    filters.closedMaxHeight,
+                    filters.maxWidth,
+                    filters.maxLength,
+                    filters.closedMaxLength,
+                    filters.maxWeight,
+                    filters.maxPrice,
+                    filters.minSeatHeight,
+                    filters.siblingMode,
+                    filters.reversibleSeatMode,
+                    filters.fullRecliningSeatMode,
+                    filters.minFrontWheelSize,
+                    filters.minBackWheelSize,
+                    searchTags
+                );
+                setStrollers(res);
+            }
     };
 
-
     const searchWithClose = async () => {
-        search();
+        await search();
         if (onClose) {
             onClose();
         }
-    
     };
 
     useEffect(() => {
         console.log("strollers page loaded");
         search();
-    }, []); 
+    }, []);
 
     const clearFilters = async () => {
         if (setStrollers) {
@@ -109,18 +134,19 @@ export default function StrollerFiltersCollection({ brands, setStrollers, dictio
         clearLocalStorage('stroller/selectedReversibleSeatMode');
         clearLocalStorage('stroller/selectedFullRecliningSeatMode');
         clearLocalStorage('stroller/tags');
-        // clearLocalStorage('stroller/selectedDimensionTags');
-        // clearLocalStorage('stroller/selectedFoldTags');
-        // clearLocalStorage('stroller/selectedBumperTags');
-        // clearLocalStorage('stroller/selectedHarnessTags');
-        // clearLocalStorage('stroller/selectedOtherTags');
-        // clearLocalStorage('stroller/selectedTerrainTags');
-        // clearLocalStorage('stroller/selectedWarrantyTags');
+
+        // Clear query parameters from URL (specifically `tags`)
+        if (typeof window !== 'undefined') {
+            const url = new URL(window.location.href);
+            url.searchParams.delete('tags');
+            window.history.pushState({}, '', url.toString());
+        }
+
         if (setFilters) {
             setFilters(initialFilters);
         }
     };
-    
+
     return (
         <Card className="">
             <CardHeader className="flex gap-3 justify-between">
@@ -129,81 +155,80 @@ export default function StrollerFiltersCollection({ brands, setStrollers, dictio
                 </Button>
                 <Button size="lg" variant="ghost" onPress={() => clearFilters()}>
                     {dictionary['common']["clear"]}
-                </Button>  
+                </Button>
             </CardHeader>
-            {/* <Divider/> */}
             <CardBody>
                 <div className="grid grid-flow-row-dense grid-cols-1">
-                    <BrandSelection brands={brands} setFilters={setFilters} isCleared={isCleared} dictionary={dictionary} type={"strollers"}/>
-                    <SelectMaxPrice 
-                        setFilters={setFilters} 
-                        isCleared={isCleared} 
-                        lSPrefix={"stroller/"} 
-                        defaultMaxPrice={FIVE_THOUSAND} 
+                    <BrandSelection brands={brands} setFilters={setFilters} isCleared={isCleared} dictionary={dictionary} type={"strollers"} />
+                    <SelectMaxPrice
+                        setFilters={setFilters}
+                        isCleared={isCleared}
+                        lSPrefix={"stroller/"}
+                        defaultMaxPrice={FIVE_THOUSAND}
                         title={dictionary["filters"]['max-price']}
                         label={dictionary["filters"]['max-price']}
                     />
                 </div>
 
                 <Accordion className='m-1 mb-10' variant="bordered" selectionMode="multiple" >
-                    
-                    <AccordionItem 
+
+                    <AccordionItem
                         value="1"
                         className=''
-                        key="filters-accordion-1" 
-                        aria-label={dictionary['filters']['section-dimension-title']} 
-                        title={dictionary['filters']['section-dimension-title']} 
+                        key="filters-accordion-1"
+                        aria-label={dictionary['filters']['section-dimension-title']}
+                        title={dictionary['filters']['section-dimension-title']}
                     >
-                        <StrollerDimensionFilters setFilters={setFilters} isCleared={isCleared} dictionary={dictionary}/>
+                        <StrollerDimensionFilters setFilters={setFilters} isCleared={isCleared} dictionary={dictionary} />
                     </AccordionItem>
 
-                    <AccordionItem key="filters-accordion-2" 
-                        aria-label={dictionary['filters']['section-seat-title']} 
-                        title={dictionary['filters']['section-seat-title']} 
-                    >              
-                        <StrollerSeatFilters setFilters={setFilters} isCleared={isCleared} dictionary={dictionary}/>
-                    </AccordionItem>
-
-                    <AccordionItem key="filters-accordion-3" 
-                        aria-label={dictionary['filters']['section-fold-title']} 
-                        title={dictionary['filters']['section-fold-title']} 
-                    >                   
-                        <StrollerFoldFilters setFilters={setFilters} isCleared={isCleared} dictionary={dictionary}/>
-                    </AccordionItem>
-
-                    <AccordionItem key="filters-accordion-4" 
-                        aria-label={dictionary['filters']['section-terrain-title']} 
-                        title={dictionary['filters']['section-terrain-title']} 
-                    >                
-                        <StrollerTerrainFilters setFilters={setFilters} isCleared={isCleared} dictionary={dictionary}/>
-                    </AccordionItem>
-
-                    <AccordionItem key="filters-accordion-5" 
-                        aria-label={dictionary['filters']['section-harness-title']} 
-                        title={dictionary['filters']['section-harness-title']} 
+                    <AccordionItem key="filters-accordion-2"
+                        aria-label={dictionary['filters']['section-seat-title']}
+                        title={dictionary['filters']['section-seat-title']}
                     >
-                        <StrollerHarnessFilters setFilters={setFilters} isCleared={isCleared} dictionary={dictionary}/>
+                        <StrollerSeatFilters setFilters={setFilters} isCleared={isCleared} dictionary={dictionary} />
                     </AccordionItem>
 
-                    <AccordionItem key="filters-accordion-6" 
-                        aria-label={dictionary['filters']['section-warranty-title']} 
+                    <AccordionItem key="filters-accordion-3"
+                        aria-label={dictionary['filters']['section-fold-title']}
+                        title={dictionary['filters']['section-fold-title']}
+                    >
+                        <StrollerFoldFilters setFilters={setFilters} isCleared={isCleared} dictionary={dictionary} />
+                    </AccordionItem>
+
+                    <AccordionItem key="filters-accordion-4"
+                        aria-label={dictionary['filters']['section-terrain-title']}
+                        title={dictionary['filters']['section-terrain-title']}
+                    >
+                        <StrollerTerrainFilters setFilters={setFilters} isCleared={isCleared} dictionary={dictionary} />
+                    </AccordionItem>
+
+                    <AccordionItem key="filters-accordion-5"
+                        aria-label={dictionary['filters']['section-harness-title']}
+                        title={dictionary['filters']['section-harness-title']}
+                    >
+                        <StrollerHarnessFilters setFilters={setFilters} isCleared={isCleared} dictionary={dictionary} />
+                    </AccordionItem>
+
+                    <AccordionItem key="filters-accordion-6"
+                        aria-label={dictionary['filters']['section-warranty-title']}
                         title={dictionary['filters']['section-warranty-title']}
                     >
-                        <StrollerWarrantyFilters setFilters={setFilters} isCleared={isCleared} dictionary={dictionary}/>
+                        <StrollerWarrantyFilters setFilters={setFilters} isCleared={isCleared} dictionary={dictionary} />
                     </AccordionItem>
 
-                    <AccordionItem key="filters-accordion-7" 
-                        aria-label={dictionary['filters']['section-bumper-title']} 
+                    <AccordionItem key="filters-accordion-7"
+                        aria-label={dictionary['filters']['section-bumper-title']}
                         title={dictionary['filters']['section-bumper-title']}
                     >
-                        <StrollerBumperFilters setFilters={setFilters} isCleared={isCleared} dictionary={dictionary}/>
+                        <StrollerBumperFilters setFilters={setFilters} isCleared={isCleared} dictionary={dictionary} />
                     </AccordionItem>
 
                     <AccordionItem key="filters-accordion-8"
-                        aria-label={dictionary['filters']['section-other-features-title']} 
+                        aria-label={dictionary['filters']['section-other-features-title']}
                         title={dictionary['filters']['section-other-features-title']}
                     >
-                        <StrollerOtherFilters setFilters={setFilters} isCleared={isCleared} dictionary={dictionary}/>
+                        <StrollerOtherFilters setFilters={setFilters} isCleared={isCleared} dictionary={dictionary} />
                     </AccordionItem>
                 </Accordion>
             </CardBody>

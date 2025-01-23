@@ -2,18 +2,18 @@ import { AffiliateDTO, CarseatCardDTO, ManualDTO, ReviewDTO, StrollerInfoDTO } f
 
 export async function getManuals(brand: string) {
     const base_url = process.env.NEXT_PUBLIC_BACKEND_URL;
-    const res = await fetch(base_url + '/manuals/'+ encodeURI(brand))
+    const res = await fetch(base_url + '/manuals/' + encodeURI(brand))
     console.log("fetch manuals")
-    
+
     if (!res.ok) {
-     throw new Error('Failed to fetch data with brand ' + encodeURI(brand));
-}
- 
-  return res.json()
+        throw new Error('Failed to fetch data with brand ' + encodeURI(brand));
+    }
+
+    return res.json()
 }
 export async function getActiveBrands() {
     const requestOptions = {
-        method: 'GET', headers: {'Content-Type': 'application/json'},
+        method: 'GET', headers: { 'Content-Type': 'application/json' },
     };
     const base_url = process.env.NEXT_PUBLIC_BACKEND_URL;
     let url = base_url + '/brands/active';
@@ -24,7 +24,7 @@ export async function getActiveBrands() {
             }
             // Handle the successful response here
             return response.json()
-                .then(brands => brands.map((brand:any) => {
+                .then(brands => brands.map((brand: any) => {
                     return {
                         name: brand.name,
                         value: brand.value,
@@ -34,32 +34,32 @@ export async function getActiveBrands() {
         })
 }
 
-export  async function getStrollerBrands() {
-  const requestOptions = {
-      method: 'GET', headers: {'Content-Type': 'application/json'},
-  };
-  const base_url = process.env.NEXT_PUBLIC_BACKEND_URL;
-  let url = base_url + '/strollers/brands';
-  return await fetch(url, requestOptions)
-      .then((response) => {
-          if (!response.ok) {
-              throw new Error('Network response was not ok');
-          }
-          // Handle the successful response here
-          return response.json()
-              .then(brands => brands.map((brand:any) => {
-                  return {
-                      name: brand.name,
-                      value: brand.value,
-                      img: brand.img
-                  }
-              }));
-      })
+export async function getStrollerBrands() {
+    const requestOptions = {
+        method: 'GET', headers: { 'Content-Type': 'application/json' },
+    };
+    const base_url = process.env.NEXT_PUBLIC_BACKEND_URL;
+    let url = base_url + '/strollers/brands';
+    return await fetch(url, requestOptions)
+        .then((response) => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            // Handle the successful response here
+            return response.json()
+                .then(brands => brands.map((brand: any) => {
+                    return {
+                        name: brand.name,
+                        value: brand.value,
+                        img: brand.img
+                    }
+                }));
+        })
 }
 
 export async function getCarSeatBrands() {
     const requestOptions = {
-        method: 'GET', headers: {'Content-Type': 'application/json'},
+        method: 'GET', headers: { 'Content-Type': 'application/json' },
     };
     const base_url = process.env.NEXT_PUBLIC_BACKEND_URL;
     let url = base_url + '/car-seats/brands';
@@ -70,29 +70,29 @@ export async function getCarSeatBrands() {
             }
             // Handle the successful response here
             return response.json()
-                .then(brands => brands.map((brand:any) => {
+                .then(brands => brands.map((brand: any) => {
                     return {
                         name: brand.name,
                         value: brand.value,
                         img: brand.img
                     }
-        }));
-    })
+                }));
+        })
 }
 
-export async function getBrandByName(brandName:string) {
+export async function getBrandByName(brandName: string) {
     const requestOptions = {
-        method: 'GET', headers: {'Content-Type': 'application/json'},
+        method: 'GET', headers: { 'Content-Type': 'application/json' },
     };
     const base_url = process.env.NEXT_PUBLIC_BACKEND_URL;
     let url = base_url + '/brands/' + brandName;
     return await fetch(url, requestOptions)
-    .then((response) => {
-        if (response.status != 200) {
-            throw new Error('Network response for get brand by name was not ok');
-        }
-        return response.json();
-    })
+        .then((response) => {
+            if (response.status != 200) {
+                throw new Error('Network response for get brand by name was not ok');
+            }
+            return response.json();
+        })
 }
 
 export async function getAllStrollers() {
@@ -109,7 +109,7 @@ export async function getAllStrollers() {
 }
 
 
-export async function getStrollersByBrand(brand:string) {
+export async function getStrollersByBrand(brand: string) {
     const base_url = process.env.NEXT_PUBLIC_BACKEND_URL;
     let url = base_url + '/strollers/brand/' + brand;
     console.log("Fetched url: " + url);
@@ -122,77 +122,78 @@ export async function getStrollersByBrand(brand:string) {
         })
 }
 
-export async function searchStrollerByName(name:string) {
+export async function searchStrollerByName(name: string) {
     const base_url = process.env.NEXT_PUBLIC_BACKEND_URL;
-    let url = base_url + '/strollers/search';
+    let url = base_url + '/strollers/quick-search';
     let params =
-            `?name=${name}`;
+        `?name=${name}`;
     return await fetch(url + params)
-    .then((res) => {
-        if (!res.ok) {
-            throw new Error('Network response was not ok');
-        }
-        return res.json();
-    })
+        .then((res) => {
+            if (!res.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return res.json();
+        })
 }
 
-export async function searchCarseatByName(name:string) {
+export async function searchCarseatByName(name: string) {
     const base_url = process.env.NEXT_PUBLIC_BACKEND_URL;
-    let url = base_url + '/car-seats/search';
+    let url = base_url + '/car-seats/quick-search';
     let params =
-            `?name=${name}`;
+        `?name=${name}`;
     return await fetch(url + params)
-    .then((res) => {
-        if (!res.ok) {
-            throw new Error('Network response was not ok');
-        }
-        return res.json();
-    })
+        .then((res) => {
+            if (!res.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return res.json();
+        })
 }
 
-export async function searchStrollers (
-                            brands,
-                            maxHeight, closedMaxHeight, maxWidth, maxLength, 
-                            closedMaxLength, maxWeight, maxPrice, minSeatHeight,
-                            siblingMode, reversibleSeat, fullRecliningSeat,
-                            minFrontWheel, minBackWheel,
-                            tags
-    ) {
-        const requestOptions = {
-            method: 'GET', headers: {'Content-Type': 'application/json'},
-        };
-        let params =
-            `?brands=${brands}` +
-            `&maxHeight=${encodeURIComponent(maxHeight)}` +
-            `&closedMaxHeight=${encodeURIComponent(closedMaxHeight)}` +
-            `&maxWidth=${encodeURIComponent(maxWidth)}` +
-            `&maxLength=${encodeURIComponent(maxLength)}` +
-            `&closedMaxLength=${encodeURIComponent(closedMaxLength)}` +
-            `&maxWeight=${encodeURIComponent(maxWeight)}` +
-            `&siblingMode=${encodeURIComponent(siblingMode)}` +
-            `&reversibleSeat=${encodeURIComponent(reversibleSeat)}` +
-            `&fullRecliningSeat=${encodeURIComponent(fullRecliningSeat)}` +
-            `&maxPrice=${encodeURIComponent(maxPrice)}` +
-            `&minSeatHeight=${encodeURIComponent(minSeatHeight)}` +
-            `&minFrontWheel=${encodeURIComponent(minFrontWheel)}` +
-            `&minBackWheel=${encodeURIComponent(minBackWheel)}` +
-            `&tags=${encodeURIComponent(tags)}` ;
-        const base_url = process.env.NEXT_PUBLIC_BACKEND_URL;
-        let url = base_url + '/strollers/query' + params;
-        return await fetch(url, requestOptions)
-            .then((response) => {
-                if (response.status != 200) {
-                    throw new Error('Network response was not ok');
-                }
-                console.log("Querying strollers");
-                return response.json();
-            })
+export async function searchStrollers(
+    brands,
+    maxHeight, closedMaxHeight, maxWidth, maxLength,
+    closedMaxLength, maxWeight, maxPrice, minSeatHeight,
+    siblingMode, reversibleSeat, fullRecliningSeat,
+    minFrontWheel, minBackWheel,
+    tags
+) {
+    const requestOptions = {
+        method: 'GET', headers: { 'Content-Type': 'application/json' },
+    };
+    let params =
+        `?brands=${brands}` +
+        `&maxHeight=${encodeURIComponent(maxHeight)}` +
+        `&closedMaxHeight=${encodeURIComponent(closedMaxHeight)}` +
+        `&maxWidth=${encodeURIComponent(maxWidth)}` +
+        `&maxLength=${encodeURIComponent(maxLength)}` +
+        `&closedMaxLength=${encodeURIComponent(closedMaxLength)}` +
+        `&maxWeight=${encodeURIComponent(maxWeight)}` +
+        `&siblingMode=${encodeURIComponent(siblingMode)}` +
+        `&reversibleSeat=${encodeURIComponent(reversibleSeat)}` +
+        `&fullRecliningSeat=${encodeURIComponent(fullRecliningSeat)}` +
+        `&maxPrice=${encodeURIComponent(maxPrice)}` +
+        `&minSeatHeight=${encodeURIComponent(minSeatHeight)}` +
+        `&minFrontWheel=${encodeURIComponent(minFrontWheel)}` +
+        `&minBackWheel=${encodeURIComponent(minBackWheel)}` +
+        `&tags=${encodeURIComponent(tags)}`;
+    const base_url = process.env.NEXT_PUBLIC_BACKEND_URL;
+    let url = base_url + '/strollers/query' + params;
+    return await fetch(url, requestOptions)
+        .then((response) => {
+            if (response.status != 200) {
+                throw new Error('Network response was not ok');
+            }
+            console.log("Querying strollers");
+            return response.json();
+        })
 }
 
-export async function getStrollerByGeneratedId (generatedId:string) : Promise<StrollerInfoDTO> {
+
+export async function getStrollerByGeneratedId(generatedId: string): Promise<StrollerInfoDTO> {
     console.log("Searching for stroller with stroller named " + generatedId)
     const requestOptions = {
-        method: 'GET', headers: {'Content-Type': 'application/json'},
+        method: 'GET', headers: { 'Content-Type': 'application/json' },
     };
     const base_url = process.env.NEXT_PUBLIC_BACKEND_URL;
     let url = base_url + '/strollers/' + generatedId.split('-').pop();
@@ -205,10 +206,10 @@ export async function getStrollerByGeneratedId (generatedId:string) : Promise<St
         })
 }
 
-export async function getStrollerImgs (generatedId:string) {
+export async function getStrollerImgs(generatedId: string) {
     console.log("Searching for stroller images with stroller named " + generatedId)
     const requestOptions = {
-        method: 'GET', headers: {'Content-Type': 'application/json'},
+        method: 'GET', headers: { 'Content-Type': 'application/json' },
     };
     const base_url = process.env.NEXT_PUBLIC_BACKEND_URL;
     let url = base_url + '/strollers/' + generatedId.split('-').pop() + '/imgs';
@@ -223,10 +224,10 @@ export async function getStrollerImgs (generatedId:string) {
         })
 }
 
-export async function getStrollerReviews (generatedId:string) {
+export async function getStrollerReviews(generatedId: string) {
     console.log("Searching for stroller reviews with stroller named " + generatedId)
     const requestOptions = {
-        method: 'GET', headers: {'Content-Type': 'application/json'},
+        method: 'GET', headers: { 'Content-Type': 'application/json' },
     };
     const base_url = process.env.NEXT_PUBLIC_BACKEND_URL;
     let url = base_url + '/strollers/' + generatedId.split('-').pop() + '/reviews';
@@ -242,9 +243,9 @@ export async function getStrollerReviews (generatedId:string) {
 }
 
 
-export async function getStrollerManualLink (strollerId:number) : Promise<ManualDTO> {
+export async function getStrollerManualLink(strollerId: number): Promise<ManualDTO> {
     const requestOptions = {
-        method: 'GET', headers: {'Content-Type': 'application/json'},
+        method: 'GET', headers: { 'Content-Type': 'application/json' },
     };
     const base_url = process.env.NEXT_PUBLIC_BACKEND_URL;
     let url = base_url + '/strollers/' + strollerId + '/manual';
@@ -268,9 +269,9 @@ export async function getStrollerManualLink (strollerId:number) : Promise<Manual
 }
 
 
-export async function getStrollerAmazonAffiliateLink (id:number) : Promise<AffiliateDTO> {
+export async function getStrollerAmazonAffiliateLink(id: number): Promise<AffiliateDTO> {
     const requestOptions = {
-        method: 'GET', headers: {'Content-Type': 'application/json'},
+        method: 'GET', headers: { 'Content-Type': 'application/json' },
     };
     const base_url = process.env.NEXT_PUBLIC_BACKEND_URL;
     let url = base_url + '/strollers/' + id + '/affiliate';
@@ -293,9 +294,9 @@ export async function getStrollerAmazonAffiliateLink (id:number) : Promise<Affil
     }
 }
 
-export async function getStrollerAnbBabyAffiliateLink (id:number) : Promise<AffiliateDTO[]> {
+export async function getStrollerAnbBabyAffiliateLink(id: number): Promise<AffiliateDTO[]> {
     const requestOptions = {
-        method: 'GET', headers: {'Content-Type': 'application/json'},
+        method: 'GET', headers: { 'Content-Type': 'application/json' },
     };
     const base_url = process.env.NEXT_PUBLIC_BACKEND_URL;
     let url = base_url + '/strollers/' + id + '/affiliate/anbbaby';
@@ -307,9 +308,9 @@ export async function getStrollerAnbBabyAffiliateLink (id:number) : Promise<Affi
         }
 
         try {
-        
-            let resp =  await response.json();
-            console.log("anb baby resp"  + resp)
+
+            let resp = await response.json();
+            console.log("anb baby resp" + resp)
             return resp;
         } catch (error) {
             console.log('no affiliate found anbbaby');
@@ -321,9 +322,9 @@ export async function getStrollerAnbBabyAffiliateLink (id:number) : Promise<Affi
     }
 }
 
-export async function getStrollerAmazonAccessoriesAffiliateLink (id:number) : Promise<AffiliateDTO[]> {
+export async function getStrollerAmazonAccessoriesAffiliateLink(id: number): Promise<AffiliateDTO[]> {
     const requestOptions = {
-        method: 'GET', headers: {'Content-Type': 'application/json'},
+        method: 'GET', headers: { 'Content-Type': 'application/json' },
     };
     const base_url = process.env.NEXT_PUBLIC_BACKEND_URL;
     let url = base_url + '/strollers/' + id + '/accessories-affiliate';
@@ -358,7 +359,7 @@ export async function getAllCarSeats() {
         })
 }
 
-export async function getCarSeatsByBrand(brand:string) {
+export async function getCarSeatsByBrand(brand: string) {
     const base_url = process.env.NEXT_PUBLIC_BACKEND_URL;
     let url = base_url + '/car-seats/brand/' + brand;
     return await fetch(url)
@@ -370,13 +371,13 @@ export async function getCarSeatsByBrand(brand:string) {
         })
 }
 
-export async function searchCarSeats(brands, 
-                                    adacs, onlyAdacTested, 
-                                    maxSeatWeight, maxKidWeight,
-                                    facingMode, maxPrice, maxKidHeight, 
-                                    tags) {
+export async function searchCarSeats(brands,
+    adacs, onlyAdacTested,
+    maxSeatWeight, maxKidWeight,
+    facingMode, maxPrice, maxKidHeight,
+    tags) {
     const requestOptions = {
-        method: 'GET', headers: {'Content-Type': 'application/json'},
+        method: 'GET', headers: { 'Content-Type': 'application/json' },
     };
 
     let params =
@@ -384,21 +385,21 @@ export async function searchCarSeats(brands,
         `&adacs=${adacs}` +
         `&onlyAdacTested=${encodeURIComponent(onlyAdacTested)}` +
         `&maxSeatWeight=${encodeURIComponent(maxSeatWeight)}` +
-        `&maxKidWeight=${encodeURIComponent(maxKidWeight)}`+
+        `&maxKidWeight=${encodeURIComponent(maxKidWeight)}` +
         `&facingMode=${facingMode}` +
         `&maxPrice=${encodeURIComponent(maxPrice)}` +
         `&maxKidHeight=${encodeURIComponent(maxKidHeight)}` +
-        `&tags=${encodeURIComponent(tags)}` ;
+        `&tags=${encodeURIComponent(tags)}`;
     const base_url = process.env.NEXT_PUBLIC_BACKEND_URL;
     let url = base_url + '/car-seats/query' + params;
-    
+
     return await fetch(url, requestOptions)
         .then((response) => {
             if (!response.ok) {
-            throw new Error('Network response was not ok');
+                throw new Error('Network response was not ok');
             }
-        // console.log(response);
-        return response.json();
+            // console.log(response);
+            return response.json();
         })
         .then(carSeats => {
             console.log("Searched for strollers with brands: " + brands);
@@ -410,7 +411,7 @@ export async function getCarseatByGeneratedId(generatedId: string): Promise<Cars
     if (!generatedId || generatedId.trim() === '') {
         console.log("Invalid generatedId:", generatedId);
     }
-    
+
     const requestOptions = {
         method: 'GET',
         headers: { 'Content-Type': 'application/json' },
@@ -431,10 +432,10 @@ export async function getCarseatByGeneratedId(generatedId: string): Promise<Cars
 }
 
 
-export async function getCarseatImgs (generatedId:string) {
+export async function getCarseatImgs(generatedId: string) {
     console.log("Searching for carseat images with carseat named " + generatedId)
     const requestOptions = {
-        method: 'GET', headers: {'Content-Type': 'application/json'},
+        method: 'GET', headers: { 'Content-Type': 'application/json' },
     };
     const base_url = process.env.NEXT_PUBLIC_BACKEND_URL;
     let url = base_url + '/car-seats/' + generatedId.split('-').pop() + '/imgs';
@@ -449,10 +450,10 @@ export async function getCarseatImgs (generatedId:string) {
         })
 }
 
-export async function getCarseatReviews (generatedId:string) {
+export async function getCarseatReviews(generatedId: string) {
     console.log("Searching for stroller reviews with stroller named " + generatedId)
     const requestOptions = {
-        method: 'GET', headers: {'Content-Type': 'application/json'},
+        method: 'GET', headers: { 'Content-Type': 'application/json' },
     };
     const base_url = process.env.NEXT_PUBLIC_BACKEND_URL;
     let url = base_url + '/car-seats/' + generatedId.split('-').pop() + '/reviews';
@@ -468,13 +469,13 @@ export async function getCarseatReviews (generatedId:string) {
 }
 
 
-export async function getCarseatManualLink (carseatId:number) : Promise<ManualDTO> {
+export async function getCarseatManualLink(carseatId: number): Promise<ManualDTO> {
     const requestOptions = {
-        method: 'GET', headers: {'Content-Type': 'application/json'},
+        method: 'GET', headers: { 'Content-Type': 'application/json' },
     };
     const base_url = process.env.NEXT_PUBLIC_BACKEND_URL;
     let url = base_url + '/car-seats/' + carseatId + '/manual';
-    
+
     try {
         const response = await fetch(url, requestOptions);
 
@@ -495,9 +496,9 @@ export async function getCarseatManualLink (carseatId:number) : Promise<ManualDT
 }
 
 
-export async function getCarseatAmazonAffiliateLink (id:number) : Promise<AffiliateDTO> {
+export async function getCarseatAmazonAffiliateLink(id: number): Promise<AffiliateDTO> {
     const requestOptions = {
-        method: 'GET', headers: {'Content-Type': 'application/json'},
+        method: 'GET', headers: { 'Content-Type': 'application/json' },
     };
     const base_url = process.env.NEXT_PUBLIC_BACKEND_URL;
     let url = base_url + '/carseats/' + id + '/affiliate';
@@ -521,51 +522,51 @@ export async function getCarseatAmazonAffiliateLink (id:number) : Promise<Affili
 }
 
 
-export async function submitStrollerCarSeatReview (data) {
+export async function submitStrollerCarSeatReview(data) {
     try {
         console.log(data)
         const base_url = process.env.NEXT_PUBLIC_BACKEND_URL;
         let url = base_url + '/reviews';
         const requestOptions = {
-            method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(data)
+            method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data)
         };
         const response = await fetch(url, requestOptions);
 
         // Check if the response is okay (status code 200-299)
         if (!response.ok) {
-          throw new Error('Failed to submit form');
+            throw new Error('Failed to submit form');
         }
-    
+
         // Optionally parse the response JSON if needed
         const result = await response.json();
         console.log('Form submitted successfully:', result);
-      } catch (error) {
+    } catch (error) {
         console.error('Error submitting form:', error);
-      }
+    }
 }
 
 
-export async function submitStrollerCarSeatReviewWMissingData (data) {
+export async function submitStrollerCarSeatReviewWMissingData(data) {
     try {
         console.log(data)
         const base_url = process.env.NEXT_PUBLIC_BACKEND_URL;
         let url = base_url + '/reviews/missing-data';
         const requestOptions = {
-            method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(data)
+            method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data)
         };
         const response = await fetch(url, requestOptions);
 
         // Check if the response is okay (status code 200-299)
         if (!response.ok) {
-          throw new Error('Failed to submit form');
+            throw new Error('Failed to submit form');
         }
-    
+
         // Optionally parse the response JSON if needed
         const result = await response.json();
         console.log('Form submitted successfully:', result);
-      } catch (error) {
+    } catch (error) {
         console.error('Error submitting form:', error);
-      }
+    }
 }
 
 
@@ -573,7 +574,7 @@ export async function getReviews(): Promise<ReviewDTO> {
     const base_url = process.env.NEXT_PUBLIC_BACKEND_URL;
     const url = `${base_url}/reviews`;
 
-    
+
     const requestOptions = {
         method: 'GET',
         headers: { 'Content-Type': 'application/json', 'Cache-Control': 'no-store' },
@@ -595,14 +596,14 @@ export async function getReviews(): Promise<ReviewDTO> {
 }
 
 
-export async function getFilteredReviews(strollerBrandsQuery:string, carSeatBrandsQuery:string): Promise<ReviewDTO> {
+export async function getFilteredReviews(strollerBrandsQuery: string, carSeatBrandsQuery: string): Promise<ReviewDTO> {
     const base_url = process.env.NEXT_PUBLIC_BACKEND_URL;
     const url = `${base_url}/reviews?strollerBrands=${strollerBrandsQuery}&carSeatBrands=${carSeatBrandsQuery}`;
 
-    
+
     const requestOptions = {
         method: 'GET',
-        headers: { 'Content-Type': 'application/json'},
+        headers: { 'Content-Type': 'application/json' },
     };
 
     try {
@@ -635,7 +636,7 @@ export async function getCountries(): Promise<string[]> {
             throw new Error(`Failed to fetch countries. Status: ${response.status}`);
         }
 
-        const data: string[] = await response.json(); 
+        const data: string[] = await response.json();
         return data;
     } catch (error) {
         console.error('Error fetching countries:', error);
@@ -659,7 +660,7 @@ export async function getCurrencies(): Promise<string[]> {
             throw new Error(`Failed to fetch currencies. Status: ${response.status}`);
         }
 
-        const data: string[] = await response.json(); 
+        const data: string[] = await response.json();
         return data;
     } catch (error) {
         console.error('Error fetching currencies:', error);

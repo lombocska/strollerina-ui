@@ -2,7 +2,7 @@
 
 import { Button } from '@nextui-org/button';
 import { Modal, ModalBody, ModalContent, ModalFooter, ModalHeader, useDisclosure } from '@nextui-org/modal';
-import { Badge } from '@nextui-org/react';
+import { Badge, Input } from '@nextui-org/react';
 import { getDictionary } from 'get-dictionary';
 import { useLocalStorage } from 'lib/LocalStorageAPI';
 import { useCurrency } from 'lib/context/currency_context';
@@ -17,6 +17,7 @@ import CounterChip from '../filter/helper/counter_chip';
 import StrollerFiltersCollection from '../filter/stroller_filters';
 import SortingSelect from '../sorting_select';
 import { searchStrollerByName } from 'lib/data';
+import GoogleAd from 'app/[lang]/GoogleAd';
 
 
 export default function StrollersContent({ initialData, brands, dictionary, lang }:
@@ -56,6 +57,7 @@ export default function StrollersContent({ initialData, brands, dictionary, lang
         console.log("Selected stroller for comparison ", selectedStrollers);
     };
 
+    //search based in quick name input field
     const handleSearch = async (query: string) => {
         setSearchQuery(query);
         if (query.length >= 2) {
@@ -91,24 +93,29 @@ export default function StrollersContent({ initialData, brands, dictionary, lang
                             {selectedStrollers && (
                                 <Link className='hidden lg:block' href={{ pathname: "/" + lang + "/compare", query: { ids: encodedIds } }}>
                                     <Badge color="warning" content={selectedStrollers?.size} isInvisible={false} shape="circle">
-                                        <ChevronsRightLeft  size={30} />
+                                        <ChevronsRightLeft size={30} />
                                     </Badge>
                                 </Link>
                             )}
                         </div>
 
                         <div className="w-full mb-5 relative">
-                            <input
+                            <Input
                                 type="text"
                                 value={searchQuery}
                                 onChange={(e) => handleSearch(e.target.value)}
                                 placeholder="Search for a stroller name..."
-                                className="w-full p-2 border border-gray-300 rounded-lg"
+                                // className="w-full p-2 border border-gray-300 rounded-lg"
+                                className="w-full p-2 border border-transparent rounded-lg focus:border-blue-500 focus:outline-none"
+                                style={{
+                                    color: "inherit",
+                                    caretColor: "transparent", 
+                                    borderColor: 'transparent'
+                                }}
                             />
 
-                            {/* Dropdown with search results */}
                             {isDropdownOpen && searchResults && (
-                                <ul className="absolute z-10 w-full bg-white border border-gray-300 rounded-lg shadow-md mt-2">
+                                <ul className="absolute z-10 w-full bg-white bg-opacity-90 border border-gray-300 rounded-lg shadow-md mt-2">
                                     {searchResults.map((stroller) => (
                                         <li key={stroller.id} className="p-2 hover:bg-gray-100">
                                             <a
@@ -125,19 +132,31 @@ export default function StrollersContent({ initialData, brands, dictionary, lang
 
                         <div className="gap-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3">
 
-                            {strollers.map(item => (
-                                <ProductCard
-                                    key={'stroller-' + item.id}
-                                    name={item.name}
-                                    brand={item.brand}
-                                    brandValue={item.brandValue}
-                                    img={item.img}
-                                    tags={item.priceFrom != null ? [Math.round(item.priceFrom * multiplicator) + "+ " + currency] : []}
-                                    generatedId={item.generatedId}
-                                    infoLinkPrefix={'/strollers/'}
-                                    isSelected={selectedStrollers.has(item.generatedId)}
-                                    onSelect={handleSelectCard}
-                                />
+                            {strollers.map((item, index) => (
+                                <>
+                                    <ProductCard
+                                        key={'stroller-' + item.id}
+                                        name={item.name}
+                                        brand={item.brand}
+                                        brandValue={item.brandValue}
+                                        img={item.img}
+                                        tags={item.priceFrom != null ? [Math.round(item.priceFrom * multiplicator) + "+ " + currency] : []}
+                                        generatedId={item.generatedId}
+                                        infoLinkPrefix={'/strollers/'}
+                                        isSelected={selectedStrollers.has(item.generatedId)}
+                                        onSelect={handleSelectCard}
+                                    />
+                                    {(index + 1) % 6 === 0 && (
+                                        <div className="w-full col-span-full my-1">
+                                            <GoogleAd
+                                                adClient="ca-pub-1946644893911245"
+                                                adSlot="9479770359"
+                                                className=""
+                                            />
+                                        </div>
+                                    )}
+                                </>
+
                             ))}
                         </div>
                     </>

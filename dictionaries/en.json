@@ -2,6 +2,7 @@
   "navbar": {
     "strollers" : "Strollers",
     "carseats" : "Car seats",
+    "guide": "Interactive Guide",
     "blog": "Blog",
     "manuals": "Manuals",
     "about": "About us",
@@ -408,6 +409,9 @@
     "tags": {
       "main-card": {
         "chip": {
+          "no": "no",
+          "yes": "yes",
+          "single": "single",
           "baseless-isofix": "isofix mount directly on the child seat",
           "base-with-belt": "car seat base fixed with belt",
           "no-isofix": "no isofix",
@@ -579,6 +583,9 @@
         }
       }
     }
+  },
+  "guide": {
+    "title": "Interactive Guide"
   },
   "manuals": {
     "main-text" : "Find here the manual of your strollers or car seats.",

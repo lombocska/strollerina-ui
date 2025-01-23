@@ -17,10 +17,10 @@ type CardProps = {
 };
 
 export default function Card({ title, description, imgSrc, href, tags = [], type, isSelected, onSelect }: CardProps) {
-    const { theme } = useTheme(); // Access the current theme using next-themes hook
+    const { theme } = useTheme(); 
 
     return (
-        <div className="p-4 w-full relative"> {/* relative osztály hozzáadása a szülő div-hez */}
+        <div className="p-4 w-full relative"> 
             <div className={`${imgSrc && 'h-full'} overflow-hidden rounded-md border border-border flex flex-col h-full`}>
                 {imgSrc &&
                 (href ? (

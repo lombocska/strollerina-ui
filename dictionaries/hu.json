@@ -2,6 +2,7 @@
   "navbar": {
     "strollers" : "Babakocsik",
     "carseats" : "Autós ülések",
+    "guide": "Interaktív választó",
     "blog": "Blog",
     "manuals": "Használati útmutatók",
     "about": "Rólunk",
@@ -512,6 +513,8 @@
     "tags": {
       "main-card":{
         "chip": {
+          "no": "nem",
+          "yes": "igen",
           "baseless-isofix": "isofix rögzítő közvetlenül a gyerekülésen",
           "base-with-belt": "autósülés bázisa övvel rögzítve",
           "no-isofix": "nincs isofix",
@@ -1116,6 +1119,9 @@
     "allCarSeatBrands": "Autósülés márkák",
     "allCarSeatNames": "autósülés nevek",
     "filterInstructions": "Szűrd a családi értékeléseket babakocsikról és autósülésekről"
+  },
+  "guide": {
+    "title": "Interactív Választó"
   },
   "manuals": {
     "main-text": "Itt megtalálhatod babakocsid használati útmutatóját...",

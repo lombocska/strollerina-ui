@@ -13,9 +13,10 @@ import CarSeatFiltersCollection from '../filter/carseat_filters';
 import CounterChip from '../filter/helper/counter_chip';
 import { CarSeatSortingSelect } from '../sorting_select';
 import Link from 'next/link';
-import { Badge } from '@nextui-org/react';
+import { Badge, Input } from '@nextui-org/react';
 import { ChevronsRightLeft, DiffIcon, HeartIcon, Search } from 'lucide-react';
 import { searchCarseatByName } from 'lib/data';
+import GoogleAd from 'app/[lang]/GoogleAd';
 
 export default function CarseatsContent({ initialData, brands, dictionary, lang }:
     {
@@ -75,32 +76,37 @@ export default function CarseatsContent({ initialData, brands, dictionary, lang 
                             <CounterChip title={"carseats"} number={carseats.length} dictionary={dictionary} />
                             <CarSeatSortingSelect carseats={carseats} setCarseats={setCarseats} dictionary={dictionary} />
                             {selectedCarseats && (
-                                
+
                                 <Link className='hidden lg:block' href={{ pathname: "/" + lang + "/compare", query: { ids: encodedIds, type: 'carseat' } }}>
                                     <Badge color="warning" content={selectedCarseats?.size} isInvisible={false} shape="circle">
                                         <ChevronsRightLeft size={25} />
                                     </Badge>
                                 </Link>
-                                
+
                             )}
                         </div>
 
                         <div className="w-full mb-5 relative">
-                            <input
+                            <Input
                                 type="text"
                                 value={searchQuery}
                                 onChange={(e) => handleSearch(e.target.value)}
                                 placeholder="Search for a carseat name..."
-                                className="w-full p-2 border border-gray-300 rounded-lg"
+                                className="w-full p-2 border border-transparent rounded-lg focus:border-blue-500 focus:outline-none"
+                                style={{
+                                    color: "inherit",
+                                    caretColor: "transparent",
+                                    borderColor: 'transparent'
+                                }}
                             />
 
-                            {isDropdownOpen && searchResults  && (
-                                <ul className="absolute z-10 w-full bg-white border border-gray-300 rounded-lg shadow-md mt-2">
+                            {isDropdownOpen && searchResults && (
+                                <ul className="absolute z-10 w-full bg-white bg-opacity-90 border border-gray-300 rounded-lg shadow-md mt-2">
                                     {searchResults.map((carseat) => (
-                                        <li key={carseat.id} className="p-2 hover:bg-gray-100">
+                                        <li key={carseat.id} className="p-2 hover:bg-gray-100 rounded-lg">
                                             <a
                                                 href={`/${lang}/carseats/${carseat.internalLink}`}
-                                                className="text-blue-500 hover:underline"
+                                                className="text-blue-500 hover:underline rounded-lg"
                                             >
                                                 {carseat.name}
                                             </a>
@@ -111,19 +117,30 @@ export default function CarseatsContent({ initialData, brands, dictionary, lang 
                         </div>
 
                         <div className="gap-2 grid grid-cols-1 sm:grid-cols-3" key={"carseats"}>
-                            {carseats.map(item => (
-                                <ProductCard
-                                    key={'carseat-' + item.id}
-                                    name={item.name}
-                                    brand={item.brand}
-                                    brandValue={item.brandValue}
-                                    img={item.img}
-                                    tags={item.bestAdac != null ? ['ADAC: ' + item.bestAdac] : []}
-                                    generatedId={item.generatedId}
-                                    infoLinkPrefix={'/carseats/'}
-                                    isSelected={selectedCarseats.has(item.generatedId)}
-                                    onSelect={handleSelectCard}
-                                />
+                            {carseats.map((item, index) => (
+                                <>
+                                    <ProductCard
+                                        key={'carseat-' + item.id}
+                                        name={item.name}
+                                        brand={item.brand}
+                                        brandValue={item.brandValue}
+                                        img={item.img}
+                                        tags={item.bestAdac != null ? ['ADAC: ' + item.bestAdac] : []}
+                                        generatedId={item.generatedId}
+                                        infoLinkPrefix={'/carseats/'}
+                                        isSelected={selectedCarseats.has(item.generatedId)}
+                                        onSelect={handleSelectCard}
+                                    />
+                                    {(index + 1) % 6 === 0 && (
+                                        <div className="w-full col-span-full my-1">
+                                            <GoogleAd
+                                                adClient="ca-pub-1946644893911245"
+                                                adSlot="9479770359"
+                                                className=""
+                                            />
+                                        </div>
+                                    )}
+                                </>
                             ))}
                         </div>
                     </>
@@ -163,7 +180,7 @@ export default function CarseatsContent({ initialData, brands, dictionary, lang 
                                 aria-label="compare"
                                 onPress={() => {
                                     // Redirect to the compare page with the selected strollers
-                                    const query = { pathname: `/${lang}/compare`, query: { ids: encodedIds , type: 'carseat'} };
+                                    const query = { pathname: `/${lang}/compare`, query: { ids: encodedIds, type: 'carseat' } };
                                     window.location.href = `${query.pathname}?${new URLSearchParams(query.query).toString()}`;
                                 }}
                                 className={`${theme === 'dark' ? 'dark:bg-[#92987F] dark:text-black' : 'bg-[#92987F] text-white'

@@ -195,6 +195,10 @@
         background-image: url('/static/images/bento/compare-header.png');
     }
 
+    .guide-header {
+        background-image: url('/static/images/bento/guide-header.png');
+    }
+
     /* Grid Items */
     .grid-item-a {
         background-image: url('/static/images/bento/reviews-square-inverz.png');

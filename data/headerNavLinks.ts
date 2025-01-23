@@ -8,6 +8,10 @@ const headerNavLinks = [
         href: "/carseats",
       },
       {
+        title: "guide",
+        href: "/guide",
+      },
+      {
         title: "reviews",
         href: "/reviews",
       },

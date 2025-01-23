@@ -70,7 +70,7 @@ const Header = () => {
                                 <li key={i}>
                                     <Button
                                         variant="ghost"
-                                        className="px-3 py-2 text-sm font-large text-muted-foreground hover:text-foreground"
+                                        className="px-3 py-2 px-2 text-sm font-large text-muted-foreground hover:text-foreground"
                                     >
                                         <Link
                                             className="rounded px-3 py-2 text-lg font-medium text-muted-foreground transition-all duration-300 hover:bg-secondary hover:brightness-125"
