@@ -105,6 +105,8 @@
     "tags": {
       "main-card": {
         "chip": {
+          "no": "no",
+          "yes": "yes",
           "baseless-isofix": "isofix mount directly on the child seat",
           "base-with-belt": "car seat base fixed with belt",
           "no-isofix": "no isofix",

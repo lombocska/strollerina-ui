@@ -107,6 +107,8 @@
     "tags": {
       "main-card":{
         "chip": {
+          "no": "nem",
+          "yes": "igen",
           "baseless-isofix": "isofix rögzítő közvetlenül a gyerekülésen",
           "base-with-belt": "autósülés bázisa övvel rögzítve",
           "no-isofix": "nincs isofix",
