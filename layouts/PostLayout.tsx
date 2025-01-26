@@ -6,6 +6,7 @@ import ScrollTopAndComment from '@/components/ScrollTopAndComment'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import type { Authors, Blog } from 'contentlayer/generated'
+import { usePathname } from 'next/navigation'
 import { CoreContent } from 'pliny/utils/contentlayer'
 import { ReactNode } from 'react'
 
@@ -31,6 +32,9 @@ interface LayoutProps {
 export default function PostLayout({ content, authorDetails, next, prev, children }: LayoutProps) {
     const { filePath, path, slug, date, title, tags } = content
     const basePath = path.split('/')[0]
+
+    const pathname = usePathname(); // Get the current URL pathname
+    const lang = pathname.split('/')[1]; // Extract the language part (e.g., "en")
 
     return (
         <>
@@ -128,7 +132,7 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
                                         </h2>
                                         <div className="flex flex-wrap space-x-3">
                                             {tags.map((tag) => (
-                                                <Tag key={tag} text={tag} />
+                                                <Tag key={tag} text={tag} lang={lang}/>
                                             ))}
                                         </div>
                                     </div>

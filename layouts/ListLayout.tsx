@@ -76,6 +76,10 @@ export default function ListLayout({
     const [searchValue, setSearchValue] = useState('')
     const [pageViews, setPageViews] = useState<Record<string, number | undefined>>({})
 
+    const pathname = usePathname(); // Get the current URL pathname
+    const lang = pathname.split('/')[1]; // Extract the language part (e.g., "en")
+
+
     const filteredBlogPosts = posts.filter((post) => {
         const searchContent = post.title + post.summary + post.tags?.join(' ')
         return searchContent.toLowerCase().includes(searchValue.toLowerCase())
@@ -158,7 +162,7 @@ export default function ListLayout({
                                                 </Link>
                                             </h3>
                                             <div className="flex flex-wrap space-x-3">
-                                                {tags?.map((tag) => <Tag key={tag} text={tag} />)}
+                                                {tags?.map((tag) => <Tag key={tag} text={tag} lang={lang}/>)}
                                             </div>
                                         </div>
                                         <div className="prose prose-sm max-w-none text-muted-foreground">

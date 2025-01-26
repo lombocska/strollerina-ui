@@ -15,9 +15,7 @@ import rehypeCitation from 'rehype-citation'
 import rehypeKatex from 'rehype-katex'
 import rehypePresetMinify from 'rehype-preset-minify'
 import rehypePrismPlus from 'rehype-prism-plus'
-// Rehype packages
 import rehypeSlug from 'rehype-slug'
-// Remark packages
 import remarkGfm from 'remark-gfm'
 import remarkMath from 'remark-math'
 
@@ -41,15 +39,15 @@ const computedFields: ComputedFields = {
         resolve: (doc) => doc._raw.sourceFilePath,
     },
     toc: { type: 'string', resolve: (doc) => extractTocHeadings(doc.body.raw) },
-};
+}
 
 /**
- * Count the occurrences of all tags across blog posts and write to json file
+ * Count the occurrences of all tags across blog posts and write to JSON file
  */
 function createTagCount(allBlogs) {
     const tagCount: Record<string, number> = {}
     allBlogs.forEach((file) => {
-        if (file.tags && (!isProduction || file.draft !== true) && file.language === "en") {
+        if (file.tags && (!isProduction || file.draft !== true)) {
             file.tags.forEach((tag) => {
                 const formattedTag = GithubSlugger.slug(tag)
                 if (formattedTag in tagCount) {
@@ -61,22 +59,28 @@ function createTagCount(allBlogs) {
         }
     })
     writeFileSync('./app/tag-data.json', JSON.stringify(tagCount))
+}
 
-    const tagCountHU: Record<string, number> = {}
-    allBlogs.forEach((file) => {
-        if (file.tags && (!isProduction || file.draft !== true) && file.language === "hu") {
-            file.tags.forEach((tag) => {
-                const formattedTag = GithubSlugger.slug(tag)
-                if (formattedTag in tagCountHU) {
-                    tagCountHU[formattedTag] += 1
-                } else {
-                    tagCountHU[formattedTag] = 1
-                }
-            })
-        }
-    })
-    writeFileSync('./app/tag-data-hu.json', JSON.stringify(tagCountHU))
-
+/**
+ * Generate RSS feed for blog posts
+ */
+function createRssFeed(allBlogs) {
+    const rssFeed = {
+        version: '2.0',
+        channel: {
+            title: siteMetadata.title,
+            link: siteMetadata.siteUrl,
+            description: siteMetadata.description,
+            items: allBlogs.map((blog) => ({
+                title: blog.title,
+                link: `${siteMetadata.siteUrl}/${blog._raw.flattenedPath}`,
+                pubDate: blog.date,
+                description: blog.summary,
+            })),
+        },
+    }
+    writeFileSync('./public/rss.xml', JSON.stringify(rssFeed))
+    console.log('RSS feed generated...')
 }
 
 function createSearchIndex(allBlogs) {
@@ -100,6 +104,7 @@ export const Blog = defineDocumentType(() => ({
         title: { type: 'string', required: true },
         date: { type: 'date', required: true },
         tags: { type: 'list', of: { type: 'string' }, default: [] },
+        categories: { type: 'list', of: { type: 'string' }, default: [] }, // New field for categories
         lastmod: { type: 'date' },
         draft: { type: 'boolean' },
         hidden: { type: 'boolean' },
@@ -111,23 +116,128 @@ export const Blog = defineDocumentType(() => ({
         bibliography: { type: 'string' },
         canonicalUrl: { type: 'string' },
         language: { type: 'string', required: true },
+        ratingValue: { type: 'string' },
+        bestRating: { type: 'string' },
+        worstRating: { type: 'string' },
+        products: { type: 'list', of: { type: 'string' } },
+        productImages: { type: 'list', of: { type: 'string' } },
     },
     computedFields: {
         ...computedFields,
         structuredData: {
             type: 'json',
-            resolve: (doc) => ({
-                '@context': 'https://schema.org',
-                '@type': 'BlogPosting',
-                headline: doc.title,
-                datePublished: doc.date,
-                dateModified: doc.lastmod || doc.date,
-                description: doc.summary,
-                image: doc.images ? doc.images[0] : siteMetadata.socialBanner,
-                url: `${siteMetadata.siteUrl}/${doc._raw.flattenedPath}`,
-                author: doc.authors,
-            }),
+            resolve: (doc) => {
+                const tagsArray = doc.tags?._array || []; 
+                
+                if (tagsArray.includes('review')) {
+                    const products = doc.products?._array || []; 
+                    const productImages = doc.productImages?._array || []; 
+                    const baseData = {
+                        '@context': 'https://schema.org',
+                        '@type': 'Review',
+                        headline: doc.title,
+                        datePublished: doc.date,
+                        dateModified: doc.lastmod || doc.date,
+                        description: doc.summary,
+                        image: doc.images ? doc.images[0] : siteMetadata.socialBanner,
+                        url: `${siteMetadata.siteUrl}/${doc._raw.flattenedPath}`,
+                        author: Array.isArray(doc.authors)
+                            ? doc.authors.map((author) => ({
+                                '@type': 'Person',
+                                name: author,
+                            }))
+                            : [],
+                        keywords: tagsArray.length > 0 ? tagsArray.join(', ') : '', // Safely join the tags array
+                        // articleSection: Array.isArray(doc.categories) ? doc.categories.join(', ') : '',
+                        wordCount: readingTime(doc.body.raw).words,
+                        "reviewBody": doc.summary,
+                        "name": doc.title,
+                        "reviewRating": {
+                            "@type": "Rating",
+                            "ratingValue": "4.8",
+                            "bestRating": "5",
+                            "worstRating": "1"
+                        },
+                        "itemReviewed": [
+                            Array.isArray(products)
+                            ? products.map((product, index) => ({
+                                "@type": "Product",
+                                "name": product,
+                                "image": productImages ? productImages[index] : siteMetadata.socialBanner,
+                                // "description": doc.summary,
+                                //   "sku": "123456789"
+                            }))
+                            : [],
+                            
+                        ]
+                    };
+                    return baseData;
+                }
+
+                const baseData = {
+                    '@context': 'https://schema.org',
+                    '@type': 'BlogPosting',
+                    headline: doc.title,
+                    datePublished: doc.date,
+                    dateModified: doc.lastmod || doc.date,
+                    description: doc.summary,
+                    image: doc.images ? doc.images[0] : siteMetadata.socialBanner,
+                    url: `${siteMetadata.siteUrl}/${doc._raw.flattenedPath}`,
+                    author: Array.isArray(doc.authors)
+                        ? doc.authors.map((author) => ({
+                            '@type': 'Person',
+                            name: author,
+                        }))
+                        : [],
+                    keywords: tagsArray.length > 0 ? tagsArray.join(', ') : '', // Safely join the tags array
+                    // articleSection: Array.isArray(doc.categories) ? doc.categories.join(', ') : '',
+                    wordCount: readingTime(doc.body.raw).words,
+                };
+
+                // Additional logic for specific tags like "review" or "comparison"
+                // if (tagsArray.includes('review')) {
+                //     return {
+                //         ...baseData,
+                //         review: {
+                //             '@type': 'Review',
+                //             author: {
+                //                 '@type': 'Person',
+                //                 name: Array.isArray(doc.authors) ? doc.authors.join(', ') : '',
+                //             },
+                //             reviewRating: {
+                //                 '@type': 'Rating',
+                //                 ratingValue: '4.8', // Replace with dynamic value if available
+                //                 bestRating: '5',
+                //                 worstRating: '1',
+                //             },
+                //         },
+                //     };
+                // }
+
+                // if (Array.isArray(doc.tags) && doc.tags.includes('comparison') && Array.isArray(doc.comparisonData)) {
+                //     return {
+                //         ...baseData,
+                //         mainEntity: doc.comparisonData.map((item) => ({
+                //             '@type': 'Product',
+                //             name: item.name,
+                //             aggregateRating: {
+                //                 '@type': 'AggregateRating',
+                //                 ratingValue: item.rating,
+                //                 reviewCount: item.reviewCount || 1,
+                //             },
+                //             offers: {
+                //                 '@type': 'Offer',
+                //                 price: item.price,
+                //                 priceCurrency: 'USD', // Adjust dynamically if needed
+                //             },
+                //         })),
+                //     };
+                // }
+
+                return baseData;
+            },
         },
+
     },
 }))
 
@@ -174,5 +284,6 @@ export default makeSource({
         const { allBlogs } = await importData()
         createTagCount(allBlogs)
         createSearchIndex(allBlogs)
+        createRssFeed(allBlogs) // Generate RSS feed
     },
 })

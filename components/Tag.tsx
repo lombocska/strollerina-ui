@@ -1,14 +1,16 @@
 import { slug } from 'github-slugger'
+import { Locale } from 'i18n-config'
 import Link from 'next/link'
 
 interface Props {
-    text: string
+    text: string,
+    lang: Locale
 }
 
-const Tag = ({ text }: Props) => {
+const Tag = ({ text, lang }: Props) => {
     return (
         <Link
-            href={`tags/${slug(text)}`}
+            href={`/${lang}/tags/${slug(text)}`}
             className="text-sm font-medium uppercase text-primary hover:brightness-125 dark:hover:brightness-125"
         >
             {text.split(' ').join('-')}

@@ -11,6 +11,7 @@ import { Skeleton } from '@/components/shadcn/skeleton'
 import siteMetadata from '@/data/siteMetadata'
 import GoogleAd from 'app/[lang]/GoogleAd'
 import type { Authors, Blog } from 'contentlayer/generated'
+import { usePathname } from 'next/navigation'
 import { Toc } from 'pliny/mdx-plugins'
 import { CoreContent } from 'pliny/utils/contentlayer'
 import { formatDate } from 'pliny/utils/formatDate'
@@ -40,6 +41,9 @@ export default function PostLayout({
         count: null,
     })
 
+    const pathname = usePathname(); // Get the current URL pathname
+    const lang = pathname.split('/')[1]; // Extract the language part (e.g., "en")
+
     useEffect(() => {
         console.log("Blog path: " + path)
         console.log("Blog slug: " + slug)
@@ -66,6 +70,7 @@ export default function PostLayout({
         <>
             {/* <SectionContainer> 
             <div className="box-border flex h-full flex-col justify-between "> */}
+            {/* <BlogPostRichSnippet content={content} lang={lang}/> */}
             <ScrollTopAndComment />
             <article>
                 <div>
@@ -111,7 +116,7 @@ export default function PostLayout({
                                 <div className="py-2">
                                     <div className="align-center flex flex-wrap justify-center space-x-3">
                                         {tags.map((tag) => (
-                                            <Tag key={tag} text={tag} />
+                                            <Tag key={tag} text={tag} lang={lang}/>
                                         ))}
                                     </div>
                                 </div>

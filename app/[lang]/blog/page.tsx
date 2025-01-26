@@ -2,6 +2,7 @@ import SectionContainer from '@/components/SectionContainer'
 import ListLayout from '@/layouts/ListLayout'
 import { genPageMetadata } from 'app/[lang]/seo'
 import { allBlogs } from 'contentlayer/generated'
+import { Locale } from 'i18n-config'
 import { allCoreContent, sortPosts } from 'pliny/utils/contentlayer'
 
 const POSTS_PER_PAGE = 100
