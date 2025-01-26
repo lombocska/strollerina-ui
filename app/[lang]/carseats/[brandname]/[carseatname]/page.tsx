@@ -5,6 +5,7 @@ import ProductSidePanel from '@/components/strollerina/content/product_info_side
 import ReviewsContent from '@/components/strollerina/content/reviews_content';
 import { subtitle, title } from "@/components/strollerina/primitives";
 import { Video } from '@/components/strollerina/video';
+import { genPageMetadata } from 'app/[lang]/seo';
 import { getDictionary } from 'get-dictionary';
 import { getBrandByName, getCarseatByGeneratedId, getCarseatImgs, getCarseatReviews } from 'lib/data';
 import { Metadata } from 'next';
@@ -64,11 +65,35 @@ export default async function CarseatInfoPage({ params }: { params: { carseatnam
   )
 }
 
-// export function generateMetadata(): Metadata {
-//   const { t } = useTranslation("carseats");
+export async function generateMetadata({ params }: { params: { carseatname?: string; brandname?: string; lang?: string } }) {
+  console.log("GenerateMetadata params:", params);
 
-//   return {
-//     title: t`info-page-title`,
-//     description: t`info-page-description`
-//   };
-// }
+  const carseatnameRaw = params?.carseatname || 'Car Seat';
+  const brandname = params?.brandname || 'Brand';
+
+  // Remove the numeric part after the last dash (-)
+  const carseatname = carseatnameRaw.includes('-')
+    ? carseatnameRaw.split('-').slice(0, -1).join('-')
+    : carseatnameRaw;
+
+  return {
+    title: `${brandname} ${carseatname} - Car Seat Info`,
+    description: `Learn about the ${carseatname}, including ADAC crash test results, customer reviews, and safety features. Compare it with other ${brandname} car seats.`,
+    robots: {
+      index: true,
+      follow: true,
+    },
+    keywords: [
+        `${carseatname} review`,
+        `${brandname} ${carseatname} manual`,
+        `${carseatname} ADAC test results`,
+        `${brandname} car seats`,
+        'best infant car seats 2024',
+        'safest car seats for newborns',
+        'ADAC crash test car seat',
+        `${carseatname} vs other car seats`,
+        'baby car seat reviews',
+        'top car seats by ADAC'
+    ],
+  };
+}

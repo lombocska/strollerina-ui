@@ -82,5 +82,22 @@ export async function generateMetadata({ params }: { params: { strollername?: st
       index: true,
       follow: true,
     },
+    keywords: [
+      `${brandname} ${strollername} review`,
+      `${brandname} ${strollername} manual`,
+      `${strollername} price and specs`,
+      'best strollers 2024',
+      'lightweight strollers',
+      'foldable strollers for travel',
+      'jogging strollers',
+      'baby strollers for newborns',
+      'top-rated strollers',
+      'affordable strollers',
+      `${brandname} lightweight stroller`,
+      'compact strollers',
+      `${brandname} foldable stroller`,
+      `${brandname} travel strollers`,
+      'stroller buying guide 2024'
+    ],    
   };
 }

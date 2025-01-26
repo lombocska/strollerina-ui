@@ -8,12 +8,23 @@ import { genPageMetadata } from '../seo';
 
 
 export const metadata = genPageMetadata({
-  title: 'Car Seats',
-  description: 'Dynamic car seat comparison',
+  title: 'Compare Car Seats: Reviews, Ratings, and ADAC Safety Tests',
+  description: 'Browse and compare car seats from top brands. Find detailed ADAC test results, customer reviews, and expert recommendations for the safest car seats of 2024.',
   robots: {
       index: true,
       follow: true,
   },
+  keywords: [
+      'car seat comparison',
+      'ADAC car seat test 2024',
+      'best car seats for babies',
+      'safest car seats 2024',
+      'child seat reviews',
+      'top-rated infant car seats',
+      'baby car seat safety ratings',
+      'affordable car seats',
+      'car seat buying guide 2024'
+  ],
 })
 
 export default async function CarSeats({
