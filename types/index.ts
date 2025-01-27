@@ -172,6 +172,7 @@ export type AffiliateDTO = {
   name: string;
   img: string;
   type: string;
+  price: number | null;
 };
 
 export type ProductCardProps = {

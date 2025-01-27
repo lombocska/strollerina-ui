@@ -189,6 +189,21 @@ export async function searchStrollers(
         })
 }
 
+export async function getStrollerById(Id: string): Promise<StrollerInfoDTO> {
+    console.log("Searching for stroller with stroller named " + Id)
+    const requestOptions = {
+        method: 'GET', headers: { 'Content-Type': 'application/json' },
+    };
+    const base_url = process.env.NEXT_PUBLIC_BACKEND_URL;
+    let url = base_url + '/strollers/' + Id;
+    return await fetch(url, requestOptions)
+        .then((response) => {
+            if (response.status != 200) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+}
 
 export async function getStrollerByGeneratedId(generatedId: string): Promise<StrollerInfoDTO> {
     console.log("Searching for stroller with stroller named " + generatedId)
