@@ -158,18 +158,18 @@ export const Blog = defineDocumentType(() => ({
                             "bestRating": "5",
                             "worstRating": "1"
                         },
-                        "itemReviewed": [
-                            Array.isArray(products)
-                            ? products.map((product, index) => ({
-                                "@type": "Product",
-                                "name": product,
-                                "image": productImages ? productImages[index] : siteMetadata.socialBanner,
-                                // "description": doc.summary,
-                                //   "sku": "123456789"
-                            }))
-                            : [],
+                        // "itemReviewed": [
+                        //     Array.isArray(products)
+                        //     ? products.map((product, index) => ({
+                        //         "@type": "Product",
+                        //         "name": product,
+                        //         "image": productImages ? productImages[index] : siteMetadata.socialBanner,
+                        //         // "description": doc.summary,
+                        //         //   "sku": "123456789"
+                        //     }))
+                        //     : [],
                             
-                        ]
+                        // ]
                     };
                     return baseData;
                 }
