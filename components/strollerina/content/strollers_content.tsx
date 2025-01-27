@@ -79,7 +79,15 @@ export default function StrollersContent({ initialData, brands, dictionary, lang
 
     return (
         <>
-
+            <aside className="hidden 2xl:block md:w-1/12  fixed left-0 top-16 h-full max-h-[1000px] bg-transparent overflow-y-auto">
+                <div className="sticky top-16">
+                    <GoogleAd
+                        adClient="ca-pub-1946644893911245"
+                        adSlot="9479770359"
+                        className="block w-full h-[800px] rounded-lg shadow-md"
+                    />
+                </div>
+            </aside>
 
             <main className="md:w-2/3 p-4  ">
 
@@ -109,7 +117,7 @@ export default function StrollersContent({ initialData, brands, dictionary, lang
                                 className="w-full p-2 border border-transparent rounded-lg focus:border-blue-500 focus:outline-none"
                                 style={{
                                     color: "inherit",
-                                    caretColor: "transparent", 
+                                    caretColor: "transparent",
                                     borderColor: 'transparent'
                                 }}
                             />
