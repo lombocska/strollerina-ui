@@ -17,6 +17,7 @@ import { Badge, Input } from '@nextui-org/react';
 import { ChevronsRightLeft, DiffIcon, HeartIcon, Search } from 'lucide-react';
 import { searchCarseatByName } from 'lib/data';
 import GoogleAd from 'app/[lang]/GoogleAd';
+import GoogleAdSidePanel from 'app/[lang]/GoogleAdSidePanel';
 
 export default function CarseatsContent({ initialData, brands, dictionary, lang }:
     {
@@ -70,17 +71,9 @@ export default function CarseatsContent({ initialData, brands, dictionary, lang 
     return (
         <>
 
-            <aside className="hidden 2xl:block md:w-1/12  fixed left-0 top-16 h-full max-h-[1000px] bg-transparent overflow-y-auto">
-                <div className="sticky top-16">
-                    <GoogleAd
-                        adClient="ca-pub-1946644893911245"
-                        adSlot="9479770359"
-                        className="block w-full h-[800px] rounded-lg shadow-md"
-                    />
-                </div>
-            </aside>
+            <GoogleAdSidePanel />
 
-            <main className="md:w-2/3 p-4  ">
+            <main className="md:w-2/3 p-4  ml-3">
                 {carseats &&
                     <>
                         <div className="flex flex-wrap content-center items-center mb-5 rounded-full justify-between space-y-2">
