@@ -8,6 +8,7 @@ interface GoogleAdProps {
   adFormat?: string
   adLayout?: string
   className?: string
+  fullWidthResponsive: boolean, // default to true
 }
 
 export default function GoogleAd({
@@ -16,6 +17,7 @@ export default function GoogleAd({
   adFormat = 'fluid',
   adLayout = 'in-article',
   className = '',
+  fullWidthResponsive = true, // default to true
 }: GoogleAdProps) {
   useEffect(() => {
     if (typeof window !== 'undefined' && window.adsbygoogle) {
