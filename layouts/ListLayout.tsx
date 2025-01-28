@@ -172,7 +172,7 @@ export default function ListLayout({
                                             <dl>
                                                 <dt className="sr-only">Published on</dt>
                                                 <dd className="flex gap-1 text-base font-medium leading-6 text-muted-foreground">
-                                                    {/* {isLoadingViewCount ? (
+                                                    {isLoadingViewCount ? (
                                                         <span className="flex items-center justify-center gap-2">
                                                             <Skeleton className="h-6 w-12" />
                                                             <span> views</span>
@@ -183,8 +183,8 @@ export default function ListLayout({
                                                                 '...'}{' '}
                                                             views
                                                         </span>
-                                                    )} */}
-                                                    {/* <span>・</span> */}
+                                                    )} 
+                                                    <span>・</span>
                                                     <time dateTime={date}>
                                                         {formatDate(date, siteMetadata.locale)}
                                                     </time>

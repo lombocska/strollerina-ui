@@ -32,17 +32,21 @@ export default async function StrollerInfoPage({ params }: { params: { strollern
                 <h2 className={subtitle({ class: "mt-4" })}>
                   {stroller.brand}
                 </h2>
-                <AmazonLink id={stroller.id} type='stroller' dictionary={dictionary.strollers}/>
+                <AmazonLink id={stroller.id} type='stroller' dictionary={dictionary.strollers} />
               </div>
             </section>
-          
+
             <Carousel slides={slideImgs} />
+            <div className="block md:hidden mt-8">
+              <StrollerInfo data={stroller} dictionary={dictionary.strollers} />
+            </div>
+
 
             {/* Reviews Section */}
             {reviews && (
               <div className="py-8">
-                <ReviewsContent 
-                  reviews={reviews} 
+                <ReviewsContent
+                  reviews={reviews}
                   dictionary={dictionary}
                   isSingleColumn={true}
                 />
@@ -56,7 +60,7 @@ export default async function StrollerInfoPage({ params }: { params: { strollern
         </main>
       </div>
 
-      <ProductSidePanel 
+      <ProductSidePanel
         dictionary={dictionary.strollers}
         info={<StrollerInfo data={stroller} dictionary={dictionary.strollers} />}
       />
@@ -98,6 +102,6 @@ export async function generateMetadata({ params }: { params: { strollername?: st
       `${brandname} foldable stroller`,
       `${brandname} travel strollers`,
       'stroller buying guide 2024'
-    ],    
+    ],
   };
 }

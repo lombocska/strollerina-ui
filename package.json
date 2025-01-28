@@ -33,6 +33,7 @@
         "@upstash/ratelimit": "^1.0.1",
         "@upstash/redis": "^1.24.2",
         "@vercel/analytics": "^1.0.2",
+        "adblock-detector": "^2.1.0",
         "autoprefixer": "^10.4.13",
         "class-variance-authority": "^0.7.0",
         "clsx": "^2.0.0",

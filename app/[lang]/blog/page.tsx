@@ -11,10 +11,10 @@ export const metadata = genPageMetadata({ title: 'Blog' })
 
 export default async function BlogPage({
     params: { lang },
-    }: {
+}: {
     params: { lang: Locale };
-    }) {
-      
+}) {
+
     const posts = allCoreContent(sortPosts(allBlogs.filter((p) => !p.hidden)).filter((p) => p.language === lang))
     const pageNumber = 1
     const initialDisplayPosts = posts.slice(
@@ -28,15 +28,15 @@ export default async function BlogPage({
 
     return (
         // <SectionContainer> 
-            <div className="box-border flex h-full flex-col justify-between ">
-                <div className="divide-y divide-accent-foreground dark:divide-accent xl:col-span-3 xl:row-span-2 xl:pb-0">
-        <ListLayout
-            posts={posts}
-            initialDisplayPosts={initialDisplayPosts}
-            pagination={pagination}
-            title="All Posts"
-        />
-        </div>
+        <div className="box-border flex h-full flex-col justify-between ">
+            <div className="divide-y divide-accent-foreground dark:divide-accent xl:col-span-3 xl:row-span-2 xl:pb-0">
+                <ListLayout
+                    posts={posts}
+                    initialDisplayPosts={initialDisplayPosts}
+                    pagination={pagination}
+                    title="All Posts"
+                />
+            </div>
         </div>
         // </SectionContainer>
     )

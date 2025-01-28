@@ -16,8 +16,8 @@ import Link from 'next/link';
 import { Badge, Input } from '@nextui-org/react';
 import { ChevronsRightLeft, DiffIcon, HeartIcon, Search } from 'lucide-react';
 import { searchCarseatByName } from 'lib/data';
-import GoogleAdSidePanel from 'app/[lang]/GoogleAdSidePanel';
-import AmongProductsGoogleAd from 'app/[lang]/GoogleAdAmongProducts';
+import GoogleAdSidePanel from '@/components/ads/GoogleAdSidePanel';
+import AmongProductsGoogleAd from '@/components/ads/GoogleAdAmongProducts';
 
 export default function CarseatsContent({ initialData, brands, dictionary, lang }:
     {
@@ -135,11 +135,11 @@ export default function CarseatsContent({ initialData, brands, dictionary, lang 
                                         isSelected={selectedCarseats.has(item.generatedId)}
                                         onSelect={handleSelectCard}
                                     />
-                                    {(index + 1) % 6 === 0 && (
+                                    {/* {(index + 1) % 6 === 0 && (
                                         <div className="w-full col-span-full my-1">
                                             <AmongProductsGoogleAd />
                                         </div>
-                                    )}
+                                    )} */}
                                 </>
                             ))}
                         </div>

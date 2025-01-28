@@ -34,7 +34,7 @@ export default function GoogleAdSidePanel() {
           adSlot="6066745749"
           adFormat="auto"
           fullWidthResponsive={true}
-          className="block w-full h-[800px] rounded-lg shadow-md"
+          className="block w-full h-[800px] rounded-lg"
         />
       </div>
     </aside>
