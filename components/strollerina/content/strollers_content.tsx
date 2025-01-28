@@ -17,8 +17,8 @@ import CounterChip from '../filter/helper/counter_chip';
 import StrollerFiltersCollection from '../filter/stroller_filters';
 import SortingSelect from '../sorting_select';
 import { searchStrollerByName } from 'lib/data';
-import GoogleAd from 'app/[lang]/GoogleAd';
 import GoogleAdSidePanel from 'app/[lang]/GoogleAdSidePanel';
+import AmongProductsGoogleAd from 'app/[lang]/GoogleAdAmongProducts';
 
 
 export default function StrollersContent({ initialData, brands, dictionary, lang }:
@@ -80,7 +80,7 @@ export default function StrollersContent({ initialData, brands, dictionary, lang
 
     return (
         <>
-             <GoogleAdSidePanel />
+            <GoogleAdSidePanel />
 
             <main className="md:w-2/3 p-4  ">
 
@@ -149,11 +149,7 @@ export default function StrollersContent({ initialData, brands, dictionary, lang
                                     />
                                     {(index + 1) % 6 === 0 && (
                                         <div className="w-full col-span-full my-1">
-                                            <GoogleAd
-                                                adClient="ca-pub-1946644893911245"
-                                                adSlot="9479770359"
-                                                className=""
-                                            />
+                                            <AmongProductsGoogleAd />
                                         </div>
                                     )}
                                 </>

@@ -31,7 +31,7 @@ export default function GoogleAdSidePanel() {
       <div className="sticky top-16">
         <GoogleAd
           adClient="ca-pub-1946644893911245"
-          adSlot="9479770359"
+          adSlot="6066745749"
           adFormat="auto"
           fullWidthResponsive={true}
           className="block w-full h-[800px] rounded-lg shadow-md"
