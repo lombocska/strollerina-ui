@@ -5,7 +5,6 @@ import ReviewsContent from '@/components/strollerina/content/reviews_content';
 import AmazonLink from '@/components/strollerina/links/amazon_affiliate_link';
 import { subtitle, title } from "@/components/strollerina/primitives";
 import { Video } from '@/components/strollerina/video';
-import { genPageMetadata } from 'app/[lang]/seo';
 import { getDictionary } from 'get-dictionary';
 import { getStrollerByGeneratedId, getStrollerImgs, getStrollerReviews } from 'lib/data';
 import { Locale } from 'next/dist/compiled/@vercel/og/satori';
@@ -37,6 +36,7 @@ export default async function StrollerInfoPage({ params }: { params: { strollern
             </section>
 
             <Carousel slides={slideImgs} />
+
             <div className="block md:hidden mt-8">
               <StrollerInfo data={stroller} dictionary={dictionary.strollers} />
             </div>
@@ -91,6 +91,7 @@ export async function generateMetadata({ params }: { params: { strollername?: st
       `${brandname} ${strollername} manual`,
       `${strollername} price and specs`,
       'best strollers 2024',
+      'best strollers 2025',
       'lightweight strollers',
       'foldable strollers for travel',
       'jogging strollers',

@@ -8,8 +8,8 @@ const siteMetadata = {
     theme: 'light', // system, dark or light
     siteUrl: 'https://www.strollerina.com',
     siteRepo: '',
-    siteLogo: '/static/images/logo.png',
-    socialBanner: '/static/images/youtubebanner.png',
+    siteLogo: '/static/favicons/logo.png',
+    socialBanner: '/static/images/social-banner.png',
     // mastodon: 'https://mastodon.social/@mastodonuser',
     email: '',
     github: '',

@@ -117,7 +117,7 @@ export default function StrollersContent({ initialData, brands, dictionary, lang
                             {isDropdownOpen && searchResults && (
                                 <ul className="absolute z-10 w-full bg-white bg-opacity-90 border border-gray-300 rounded-lg shadow-md mt-2">
                                     {searchResults.map((stroller) => (
-                                        <li key={stroller.id} className="p-2 hover:bg-gray-100">
+                                        <li key={stroller.generatedId} className="p-2 hover:bg-gray-100">
                                             <a
                                                 href={`/${lang}/strollers/${stroller.internalLink}`}
                                                 className="text-blue-500 hover:underline"

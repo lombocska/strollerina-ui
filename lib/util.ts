@@ -1,15 +1,15 @@
 
-export async function getManuals(brand: string) {
-    const base_url = process.env.NEXT_PUBLIC_BACKEND_URL;
-    const res = await fetch(base_url + '/manuals/'+ encodeURI(brand))
-    console.log("fetch manuals")
+// export async function getManuals(brand: string) {
+//     const base_url = process.env.NEXT_PUBLIC_BACKEND_URL;
+//     const res = await fetch(base_url + '/manuals/'+ encodeURI(brand))
+//     console.log("fetch manuals")
     
-    if (!res.ok) {
-     throw new Error('Failed to fetch data with brand ' + encodeURI(brand));
-}
+//     if (!res.ok) {
+//      throw new Error('Failed to fetch data with brand ' + encodeURI(brand));
+// }
  
-  return res.json()
-}
+//   return res.json()
+// }
 
 export function deepCompare(arg1, arg2){
     if (Object.prototype.toString.call(arg1) === Object.prototype.toString.call(arg2)){

@@ -356,10 +356,14 @@ export const Blog = defineDocumentType(() => ({
                 const ratings = doc.ratings?._array || [];
                 const authorList = doc.authors._array || [];
                 const authors = authorList.map((author) => ({
-                        '@type': 'Person',
-                        name: author,
-                    }));
-                
+                    '@type': 'Person',
+                    name: author,
+                }));
+
+                const domain = siteMetadata.siteUrl; // Replace with your actual domain
+                const imagePath = doc.images?.[0] || siteMetadata.socialBanner;
+                const fullImageUrl = imagePath ? `${domain}${imagePath.startsWith('/') ? '' : '/'}${imagePath}` : null;
+
                 // Helper function to fetch product details
                 const fetchProductDetails = async (productId) => {
                     try {
@@ -403,7 +407,7 @@ export const Blog = defineDocumentType(() => ({
                         datePublished: doc.date,
                         dateModified: doc.lastmod || doc.date,
                         description: doc.summary,
-                        image: doc.images?.[0] || siteMetadata.socialBanner,
+                        image: fullImageUrl,
                         url: `${siteMetadata.siteUrl}/${doc._raw.flattenedPath}`,
                         author: authors,
                         keywords: tagsArray.join(', '),
@@ -423,12 +427,12 @@ export const Blog = defineDocumentType(() => ({
                 // Default BlogPosting schema
                 return {
                     '@context': 'https://schema.org',
-                    '@type': 'BlogPosting',
+                    '@type': 'Article',
                     headline: doc.title,
                     datePublished: doc.date,
                     dateModified: doc.lastmod || doc.date,
                     description: doc.summary,
-                    image: doc.images?.[0] || siteMetadata.socialBanner,
+                    image: fullImageUrl,
                     url: `${siteMetadata.siteUrl}/${doc._raw.flattenedPath}`,
                     author: authors,
                     keywords: tagsArray.join(', '),

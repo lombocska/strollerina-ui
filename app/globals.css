@@ -72,7 +72,17 @@
         @apply bg-background text-foreground;
     }
 }
-
+.vertical-timeline::before {
+    /* this is the vertical line */
+  
+    background: black !important;
+  }
+  
+  .empty {
+    height: 600px;
+    border: 1px solid red;
+  }
+  
 @layer components {
 
 
