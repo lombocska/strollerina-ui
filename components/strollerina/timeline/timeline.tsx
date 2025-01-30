@@ -5,8 +5,6 @@ import { motion } from "framer-motion";
 import { SeriesDTO, StrollerInfoDTO } from "types";
 import { getSeriesById, getStrollerById } from "lib/data";
 import ProductCard from "../cards/product_card";
-import { getDictionary } from "get-dictionary";
-import { usePathname } from "next/navigation";
 
 type ProductType = "STROLLER" | "CAR_SEAT";
 
@@ -22,10 +20,6 @@ interface TimelineProps {
 }
 
 export default function Timeline({ productType, itemId }: TimelineProps) {
-
-    // const pathname = usePathname(); // Get the current URL pathname
-    // const lang = pathname.split('/')[1]; // Extract the language part (e.g., "en")
-    // const dictionary = await getDictionary(lang === 'en' ? 'en' : 'hu');
 
     const [milestones, setMilestones] = useState<Milestone[]>([]);
     const [loading, setLoading] = useState<boolean>(true);
@@ -83,9 +77,6 @@ export default function Timeline({ productType, itemId }: TimelineProps) {
 function MilestoneList({ milestones, isMobile }: { milestones: Milestone[]; isMobile: boolean }) {
     return (
         <>
-            <h2 className="text-2xl text-center from-black to-stone-500 bg-clip-text text-strollerina_green-100 mt-10">
-                Models
-            </h2>
             <div className={`${isMobile ? "block md:hidden" : "hidden md:block"} relative flex flex-col items-center py-10 w-full`}>
                 {/* Vertical Line (Now in both mobile & desktop) */}
 

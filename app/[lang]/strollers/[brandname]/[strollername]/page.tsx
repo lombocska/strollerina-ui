@@ -43,6 +43,9 @@ export default async function StrollerInfoPage({ params }: { params: { strollern
             </div>
 
 
+            <h2 className="text-2xl text-center from-black to-stone-500 bg-clip-text text-strollerina_green-100 mt-10">
+                {dictionary.strollers.common['series']}
+            </h2>
             <Timeline productType="STROLLER" itemId={stroller.id}/>
 
             {/* Reviews Section */}
