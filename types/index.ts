@@ -6,22 +6,22 @@ export type IconSvgProps = SVGProps<SVGSVGElement> & {
 
 export type CarseatCard = {
   id: string;
-  generatedId:string;
+  generatedId: string;
   brand: string;
   brandValue: string;
   name: string;
-  img:string;
+  img: string;
   priceFrom: string;
   bestAdac: number;
 };
 
 export type StrollerCard = {
   id: string;
-  generatedId:string;
+  generatedId: string;
   brand: string;
   brandValue: string;
   name: string;
-  img:string;
+  img: string;
   priceFrom: number;
   weight: string;
   openHeight: string;
@@ -42,7 +42,7 @@ export type StrollerCard = {
 
 export type StrollerSearchByNameDto = {
   id: string;
-  generatedId:string;
+  generatedId: string;
   brand: string;
   brandValue: string;
   name: string;
@@ -52,14 +52,14 @@ export type StrollerSearchByNameDto = {
 
 export type CarseatSearchByNameDto = {
   id: string;
-  generatedId:string;
+  generatedId: string;
   brand: string;
   brandValue: string;
   name: string;
   internalLink: string;
 };
 
-export type CarseatsContentProps =  CarseatCard[];
+export type CarseatsContentProps = CarseatCard[];
 
 
 export type StrollersContentProps = StrollerCard[];
@@ -70,7 +70,7 @@ export type BrandContentProps = {
 };
 export type BrandItem = {
   name: string;
-  img:string;
+  img: string;
   value: string;
 };
 
@@ -100,7 +100,7 @@ export interface AdacSelectionProps {
 }
 
 export type CarseatCardDTO = {
-  generatedId:string;
+  generatedId: string;
   brand: string;
   brandValue: string;
   name: string;
@@ -123,6 +123,7 @@ export type CarseatCardDTO = {
   sideProtection: boolean;
   rotating: boolean;
   adacInfo: AdacInfo[];
+  productionDate: number | null;
 };
 
 export type StrollerInfoDTO = {
@@ -157,6 +158,7 @@ export type StrollerInfoDTO = {
   reversibleSeat: boolean;
   recliningSeat: boolean;
   tags: string[];
+  productionDate: number | null;
 };
 
 export type ManualDTO = {
@@ -179,12 +181,13 @@ export type ProductCardProps = {
   name: string;
   brand: string;
   img: string;
-  tags: [] ;
+  tags: [];
   generatedId: string;
   brandValue: string;
   infoLinkPrefix: string;
   isSelected: boolean;
   onSelect: (title: string) => void;
+  notHidden: boolean | true;
 }
 
 export type CarSeatFiltersProps = Partial<{
@@ -253,7 +256,7 @@ export interface TagsProps {
 export interface NumberInputProps {
   title: string;
   label: string;
-  inputValue:  string; // Az inputValue lehet string, mivel a <Input> komponens value prop-ja stringet vár
+  inputValue: string; // Az inputValue lehet string, mivel a <Input> komponens value prop-ja stringet vár
   setInputValue: (value: number | string) => void;
   demo?: React.ReactNode;
   endContent?: React.ReactNode | null; // endContent lehet React komponens vagy null
@@ -318,3 +321,16 @@ export type ReviewDTO = {
   standaloneStrollerReviews: StrollerCarSeatReviewDTO[];
   standaloneCarSeatReviews: StrollerCarSeatReviewDTO[];
 };
+
+export interface SeriesDTO {
+  id: number;
+  name: string;
+  items: SeriesAssociationDTO[];
+}
+
+export interface SeriesAssociationDTO {
+  itemId: number;
+  itemType: string;
+  productionDate: string;
+  otherInfo: string;
+}

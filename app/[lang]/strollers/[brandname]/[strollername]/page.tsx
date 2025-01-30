@@ -4,6 +4,7 @@ import ProductSidePanel from '@/components/strollerina/content/product_info_side
 import ReviewsContent from '@/components/strollerina/content/reviews_content';
 import AmazonLink from '@/components/strollerina/links/amazon_affiliate_link';
 import { subtitle, title } from "@/components/strollerina/primitives";
+import Timeline from '@/components/strollerina/timeline/timeline';
 import { Video } from '@/components/strollerina/video';
 import { getDictionary } from 'get-dictionary';
 import { getStrollerByGeneratedId, getStrollerImgs, getStrollerReviews } from 'lib/data';
@@ -41,6 +42,8 @@ export default async function StrollerInfoPage({ params }: { params: { strollern
               <StrollerInfo data={stroller} dictionary={dictionary.strollers} />
             </div>
 
+
+            <Timeline productType="STROLLER" itemId={stroller.id} dictionary={dictionary.strollers}/>
 
             {/* Reviews Section */}
             {reviews && (

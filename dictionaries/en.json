@@ -100,7 +100,8 @@
       "adac-select-chip": "ADAC certification",
       "adac-chose": "Select ADAC verdict",
       "facing-select-chip": "Car seat facing mode",
-      "facing-chose": "Select facing mode"
+      "facing-chose": "Select facing mode",
+      "series": "Series"
     },
     "tags": {
       "main-card": {

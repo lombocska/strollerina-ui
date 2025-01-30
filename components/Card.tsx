@@ -16,6 +16,7 @@ type CardProps = {
     type?: 'comparable';
     isSelected: boolean;
     onSelect: (title: string) => void;
+    notHidden: boolean;
 };
 
 export default function Card({
@@ -27,6 +28,7 @@ export default function Card({
     type,
     isSelected,
     onSelect,
+    notHidden = true
 }: CardProps) {
     const { theme } = useTheme();
 
@@ -37,7 +39,11 @@ export default function Card({
                 <div
                     className={`${
                         imgSrc && 'h-full'
-                    } overflow-hidden rounded-md border border-border flex flex-col h-full cursor-pointer hover:shadow-lg hover:scale-105 transition-transform duration-200 ease-in-out`}
+                    } overflow-hidden 
+                    rounded-md border 
+                    border-border flex flex-col h-full cursor-pointer 
+                    hover:shadow-lg hover:scale-105 transition-transform duration-200 ease-in-out
+                    bg-gray-100 bg-opacity-50`}
                 >
                     {imgSrc && (
                         <Image
@@ -75,7 +81,7 @@ export default function Card({
             </Link>
 
             {/* Small Comparison Icon in the top-right corner */}
-            {type === 'comparable' && href && (
+            {type === 'comparable' && href && notHidden && (
                 <div
                     className={`absolute top-2 right-2 p-1 rounded-full shadow-md cursor-pointer hover:bg-primary hover:text-white transition duration-200 ease-in-out
                         ${isSelected ? 'bg-primary' : 'bg-white'} 

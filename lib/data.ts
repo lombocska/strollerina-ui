@@ -1,4 +1,4 @@
-import { AffiliateDTO, CarseatCardDTO, ManualDTO, ReviewDTO, StrollerInfoDTO } from "types";
+import { AffiliateDTO, CarseatCardDTO, ManualDTO, ReviewDTO, SeriesAssociationDTO, SeriesDTO, StrollerInfoDTO } from "types";
 
 export async function getManuals(brand: string) {
     const base_url = process.env.NEXT_PUBLIC_BACKEND_URL;
@@ -683,3 +683,35 @@ export async function getCurrencies(): Promise<string[]> {
     }
 }
 
+
+export async function getSeriesById(productType: string, itemId: number): Promise<SeriesDTO> {
+    const requestOptions = {
+      method: 'GET',
+      headers: { 'Content-Type': 'application/json' },
+    };
+  
+    const base_url = process.env.NEXT_PUBLIC_BACKEND_URL;
+    const url = `${base_url}/series/${productType}/${itemId}`;
+    
+    const response = await fetch(url, requestOptions);
+    if (!response.ok) {
+      throw new Error("Failed to fetch series for the item");
+    }
+    return response.json();
+  }
+  
+  export async function getOtherItemsInSeries(itemId: number): Promise<SeriesAssociationDTO[]> {
+    const requestOptions = {
+      method: 'GET',
+      headers: { 'Content-Type': 'application/json' },
+    };
+  
+    const base_url = process.env.NEXT_PUBLIC_BACKEND_URL;
+    const url = `${base_url}/series/${itemId}/others`;
+  
+    const response = await fetch(url, requestOptions);
+    if (!response.ok) {
+      throw new Error("Failed to fetch other items in the series");
+    }
+    return response.json();
+  }
