@@ -6,6 +6,7 @@ import { SeriesDTO, StrollerInfoDTO } from "types";
 import { getSeriesById, getStrollerById } from "lib/data";
 import ProductCard from "../cards/product_card";
 import { getDictionary } from "get-dictionary";
+import { usePathname } from "next/navigation";
 
 type ProductType = "STROLLER" | "CAR_SEAT";
 
@@ -18,10 +19,14 @@ interface Milestone {
 interface TimelineProps {
     productType: ProductType;
     itemId: number;
-    dictionary: Awaited<ReturnType<typeof getDictionary>>["strollers"];
 }
 
-export default function Timeline({ productType, itemId, dictionary }: TimelineProps) {
+export default function Timeline({ productType, itemId }: TimelineProps) {
+
+    // const pathname = usePathname(); // Get the current URL pathname
+    // const lang = pathname.split('/')[1]; // Extract the language part (e.g., "en")
+    // const dictionary = await getDictionary(lang === 'en' ? 'en' : 'hu');
+
     const [milestones, setMilestones] = useState<Milestone[]>([]);
     const [loading, setLoading] = useState<boolean>(true);
     const [error, setError] = useState<string | null>(null);
@@ -66,20 +71,20 @@ export default function Timeline({ productType, itemId, dictionary }: TimelinePr
     return (
         <>
             {/* Desktop View */}
-            <MilestoneList milestones={milestones} isMobile={false} dictionary={dictionary} />
+            <MilestoneList milestones={milestones} isMobile={false} />
 
             {/* Mobile View */}
-            <MilestoneList milestones={milestones} isMobile={true} dictionary={dictionary} />
+            <MilestoneList milestones={milestones} isMobile={true} />
         </>
     );
 }
 
 // COMPONENT TO RENDER MILESTONES
-function MilestoneList({ milestones, isMobile, dictionary }: { milestones: Milestone[]; isMobile: boolean; dictionary: Awaited<ReturnType<typeof getDictionary>>["strollers"] }) {
+function MilestoneList({ milestones, isMobile }: { milestones: Milestone[]; isMobile: boolean }) {
     return (
         <>
             <h2 className="text-2xl text-center from-black to-stone-500 bg-clip-text text-strollerina_green-100 mt-10">
-                {dictionary.common["series"]}
+                Models
             </h2>
             <div className={`${isMobile ? "block md:hidden" : "hidden md:block"} relative flex flex-col items-center py-10 w-full`}>
                 {/* Vertical Line (Now in both mobile & desktop) */}

@@ -43,7 +43,7 @@ export default async function StrollerInfoPage({ params }: { params: { strollern
             </div>
 
 
-            <Timeline productType="STROLLER" itemId={stroller.id} dictionary={dictionary.strollers}/>
+            <Timeline productType="STROLLER" itemId={stroller.id}/>
 
             {/* Reviews Section */}
             {reviews && (

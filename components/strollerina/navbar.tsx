@@ -105,7 +105,7 @@ export const Navbar = ({dictionary}: {
 
             <NavbarContent className="lg:hidden basis-1 pl-4" justify="end">
               <ThemeSwitch />
-              <SearchButton />
+              {/* <SearchButton /> */}
               <NavbarMenuToggle onClick={handleMenuToggle} />
             </NavbarContent>
 

@@ -252,7 +252,8 @@
           "agr-certified": "AGR certified",
           "rearFacing": "rear-facing",
           "forwardFacing": "forward-facing",
-          "sideProtection": "side protection"
+          "sideProtection": "side protection",
+          "carrycot-transforms-sport-seat": "carrycot transforms to sport seat"
         },
         "tooltip": {
           "baseless-isofix": "isofix mount directly on the child seat",
