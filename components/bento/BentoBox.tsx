@@ -15,16 +15,18 @@ const BentoBox = ({ posts }) => {
                 className="bento grid-mobile-layout sm:grid-sm-layout xl:grid-xl-layout mx-auto grid max-w-[375px] grid-cols-2 gap-4 *:rounded-3xl *:border *:border-muted *:bg-secondary *:bg-cover *:bg-center *:bg-no-repeat sm:max-w-screen-sm xl:max-w-screen-xl xl:grid-cols-4"
                 aria-label="Personal information and activity grid"
             >
+                <Link href={"/reviews"} aria-label={'reviews'} passHref className='grid-item-a'>
 
-                <div className="grid-item-a relative aspect-square hover:bg-none">
-                    <div className="overlay grid-item-a-overlay absolute inset-0 z-0 size-full rounded-3xl bg-cover bg-center bg-no-repeat transition-opacity duration-200 xl:opacity-0" />
-                    <ExternalLink
-                        href={`/reviews`}
-                        aria-label="Search for reviews"
-                        title="Search in reviews"
-                    />
+                    <div className=" relative aspect-square hover:bg-none">
+                        <div className="overlay grid-item-a-overlay absolute inset-0 z-0 size-full rounded-3xl bg-cover bg-center bg-no-repeat transition-opacity duration-200 xl:opacity-0" />
+                        {/* <ExternalLink
+                            href={`/reviews`}
+                            aria-label="Search for reviews"
+                            title="Search in reviews"
+                        /> */}
 
-                </div>
+                    </div>
+                </Link>
                 {/* <div
                     className="first grid-item-a aspect-square rounded-3xl border bg-cover bg-center bg-no-repeat sm:aspect-[2.1/1] xl:aspect-auto "
                     role="img"
@@ -39,16 +41,17 @@ const BentoBox = ({ posts }) => {
                     </p>
                 </div> */}
 
-                <div className="grid-item-b relative aspect-square hover:bg-none">
-                    <div className="overlay grid-item-b-overlay absolute inset-0 z-0 size-full rounded-3xl bg-cover bg-center bg-no-repeat transition-opacity duration-200 xl:opacity-0" />
+                <Link href={"/strollers"} aria-label={'reviews'} passHref className='grid-item-b'>
+                    <div className="relative aspect-square hover:bg-none">
+                        <div className="overlay grid-item-b-overlay absolute inset-0 z-0 size-full rounded-3xl bg-cover bg-center bg-no-repeat transition-opacity duration-200 xl:opacity-0" />
 
-                    <ExternalLink
-                        href={`/strollers`}
-                        aria-label="Search for strollers"
-                        title="Compare your strollers"
-                    />
-                </div>
-
+                        {/* <ExternalLink
+                            href={`/strollers`}
+                            aria-label="Search for strollers"
+                            title="Compare your strollers"
+                        /> */}
+                    </div>
+                </Link>
                 {/* <div className="grid-item-b aspect-square" role="img" aria-label="CTF Information">
                     <div className="overlay grid-item-b-overlay size-full rounded-3xl bg-cover bg-center bg-no-repeat transition-opacity duration-200 xl:opacity-0" />
                     <p className="sr-only">
@@ -65,62 +68,71 @@ const BentoBox = ({ posts }) => {
 
                 <div className="grid-item-c aspect-[1/2.1] xl:aspect-auto" aria-hidden="true" />
 
-                <div className="grid-item-d relative aspect-square hover:bg-none">
-                    <div className="overlay grid-item-d-overlay absolute inset-0 z-0 size-full rounded-3xl bg-cover bg-center bg-no-repeat transition-opacity duration-200 xl:opacity-0" />
+                <Link href={"/carseats"} aria-label={'reviews'} passHref className='grid-item-d'>
+                    <div className="relative aspect-square hover:bg-none">
+                        <div className="overlay grid-item-d-overlay absolute inset-0 z-0 size-full rounded-3xl bg-cover bg-center bg-no-repeat transition-opacity duration-200 xl:opacity-0" />
 
-                    <ExternalLink
+                        {/* <ExternalLink
                         href={`/carseats`}
                         aria-label="Search for car seats"
                         title="Compare your car seats"
-                    />
-                </div>
+                    /> */}
+                    </div>
+                </Link>
 
-
-                <div className="grid-item-e relative flex aspect-[6/5] items-start overflow-hidden p-4 hover:bg-none sm:aspect-[2.1/1] sm:items-center xl:aspect-auto">
-                    <div className="overlay grid-item-e-overlay absolute inset-0 size-full rounded-3xl bg-cover bg-center bg-no-repeat transition-opacity duration-200 xl:opacity-0" />
-                    <Image
-                        src={posts[0].images[0]}
-                        alt={`Featured image for the latest post: ${posts[0].title}`}
-                        width={477}
-                        height={251}
-                        className="w-full rounded-2xl border border-border sm:ml-2 sm:w-[80%]"
-                    />
-                    <ExternalLink
+                <Link href={posts[0].path} aria-label={'blogpost'} passHref className='grid-item-e'>
+                    <div className="relative flex aspect-[6/5] items-start overflow-hidden p-4 hover:bg-none sm:aspect-[2.1/1] sm:items-center xl:aspect-auto">
+                        <div className="overlay grid-item-e-overlay absolute inset-0 size-full rounded-3xl bg-cover bg-center bg-no-repeat transition-opacity duration-200 xl:opacity-0" />
+                        <Image
+                            src={posts[0].images[0]}
+                            alt={`Featured image for the latest post: ${posts[0].title}`}
+                            width={477}
+                            height={251}
+                            className="w-full rounded-2xl border border-border sm:ml-2 sm:w-[80%]"
+                        />
+                        {/* <ExternalLink
                         href={posts[0].path}
                         newTab={false}
                         aria-label={`Read the latest post: ${posts[0].title}`}
                         title="Read the latest post"
-                    />
-                </div>
+                    /> */}
+                    </div>
+                </Link>
 
-                <div className="grid-item-f relative flex aspect-square items-center justify-center overflow-hidden hover:bg-none sm:aspect-[2.1/1] xl:aspect-auto">
-                    <div className="overlay grid-item-f-overlay absolute inset-0  size-full rounded-3xl bg-cover bg-center bg-no-repeat transition-opacity duration-200 xl:opacity-0" />
-                    <ExternalLink
-                        href={`/manuals`}
-                        aria-label="Search for manuals"
-                        title="Compare your manuals"
-                    />
-                </div>
 
-                <div className="grid-item-y relative aspect-square hover:bg-none">
-                    <div className="overlay grid-item-y-overlay absolute inset-0 z-0 size-full rounded-3xl bg-cover bg-center bg-no-repeat transition-opacity duration-200 xl:opacity-0" />
-                    <ExternalLink
+                <Link href={'/manuals'} aria-label={'manuals'} passHref className='grid-item-f'>
+                    <div className="relative flex aspect-square items-center justify-center overflow-hidden hover:bg-none sm:aspect-[2.1/1] xl:aspect-auto">
+                        <div className="overlay grid-item-f-overlay absolute inset-0  size-full rounded-3xl bg-cover bg-center bg-no-repeat transition-opacity duration-200 xl:opacity-0" />
+                        {/* <ExternalLink
+                            href={`/manuals`}
+                            aria-label="Search for manuals"
+                            title="Compare your manuals"
+                        /> */}
+                    </div>
+                </Link>
+
+                <Link href={'/reviews'} aria-label={'reviews'} passHref className='grid-item-y'>
+                    <div className="relative aspect-square hover:bg-none">
+                        <div className="overlay grid-item-y-overlay absolute inset-0 z-0 size-full rounded-3xl bg-cover bg-center bg-no-repeat transition-opacity duration-200 xl:opacity-0" />
+                        {/* <ExternalLink
                         href={`/reviews`}
                         aria-label="Search for reviews"
                         title="Search in reviews"
-                    />
+                    /> */}
 
-                </div>
+                    </div>
+                </Link>
 
-                <div className="grid-item-g relative aspect-square hover:bg-none">
-                    <div className="overlay grid-item-g-overlay absolute inset-0 z-0 size-full rounded-3xl bg-cover bg-center bg-no-repeat transition-opacity duration-200 xl:opacity-0" />
-                    <ExternalLink
-                        href={`/reviews`}
-                        aria-label="Search for reviews"
-                        title="Search in reviews"
-                    />
-
-                </div>
+                <Link href={'/reviews'} aria-label={'reviews-g'} passHref className='grid-item-g'>
+                    <div className="relative aspect-square hover:bg-none">
+                        <div className="overlay grid-item-g-overlay absolute inset-0 z-0 size-full rounded-3xl bg-cover bg-center bg-no-repeat transition-opacity duration-200 xl:opacity-0" />
+                        {/* <ExternalLink
+                            href={`/reviews`}
+                            aria-label="Search for reviews"
+                            title="Search in reviews"
+                        /> */}
+                    </div>
+                </Link>
 
                 <div className="grid-item-h aspect-[1/2.1] xl:aspect-auto" aria-hidden="true" />
 

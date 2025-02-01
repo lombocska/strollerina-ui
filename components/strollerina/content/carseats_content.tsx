@@ -16,8 +16,9 @@ import Link from 'next/link';
 import { Badge, Input } from '@nextui-org/react';
 import { ChevronsRightLeft, DiffIcon, HeartIcon, Search } from 'lucide-react';
 import { searchCarseatByName } from 'lib/data';
-import GoogleAdSidePanel from '@/components/ads/GoogleAdSidePanel';
-import AmongProductsGoogleAd from '@/components/ads/GoogleAdAmongProducts';
+import GoogleAdSidePanel from '@/components/monetization/GoogleAdSidePanel';
+import AmongProductsGoogleAd from '@/components/monetization/GoogleAdAmongProducts';
+import BuyMeACoffeeSupport from '@/components/monetization/BuyMeaCoffee';
 
 export default function CarseatsContent({ initialData, brands, dictionary, lang }:
     {
@@ -153,6 +154,7 @@ export default function CarseatsContent({ initialData, brands, dictionary, lang 
                 />
             </aside>
 
+            {/* MOBILE FLOATING SIDE BUTTONS */}
             <div className="lg:hidden fixed right-0 top-1/2 z-99 flex flex-col gap-4 transform -translate-y-1/2">
                 <Button
                     isIconOnly
@@ -191,7 +193,11 @@ export default function CarseatsContent({ initialData, brands, dictionary, lang 
                         </Badge>
                     </div>
                 )}
-
+                {/* Buy Me a Coffee Button */}
+                <BuyMeACoffeeSupport
+                    clsName={`${theme === 'dark' ? 'dark:bg-[#92987F] dark:text-black' : 'bg-[#92987F] text-white'}
+            shadow rounded-l-full`}
+                />
             </div>
 
 

@@ -21,6 +21,7 @@ interface ListLayoutProps {
     title: string
     initialDisplayPosts?: CoreContent<Blog>[]
     pagination?: PaginationProps
+    onlyBlogPostListShown?: boolean
 }
 
 function Pagination({ totalPages, currentPage }: PaginationProps) {
@@ -72,6 +73,7 @@ export default function ListLayout({
     title,
     initialDisplayPosts = [],
     pagination,
+    onlyBlogPostListShown = false
 }: ListLayoutProps) {
     const [searchValue, setSearchValue] = useState('')
     const [pageViews, setPageViews] = useState<Record<string, number | undefined>>({})
@@ -114,96 +116,101 @@ export default function ListLayout({
 
     return (
         <>
-            <div className="divide-y divide-accent-foreground dark:divide-accent">
-                <div className="space-y-2 py-8 md:space-y-5">
-                    <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-foreground sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-                        {title}
-                    </h1>
-                    <div className="relative w-full">
-                        <label>
-                            <span className="sr-only">Search articles</span>
-                            <input
-                                aria-label="Search articles"
-                                type="text"
-                                onChange={(e) => setSearchValue(e.target.value)}
-                                placeholder="Search articles"
-                                className="block w-full rounded-md border border-muted-foreground bg-secondary px-4 py-2 text-muted-foreground placeholder-muted-foreground focus:border-primary focus:ring-primary dark:border-muted"
-                            />
-                        </label>
-                        <Search className="absolute right-3 top-3 h-5 w-5 text-muted-foreground" />
+            {!onlyBlogPostListShown && (
+
+                <div className="divide-y divide-accent-foreground dark:divide-accent">
+                    <div className="space-y-2 py-8 md:space-y-5">
+                        <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-foreground sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+                            {title}
+                        </h1>
+                        <div className="relative w-full">
+                            <label>
+                                <span className="sr-only">Search articles</span>
+                                <input
+                                    aria-label="Search articles"
+                                    type="text"
+                                    onChange={(e) => setSearchValue(e.target.value)}
+                                    placeholder="Search articles"
+                                    className="block w-full rounded-md border border-muted-foreground bg-secondary px-4 py-2 text-muted-foreground placeholder-muted-foreground focus:border-primary focus:ring-primary dark:border-muted"
+                                />
+                            </label>
+                            <Search className="absolute right-3 top-3 h-5 w-5 text-muted-foreground" />
+                        </div>
                     </div>
                 </div>
-                <ul>
-                    {!filteredBlogPosts.length && 'No posts found.'}
-                    {displayPosts.map((post) => {
-                        const { slug, path, date, title, summary, tags, thumbnail } = post
-                        const isLoadingViewCount = pageViews[slug] === undefined
-                        return (
-                            <li key={path} className="py-4">
-                                <article className="space-y-2 xl:grid xl:grid-cols-5 xl:items-start xl:gap-4 xl:space-y-0">
-                                    <div className="xl:col-span-2">
-                                        <Link href={`/${path}`}>
-                                            <div className="relative aspect-video">
-                                                <Image
-                                                    src={thumbnail || ''}
-                                                    alt={`${title} thumbnail`}
-                                                    fill
-                                                    className="mb-4 h-fit w-full rounded-md object-contain"
-                                                    loading='lazy'
-                                                />
-                                            </div>
-                                        </Link>
-                                    </div>
-                                    <div className="space-y-3 xl:col-span-3">
-                                        <div>
-                                            <h3 className="mb-2 text-2xl font-bold leading-8 tracking-tight">
-                                                <Link href={`/${path}`} className="text-foreground">
-                                                    {title}
-                                                </Link>
-                                            </h3>
-                                            <div className="flex flex-wrap space-x-3">
-                                                {tags?.map((tag) => <Tag key={tag} text={tag} lang={lang}/>)}
-                                            </div>
+            )}
+            <ul>
+                {!filteredBlogPosts.length && 'No posts found.'}
+                {displayPosts.map((post) => {
+                    const { slug, path, date, title, summary, tags, thumbnail } = post
+                    const isLoadingViewCount = pageViews[slug] === undefined
+                    return (
+                        <li key={path} className="py-4">
+                            <article className="space-y-2 xl:grid xl:grid-cols-5 xl:items-start xl:gap-4 xl:space-y-0">
+                                <div className="xl:col-span-2">
+                                    <Link href={`/${path}`}>
+                                        <div className="relative aspect-video">
+                                            <Image
+                                                src={thumbnail || ''}
+                                                alt={`${title} thumbnail`}
+                                                fill
+                                                className="mb-4 h-fit w-full rounded-md object-contain"
+                                                loading='lazy'
+                                            />
                                         </div>
-                                        <div className="prose prose-sm max-w-none text-muted-foreground">
-                                            {summary}
-                                        </div>
-                                        <div>
-                                            <dl>
-                                                <dt className="sr-only">Published on</dt>
-                                                <dd className="flex gap-1 text-base font-medium leading-6 text-muted-foreground">
-                                                    {isLoadingViewCount ? (
-                                                        <span className="flex items-center justify-center gap-2">
-                                                            <Skeleton className="h-6 w-12" />
-                                                            <span> views</span>
-                                                        </span>
-                                                    ) : (
-                                                        <span>
-                                                            {pageViews[slug]?.toLocaleString() ||
-                                                                '...'}{' '}
-                                                            views
-                                                        </span>
-                                                    )} 
-                                                    <span>・</span>
-                                                    <time dateTime={date}>
-                                                        {formatDate(date, siteMetadata.locale)}
-                                                    </time>
-                                                </dd>
-                                            </dl>
+                                    </Link>
+                                </div>
+                                <div className="space-y-3 xl:col-span-3">
+                                    <div>
+                                        <h3 className="mb-2 text-2xl font-bold leading-8 tracking-tight">
+                                            <Link href={`/${path}`} className="text-foreground">
+                                                {title}
+                                            </Link>
+                                        </h3>
+                                        <div className="flex flex-wrap space-x-3">
+                                            {tags?.map((tag) => <Tag key={tag} text={tag} lang={lang} />)}
                                         </div>
                                     </div>
-                                </article>
-                            </li>
-                        )
-                    })}
-                </ul>
-            </div>
-            {pagination && pagination.totalPages > 1 && !searchValue && (
+                                    <div className="prose prose-sm max-w-none text-muted-foreground">
+                                        {summary}
+                                    </div>
+                                    <div>
+                                        <dl>
+                                            <dt className="sr-only">Published on</dt>
+                                            <dd className="flex gap-1 text-base font-medium leading-6 text-muted-foreground">
+                                                {isLoadingViewCount ? (
+                                                    <span className="flex items-center justify-center gap-2">
+                                                        <Skeleton className="h-6 w-12" />
+                                                        <span> views</span>
+                                                    </span>
+                                                ) : (
+                                                    <span>
+                                                        {pageViews[slug]?.toLocaleString() ||
+                                                            '...'}{' '}
+                                                        views
+                                                    </span>
+                                                )}
+                                                <span>・</span>
+                                                <time dateTime={date}>
+                                                    {formatDate(date, siteMetadata.locale)}
+                                                </time>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </article>
+                        </li>
+                    )
+                })}
+            </ul>
+        
+            {!onlyBlogPostListShown && pagination && pagination.totalPages > 1 && !searchValue && (
                 <Pagination
                     currentPage={pagination.currentPage}
                     totalPages={pagination.totalPages}
                 />
-            )}
+            )
+}
         </>
     )
 }

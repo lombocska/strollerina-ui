@@ -101,7 +101,13 @@
       "adac-chose": "Select ADAC verdict",
       "facing-select-chip": "Car seat facing mode",
       "facing-chose": "Select facing mode",
-      "series": "Series"
+      "series": "Series",
+      "unlock-code": "Enter your email adress after payment:",
+      "unlock-text": "Unlocking these advanced filters requires a small contribution. This site took a lot of effort (more than 1 year and counting) to build and gather all the data, so if you'd like to access these extra filters, please consider buying me a coffee.",
+      "unlocking-bmc-btn": "Buy me a coffee",
+      "unlock-filter-btn": "Unlock Filters",
+      "other": "Other",
+      "strollers": "strollers"
     },
     "tags": {
       "main-card": {
@@ -408,7 +414,14 @@
       "adac-select-chip": "ADAC certification",
       "adac-chose": "Select ADAC verdict",
       "facing-select-chip": "Car seat facing mode",
-      "facing-chose": "Select facing mode"
+      "facing-chose": "Select facing mode",
+      "series": "Series",
+      "unlock-code": "Enter your email adress after payment:",
+      "unlock-text": "Unlocking these advanced filters requires a small contribution. This site took a lot of effort (more than 1 year and counting) to build and gather all the data, so if you'd like to access these extra filters, please consider buying me a coffee.",
+      "unlocking-bmc-btn": "Buy me a coffee",
+      "unlock-filter-btn": "Unlock Filters",
+      "other": "Other",
+      "strollers": "car seats"
     } ,
     "tags": {
       "main-card": {
@@ -816,7 +829,9 @@
     "terms-and-conditions": "Terms and Conditions",
     "select": "Useful pages"
   },  
-
+  "blog-posts": {
+    "title": "Blog posts"
+  },
   "home":{
     "welcome": "The ultimate stroller and car seat guide",
     "sub-welcome": "Search and compare strollers and car seats",

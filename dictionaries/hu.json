@@ -1,12 +1,12 @@
 {
   "navbar": {
-    "strollers" : "Babakocsik",
-    "carseats" : "Autós ülések",
+    "strollers": "Babakocsik",
+    "carseats": "Autós ülések",
     "guide": "Interaktív választó",
     "blog": "Blog",
     "manuals": "Használati útmutatók",
     "about": "Rólunk",
-    "reviews": "Értékelések"       
+    "reviews": "Értékelések"
   },
   "strollers": {
     "page-title": "Babakocsik",
@@ -17,12 +17,12 @@
     "search": "Keresés",
     "clear": "Szűrők törlése",
     "producer-link": "Gyártó honlapja",
-    "manual-link": "Használati útmutató",    
-    "compare" : "Összehasonlítás",
+    "manual-link": "Használati útmutató",
+    "compare": "Összehasonlítás",
     "table": {
-      "titles" : {
+      "titles": {
         "heigh-width-length": "Magasság, szélesség, hosszúság, súly",
-        "capacity" : "Terhelhetőség",
+        "capacity": "Terhelhetőség",
         "wheel": "Kerekek",
         "seat": "Ülés",
         "tags": "Tulajdonságok",
@@ -35,12 +35,12 @@
         "closed-height": "Összecsukott magasság [cm]",
         "closed-width": "Összecsukott szélesség [cm]",
         "closed-length": "Összecsukott hosszúság [cm]",
-        "sum-load-capacity" : "Összsúlyterhelhetőség [kg]",
-        "seat-load-capacity" : "Ülés terhelhetősége [kg]",
-        "basket-load-capacity" : "Kosár terhelhetősége [kg]",
+        "sum-load-capacity": "Összsúlyterhelhetőség [kg]",
+        "seat-load-capacity": "Ülés terhelhetősége [kg]",
+        "basket-load-capacity": "Kosár terhelhetősége [kg]",
         "weight": "Babakocsi súly [kg]",
-        "front-wheel" : "Első kerék mérete [cm]",
-        "back-wheel" : "Hátsó kerék mérete [cm]",
+        "front-wheel": "Első kerék mérete [cm]",
+        "back-wheel": "Hátsó kerék mérete [cm]",
         "seat-reversible": "Megfordítható",
         "seat-recline": "Teljesen dönthető",
         "seat-height": "Ülés hátrészének magassága [cm]",
@@ -102,11 +102,17 @@
       "adac-select-chip": "Termék ADAC minősítése",
       "adac-chose": "Válassz ADAC minősítést",
       "facing-select-chip": "Autós ülés irány",
-      "facing-chose": "Válassz elhelyezési irányt"  ,
-      "series": "Korábbi modellek" 
+      "facing-chose": "Válassz elhelyezési irányt",
+      "series": "Korábbi modellek",
+      "unlock-code": "Kérlek add meg az email címed:",
+      "unlock-text": "Ezeknek az extra szűrőknek az eléréséhez egy kis hozzájárulás szükséges. Az oldal elkészítése és az összes adat összegyűjtése több mint 1 évnyi munkát vett igénybe (és még mindig tart), így ha szeretnéd használni ezeket az extra szűrőket, kérlek, támogass egy kávéval.",
+      "unlocking-bmc-btn": "Vegyél egy kávét!",
+      "unlock-filter-btn": "Szűrők feloldása",
+      "other": "Egyéb",
+      "strollers": "babakocsik"
     },
     "tags": {
-      "main-card":{
+      "main-card": {
         "chip": {
           "no": "nem",
           "yes": "igen",
@@ -252,8 +258,8 @@
           "base-with-car-seat-belt": "Bázistalp saját övvel rögzítve",
           "extra-legroom": "Plusz lábtér",
           "agr-certified": "AGR minősített",
-          "rearFacing" : "Menetiránynak háttal ülő gyermek",
-          "forwardFacing" : "Menetiránnyal megegyező irányba néző gyermek",
+          "rearFacing": "Menetiránynak háttal ülő gyermek",
+          "forwardFacing": "Menetiránnyal megegyező irányba néző gyermek",
           "sideProtection": "Oldalsó ütközésvédelem"
         },
         "tooltip": {
@@ -327,8 +333,8 @@
           "straight-sit-up": "A háttámlák (majdnem) 90 fokos szögben állnak",
           "3point-harness": "3-pontos biztonsági öv",
           "5point-harness": "5-pontos biztonsági öv",
-          "3-point-harness" : "3-pontos biztonsági öv",
-          "5-point-harness" : "5-pontos biztonsági öv",
+          "3-point-harness": "3-pontos biztonsági öv",
+          "5-point-harness": "5-pontos biztonsági öv",
           "one-pull-harness": "Egy kézzel rögzíthető biztonsági öv.",
           "magnetic-harness": "Gyors, mágneses biztonsági öv rendszer",
           "happy-belt": "happy belt",
@@ -384,8 +390,8 @@
           "section-other-features": "Egyéb jellemzők"
         }
       }
-    }    
-  }, 
+    }
+  },
   "carseats": {
     "page-title": "Autós ülések",
     "page-description": "Autós ülések összehasonlítása, keresése",
@@ -399,10 +405,10 @@
     "producer-link": "Gyártó honlapja",
     "manual-link": "Használati útmutató",
     "table": {
-      "titles" : {
-        "default-info" : "Alapadatok",
+      "titles": {
+        "default-info": "Alapadatok",
         "heigh-width-length": "Magasság, szélesség, hosszúság, súly",
-        "capacity" : "Terhelhetőség",
+        "capacity": "Terhelhetőség",
         "wheel": "Kerekek",
         "seat": "Ülés",
         "tags": "Tulajdonságok",
@@ -429,12 +435,12 @@
         "closed-height": "Összecsukott magasság [cm]",
         "closed-width": "Összecsukott szélesség [cm]",
         "closed-length": "Összecsukott hosszúság [cm]",
-        "sum-load-capacity" : "Összsúlyterhelhetőség [kg]",
-        "seat-load-capacity" : "Ülés terhelhetősége [kg]",
-        "basket-load-capacity" : "Kosár terhelhetősége [kg]",
+        "sum-load-capacity": "Összsúlyterhelhetőség [kg]",
+        "seat-load-capacity": "Ülés terhelhetősége [kg]",
+        "basket-load-capacity": "Kosár terhelhetősége [kg]",
         "weight": "Babakocsi súly [kg]",
-        "front-wheel" : "Első kerék mérete [cm]",
-        "back-wheel" : "Hátsó kerék mérete [cm]",
+        "front-wheel": "Első kerék mérete [cm]",
+        "back-wheel": "Hátsó kerék mérete [cm]",
         "seat-reversible": "Megfordítható",
         "seat-recline": "Teljesen dönthető",
         "seat-height": "Ülés hátrészének magassága [cm]",
@@ -443,7 +449,7 @@
     },
     "filters": {
       "max-weight": "Max Autós Ülés Súly [kg]",
-      "max-weight-car-seat" : "Max Autós Ülés Súly [kg]",
+      "max-weight-car-seat": "Max Autós Ülés Súly [kg]",
       "max-weight-kid": "Max Gyermek Súly [kg]",
       "max-height-kid": "Max Gyermek Magasság [cm]",
       "max-price": "Max Ár",
@@ -469,22 +475,21 @@
       "section-price-title": "Ár paraméterek",
       "only-with-adac": "Csak ADAC teszten résztvett ülések",
       "adac": {
-          "title": "Adac teszt eredmény",
-          "very-good": "Nagyon jó (< 1.5)",
-          "good": "Jó (1.6 - 3.5)",
-          "satisfactory": "Kielégítő (3.6 - 4.4)",
-          "poor": "Hiányos (4.5 - 5.5)",
-          "not-adac-tested": "Nincs ADAC tesztelve",
-          "installation": "Telepítés módja",
-          "verdict" : "ADAC eredmény",
-          "price-from": "Legalacsonyabb ár megközelítőleg",
-          "link": "ADAC link"
-  
+        "title": "Adac teszt eredmény",
+        "very-good": "Nagyon jó (< 1.5)",
+        "good": "Jó (1.6 - 3.5)",
+        "satisfactory": "Kielégítő (3.6 - 4.4)",
+        "poor": "Hiányos (4.5 - 5.5)",
+        "not-adac-tested": "Nincs ADAC tesztelve",
+        "installation": "Telepítés módja",
+        "verdict": "ADAC eredmény",
+        "price-from": "Legalacsonyabb ár megközelítőleg",
+        "link": "ADAC link"
       },
       "seat": {
-          "title": "Autós ülés rögzítési iránya",
-          "rear": "Menetiránynak háttal",
-          "forward": "Menetirányba"
+        "title": "Autós ülés rögzítési iránya",
+        "rear": "Menetiránynak háttal",
+        "forward": "Menetirányba"
       }
     },
     "sorting": {
@@ -495,8 +500,7 @@
       "bestAdacAsc": "Legjobb Adac minősítésűek",
       "bestAdacDesc": "Legrosszabb Adac minősítésűek"
     },
-    "common": 
-    {
+    "common": {
       "brand-manual-title": "Használati útmutatók",
       "main-text": "Itt megtalálod álmaid babakocsiját...",
       "info": "Részletek",
@@ -511,10 +515,17 @@
       "adac-select-chip": "Termék ADAC minősítése",
       "adac-chose": "Válassz ADAC minősítést",
       "facing-select-chip": "Autós ülés irány",
-      "facing-chose": "Válassz elhelyezési irányt"
+      "facing-chose": "Válassz elhelyezési irányt",
+      "series": "Series",
+      "unlock-code": "Kérlek add meg az email címed:",
+      "unlock-text": "Ezeknek az extra szűrőknek az eléréséhez egy kis hozzájárulás szükséges. Az oldal elkészítése és az összes adat összegyűjtése több mint 1 évnyi munkát vett igénybe (és még mindig tart), így ha szeretnéd használni ezeket az extra szűrőket, kérlek, támogass egy kávéval.",
+      "unlocking-bmc-btn": "Vegyél egy kávét!",
+      "unlock-filter-btn": "Szűrők feloldása",
+      "other": "Egyéb",
+      "strollers": "autós ülések"
     },
     "tags": {
-      "main-card":{
+      "main-card": {
         "chip": {
           "no": "nem",
           "yes": "igen",
@@ -658,8 +669,8 @@
           "base-with-car-seat-belt": "Bázistalp saját övvel rögzítve",
           "extra-legroom": "Plusz lábtér",
           "agr-certified": "AGR minősített",
-          "rearFacing" : "Menetiránynak háttal ülő gyermek",
-          "forwardFacing" : "Menetiránnyal megegyező irányba néző gyermek",
+          "rearFacing": "Menetiránynak háttal ülő gyermek",
+          "forwardFacing": "Menetiránnyal megegyező irányba néző gyermek",
           "sideProtection": "Oldalsó ütközésvédelem"
         },
         "tooltip": {
@@ -733,8 +744,8 @@
           "straight-sit-up": "A háttámlák (majdnem) 90 fokos szögben állnak",
           "3point-harness": "3-pontos biztonsági öv",
           "5point-harness": "5-pontos biztonsági öv",
-          "3-point-harness" : "3-pontos biztonsági öv",
-          "5-point-harness" : "5-pontos biztonsági öv",
+          "3-point-harness": "3-pontos biztonsági öv",
+          "5-point-harness": "5-pontos biztonsági öv",
           "one-pull-harness": "Egy kézzel rögzíthető biztonsági öv.",
           "magnetic-harness": "Gyors, mágneses biztonsági öv rendszer",
           "happy-belt": "happy belt",
@@ -790,7 +801,7 @@
           "section-other-features": "Egyéb jellemzők"
         }
       }
-    } 
+    }
   },
   "blog": {
     "post": {
@@ -806,11 +817,11 @@
         "pros-title": "Milyen tanúsítványok és tesztek léteznek a gyermekülések számára?",
         "pro-title": "Előny",
         "pros": [
-            "ADAC teszt",
-            "Plus teszt (Svédország)",
-            "ECE R44/04 szabvány",
-            "i-Size (ECE R129) szabvány",
-            "ÖAMTC teszt"
+          "ADAC teszt",
+          "Plus teszt (Svédország)",
+          "ECE R44/04 szabvány",
+          "i-Size (ECE R129) szabvány",
+          "ÖAMTC teszt"
         ],
         "pros-img": [
           [
@@ -828,18 +839,18 @@
           []
         ],
         "pros-descr": [
-            "Az ADAC (Allgemeiner Deutscher Automobil-Club) egy német autóklub, amely nagy megbecsülésnek örvend. Ez a klub különböző teszteket végez, beleértve a gyermekülések tesztelését is, hogy segítsen a szülőknek eligazodni a rengeteg elérhető lehetőség között. A biztonság, az ergonómia, a gyártás során felhasznált anyagok és a könnyű tisztíthatóság a fő kritériumok között szerepelnek, amelyeket ezekben a tesztekben értékelnek. Ezen jellemzők pontszámainak átlagolásával egy 1,5 és 5,5 közötti értékelés nyerhető.",           
-            "A VTI és az NTF (Nemzeti Közlekedésbiztonsági Társaság) 2009-ben vezette be Svédországban a Plus tesztet. A Plus teszt különösen szigorú tesztkövetelményeket állít fel, és egy további teszt, amely önkéntes az autósülés gyártók számára. A tesztprotokoll 2023-as frissítése óta egyetlen előre néző autósülés sem vehet részt a teszten. A Plus teszt alapgondolata az, hogy egyetlen gyermek sem szenvedhet veszélyes vagy életveszélyes sérülést egy ütközés miatt egy Plus teszt által ajánlott autósülésben.",
-            "Az ECE R44/04 a régebbi európai minősítési szabvány, amelyet az ECE R129 i-Size szabvány vált fel. Az ezzel a tanúsítvánnyal rendelkező gyermekülések még használhatók, de az új gyermekülések csak az új szabvány (R-129) szerint lesznek jóváhagyva, mivel az ECE R44/04-et 2024 szeptemberétől kivonják. \n\n Ebben a szabványban még nem tesztelték oldalsó ütközésekre az autós üléseket és a gyermek súlya alapján kategorizáltak.",
-            "Az új Európai Uniós szabvány fokozatosan felváltja az ECE R44 szabványt. Az i-Size szabvány szigorúbb biztonsági követelményeket ír elő, beleértve az oldalsó ütközési teszteket és az ISOFIX használatának kötelezővé tételét. \n\n 2013 júniusában lépett életbe az i-Size ECE R129 szabvány, amely új szintre emelte a gyermekülések biztonságát. \n Az új szabályozás kötelező biztonsági követelményeket állít fel a gyermekülések számára, nagyobb védelmet nyújtva egy baleset esetén. Bizonyos biztonsági elvárások, amelyeket ma alapvetőnek tartanak, nem voltak kötelezőek az ECE R44/04 szabvány szerint, amely 2005 óta van érvényben. A gyártók választhattak, hogy beépítik-e ezeket a fejlett védelmi intézkedéseket, vagy megelégednek-e az alapminőséggel. \n\n Az új szabvány szükségessé vált a régi szabvány hiányosságai és az autógyártás, a gyermekülés tervezés és a biztonsági technológia fejlődése miatt, amelyek lehetővé és szükségessé tették. \n\n Miért hozták létre az új i-Size szabványt? röviden: az emberi hiba (= szülői hiba) elkerülése \n\n - Túl sok gyermek halt meg autóbalesetben. A gyermekhalálozások vezető oka az autóbaleset. Bár a gyermekhalálozások száma csökkent, Európában az R129-es szabvány bevezetéséig még mindig 10 gyermek halt meg az utakon hetente, és körülbelül 1150 sérült meg. (Források: WHO (2007), EEVC Munkacsoport 18 Jelentés (2006. február). Felmérés 12 európai országban a 0–14 éves gyermekek körében (2003)). \n\n Azóta a statisztika sokat javult. A 0-12 hós gyermekek halálozási aránya a legalacsonyabb a többi korcsoporthoz képest, és az elmúlt évtizedben a halálozási arány is a legnagyobb mértékben csökkent minden korcsoport közül. \n A gyermekek közúti halálozásainak abszolút száma 2011 és 2020 között 47%-kal csökkent, 733 halálesetről 2011-ben 386 halálesetre 2020-ban Az EU-ban. Mivel a közúti halálozások száma kevésbé gyorsan csökkent, relatív részarányuk kissé csökkent. A gyermekek csoportján belül a legnagyobb csökkenés a 5–9 éves korcsoportban volt megfigyelhető. \n Közlekedési mód szerint a gyermekek nagyon magas halálozási arányt mutattak a legveszélyeztetettebb közlekedési módok között: a gyermekek 32%-a gyalogos, 13%-a kerékpáros volt. Ezek az adatok az EU átlagai, de számos EU-országban sokkal magasabb százalékok találhatók. \n Romániában és Görögországban a gyermekhalálozások több, mint felét gyalogosok tették ki. Hollandiában a gyermekhalálozások 47%-a kerékpáros volt. A gyermekek és az összes halálozás százalékos arányának különbsége tükrözi a gyermekek mobilitási viselkedését. link: https://road-safety.transport.ec.europa.eu/document/download/7f00b402-9aa2-44c7-b3c0-aaa6f81e0abd_en?filename=ff_children_20220706.pdf \n\n - ISOFIX szükséges, mivel sok gyermekülést helytelenül telepítenek. A gyermekülés biztonsági övének megfelelő rögzítése túl hosszadalmas és bonyolult lehet sok szülő számára, aminek következtében 27%-uk helytelenül telepíti az ülést. A legjobb megoldás az ISOFIX. A helytelen telepítés aránya ISOFIX üléseknél csak 4%. Az új i-Size ECE R129 szabvány előírja, hogy a gyermekülések ISOFIX-kompatibilisek legyenek, mivel a szabvány kötelezővé teszi az ISOFIX használatát. Az ISOFIX használata azonban nem jelenti azt, hogy biztonságosabb maga az autós ülés, mint az öv helyes használata. \n Probléma még, hogy sook régebbi autóban nincs ISOFIX. Bár az ISOFIX egyre gyakoribb az 2006–2007 után gyártott autókban. Azonban az 2011 januárjától gyártott autókban az ISOFIX alapfelszereltség.",
-            "Az osztrák autóklub tesztje, hasonlóan az ADAC-hoz, több szempont alapján értékeli a gyermeküléseket, például biztonság, kezelés, ergonómia és környezeti szempontok."
+          "Az ADAC (Allgemeiner Deutscher Automobil-Club) egy német autóklub, amely nagy megbecsülésnek örvend. Ez a klub különböző teszteket végez, beleértve a gyermekülések tesztelését is, hogy segítsen a szülőknek eligazodni a rengeteg elérhető lehetőség között. A biztonság, az ergonómia, a gyártás során felhasznált anyagok és a könnyű tisztíthatóság a fő kritériumok között szerepelnek, amelyeket ezekben a tesztekben értékelnek. Ezen jellemzők pontszámainak átlagolásával egy 1,5 és 5,5 közötti értékelés nyerhető.",
+          "A VTI és az NTF (Nemzeti Közlekedésbiztonsági Társaság) 2009-ben vezette be Svédországban a Plus tesztet. A Plus teszt különösen szigorú tesztkövetelményeket állít fel, és egy további teszt, amely önkéntes az autósülés gyártók számára. A tesztprotokoll 2023-as frissítése óta egyetlen előre néző autósülés sem vehet részt a teszten. A Plus teszt alapgondolata az, hogy egyetlen gyermek sem szenvedhet veszélyes vagy életveszélyes sérülést egy ütközés miatt egy Plus teszt által ajánlott autósülésben.",
+          "Az ECE R44/04 a régebbi európai minősítési szabvány, amelyet az ECE R129 i-Size szabvány vált fel. Az ezzel a tanúsítvánnyal rendelkező gyermekülések még használhatók, de az új gyermekülések csak az új szabvány (R-129) szerint lesznek jóváhagyva, mivel az ECE R44/04-et 2024 szeptemberétől kivonják. \n\n Ebben a szabványban még nem tesztelték oldalsó ütközésekre az autós üléseket és a gyermek súlya alapján kategorizáltak.",
+          "Az új Európai Uniós szabvány fokozatosan felváltja az ECE R44 szabványt. Az i-Size szabvány szigorúbb biztonsági követelményeket ír elő, beleértve az oldalsó ütközési teszteket és az ISOFIX használatának kötelezővé tételét. \n\n 2013 júniusában lépett életbe az i-Size ECE R129 szabvány, amely új szintre emelte a gyermekülések biztonságát. \n Az új szabályozás kötelező biztonsági követelményeket állít fel a gyermekülések számára, nagyobb védelmet nyújtva egy baleset esetén. Bizonyos biztonsági elvárások, amelyeket ma alapvetőnek tartanak, nem voltak kötelezőek az ECE R44/04 szabvány szerint, amely 2005 óta van érvényben. A gyártók választhattak, hogy beépítik-e ezeket a fejlett védelmi intézkedéseket, vagy megelégednek-e az alapminőséggel. \n\n Az új szabvány szükségessé vált a régi szabvány hiányosságai és az autógyártás, a gyermekülés tervezés és a biztonsági technológia fejlődése miatt, amelyek lehetővé és szükségessé tették. \n\n Miért hozták létre az új i-Size szabványt? röviden: az emberi hiba (= szülői hiba) elkerülése \n\n - Túl sok gyermek halt meg autóbalesetben. A gyermekhalálozások vezető oka az autóbaleset. Bár a gyermekhalálozások száma csökkent, Európában az R129-es szabvány bevezetéséig még mindig 10 gyermek halt meg az utakon hetente, és körülbelül 1150 sérült meg. (Források: WHO (2007), EEVC Munkacsoport 18 Jelentés (2006. február). Felmérés 12 európai országban a 0–14 éves gyermekek körében (2003)). \n\n Azóta a statisztika sokat javult. A 0-12 hós gyermekek halálozási aránya a legalacsonyabb a többi korcsoporthoz képest, és az elmúlt évtizedben a halálozási arány is a legnagyobb mértékben csökkent minden korcsoport közül. \n A gyermekek közúti halálozásainak abszolút száma 2011 és 2020 között 47%-kal csökkent, 733 halálesetről 2011-ben 386 halálesetre 2020-ban Az EU-ban. Mivel a közúti halálozások száma kevésbé gyorsan csökkent, relatív részarányuk kissé csökkent. A gyermekek csoportján belül a legnagyobb csökkenés a 5–9 éves korcsoportban volt megfigyelhető. \n Közlekedési mód szerint a gyermekek nagyon magas halálozási arányt mutattak a legveszélyeztetettebb közlekedési módok között: a gyermekek 32%-a gyalogos, 13%-a kerékpáros volt. Ezek az adatok az EU átlagai, de számos EU-országban sokkal magasabb százalékok találhatók. \n Romániában és Görögországban a gyermekhalálozások több, mint felét gyalogosok tették ki. Hollandiában a gyermekhalálozások 47%-a kerékpáros volt. A gyermekek és az összes halálozás százalékos arányának különbsége tükrözi a gyermekek mobilitási viselkedését. link: https://road-safety.transport.ec.europa.eu/document/download/7f00b402-9aa2-44c7-b3c0-aaa6f81e0abd_en?filename=ff_children_20220706.pdf \n\n - ISOFIX szükséges, mivel sok gyermekülést helytelenül telepítenek. A gyermekülés biztonsági övének megfelelő rögzítése túl hosszadalmas és bonyolult lehet sok szülő számára, aminek következtében 27%-uk helytelenül telepíti az ülést. A legjobb megoldás az ISOFIX. A helytelen telepítés aránya ISOFIX üléseknél csak 4%. Az új i-Size ECE R129 szabvány előírja, hogy a gyermekülések ISOFIX-kompatibilisek legyenek, mivel a szabvány kötelezővé teszi az ISOFIX használatát. Az ISOFIX használata azonban nem jelenti azt, hogy biztonságosabb maga az autós ülés, mint az öv helyes használata. \n Probléma még, hogy sook régebbi autóban nincs ISOFIX. Bár az ISOFIX egyre gyakoribb az 2006–2007 után gyártott autókban. Azonban az 2011 januárjától gyártott autókban az ISOFIX alapfelszereltség.",
+          "Az osztrák autóklub tesztje, hasonlóan az ADAC-hoz, több szempont alapján értékeli a gyermeküléseket, például biztonság, kezelés, ergonómia és környezeti szempontok."
         ],
         "dimension-title": "Legjobb autós ülések 2024-ben az ADAC alapján a Group0+ korcsoportnak, azaz babáknak",
         "differences": "A legfrissebb gyermekülés értékelésben (2024) az ADAC 24 ülést értékelt szigorúan biztonság, használhatóság, ergonómia és szennyezőanyag szintje alapján. Míg minden méretkategóriában vannak elismerésre méltó modellek, két ülést 'nem kielégítő' minősítéssel értékeltek a szennyezőanyag szennyezés miatt. \n\n - 24 gyermekülést teszteltek különböző méretekben, \n\n - Babák számára a Nuna Pipa urbn 1.6-tal, a Cybex Cloud G i-Size Base G-vel 1.8-cal, a Lionelo Astrid i-Size Astrid i-Size Base-szal 1.8-cal, és az Avionaut Cosmo IQ Base 2.0 C Base-szal 2.0 ADAC eredménnyel.",
         "end-title": "Legrosszabb autós ülések 2024-ben az ADAC alapján",
         "end": "A Silver Cross Discover i-Size huzatanyaga DPHP szennyezőanyagot tartalmaz, amely károsíthatja a pajzsmirigyet és az agyalapi mirigyet. A biztonsági kategóriában ez az ülés csak kielégítő minősítést kapott, és a szennyezőanyag tartalom rossz értékelése magyarázza az ADAC 4.8-as értékelését. \n\n A második 'hiányos' minősítést kapott ülés, a Peg Perego Viaggio Twist + Base Twist, teljesen megbukott egy frontális ütközésnél, ami azt jelenti, hogy akut sérülésveszélyt jelent a gyermek számára: ütközés esetén az ülés kirepül a járműből! A súlyos biztonsági hibák miatt az ADAC semmiképpen sem javasolja a Peg Perego Viaggio Twist + Base Twist használatát. Ezenkívül a huzatanyag is szennyezett, ami az ADAC 5.5-ös értékelését eredményezte. Az ott kimutatott égésgátló TCPP-t rákkeltőnek gyanítják. \n\n Videó a frontális ütközési tesztről: https://youtube.com/shorts/FKLE7wVk-uc?si=sTuvCsYNfLAcSuY5 \n\n forrás: https://www.adac.de/rund-ums-fahrzeug/ausstattung-technik-zubehoer/kindersitze/kindersitztest/kindersitz-vergleichstest-2024/",
         "final": "Remélem tetszett és hasznosnak találtad a beszámolóm a 2024-es ADAC autósülés tesztről, amely az autós hordozókról szólt. Let's get strollin'..."
-      },    
+      },
       "maxi-cosi-jade-carrycot-car-seat-3way-fix-review": {
         "title": "Maxi Cosi Jade\n\nLehet egy mózeskosár olyan biztonságos az autóban, mint egy autósülés az újszülöttünk számára?",
         "intro": "Amikor újszülötted biztonságáról és kényelméről van szó, a Maxi-Cosi Jade autósülés az egyik legjobb választás. A MAxi Cosi Jade mózese egyedülálló megoldást kínál azoknak a szülőknek, akik a legjobbat keresik gyermekeik számára. Ebben a cikkben megvizsgáljuk a Maxi-Cosi Jade autósülés jellemzőit, előnyeit és esetleges hátrányait, hogy segíthessünk megalapozott döntést hozni.\n\n A Maxi-Cosi Jade egy díjnyertes autósülés, amelyet kifejezetten újszülöttek számára terveztek, körülbelül hat hónapos korig vagy 40-70 cm testhosszig. Az autósülés biztonsági előírásait ötvözi a mózeskosár kényelmével, így ideális választás a biztonságot és kényelmet előnyben részesítő szülők számára.",
@@ -849,31 +860,31 @@
         "end": "A Maxi-Cosi Jade autósülés kiváló választás azoknak a szülőknek, akik páratlan biztonságot és kényelmet keresnek újszülöttjük számára. Innovatív kialakítása, fejlett biztonsági funkciói és sokoldalú használhatósága révén kiemelkedő termék a piacon. Bár magasabb árral és korlátozott használati idővel rendelkezik, a biztonság és kényelem terén nyújtott előnyei megérik a befektetést. Ha olyan autósülést keresel, amely a baba jólétét és a könnyű használatot helyezi előtérbe, a Maxi-Cosi Jade kiváló választás lehet.",
         "pros-title": "Előnyök",
         "pros": [
-            "Szuper biztonságos",
-            "i-Size ECE R129 tanúsítvánnyal rendelkezik",
-            "Teljesen vízszintes fekvő pozíció",
-            "Zavartalan alvás",
-            "A Maxi Cosi 3way sorozat része"
+          "Szuper biztonságos",
+          "i-Size ECE R129 tanúsítvánnyal rendelkezik",
+          "Teljesen vízszintes fekvő pozíció",
+          "Zavartalan alvás",
+          "A Maxi Cosi 3way sorozat része"
         ],
         "pros-descr": [
-            "Az ADAC 2019-ben tesztelte ezt az autósülést. Az eredmény alapján ez az autósülés a legjobb autósülés lett 1,5 ponttal ('nagyon jó' kategória az ADAC-ban). Ez az autósülés elosztja az erőket a baba teljes testén egy ütközés során. A baba feje az autó középpontjában van, maximalizálva az oldalsó ütközésvédelmet.",
-            "Megfelel a legmagasabb biztonsági szabványoknak, az ülés besorolása a legújabb szabályok alapján történik, ami a gyermek testhosszán alapul.",
-            "Tekintettel arra, hogy ez egy mózeskosár, a gyermek megfelelően egyenes háttal aludhat.",
-            "Nem kell felébreszteni a babát az autóból a babakocsiba való áthelyezéshez.",
-            "Ha szereted a Maxi-Cosit, és a 4 éves korig használatos autósülés is Maxi-Cosi lesz, akkor érdemes megvenni. Ez a rendszer születéstől körülbelül 4 éves korig nyújt megoldást a 3WayFix (FamilyFix3), Pebble Plus és Pearl Pro i-Size kombinációjával.\n\n A Jade kompatibilis olyan babakocsikkal, mint a Leona, Adorra2, Adorra, Street és Lila SP."
+          "Az ADAC 2019-ben tesztelte ezt az autósülést. Az eredmény alapján ez az autósülés a legjobb autósülés lett 1,5 ponttal ('nagyon jó' kategória az ADAC-ban). Ez az autósülés elosztja az erőket a baba teljes testén egy ütközés során. A baba feje az autó középpontjában van, maximalizálva az oldalsó ütközésvédelmet.",
+          "Megfelel a legmagasabb biztonsági szabványoknak, az ülés besorolása a legújabb szabályok alapján történik, ami a gyermek testhosszán alapul.",
+          "Tekintettel arra, hogy ez egy mózeskosár, a gyermek megfelelően egyenes háttal aludhat.",
+          "Nem kell felébreszteni a babát az autóból a babakocsiba való áthelyezéshez.",
+          "Ha szereted a Maxi-Cosit, és a 4 éves korig használatos autósülés is Maxi-Cosi lesz, akkor érdemes megvenni. Ez a rendszer születéstől körülbelül 4 éves korig nyújt megoldást a 3WayFix (FamilyFix3), Pebble Plus és Pearl Pro i-Size kombinációjával.\n\n A Jade kompatibilis olyan babakocsikkal, mint a Leona, Adorra2, Adorra, Street és Lila SP."
         ],
         "cons-title": "Hátrányok",
         "cons": [
-            "Két ülést foglal",
-            "Nehéz",
-            "Nagyon korlátozott élettartam",
-            "Drága"
+          "Két ülést foglal",
+          "Nehéz",
+          "Nagyon korlátozott élettartam",
+          "Drága"
         ],
         "cons-descr": [
-            "Mivel Isofix alapon az utazás irányára merőlegesen rögzíthető, két ülést foglal el.",
-            "Majdnem 6 kg, így szülés után nem könnyű felemelni a gyerekkel együtt.",
-            "Akkor használható, ha a gyermek 40 cm-nél hosszabb és 70 cm-nél rövidebb, vagy kevesebb, mint 9 kg.",
-            "Figyelembe véve a rövid élettartamot, az ár egy kicsit magasabb, mint amennyit indokolna."
+          "Mivel Isofix alapon az utazás irányára merőlegesen rögzíthető, két ülést foglal el.",
+          "Majdnem 6 kg, így szülés után nem könnyű felemelni a gyerekkel együtt.",
+          "Akkor használható, ha a gyermek 40 cm-nél hosszabb és 70 cm-nél rövidebb, vagy kevesebb, mint 9 kg.",
+          "Figyelembe véve a rövid élettartamot, az ár egy kicsit magasabb, mint amennyit indokolna."
         ]
       },
       "cybex-gazelle-s2-impartial-review": {
@@ -900,7 +911,6 @@
           "Biztonság",
           "Két sportüléssel is összehajtható"
         ],
-    
         "pros-descr": [
           "Legfontosabb előnye, hogy testvér babakocsivá alakítható, azonban egy gyermek szállítása esetén ugyanúgy viselkedik, mint egy normál babakocsi. Egy gyerekülés felhelyezése esetén szuperkönnyen irányítható, jól veszi az útakadályokat, könnyen megemelhető egy padka esetén és óriási alsó kosárkapacitása és terhelhetősége van. \nMásik előnye hogy 2 babahordozó autós ülés is rákattintható, azaz tökéletes travel system, ami nem mondható el az összes testvér babakocsiról a piacon. Például a Thule Urban Glide double széria csak egy autós ülést képes fogadni.",
           "Az egyik legjobb funkciója, hogy mosható az üléshuzat és a napvitorla mosógépben, persze a megfelelő körülmények között. Ez jelenleg a piacon egészen rendkívüli, hiszen sok babakocsi gyártó nem engedi a babakocsi huzat mosását mosógépben mosni. Erre rátesz egy lapáttal, hogy a huzat eltávolítása gyerekjáték.",
@@ -960,12 +970,12 @@
         "warranty": "A Doona nem átruházható, 2 éves garanciát biztosít a számla bemutatása és a sorozatszám megadása esetén. A panaszkezelés megkönnyítése érdekében regisztrálhatja a terméket a Doona weboldalán.",
         "pros-title": "Előnyök",
         "pros": [
-        "Teljes dőlési funkció, 3 pozícióban - Ülés, Pihenés, Hátradőlés",
-        "Tanúsított az i-Size ECE R129 szerint",
-        "Puha kioldó rendszer",
-        "Új kabin tervezés textil cipzáros csatlakozással",
-        "Ütéscsillapító mechanizmus",
-        "Fejlett oldalütközés-védelem, Doona SIP kiegészítő"
+          "Teljes dőlési funkció, 3 pozícióban - Ülés, Pihenés, Hátradőlés",
+          "Tanúsított az i-Size ECE R129 szerint",
+          "Puha kioldó rendszer",
+          "Új kabin tervezés textil cipzáros csatlakozással",
+          "Ütéscsillapító mechanizmus",
+          "Fejlett oldalütközés-védelem, Doona SIP kiegészítő"
         ],
         "pros-descr": [
           "Ezek a kiemelkedő jellemzők kényelmet és kényelmet nyújtanak, biztosítva a zökkenőmentes élményt a világ felfedezése során. \n\n[Kép forrása: doona.com]",
@@ -976,17 +986,18 @@
           "Fejlett oldalütközés-védelem, Doona SIP kiegészítővel. \n\n[Kép forrása: doona.com]"
         ],
         "cons-title": "Hátrányok",
-        "cons": [      
-          "Nehéz",      
-          "Tolókar magassága",      
-          "Ár",      
-          "ADAC Tanúsítás"    
+        "cons": [
+          "Nehéz",
+          "Tolókar magassága",
+          "Ár",
+          "ADAC Tanúsítás"
         ],
-        "cons-descr": [      
-          "Mint más Doona modellek, a Doona X is nehezebb lehet a hagyományos csecsemő autósüléseknél az integrált babakocsi mechanizmus miatt. Ez a plusz súly nehezebbé teheti a szállítást, különösen az alacsony termetű egyének számára.",      
-          "Néhány felhasználó talán alacsonynak találja a Doona X tolókarját 101 cm magasságával, különösen a magasabb emberek. Ez kényelmetlenséget okozhat hosszabb ideig tartó babakocsi tolásakor.",      
-          "A Doona X, mint más Doona termékek, befektetés. Két funkcionalitása és innovatív jellemzői prémium áron érhetők el, ami nem mindenki költségvetéséhez megfelelő.",      
-          "Ellentétben néhány más babakocsi márka, a Doona X-nek nincs ADAC tanúsítása, ami egy biztonsági szabvány, amelyet bizonyos régiókban ismernek el. Ez a tanúsítás hiánya aggodalmakat válthat ki azoknál a szülőknél, akik további biztosítékot keresnek a biztonsággal kapcsolatban."    ],
+        "cons-descr": [
+          "Mint más Doona modellek, a Doona X is nehezebb lehet a hagyományos csecsemő autósüléseknél az integrált babakocsi mechanizmus miatt. Ez a plusz súly nehezebbé teheti a szállítást, különösen az alacsony termetű egyének számára.",
+          "Néhány felhasználó talán alacsonynak találja a Doona X tolókarját 101 cm magasságával, különösen a magasabb emberek. Ez kényelmetlenséget okozhat hosszabb ideig tartó babakocsi tolásakor.",
+          "A Doona X, mint más Doona termékek, befektetés. Két funkcionalitása és innovatív jellemzői prémium áron érhetők el, ami nem mindenki költségvetéséhez megfelelő.",
+          "Ellentétben néhány más babakocsi márka, a Doona X-nek nincs ADAC tanúsítása, ami egy biztonsági szabvány, amelyet bizonyos régiókban ismernek el. Ez a tanúsítás hiánya aggodalmakat válthat ki azoknál a szülőknél, akik további biztosítékot keresnek a biztonsággal kapcsolatban."
+        ],
         "differences-title": "Különbségek a Doona X, Doona i és Doona + között",
         "differences": "Dőlésszög: Csak a Doona X kínál három dőlési pozíciót - Ülés, Pihenés és Hátradőlés - több lehetőséget biztosítva gyermekének kényelmére. \n\ni-Size megfelelőség: Csak a Doona X és a Doona i rendelkezik R129 tanúsítvánnyal, míg a klasszikus Doona + R44 tanúsítvánnyal rendelkezik. \n\nNapvitorla tervezés: Míg az új Doona X-nek cipzáros csatlakozása van, a Doona i és a Doona + textil nyomógombos csatlakozással rendelkezik. \n\nAmi a kerekeket illeti, csak a Doona X rendelkezik ütéscsillapító mechanizmussal. \n\n",
         "end-title": "Összességében",
@@ -994,50 +1005,50 @@
         "final": "Remélem tetszett és hasznosnak találtad a Doona X átfogó reviewt. Let's get strollin'..."
       },
       "bugaboo-butterfly-review-2024": {
-          "stroller-id": 7002,
-          "title": "Bugaboo Butterfly: a top városi babakocsi",
-          "subtitle": "Méretek, beállítások, előnyök és hátrányok",
-          "header-title": "Bugaboo Butterfly Babakocsi",
-          "intro": "A Bugaboo Butterfly 2023 elején jelent meg és legyőzte a Yoyo2 ultrakompakt könnyű babakocsit. \n\nA magas minőségű, funkcionális és stílusos babakocsik iránti elkötelezettségéről ismert Bugaboo újra kitolta a határokat a Butterfly-val, egy olyan babakocsival, amely a modern családok dinamikus igényeit hivatott kielégíteni. \n\n Ez a cikk a Bugaboo Butterfly jellemzőit, előnyeit és egyedi vonásait vizsgálja, kiemelve, miért emelkedik ki a zsúfolt babakocsi piacon.",
-          "intro2": "",
-          "default-data": "Méretek, képek, jellemzők",
-          "pros-title": "Előnyök",
-          "pros": [
-              "Extra magas háttámla",
-              "Automatikusan egy kézzel összecsukható",
-              "4 év garancia",
-              "Travel System",
-              "pehelysúlyú",
-              "Környezetbarát",
-              "Nagy kosár kapacitás"
-          ],
-          "pros-descr": [
-              "63 cm-es magasságával ez a babakocsi nyeri a versenyt az ülésmagasság tekintetében. Nagyszerű választás magasabb kisgyermekek számára.",
-              "Ez a babakocsi 1 másodperc alatt összecsukódik! [kép forrás: bugaboo.com]",
-              "A Bugaboo 4 év garanciát biztosít. Ez sokkal jobb, mint a Cybex 2 éves garanciája.",
-              "Autósülés adapterrel utazási rendszerként is használható, megkönnyítve az autós utazásokat.",
-              "Mindössze 7,3 kg, így sokkal könnyebb, mint a többi kategóriabeli babakocsi.",
-              "A Bugaboo törekszik arra, hogy környezetbarát anyagokat használjon babakocsijaiban.",
-              "Általában a könnyű babakocsiknak kicsi kosaruk van, 2-3 kg tárolókapacitással. A Butterfly akár 8 kg-ot is tárolhat!"
-          ],
-          "cons-title": "Hátrányok",
-          "cons": [
-              "Kartámasz, mint kiegészítő",
-              "Kerékméret",
-              "Nincs teljesen vízszintes fekvő pozíció",
-              "A háttámla nem állítható derékszögbe"
-          ],
-          "cons-descr": [
-              "Mint a Cybex, a Bugaboo is ugyanazt csinálja a kiegészítőkkel. Mindent külön kell megvásárolni, relatíve magas áron... [kép forrás: bugaboo.com]",
-              "Bár menő babakocsi, a kerekek kicsik, így valószínűleg nehézségei lesznek a nagyobb kátyúkkal vagy terepekkel.",
-              "Sajnos a Butterfly ülése nem dönthető teljesen fekvő helyzetbe.",
-              "A Butterfly ülése nem állítható úgy, hogy teljesen egyenesen üljön a kisgyermek. Sok gyerek pedig nem bírja az ilyen babakocsikat, folyamatosan rángatja a kartámaszt, egyenesen szeretne ülni."
-          ],
-          "differences-title": "",
-          "differences": "",
-          "end-title": "Összességében",
-          "end": "A Bugaboo Butterfly több mint egy babakocsi; ez a Bugaboo innovatív szellemiségének és a szülők és gyermekek életminőségének javítására irányuló elkötelezettségének bizonyítéka. Kompakt kialakításával, könnyű használatával, kiváló kényelmével és környezetbarát jellemzőivel a Butterfly kiemelkedő választás a városi családok számára. Legyen szó zsúfolt utcákról, parkbeli sétákról vagy utazásról, a Bugaboo Butterfly minden utazást élvezetes élménnyé varázsol. \n\n",
-          "final": "Remélem, élvezted ezt az értékelést. Induljunk el sétálni..."
+        "stroller-id": 7002,
+        "title": "Bugaboo Butterfly: a top városi babakocsi",
+        "subtitle": "Méretek, beállítások, előnyök és hátrányok",
+        "header-title": "Bugaboo Butterfly Babakocsi",
+        "intro": "A Bugaboo Butterfly 2023 elején jelent meg és legyőzte a Yoyo2 ultrakompakt könnyű babakocsit. \n\nA magas minőségű, funkcionális és stílusos babakocsik iránti elkötelezettségéről ismert Bugaboo újra kitolta a határokat a Butterfly-val, egy olyan babakocsival, amely a modern családok dinamikus igényeit hivatott kielégíteni. \n\n Ez a cikk a Bugaboo Butterfly jellemzőit, előnyeit és egyedi vonásait vizsgálja, kiemelve, miért emelkedik ki a zsúfolt babakocsi piacon.",
+        "intro2": "",
+        "default-data": "Méretek, képek, jellemzők",
+        "pros-title": "Előnyök",
+        "pros": [
+          "Extra magas háttámla",
+          "Automatikusan egy kézzel összecsukható",
+          "4 év garancia",
+          "Travel System",
+          "pehelysúlyú",
+          "Környezetbarát",
+          "Nagy kosár kapacitás"
+        ],
+        "pros-descr": [
+          "63 cm-es magasságával ez a babakocsi nyeri a versenyt az ülésmagasság tekintetében. Nagyszerű választás magasabb kisgyermekek számára.",
+          "Ez a babakocsi 1 másodperc alatt összecsukódik! [kép forrás: bugaboo.com]",
+          "A Bugaboo 4 év garanciát biztosít. Ez sokkal jobb, mint a Cybex 2 éves garanciája.",
+          "Autósülés adapterrel utazási rendszerként is használható, megkönnyítve az autós utazásokat.",
+          "Mindössze 7,3 kg, így sokkal könnyebb, mint a többi kategóriabeli babakocsi.",
+          "A Bugaboo törekszik arra, hogy környezetbarát anyagokat használjon babakocsijaiban.",
+          "Általában a könnyű babakocsiknak kicsi kosaruk van, 2-3 kg tárolókapacitással. A Butterfly akár 8 kg-ot is tárolhat!"
+        ],
+        "cons-title": "Hátrányok",
+        "cons": [
+          "Kartámasz, mint kiegészítő",
+          "Kerékméret",
+          "Nincs teljesen vízszintes fekvő pozíció",
+          "A háttámla nem állítható derékszögbe"
+        ],
+        "cons-descr": [
+          "Mint a Cybex, a Bugaboo is ugyanazt csinálja a kiegészítőkkel. Mindent külön kell megvásárolni, relatíve magas áron... [kép forrás: bugaboo.com]",
+          "Bár menő babakocsi, a kerekek kicsik, így valószínűleg nehézségei lesznek a nagyobb kátyúkkal vagy terepekkel.",
+          "Sajnos a Butterfly ülése nem dönthető teljesen fekvő helyzetbe.",
+          "A Butterfly ülése nem állítható úgy, hogy teljesen egyenesen üljön a kisgyermek. Sok gyerek pedig nem bírja az ilyen babakocsikat, folyamatosan rángatja a kartámaszt, egyenesen szeretne ülni."
+        ],
+        "differences-title": "",
+        "differences": "",
+        "end-title": "Összességében",
+        "end": "A Bugaboo Butterfly több mint egy babakocsi; ez a Bugaboo innovatív szellemiségének és a szülők és gyermekek életminőségének javítására irányuló elkötelezettségének bizonyítéka. Kompakt kialakításával, könnyű használatával, kiváló kényelmével és környezetbarát jellemzőivel a Butterfly kiemelkedő választás a városi családok számára. Legyen szó zsúfolt utcákról, parkbeli sétákról vagy utazásról, a Bugaboo Butterfly minden utazást élvezetes élménnyé varázsol. \n\n",
+        "final": "Remélem, élvezted ezt az értékelést. Induljunk el sétálni..."
       }
     }
   },
@@ -1140,8 +1151,8 @@
     "intro": "Üdvözöllek az oldalamon, ahol babakocsik és autós ülések összehasonlításához, valamint informatív blogbejegyzésekhez találsz forrásokat.",
     "who-we-are-title": "Ki vagyok én",
     "who-we-are": "Két kisgyermek édesanyja vagyok, közgazdász, építőmérnök és szoftverfejlesztő. Ilyen sokszínű háttérrel egyedi nézőpontot hozok a szülői termékek világába. Ennek az oldalnak a létrehozásához vezető utam a saját szülői tapasztalataimból és kihívásaimból indult ki.",
-    "our-story-title" : "Az én történetem",
-    "our-story" : "Amikor a gyermekeim megszülettek, rendkívül nehéz volt átfogó információt találni a babakocsik alapos összehasonlításához. Ugyanez a probléma merült fel az autós üléseknél is — nem volt olyan forrás, amely részletes összehasonlítást nyújtott volna a legfontosabb szempontok alapján. Ez a frusztráció szülte az ötletet, hogy létrehozzak egy weboldalt, amely betölti ezt a hiányt és segít más szülőknek könnyedén meghozni a megfelelő döntéseket.",
+    "our-story-title": "Az én történetem",
+    "our-story": "Amikor a gyermekeim megszülettek, rendkívül nehéz volt átfogó információt találni a babakocsik alapos összehasonlításához. Ugyanez a probléma merült fel az autós üléseknél is — nem volt olyan forrás, amely részletes összehasonlítást nyújtott volna a legfontosabb szempontok alapján. Ez a frusztráció szülte az ötletet, hogy létrehozzak egy weboldalt, amely betölti ezt a hiányt és segít más szülőknek könnyedén meghozni a megfelelő döntéseket.",
     "our-mission-title": "Az én küldetésem",
     "our-mission": "Küldetésem, hogy megbízható, részletes és elfogulatlan információkat nyújtsak a babakocsikról és autós ülésekről. Célom, hogy egyszerűsítsem a legjobb termékek kiválasztásának folyamatát, mélyreható összehasonlításokat és szakértői tanácsokat kínálva.",
     "my-work-title": "Az én munkám",
@@ -1219,11 +1230,14 @@
     ]
   },
   "obligatory": {
-  "about-us": "Rólunk",
-  "disclaimer": "Felelősségkizárás",
-  "privacy-policy": "Adatvédelmi irányelvek",
-  "terms-and-conditions": "Általános Szerződési Feltételek",
-  "select": "Hasznos oldalak"
+    "about-us": "Rólunk",
+    "disclaimer": "Felelősségkizárás",
+    "privacy-policy": "Adatvédelmi irányelvek",
+    "terms-and-conditions": "Általános Szerződési Feltételek",
+    "select": "Hasznos oldalak"
+  },
+  "blog-posts": {
+    "title": "Cikkek"
   },
   "drawer": {
     "buttons": {
@@ -1559,7 +1573,7 @@
     "back-wheel-size": "Hátsó kerék mérete",
     "price-from": "Legalacsonyabb ár megközelítőleg"
   },
-  "stroller-info-dialog" : {
+  "stroller-info-dialog": {
     "accessories-title": "Hasznos kiegészítők babakocsikhoz",
     "images": "Képek"
   },
@@ -1855,19 +1869,19 @@
     }
   },
   "seo": {
-    "compare-strollers" : {
+    "compare-strollers": {
       "title": "Babakocsik összehasonlítása",
       "description": "Hasonlítsa össze a legjobb babakocsikat ár, jellemzők és vélemények alapján!"
     },
-    "compare-carseats" : {
+    "compare-carseats": {
       "title": "Autós ülések összehasonlítása",
       "description": "Hasonlítsa össze a legjobb autós üléseket ár, jellemzők és vélemények alapján!"
     },
-    "reviews" : {
+    "reviews": {
       "title": "Reviews babakocsikról és autós ülésekről",
       "description": "beszéljünk kicsit a babakocsikról és az autós ülésekről"
     },
-    "manuals" : {
+    "manuals": {
       "title": "Babakocsik és autós ülések használati útmutatója",
       "description": "Találd meg babakocsid vagy autós ülésed használati útmutatóját."
     }

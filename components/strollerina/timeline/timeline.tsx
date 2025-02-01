@@ -60,7 +60,7 @@ export default function Timeline({ productType, itemId }: TimelineProps) {
     }, [productType, itemId]);
 
     if (loading) return <div>Loading...</div>;
-    if (error) return <></>;
+    if (error) return <>No series found</>;
 
     return (
         <>

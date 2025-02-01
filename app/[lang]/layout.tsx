@@ -18,7 +18,7 @@ import Script from 'next/script'
 import CookieConsentComponent from '@/components/cookieconsent/CookieConsent'
 import { Navbar } from '@/components/strollerina/navbar'
 import { getDictionary } from 'get-dictionary'
-import GoogleAdsense from '../../components/ads/GoogleAdsense'
+import GoogleAdsense from '../../components/monetization/GoogleAdsense'
 import Head from 'next/head'
 // import CookieConsentComponent from '../components/CookieConsent';
 

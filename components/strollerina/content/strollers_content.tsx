@@ -17,7 +17,8 @@ import CounterChip from '../filter/helper/counter_chip';
 import StrollerFiltersCollection from '../filter/stroller_filters';
 import SortingSelect from '../sorting_select';
 import { searchStrollerByName } from 'lib/data';
-import GoogleAdSidePanel from '@/components/ads/GoogleAdSidePanel';
+import GoogleAdSidePanel from '@/components/monetization/GoogleAdSidePanel';
+import BuyMeACoffeeSupport from '@/components/monetization/BuyMeaCoffee';
 
 
 export default function StrollersContent({ initialData, brands, dictionary, lang }:
@@ -167,18 +168,22 @@ export default function StrollersContent({ initialData, brands, dictionary, lang
                 />
             </aside>
 
+            {/* MOBILE FLOATING SIDE BUTTONS */}
             <div className="lg:hidden fixed right-0 top-1/2 z-99 flex flex-col gap-4 transform -translate-y-1/2">
+                {/* Search Button */}
                 <Button
                     isIconOnly
                     radius="none"
                     size="lg"
                     aria-label="search"
                     onPress={onOpen}
-                    className={`${theme === 'dark' ? 'dark:bg-[#92987F] dark:text-black' : 'bg-[#92987F] text-white'
-                        } shadow rounded-l-full hover:scale-110 transition-transform`}
+                    className={`${theme === 'dark' ? 'dark:bg-[#92987F] dark:text-black' : 'bg-[#92987F] text-white'}
+            shadow rounded-l-full hover:scale-110 transition-transform`}
                 >
                     <Search />
                 </Button>
+
+                {/* Compare Button with Badge */}
                 {selectedStrollers && (
                     <div className="lg:hidden fixed right-0 top-[calc(50%+4rem)] z-99" id="compare">
                         <Badge
@@ -197,8 +202,8 @@ export default function StrollersContent({ initialData, brands, dictionary, lang
                                     const query = { pathname: `/${lang}/compare`, query: { ids: encodedIds } };
                                     window.location.href = `${query.pathname}?${new URLSearchParams(query.query).toString()}`;
                                 }}
-                                className={`${theme === 'dark' ? 'dark:bg-[#92987F] dark:text-black' : 'bg-[#92987F] text-white'
-                                    } shadow rounded-l-full`}
+                                className={`${theme === 'dark' ? 'dark:bg-[#92987F] dark:text-black' : 'bg-[#92987F] text-white'}
+                    shadow rounded-l-full`}
                             >
                                 <ChevronsRightLeft />
                             </Button>
@@ -206,7 +211,13 @@ export default function StrollersContent({ initialData, brands, dictionary, lang
                     </div>
                 )}
 
+                {/* Buy Me a Coffee Button */}
+                <BuyMeACoffeeSupport
+                    clsName={`${theme === 'dark' ? 'dark:bg-[#92987F] dark:text-black' : 'bg-[#92987F] text-white'}
+            shadow rounded-l-full`}
+                />
             </div>
+
 
             <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
                 <ModalContent className="overflow-y-auto max-h-screen">

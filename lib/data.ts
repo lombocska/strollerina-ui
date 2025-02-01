@@ -1,5 +1,32 @@
 import { AffiliateDTO, CarseatCardDTO, ManualDTO, ReviewDTO, SeriesAssociationDTO, SeriesDTO, StrollerInfoDTO } from "types";
 
+
+export async function unlockFilters(email: string): Promise<Response | null> {
+    try {
+        const base_url = process.env.NEXT_PUBLIC_BACKEND_URL;
+        let url = base_url + '/api/check-payment';
+        const requestOptions = {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email }) // Ensure it's an object with the email property
+        };
+        const response = await fetch(url, requestOptions);
+
+        // Check if the response status code is in the successful range (200-299)
+        if (!response.ok) {
+            // You can throw an error or return null if the response is not ok
+            throw new Error(`Request failed with status ${response.status}`);
+        }
+
+        return response;
+    } catch (error) {
+        console.error('Error unlocking filters:', error);
+        return null;
+    }
+}
+
+
+
 export async function getManuals(brand: string) {
     const base_url = process.env.NEXT_PUBLIC_BACKEND_URL;
     const res = await fetch(base_url + '/manuals/' + encodeURI(brand))

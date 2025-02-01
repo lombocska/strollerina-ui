@@ -1,4 +1,3 @@
-import SectionContainer from '@/components/SectionContainer'
 import ListLayout from '@/layouts/ListLayout'
 import { genPageMetadata } from 'app/[lang]/seo'
 import { allBlogs } from 'contentlayer/generated'

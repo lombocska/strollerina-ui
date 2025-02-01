@@ -2,7 +2,7 @@
 
 import { Accordion, AccordionItem } from '@nextui-org/accordion';
 import { Button } from "@nextui-org/button";
-import { Card, CardBody, CardHeader } from '@nextui-org/card';
+import { Card, CardBody, CardFooter, CardHeader } from '@nextui-org/card';
 import { Divider } from '@nextui-org/react';
 import { getDictionary } from 'get-dictionary';
 import { clearLocalStorage, useLocalStorage } from 'lib/LocalStorageAPI';
@@ -21,6 +21,8 @@ import CarSeatOtherFilters from './carseat_filters/carseat_other_filters';
 import CarSeatSeatDimensionFilters from './carseat_filters/carseat_seat_dimension_filters';
 import BrandSelection from './input_fields/brand_selection';
 import SelectMaxPrice from "./input_fields/input_max_price";
+import { useMediaQuery } from 'react-responsive';
+import UnlockFilters from '@/components/monetization/UnlockFilters';
 
 
 export default function CarSeatFiltersCollection({ brands, setCarseats, dictionary, onClose }: {
@@ -29,6 +31,8 @@ export default function CarSeatFiltersCollection({ brands, setCarseats, dictiona
     dictionary: Awaited<ReturnType<typeof getDictionary>>["carseats"];
     onClose?: () => void;
 }) {
+
+    const isMobile = useMediaQuery({ maxWidth: 768 }); // Detects mobile devices
 
     const initialFilters: CarSeatFilters =
     {
@@ -46,6 +50,7 @@ export default function CarSeatFiltersCollection({ brands, setCarseats, dictiona
     //filters
     const [filters, setFilters] = useLocalStorage("carseat/filters", initialFilters);
     const [isCleared, setIsCleared] = useState(false);
+    const [filtersLocked, setFiltersLocked] = useLocalStorage("payment/filtersLocked", true);
 
     // Get query params from URL
     const getQueryParams = () => {
@@ -68,17 +73,17 @@ export default function CarSeatFiltersCollection({ brands, setCarseats, dictiona
 
 
     const search = async () => {
-        console.log("Search with  " + filters.brandsName)
+        // console.log("Search with  " + filters.brandsName)
         // Extract tags from URL query parameters if they exist
         const tagsFromUrl = getQueryParams();
 
         // If tags from URL are not empty, merge them with current filter tags
         const searchTags = tagsFromUrl.length > 0 ? tagsFromUrl : filters.tags;
-        
-        if (setFilters && tagsFromUrl.length > 0 ) {
+
+        if (setFilters && tagsFromUrl.length > 0) {
             setFilters(initialFilters);
         }
-        
+
         if (setCarseats) {
             searchCarSeats(filters.brandsName,
                 filters.adacsName,
@@ -140,22 +145,23 @@ export default function CarSeatFiltersCollection({ brands, setCarseats, dictiona
     }
 
     useEffect(() => {
-        console.log("carseats page loaded");
+        // console.log("carseats page loaded");
         search();
     }, []);
 
     return (
         <>
             <Card className="">
-                <CardHeader className="flex gap-3 justify-between">
-                    <Button radius="full" size="lg" variant="ghost" onPress={() => searchWithClose()}>
-                        {dictionary['common']["search"]}
-                    </Button>
-                    <Button radius="full" size="lg" variant="ghost" onPress={() => clearFilters()}>
-                        {dictionary['common']["clear"]}
-                    </Button>
-                </CardHeader>
-
+                {!isMobile && ( // Show these buttons in header only for desktop
+                    <CardHeader className="flex gap-3 justify-between">
+                        <Button radius="full" size="lg" variant="ghost" onPress={() => searchWithClose()}>
+                            {dictionary['common']["search"]}
+                        </Button>
+                        <Button radius="full" size="lg" variant="ghost" onPress={() => clearFilters()}>
+                            {dictionary['common']["clear"]}
+                        </Button>
+                    </CardHeader>
+                )}
                 <Divider />
                 <CardBody>
                     <div className="grid grid-flow-row-dense grid-cols-1">
@@ -224,7 +230,18 @@ export default function CarSeatFiltersCollection({ brands, setCarseats, dictiona
                             <CarSeatOtherFilters setFilters={setFilters} isCleared={isCleared} dictionary={dictionary} />
                         </AccordionItem>
                     </Accordion>
+                    {filtersLocked && <UnlockFilters dictionary={dictionary} setFiltersLocked={setFiltersLocked} />}
                 </CardBody>
+                {isMobile && (
+                    <CardFooter>
+                        <Button size="lg" variant="bordered" onPress={clearFilters}>
+                            {dictionary['common']["clear"]}
+                        </Button>
+                        <Button size="lg" variant="bordered" color={'primary'} onPress={searchWithClose}>
+                            {dictionary['common']["search"]}
+                        </Button>
+                    </CardFooter>
+                )}
             </Card>
         </>
     );

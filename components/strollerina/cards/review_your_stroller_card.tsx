@@ -2,7 +2,6 @@ import React from 'react';
 import { Card, Select, SelectItem, Checkbox, Input, Textarea, Image } from '@nextui-org/react';
 import RatingStars from '@/components/strollerina/rating_stars';
 import { useForm } from 'react-hook-form';
-import { useCurrency } from 'lib/context/currency_context';
 
 interface StrollerCardProps {
     dictionary: any; // Replace with a more specific type if needed

@@ -22,10 +22,10 @@ import SearchButton from "../SearchButton";
 import { ThemeSwitch } from "components/strollerina/theme-switch";
 import { Logo } from "@/components/icons";
 import { getDictionary } from 'get-dictionary';
-import ObligatoryPages from '../obligatory-pages';
+import BuyMeACoffeeSupport from '../monetization/BuyMeaCoffee'
 
-export const Navbar = ({dictionary}: {
-    dictionary: Awaited<ReturnType<typeof getDictionary>>["navbar"]
+export const Navbar = ({ dictionary }: {
+  dictionary: Awaited<ReturnType<typeof getDictionary>>["navbar"]
 }) => {
 
   const [isScrolled, setIsScrolled] = useState(false)
@@ -73,39 +73,35 @@ export const Navbar = ({dictionary}: {
               </NavbarBrand>
             </NavbarContent>
 
-            <NavbarContent className="hidden lg:flex lg:basis-full" justify="end">
-              <NavbarItem className="hidden lg:flex gap-2">
-                <ul className="hidden lg:flex gap-4 justify-start ml-2">
+            <NavbarContent className="hidden md:flex md:basis-full" justify="end">
+              <NavbarItem className="hidden md:flex gap-2">
+                <ul className="hidden md:flex gap-4 justify-start ml-2">
                   {headerNavLinks.map((item) => (
                     <NavbarItem key={item.href}>
-                        <NextLink
-                          className={clsx(
-                            'data-[active=true]:text-primary data-[active=true]:font-medium font-large text-muted-foreground hover:text-foreground',
-                          )}
-                          color="foreground"
-                          href={item.href}
-                        >
-                          {dictionary["navbar"][item.title]}
-                        </NextLink>
+                      <NextLink
+                        className={clsx(
+                          'data-[active=true]:text-primary data-[active=true]:font-medium font-large text-muted-foreground hover:text-foreground',
+                        )}
+                        color="foreground"
+                        href={item.href}
+                      >
+                        {dictionary["navbar"][item.title]}
+                      </NextLink>
                     </NavbarItem>
                   ))}
                 </ul>
               </NavbarItem>
 
-              <NavbarItem className="hidden lg:flex gap-2">
+              <NavbarItem className="hidden md:flex gap-2">
                 <LocaleSwitcher />
               </NavbarItem>
-              <NavbarItem className="hidden lg:flex gap-2">
-                {/* <ObligatoryPages pages={obligatoryPages} dictionary={dictionary}/> */}
-              </NavbarItem>
 
               <ThemeSwitch />
-              <SearchButton />
+              <BuyMeACoffeeSupport />
             </NavbarContent>
 
-            <NavbarContent className="lg:hidden basis-1 pl-4" justify="end">
+            <NavbarContent className="md:hidden basis-1 pl-4" justify="end">
               <ThemeSwitch />
-              {/* <SearchButton /> */}
               <NavbarMenuToggle onClick={handleMenuToggle} />
             </NavbarContent>
 
@@ -115,17 +111,17 @@ export const Navbar = ({dictionary}: {
                   <NavbarMenuItem key={`${item}-${index}`}>
                     <Link
                       color={
-                        [0,1].includes(index) 
+                        [0, 1].includes(index)
                           ? "primary"
                           : index === headerNavLinks?.length - 3
-                          ? "danger"
-                          : "foreground"
+                            ? "danger"
+                            : "foreground"
                       }
                       href={item.href}
                       size="lg"
                       onPress={handleMenuItemClick} // Bezárja a menüt, amikor egy menüpontot kiválasztanak
                     >
-                       {dictionary["navbar"][item.title]}
+                      {dictionary["navbar"][item.title]}
                     </Link>
                   </NavbarMenuItem>
                 ))}

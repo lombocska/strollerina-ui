@@ -1,13 +1,16 @@
 import StrollerInfo from '@/components/strollerina/cards/stroller_info';
 import Carousel from '@/components/strollerina/carousel/carousel';
+import OtherStrollersContent from '@/components/strollerina/content/other_strollers_content';
 import ProductSidePanel from '@/components/strollerina/content/product_info_side_panel';
+import RelatedBlogPost from '@/components/strollerina/content/related_blog_post';
 import ReviewsContent from '@/components/strollerina/content/reviews_content';
 import AmazonLink from '@/components/strollerina/links/amazon_affiliate_link';
 import { subtitle, title } from "@/components/strollerina/primitives";
 import Timeline from '@/components/strollerina/timeline/timeline';
 import { Video } from '@/components/strollerina/video';
+import { Divider } from '@nextui-org/divider';
 import { getDictionary } from 'get-dictionary';
-import { getStrollerByGeneratedId, getStrollerImgs, getStrollerReviews } from 'lib/data';
+import { getStrollerByGeneratedId, getStrollerImgs, getStrollerReviews, getStrollersByBrand } from 'lib/data';
 import { Locale } from 'next/dist/compiled/@vercel/og/satori';
 
 export default async function StrollerInfoPage({ params }: { params: { strollername: string, brandname: string, lang: Locale } }) {
@@ -43,11 +46,14 @@ export default async function StrollerInfoPage({ params }: { params: { strollern
             </div>
 
 
-            <h2 className="text-2xl text-center from-black to-stone-500 bg-clip-text text-strollerina_green-100 mt-10">
-                {dictionary.strollers.common['series']}
-            </h2>
-            <Timeline productType="STROLLER" itemId={stroller.id}/>
+            <Divider />
 
+            <h2 className="text-2xl  from-black to-stone-500 bg-clip-text text-strollerina_green-100 mt-10">
+              {dictionary.strollers.common['series']}
+            </h2>
+            <Timeline productType="STROLLER" itemId={stroller.id} />
+
+            <Divider />
             {/* Reviews Section */}
             {reviews && (
               <div className="py-8">
@@ -60,9 +66,19 @@ export default async function StrollerInfoPage({ params }: { params: { strollern
             )}
 
           </section>
+
+          {/* VIDEO */}
           <div className="grid grid-rows-1">
             <Video link={stroller.video} />
           </div>
+
+          <Divider />
+
+          <RelatedBlogPost tags={[stroller.name, stroller.brand]} lang={params.lang} dictionary={dictionary['blog-posts']} />
+
+          <Divider />
+          <OtherStrollersContent stroller={stroller} dictionary={dictionary.strollers} />
+
         </main>
       </div>
 

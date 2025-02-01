@@ -1,12 +1,16 @@
 'use client';
 
+import { useState, useEffect } from 'react';
+import { useLocalStorage } from 'lib/LocalStorageAPI';
 import { FIVE_THOUSAND, ONE_HUNDRED_FIFTY, THIRTY, TWO_HUNDRED, ZERO } from 'lib/constants';
 import { getAllStrollers, searchStrollers } from 'lib/data';
 import { deepCompare } from 'lib/util';
 import { BrandContentProps, StrollerCard, StrollerFilters } from 'types';
 import { Accordion, AccordionItem } from '@nextui-org/accordion';
-import { Button } from "@nextui-org/button";
-import { useEffect, useState } from 'react';
+import { Button, Input } from "@nextui-org/react";
+import { Card, CardBody, CardFooter, CardHeader } from '@nextui-org/card';
+import { useMediaQuery } from 'react-responsive';
+import { getDictionary } from 'get-dictionary';
 import BrandSelection from './input_fields/brand_selection';
 import SelectMaxPrice from "./input_fields/input_max_price";
 import StrollerDimensionFilters from "./stroller_filters/stroller_dimension_filters";
@@ -16,13 +20,10 @@ import StrollerOtherFilters from './stroller_filters/stroller_other_filters';
 import StrollerSeatFilters from './stroller_filters/stroller_seat_filters';
 import StrollerTerrainFilters from './stroller_filters/stroller_terrain_filters';
 import StrollerWarrantyFilters from './stroller_filters/stroller_warranty_filters';
-import { Card, CardBody, CardHeader } from '@nextui-org/card';
-import { Divider } from '@nextui-org/react';
-import { getDictionary } from 'get-dictionary';
 import StrollerBumperFilters from './stroller_filters/stroller_bumper_filters';
-import dynamic from 'next/dynamic';
-import { clearLocalStorage, useLocalStorage } from 'lib/LocalStorageAPI';
-
+import { clearLocalStorage } from 'lib/LocalStorageAPI';
+import BuyMeACoffeeSupport from '@/components/monetization/BuyMeaCoffee';
+import UnlockFilters from '@/components/monetization/UnlockFilters';
 
 export default function StrollerFiltersCollection({ brands, setStrollers, dictionary, onClose }: {
     brands: BrandContentProps;
@@ -30,9 +31,9 @@ export default function StrollerFiltersCollection({ brands, setStrollers, dictio
     dictionary: Awaited<ReturnType<typeof getDictionary>>["strollers"];
     onClose?: () => void;
 }) {
+    const isMobile = useMediaQuery({ maxWidth: 768 });
 
-    const initialFilters: StrollerFilters =
-    {
+    const initialFilters: StrollerFilters = {
         brandsName: [],
         maxHeight: TWO_HUNDRED,
         closedMaxHeight: TWO_HUNDRED,
@@ -47,72 +48,44 @@ export default function StrollerFiltersCollection({ brands, setStrollers, dictio
         tags: []
     };
 
-    //filters
     const [filters, setFilters] = useLocalStorage("stroller/filters", initialFilters);
     const [isCleared, setIsCleared] = useState(false);
-
-    // Get query params from URL
-    const getQueryParams = () => {
-        if (typeof window !== 'undefined') {
-            const searchParams = new URLSearchParams(window.location.search);
-            const tags = searchParams.get('tags');
-            return tags ? tags.split(',') : []; // returns a list of tags if exists
-        }
-        return [];
-    };
+    const [filtersLocked, setFiltersLocked] = useLocalStorage("payment/filtersLocked", true);
 
     useEffect(() => {
-        console.log("stroller filters changing");
         const isEqual = deepCompare(filters, initialFilters);
-        if (isEqual) {
-            console.log("initial filters equal with selected ones");
-            setIsCleared(false);
-        }
+        if (isEqual) setIsCleared(false);
     }, [filters]);
 
     const search = async () => {
- 
-        // Extract tags from URL query parameters if they exist
-        const tagsFromUrl = getQueryParams();
-
-        // If tags from URL are not empty, merge them with current filter tags
-        const searchTags = tagsFromUrl.length > 0 ? tagsFromUrl : filters.tags;
-
-        if (setFilters && tagsFromUrl.length > 0 ) {
-            setFilters(initialFilters);
-        }
-        
         if (setStrollers) {
-                const res = await searchStrollers(
-                    filters.brandsName,
-                    filters.maxHeight,
-                    filters.closedMaxHeight,
-                    filters.maxWidth,
-                    filters.maxLength,
-                    filters.closedMaxLength,
-                    filters.maxWeight,
-                    filters.maxPrice,
-                    filters.minSeatHeight,
-                    filters.siblingMode,
-                    filters.reversibleSeatMode,
-                    filters.fullRecliningSeatMode,
-                    filters.minFrontWheelSize,
-                    filters.minBackWheelSize,
-                    searchTags
-                );
-                setStrollers(res);
-            }
+            const res = await searchStrollers(
+                filters.brandsName,
+                filters.maxHeight,
+                filters.closedMaxHeight,
+                filters.maxWidth,
+                filters.maxLength,
+                filters.closedMaxLength,
+                filters.maxWeight,
+                filters.maxPrice,
+                filters.minSeatHeight,
+                filters.siblingMode,
+                filters.reversibleSeatMode,
+                filters.fullRecliningSeatMode,
+                filters.minFrontWheelSize,
+                filters.minBackWheelSize,
+                filters.tags
+            );
+            setStrollers(res);
+        }
     };
 
     const searchWithClose = async () => {
         await search();
-        if (onClose) {
-            onClose();
-        }
+        if (onClose) onClose();
     };
 
     useEffect(() => {
-        console.log("strollers page loaded");
         search();
     }, []);
 
@@ -122,45 +95,23 @@ export default function StrollerFiltersCollection({ brands, setStrollers, dictio
             setStrollers(allStrollers);
         }
         setIsCleared(true);
-
-        clearLocalStorage('stroller/selectedBrandsName');
-        clearLocalStorage('stroller/selectedMaxHeight');
-        clearLocalStorage('stroller/selectedClosedMaxHeight');
-        clearLocalStorage('stroller/selectedMaxWidth');
-        clearLocalStorage('stroller/selectedMaxLength');
-        clearLocalStorage('stroller/selectedClosedMaxLength');
-        clearLocalStorage('stroller/selectedMaxWeight');
-        clearLocalStorage('stroller/selectedMaxPrice');
-        clearLocalStorage('stroller/selectedMinSeatHeight');
-        clearLocalStorage('stroller/selectedMinFrontWheelSize');
-        clearLocalStorage('stroller/selectedMinBackWheelSize');
-        clearLocalStorage('stroller/selectedSiblingMode');
-        clearLocalStorage('stroller/selectedReversibleSeatMode');
-        clearLocalStorage('stroller/selectedFullRecliningSeatMode');
-        clearLocalStorage('stroller/tags');
-
-        // Clear query parameters from URL (specifically `tags`)
-        if (typeof window !== 'undefined') {
-            const url = new URL(window.location.href);
-            url.searchParams.delete('tags');
-            window.history.pushState({}, '', url.toString());
-        }
-
-        if (setFilters) {
-            setFilters(initialFilters);
-        }
+        clearLocalStorage('stroller/filters');
+        setFilters(initialFilters);
     };
 
+
     return (
-        <Card className="">
-            <CardHeader className="flex gap-3 justify-between">
-                <Button size="lg" variant="ghost" onPress={() => searchWithClose()}>
-                    {dictionary['common']["search"]}
-                </Button>
-                <Button size="lg" variant="ghost" onPress={() => clearFilters()}>
-                    {dictionary['common']["clear"]}
-                </Button>
-            </CardHeader>
+        <Card>
+            {!isMobile && (
+                <CardHeader className="flex gap-3 justify-between">
+                    <Button size="lg" variant="ghost" onPress={searchWithClose}>
+                        {dictionary['common']["search"]}
+                    </Button>
+                    <Button size="lg" variant="ghost" onPress={clearFilters}>
+                        {dictionary['common']["clear"]}
+                    </Button>
+                </CardHeader>
+            )}
             <CardBody>
                 <div className="grid grid-flow-row-dense grid-cols-1">
                     <BrandSelection brands={brands} setFilters={setFilters} isCleared={isCleared} dictionary={dictionary} type={"strollers"} />
@@ -174,68 +125,50 @@ export default function StrollerFiltersCollection({ brands, setStrollers, dictio
                     />
                 </div>
 
-                <Accordion className='m-1 mb-10' variant="bordered" selectionMode="multiple" >
-
-                    <AccordionItem
-                        value="1"
-                        className=''
-                        key="filters-accordion-1"
-                        aria-label={dictionary['filters']['section-dimension-title']}
-                        title={dictionary['filters']['section-dimension-title']}
-                    >
+                <Accordion className='m-1 mb-10' variant="bordered" selectionMode="multiple">
+                    <AccordionItem key="filters-accordion-1" title={dictionary['filters']['section-dimension-title']} isDisabled={filtersLocked}>
+                        {filtersLocked && <div className="absolute inset-0 bg-gray-300 opacity-50 pointer-events-none"></div>}
                         <StrollerDimensionFilters setFilters={setFilters} isCleared={isCleared} dictionary={dictionary} />
                     </AccordionItem>
 
-                    <AccordionItem key="filters-accordion-2"
-                        aria-label={dictionary['filters']['section-seat-title']}
-                        title={dictionary['filters']['section-seat-title']}
-                    >
+                    <AccordionItem key="filters-accordion-2" title={dictionary['filters']['section-seat-title']} isDisabled={filtersLocked}>
                         <StrollerSeatFilters setFilters={setFilters} isCleared={isCleared} dictionary={dictionary} />
                     </AccordionItem>
 
-                    <AccordionItem key="filters-accordion-3"
-                        aria-label={dictionary['filters']['section-fold-title']}
-                        title={dictionary['filters']['section-fold-title']}
-                    >
+                    <AccordionItem key="filters-accordion-3" title={dictionary['filters']['section-fold-title']} isDisabled={filtersLocked}>
                         <StrollerFoldFilters setFilters={setFilters} isCleared={isCleared} dictionary={dictionary} />
                     </AccordionItem>
 
-                    <AccordionItem key="filters-accordion-4"
-                        aria-label={dictionary['filters']['section-terrain-title']}
-                        title={dictionary['filters']['section-terrain-title']}
-                    >
+                    <AccordionItem key="filters-accordion-4" title={dictionary['filters']['section-terrain-title']} isDisabled={filtersLocked}>
                         <StrollerTerrainFilters setFilters={setFilters} isCleared={isCleared} dictionary={dictionary} />
                     </AccordionItem>
 
-                    <AccordionItem key="filters-accordion-5"
-                        aria-label={dictionary['filters']['section-harness-title']}
-                        title={dictionary['filters']['section-harness-title']}
-                    >
+                    <AccordionItem key="filters-accordion-5" title={dictionary['filters']['section-harness-title']} isDisabled={filtersLocked}>
                         <StrollerHarnessFilters setFilters={setFilters} isCleared={isCleared} dictionary={dictionary} />
                     </AccordionItem>
 
-                    <AccordionItem key="filters-accordion-6"
-                        aria-label={dictionary['filters']['section-warranty-title']}
-                        title={dictionary['filters']['section-warranty-title']}
-                    >
+                    <AccordionItem key="filters-accordion-6" title={dictionary['filters']['section-warranty-title']} isDisabled={filtersLocked}>
                         <StrollerWarrantyFilters setFilters={setFilters} isCleared={isCleared} dictionary={dictionary} />
                     </AccordionItem>
 
-                    <AccordionItem key="filters-accordion-7"
-                        aria-label={dictionary['filters']['section-bumper-title']}
-                        title={dictionary['filters']['section-bumper-title']}
-                    >
-                        <StrollerBumperFilters setFilters={setFilters} isCleared={isCleared} dictionary={dictionary} />
-                    </AccordionItem>
-
-                    <AccordionItem key="filters-accordion-8"
-                        aria-label={dictionary['filters']['section-other-features-title']}
-                        title={dictionary['filters']['section-other-features-title']}
-                    >
+                    <AccordionItem key="filters-accordion-8" title={dictionary['filters']['section-other-features-title']} isDisabled={filtersLocked}>
                         <StrollerOtherFilters setFilters={setFilters} isCleared={isCleared} dictionary={dictionary} />
                     </AccordionItem>
                 </Accordion>
+
+                {filtersLocked && <UnlockFilters dictionary={dictionary} setFiltersLocked={setFiltersLocked} />}
+
             </CardBody>
+            {isMobile && (
+                <CardFooter>
+                    <Button size="lg" variant="bordered" onPress={clearFilters}>
+                        {dictionary['common']["clear"]}
+                    </Button>
+                    <Button size="lg" variant="bordered" color={'primary'} onPress={searchWithClose}>
+                        {dictionary['common']["search"]}
+                    </Button>
+                </CardFooter>
+            )}
         </Card>
     );
 }
