@@ -14,7 +14,8 @@ const ContentSecurityPolicy = `
   media-src 'self';
   connect-src *;
   font-src 'self' fonts.gstatic.com;
-  frame-src giscus.app www.youtube.com *.doubleclick.net https://pagead2.googlesyndication.com;
+  frame-src giscus.app www.youtube.com *.doubleclick.net *.google.com *.googlesyndication.com *.googleadservices.com https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://ep2.adtrafficquality.google;
+  fenced-frame-src *.google.com *.googlesyndication.com;
 `
 const securityHeaders = [
     // https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP
