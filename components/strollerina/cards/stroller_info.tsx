@@ -13,11 +13,17 @@ import { AffiliateDTO, BrandItem, ManualDTO, StrollerInfoDTO } from 'types';
 import Chips from '../chips';
 import { InfoTable } from '../table';
 
-const StrollerInfo = ({ data, dictionary, commonTags }: { 
+
+const StrollerInfo = ({ 
+    data, 
+    dictionary,  
+    commonTags = [] 
+}: { 
     data: StrollerInfoDTO; 
-    dictionary: Awaited<ReturnType<typeof getDictionary>>["strollers"];
-    commonTags: string[];
+    dictionary: Awaited<ReturnType<typeof getDictionary>>["strollers"]; 
+    commonTags?: string[]; 
 }) => {
+
     const open_dimension_columns = siteConfig.stroller_info_open_dimensions_columns;
     const closed_dimension_columns = siteConfig.stroller_info_closed_dimensions_columns;
     const capacity_columns = siteConfig.stroller_info_capacity_columns;
