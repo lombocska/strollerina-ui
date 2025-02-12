@@ -50,7 +50,7 @@ export default function StrollerFiltersCollection({ brands, setStrollers, dictio
 
     const [filters, setFilters] = useLocalStorage("stroller/filters", initialFilters);
     const [isCleared, setIsCleared] = useState(false);
-    const [filtersLocked, setFiltersLocked] = useLocalStorage("payment/filtersLocked", true);
+    const [filtersLocked, setFiltersLocked] = useLocalStorage("payment/filtersLocked", false);
 
     useEffect(() => {
         const isEqual = deepCompare(filters, initialFilters);

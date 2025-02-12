@@ -50,7 +50,7 @@ export default function CarSeatFiltersCollection({ brands, setCarseats, dictiona
     //filters
     const [filters, setFilters] = useLocalStorage("carseat/filters", initialFilters);
     const [isCleared, setIsCleared] = useState(false);
-    const [filtersLocked, setFiltersLocked] = useLocalStorage("payment/filtersLocked", true);
+    const [filtersLocked, setFiltersLocked] = useLocalStorage("payment/filtersLocked", false);
 
     // Get query params from URL
     const getQueryParams = () => {
