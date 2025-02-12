@@ -156,7 +156,7 @@ export default function StrollerFiltersCollection({ brands, setStrollers, dictio
                     </AccordionItem>
                 </Accordion>
 
-                {filtersLocked && <UnlockFilters dictionary={dictionary} setFiltersLocked={setFiltersLocked} />}
+                {/* {filtersLocked && <UnlockFilters dictionary={dictionary} setFiltersLocked={setFiltersLocked} />} */}
 
             </CardBody>
             {isMobile && (

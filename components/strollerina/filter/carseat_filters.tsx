@@ -230,7 +230,7 @@ export default function CarSeatFiltersCollection({ brands, setCarseats, dictiona
                             <CarSeatOtherFilters setFilters={setFilters} isCleared={isCleared} dictionary={dictionary} />
                         </AccordionItem>
                     </Accordion>
-                    {filtersLocked && <UnlockFilters dictionary={dictionary} setFiltersLocked={setFiltersLocked} />}
+                    {/* {filtersLocked && <UnlockFilters dictionary={dictionary} setFiltersLocked={setFiltersLocked} />} */}
                 </CardBody>
                 {isMobile && (
                     <CardFooter>
